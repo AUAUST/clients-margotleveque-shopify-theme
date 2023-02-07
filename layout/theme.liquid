@@ -95,9 +95,9 @@ carlosmayo.info
     {%- endfor %}
   </div>
   <body class="template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle -}}
-                                           {%- if template.suffix.size > 0 -%}{{ template.suffix | prepend: "-" -}}
-                                           {%- elsif template == 'cart' and cart.item_count == 0 -%}-empty
-                                           {%- elsif request.path contains '/challenge' -%}-challenge{% endif %}">
+                                                 {%- if template.suffix.size > 0 -%}{{ template.suffix | prepend: "-" -}}
+                                                 {%- elsif template == 'cart' and cart.item_count == 0 -%}-empty
+                                                 {%- elsif request.path contains '/challenge' -%}-challenge{% endif %}">
 
     <!--Loader-->
     <div

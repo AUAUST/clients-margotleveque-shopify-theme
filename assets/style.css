@@ -2422,11 +2422,11 @@ input[type="range"]::-webkit-slider-thumb:active {
   display: block;
   position: absolute;
 
-  width: 0.8em;
-  height: 0.8em;
+  width: 0.7em;
+  height: 0.7em;
 
   left: 0;
-  top: 0.15em;
+  top: 0.25em;
 
   background-color: transparent;
   border-radius: 100%;
@@ -2440,7 +2440,7 @@ input[type="range"]::-webkit-slider-thumb:active {
 }
 #product-options wrap .product-selector.active::before,
 #product-options wrap .product-selector.right.bonus::before {
-  background: radial-gradient(circle, #00ff00 50%, transparent 50%);
+  background: radial-gradient(circle, #0f0 50%, transparent 50%);
 }
 
 #product-options wrap .product-selector.active,
