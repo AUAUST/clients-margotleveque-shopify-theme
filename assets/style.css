@@ -2365,7 +2365,7 @@ input[type="range"]::-webkit-slider-thumb:active {
   border-bottom: 0.5px gray solid;
   margin-bottom: 4px;
 }
-#product-options .title .more-details h6 {
+#product-options .title .more-details a {
   text-decoration: underline;
   text-underline-offset: 2px;
   text-decoration-color: #00ff00;
