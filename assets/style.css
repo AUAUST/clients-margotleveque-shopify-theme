@@ -2328,15 +2328,24 @@ input[type="range"]::-webkit-slider-thumb:active {
   position: relative;
 }
 #product-options .title .more-details {
-  position: absolute;
-  top: 0.3em;
-  border-radius: 100%;
-  text-align: center;
-  height: 1em;
-  width: 1em;
   display: inline-block;
-  color: black;
-  border: 1px solid black;
+  position: absolute;
+
+  text-align: center;
+  line-height: 12px;
+  font-size: 13px;
+  font-weight: 900;
+
+  top: 0.4em;
+  height: 1.1rem;
+  width: 1.1rem;
+
+  pointer-events: all;
+  cursor: pointer;
+
+  color: gray;
+  border: 1px solid lightgray;
+  border-radius: 100%;
 }
 #product-options form,
 #product-options form input {
