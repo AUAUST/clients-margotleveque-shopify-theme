@@ -1789,24 +1789,13 @@ div#banner {
   position: relative;
   color: lightgray;
 }
-.type-row_name .coming-soon::after {
-  content: "Coming soon!";
-  left: 50%;
-  width: 100%;
-  transform: translate(-47%, 110%) rotate(-5deg);
-  position: absolute;
-  font-family: "Romie Italic";
-  font-size: 0.3em;
-  transition: text-shadow 0.1s linear;
-  --shadow-color: transparent;
-  --text-color: transparent;
-  color: var(--text-color);
-  text-shadow: var(--shadow-color) 1px 1px 0, var(--shadow-color) 1px -1px 0,
-    var(--shadow-color) -1px 1px 0, var(--shadow-color) -1px -1px 0;
+.type-row_name .coming-soon svg {
+  height: 5rem;
+  top: 25%;
+  opacity: 0;
 }
-.type-row_name:hover .coming-soon::after {
-  --shadow-color: #00ff00;
-  --text-color: gray;
+.type-row_name:hover .coming-soon svg {
+  opacity: 1;
 }
 
 /* COLLECTIONS
