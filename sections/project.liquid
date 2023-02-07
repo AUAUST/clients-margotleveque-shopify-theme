@@ -1,0 +1,94 @@
+{%- assign slides = 0 -%}
+{%- for block in section.blocks -%}
+{%- assign slides = slides | plus: 1 -%}
+{%- endfor -%}
+<!--Project images-->
+<div class="project {{ section.settings.size }} {% if slides > 1 %}slider{% endif -%}"
+     data-id="{{ section.id }}"
+     {% if section.settings.title.size > 0 -%}
+     data-title="{{ section.settings.title }}"{% endif %}>
+  {% if slides > 1 -%}
+  <div>
+    <div class="slider-tracker">
+  {%- endif %}
+  	  {%- assign s = 0 -%}
+      {% for block in section.blocks -%}
+      {%- assign s = s | plus: 1 -%}
+      <img class="lazy {% if slides > 1 %}slide{% endif %}" src="{{ block.settings.img | img_url: 'thumb' }}" data-slide="{{ s }}" data-src="{{ block.settings.img | img_url: 'master' }}" alt="{{ section.title }}" />
+      {%- endfor %}
+  {% if slides > 1 -%}
+    </div>
+    <!--Arrow W-->
+    <span class="prev"></span>
+    <!--Arrow E-->
+    <span class="next"></span>
+  </div>
+  {%- endif %}
+</div>
+<!--Project description-->
+<div class="description {{ section.settings.size }}">
+  {% if slides > 1 -%}
+  <wrap class="counter"><span>1</span>/{{ slides }}</wrap>
+  {%- endif %}
+  {% if section.settings.text_mobile != blank %}
+  <span>{{ section.settings.text_mobile | replace: '<em', '|em' | replace: '</em>', '|/em|' | replace: '<a', '|a' | replace: '</a>', '|/a|' | replace: '</p>', '|br' | strip_html | replace: '|br', '<br>' | replace: '|a', '<a' | replace: '|/a|', '</a>' | replace: '|em', '<em' | replace: '|/em|', '</em>' }}</span>
+  {% endif %}
+  <span>{{ section.settings.text | replace: '<em', '|em' | replace: '</em>', '|/em|' | replace: '<a', '|a' | replace: '</a>', '|/a|' | replace: '</p>', '|br' | strip_html | replace: '|br', '<br>' | replace: '|a', '<a' | replace: '|/a|', '</a>' | replace: '|em', '<em' | replace: '|/em|', '</em>' }}</span>
+</div>
+
+{% schema %}
+  {
+	"class": "module-project",
+	"settings": [
+      {
+        "id": "title",
+        "type": "text",
+        "label": "Title"
+      },
+	  {
+        "id": "text",
+        "type": "richtext",
+        "label": "Description (desktop)"
+      },
+	  {
+        "id": "text_mobile",
+        "type": "richtext",
+        "label": "Description (mobile)",
+		"info": "Leave it empty to display the desktop description on both formats"
+      },
+	  {
+		"id": "size",
+		"type": "select",
+        "label": "Size",
+		"options": [
+          { "value": "small", "label": "Small"},
+          { "value": "normal", "label": "Normal"},
+          { "value": "medium", "label": "Medium"},
+          { "value": "large", "label": "Large"},
+          { "value": "big", "label": "Big"}
+       ],
+		"default": "normal"
+	  }
+    ],
+    "blocks": [
+      {
+        "type": "gallery",
+        "name": "Slide",
+        "settings": [
+          {
+            "type":      "image_picker",
+   			"id":        "img",
+   			"label":     "Slide"
+          }
+        ]
+      }
+    ],
+	"presets": [
+        {
+            "category": "Selected Work",
+            "name": "Project"
+			
+        }
+    ]
+  }
+{% endschema %}

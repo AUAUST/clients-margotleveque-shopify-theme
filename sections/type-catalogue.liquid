@@ -1,0 +1,512 @@
+{% if template == 'list-collections' %}
+{% for block in section.blocks -%}
+  {%- assign inactive = false -%}
+  {%- assign collection = collections[block.settings.collection] -%}
+  {%- assign product = all_products[block.settings.active] -%}
+  {%- if block.settings.coming_soon == true -%}
+	{%- assign inactive = true -%}
+  {%- endif -%}
+  {%- assign has_italic = false -%}
+  {%- assign italic_coming_soon = false  -%}
+  {%- if block.settings.has_italic -%}
+    {%- assign has_italic = true  -%}
+    {%- if block.settings.italic_coming_soon -%}
+      {%- assign italic_coming_soon = true  -%}
+    {%- endif -%}
+  {%- endif -%}
+  {%- assign name = block.id -%}
+  <a class="type-row type-{{ name }} {% if inactive == true %}inactive{% endif %} {% if section.settings.align == 'center' %}center{% endif %}"
+     href="{{ collection.url }}"
+     {% if block.settings.ornaments != blank %}data-orn="{{ block.settings.ornaments | slice: 0 }}"{% endif %}
+     style="font-size: {{ block.settings.font_size | divided_by: 6.0 }}vw">
+    <span>
+      <div class="type-row_details">
+        {%- if inactive == true -%}
+          <span>COMING SOON</span>
+        {%- else -%}
+          <span>{{- collection.title | upcase -}}</span>
+          <span>1 family</span>
+          <span>{% if collection.products.count == 1 %}{{ collection.all_products_count }} style{% else %}{{ collection.all_products_count | minus: 1 }} styles{% endif %}</span>
+        {%- endif -%}
+      </div>
+      <div class="type-row_name">
+        <div>
+          {{- block.settings.collection_name -}}
+        </div>
+        {%- if has_italic -%}
+            <!-- keep that line (contains a no-break space) --!>
+          <div style="font-style:italic" {%- if italic_coming_soon -%}class="coming-soon"{%- endif -%}>
+             {{- block.settings.italic_text -}}
+          </div>
+        {% endif %}
+      </div>
+      <!-- {%- if inactive == true -%}
+        {% include 'soon' %}
+      {%- endif -%} -->
+    </span>
+  </a>
+  <style>
+    .type-{{ name }}{
+        font-family: '{{ name }}';
+    }
+  {%- if has_italic -%}
+      @font-face{
+        font-family: '{{ name }}';
+        src: url('{{ block.settings.active_italic }}') format('woff2');
+        font-style: italic;
+        font-display: block;
+      }
+    {% endif %}
+    @font-face{
+        font-family: '{{ name }}';
+        src: url('{{ product.description }}') format('woff2');  
+        font-style: normal;
+        font-display: block;
+    }
+  
+  </style>
+{%- endfor %}
+{%- else -%}
+
+  {%- assign ID = collection.id -%}
+  {%- assign inactive = false -%}
+  {%- assign specimen = false -%}
+
+  {%- for block in section.blocks -%}
+    {%- assign block_collection = collections[block.settings.collection] -%}
+    {%- assign product_collection = all_products[block.settings.active] -%}
+    {% if block_collection.id == ID %}
+	  {%- assign title = block.settings.title -%}
+      {%- assign name = block.id -%}
+      {%- assign type = product_collection.description -%} 
+	  {%- assign product_ = product_collection -%} 
+	  {%- assign opacity = block.settings.layer_opacity -%}
+	  {%- assign description = block.settings.description -%}	 
+    {%- assign license = block.settings.license -%}	  
+	  {%- if block.settings.specimen != blank -%}
+	    {%- assign specimen = true -%}
+	    {%- assign specimen_link = block.settings.specimen -%}
+	  {%- endif -%}
+	  {%- if block.settings.coming_soon == true -%}
+		{%- assign inactive = true -%}
+  	  {%- endif -%}
+    {%- endif -%}
+  {%- endfor -%}
+
+  <!--Content-->
+  <div id="product-content">
+    
+    <!--Type Row-->
+    <div id="type-row"
+         class="type-{{ name }}"> 
+      <span id="editable"
+            class="pure {% if inactive == true %}inactive{% endif %}"
+            {% if inactive != true %}
+            contenteditable="true"
+            autocorrect="off"
+            spellcheck="false"
+            placeholder="{{ title }}"{% endif %}>
+        {{ title }}
+      </span>
+      <style>
+        .type-{{ name }}{
+            font-family: '{{ name }}';
+        }
+        @font-face{
+            font-family: '{{ name }}'; src: url('{{ type }}') format('woff2');  
+            font-display: block;
+        }
+      </style>
+    </div>
+    
+    {%- for product in collection.products -%}
+    {%- assign total = collection.all_products_count -%}
+    {%- for tag in product.tags -%}
+    {%- if tag contains 'exclude' -%} 
+    {%- assign total = total | minus: 1 -%}
+    {%- endif -%}
+    {%- endfor -%}
+    {%- endfor -%}
+    
+    <!--Actions-->
+    <div id="type-actions">      
+      
+      <!--Title-->
+      <div class="title">{{ collection.title }}</div>    
+      
+      <!--Styles-->
+      <div class="styles select-wrapper">        
+        <select id="styles">
+          
+          <option selected value disabled>
+            {% if total == 1 %}{{ total }}{% else %}{{ total }}{% endif %} Style{% if total > 1 -%}s{% endif %}
+          </option>
+          
+          {% for product in collection.products -%}
+          
+          	{%- assign exclude = false -%}          
+          	{%- for tag in product.tags -%}
+     		{%- if tag contains 'exclude' -%}  
+          	{%- assign exclude = true -%}
+          	{%- endif -%}
+            {%- endfor -%}          
+          	
+            {%- if product.description != blank and exclude == false -%}
+            <option value="{{ product.title | handle | escape }}"
+                    data-title="{{ product.title }}">
+              {% if product.title contains collection.title and product.title != collection.title %}
+              {{- product.title | replace: collection.title, '' -}}
+              {% else %}
+              {{- product.title -}}
+              {% endif %}
+            </option>
+            {%- endif -%}
+          
+          {%- endfor %}
+        </select>
+      </div>
+      <div id="hidden-select-option">{{ collection.all_products_count }} Style{% if collection.all_products_count > 1 -%}s{% endif %}</div>
+      {% comment %}
+      {% if collection.all_products_count > 1 -%}
+      <div class="styles select-wrapper">
+        <optgroup label="{{ collection.all_products_count }} Style">
+          <select id="styles">
+          {% for product in collection.products %}
+            {%- if product.description != blank -%}
+            <option value="{{ product.title | handle | escape }}"
+                    data-title="{{ product.title }}"
+                    {% if product_.id == product.id %}selected{% endif %}>
+              {{- product.title | replace: collection.title, '' -}}
+            </option>
+            {%- endif -%}
+          {% endfor %}
+          </select>
+        </optgroup>
+      </div>
+      <div id="hidden-select-option">{{ product_.title | replace: collection.title, '' }}</div>
+      {%- else -%}
+      <div class="styles">1 Style</div>
+      {%- endif %}
+      {% endcomment %}
+      
+      {% if inactive != true -%}
+      <!--Handler-->
+      <wrap>
+        <span>Size</span>
+        <input class="type-handler" type="range" min="30" max="280" value="125" step="1" />
+      </wrap>
+      {%- endif %}
+      
+      <!--Information-->
+      <span class="select-wrapper">
+        <span>Information</span>
+      </span>
+      
+      <!--Colors-->
+      <div>
+        <svg id="gray" class="color active">
+          <circle cx="50%" cy="50%" r="50%"></circle>
+		</svg>
+        <svg id="black" class="color">
+          <circle cx="50%" cy="50%" r="50%"></circle>
+		</svg>
+        <svg id="white" class="color">
+          <circle cx="50%" cy="50%" r="50%"></circle>
+		</svg>
+        <!--<div id="gray" class="color active"></div>
+        <div id="black" class="color"></div>
+        <div id="white" class="color"></div>-->
+      </div>
+      
+    </div>
+    
+    {% if collection.description contains "<img" %}
+      {% assign content_src = collection.description | split: ' src="' %}
+      {% assign alt = collection.description | split: 'alt="' %}
+      {% assign content_size = content_src.size | minus: 1 %}
+    {% endif %}
+    
+    <!--Product Gallery-->
+    <div id="gallery" {% if content_size > 1 %}class="slider"{% endif -%}>
+      {% if content_size > 0 -%}
+      <div>
+        <div class="slider-tracker focus">
+        {% for i in (1..content_size) %}
+        {% assign src = content_src[i] | split: '"' | first %}
+        {% assign alt_first = alt[i] | split: '"' | first %}
+        {% assign image_src_thumb = src | replace: '_50x50', '_160x160' | replace: '_100x100', '_160x160' | replace: '_240x240', '_160x160' | replace: '_480x480', '_160x160' | replace: '_600x600', '_160x160' | replace: '_1024x1024', '_160x160' | replace: '_2048x2048', '_160x160' %}
+        {% assign image_src_master = src | replace: '_50x50', '' | replace: '_100x100', '' | replace: '_240x240', '' | replace: '_480x480', '' | replace: '_600x600', '' | replace: '_1024x1024', '' | replace: '_2048x2048', '' %}
+        <div class="slide" data-slide="{{ i }}" style="grid-row: {{ i }}">
+          <img class="lazy" src="{{ image_src_thumb }}" data-src="{{ image_src_master }}"  alt="{{ collection.title }} {{ i }}" />   
+        {% if alt_first != blank %}
+          {% if alt_first contains '||' %}
+            {% assign link = alt_first | split: '||' %}
+            <a href="{{ link[1] }}"
+               class="caption"
+               target="_blank"
+               rel="noreferrer"
+               style="background-color: rgba(255,255,255, .{{ opacity }})">
+              <i><u>{{ link[0] }}</u></i>
+            </a>
+          {% else %}
+            <div class="caption" style="background-color: rgba(255,255,255, .{{ opacity }})">
+              <i>{{ alt_first  }}</i>
+            </div>
+          {% endif %}
+        {% endif %}
+        </div>
+        {% endfor %}
+        </div>
+        {% if content_size > 1 -%}
+        <!--Arrow W-->
+        <span class="prev"></span>
+        <!--Arrow E-->
+        <span class="next"></span>
+        {%- endif %}
+      </div>
+      {%- else -%}
+      <!--Image-->
+      <img class="lazy slide" src="{{ collection.image | img_url: 'thumb' }}" data-src="{{ collection.image | img_url: 'master' }}" alt="{{ collection.title }}" />
+      {%- endif %}
+    </div>
+    
+    <!--Product infos-->
+    <div id="infos">
+      <!--Description-->
+      <wrap>
+        {% if content_size > 1 -%}
+        <wrap class="counter"><span>1</span>/{{ content_size }}</wrap>
+        {%- endif %}
+        <p class="desc">{{ description | replace: '<em', '|em' | replace: '</em>', '|/em|' | replace: '<a', '|a' | replace: '</a>', '|/a|' | replace: '</p>', '|br' | strip_html | replace: '|br', '<br>' | replace: '|a', '<a' | replace: '|/a|', '</a>' | replace: '|em', '<em' | replace: '|/em|', '</em>' }}</p>
+        <!-- <div class="spacer">*</div> -->
+        <p class="license">
+          {{ license | replace: '<em', '|em' | replace: '</em>', '|/em|' | replace: '<a', '|a' | replace: '</a>', '|/a|' | replace: '</p>', '|br' | strip_html | replace: '|br', '<br>' | replace: '|a', '<a' | replace: '|/a|', '</a>' | replace: '|em', '<em' | replace: '|/em|', '</em>' }}
+          {% if settings.eula.size > 0 -%}
+          <a class="" href="{{ settings.eula }}" target="_blank" rel="noreferrer">
+            → <u>Read more about licensing</u>
+          </a>
+          {%- endif %}
+        </p>
+      
+      </wrap>
+      <!--Products-->
+      <div id="products">        
+        <!--Actions-->
+        <div id="actions">   
+          <!-- <div id="buy" class="pill {% if inactive == true %}inactive{% endif %}" data-title="Buy {{ collection.title }}">
+            {% if inactive == true -%}
+            Coming soon
+            {%- else -%}
+            Buy {{ collection.title }}
+            {%- endif %}
+          </div>       
+          {%- assign name = collection.title | handle | downcase | escape -%} -->
+          <!-- {% if specimen == true -%}
+          <a class="pill" href="{{ specimen_link }}" target="_blank" rel="noreferrer">
+            Specimen
+          </a>  
+          {%- endif %} -->
+          <!-- {% if settings.eula.size > 0 -%}
+          <a class="pill" href="{{ settings.eula }}" target="_blank" rel="noreferrer">
+            ¶ EULA
+          </a>
+          {%- endif %} -->
+        </div>
+        
+        <!--Styles-->
+        {% unless inactive == true %}
+        <div id="product-options">
+          <!--Variant Title-->
+          <div class="title">SELECT STYLE</div>
+          <!--Variants-->
+
+    
+
+          <wrap>        
+            <div class="left">
+            {% for product in collection.products -%}
+              {% if product.tags contains "pack" or forloop.length == 1 %}
+              <div class="style product-selector left {% if product.tags contains "pack" %}bold{% endif %}" data-pack="{{- product.title -}}" data-value="{{ product.title | handle | downcase | escape }}" data-id="{{ product.id }}">
+                {{- product.title -}}
+              </div>
+              {% endif %}
+            {% endfor %}
+            </div>
+            <div class="right">
+              {% for product in collection.products -%}
+                {% unless product.tags contains "pack" or forloop.length <= 1 %}
+                <div class="style product-selector right" data-pack="{%- for item in product.metafields.custom.pack.value -%}{{ item.title }} {% endfor %}" data-value="{{ product.title | handle | downcase | escape }}" data-id="{{ product.id }}">
+                  {{- product.title -}}
+                  {% if product.tags contains "new" %}
+                  {% render 'new-icon' %}
+                  {% endif %}
+                </div>
+                {% endunless %}
+              {% endfor %}
+              </div>
+          </wrap>
+          {% for product in collection.products -%}  
+            {% include 'purchase-content'%}        
+          {%- endfor %}
+        </div>
+        {% endunless %}
+         
+      </div>
+    </div>    
+    
+  </div>
+
+{%- endif %}
+
+<script>
+
+
+
+
+  $('.product-selector.left').click(function(evt) {
+    // console.log($(this).attr('data-pack'))
+    var target = $(this).attr('data-pack');
+    // console.log(target)
+    Array.from(document.querySelectorAll('.product-selector.right')).forEach(item => {
+      if (item.getAttribute('data-pack').includes(target)) {
+        // console.log(item)
+        $(item).addClass('bonus')
+      } else {
+        $(item).removeClass('bonus')
+      }
+    })
+  })
+  $('.product-selector.right').click(function(evt) {
+    $('.product-selector').removeClass('bonus')
+  })
+
+  
+</script>
+
+{% schema %}
+  {
+	"class": "type-catalogue",
+	"settings": [
+      {
+         "type": "select",
+         "id": "align",
+         "label": "Text Align",
+         "options": [
+           {
+             "value": "left",
+             "label": "Left"
+           },
+           {
+             "value": "center",
+             "label": "Center"
+           }
+         ],
+         "default": "left"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "type",
+        "name": "Type",
+        "settings": [	
+		  {
+             "type": "collection",
+             "id": "collection",
+             "label": "Collection"
+          },
+		      {
+            "type":      "text",
+            "id":        "collection_name",
+            "label":     "Title"
+          },
+          
+		      {
+            "type":      "text",
+   			    "id":        "ornaments",
+   			    "label":     "Bodoni Ornaments",
+			      "info": 	 "Use only one letter"
+          },
+          {
+             "type": "product",
+             "id": "active",
+             "label": "Active Type"
+          },
+          {
+            "type": "checkbox",
+            "id": "has_italic",
+            "label": "Has italic?",
+            "info": "Whether to display the italic font in the title."
+          },
+          {
+            "type": "checkbox",
+            "id": "italic_coming_soon",
+            "label": "Italic is coming soon?",
+            "info": "Whether to display the italic font as \"coming soon\"?"
+          },
+          {
+            "type": "text",
+            "id": "italic_text",
+            "label": "Italic Text",
+            "info": "The italic text to append to the title."
+          },
+          {
+             "type": "textarea",
+             "id": "active_italic",
+             "label": "Italic Type",
+             "info": "Base64 string of a woff2 font file"
+          },
+		      
+		      
+          {
+            "type":      "text",
+            "id":        "title",
+            "label":     "Title"
+          },
+          {
+            "type": "range",
+            "id": "font_size",
+            "min": 15,
+            "max": 100,
+            "step": 1,
+            "unit": "vw",
+            "label": "Collection Font size",
+            "default": 50
+          },
+		      {
+            "type":      "richtext",
+   			    "id":        "description",
+   			    "label":     "Description"
+          },
+          {
+            "type":      "richtext",
+   			    "id":        "license",
+   			    "label":     "Licensing"
+          },
+          {
+            "type":      "url",
+            "id":        "specimen",
+            "label":     "Specimen",
+            "info":		 "Upload a .pdf to Settings > Files and paste here the generated url"
+          },
+		      {
+            "type": "range",
+            "id": "layer_opacity",
+            "min": 0,
+            "max": 99,
+            "step": 1,
+            "unit": "%",
+            "label": "Opacity layer over images",
+            "default": 50
+          },
+          
+          {
+            "type": "checkbox",
+            "id": "coming_soon",
+            "label": "Coming Soon",
+			      "default": false
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

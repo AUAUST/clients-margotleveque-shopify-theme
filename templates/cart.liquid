@@ -1,0 +1,78 @@
+<!--Container-->
+<form id="cart-wrapper" action="/cart" method="post">
+  
+  <!--Header-->
+  <header>
+    {% include 'menu' %}
+  </header>
+  
+  <!--Title-->
+  <div id="cart-header">Shopping Cart</div>
+  
+  <!--Content-->    
+  <wrap>
+    {%- if cart.item_count > 0 -%}
+    {% for item in cart.items -%}  
+    <!--Item-->
+    <div class="item">
+      <div>
+        <!--Title-->
+        <div class="item-title">
+          {{- item.product.title -}}
+        </div>
+        {% unless item.product.options contains 'Title' -%}
+        <!--Variations-->
+        <div class="item-variations">
+          {% for option_title in item.product.options -%}
+          <span>{{ item.variant.options[forloop.index0] }}</span>
+          {%- endfor %} 
+        </div>
+        {%- endunless %}
+        <!--Item Subtotal-->
+        <div class="item-total">
+          {{- item.line_price | money -}}
+        </div>
+      </div>
+      <!--Remove-->      
+      <a class="item-remove" href="/cart/change?line={{ forloop.index }}&quantity=0">
+      	<!--Close-->
+        <svg viewBox="0 0 12 13">
+          <polygon points="12,0 10,0 6,5.2 2,0 0,0 5,6.5 0,13 2,13 6,7.8 10,13 12,13 7,6.5 "/>
+        </svg>
+      </a>
+    </div> 
+    {%- endfor %}
+    {% else %}
+    <div>Your cart is empty</div>
+    {% endif %}
+  </wrap>
+  
+  <!--Footer-->
+  <div id="cart-footer">
+    <!--Bag Total-->
+    <div class="item">
+      <span>TOTAL (including taxes)</span> <span>{{ cart.total_price | money }}</span>
+    </div>
+    <!--Terms-->
+    <div id="terms">
+      <span>I agree to the <a href="/pages/terms" target="_blank" rel="noreferrer"><i>Terms</i></a> and to the Font <a href="/pages/licenses" target="_blank" rel="noreferrer"><i>License</i></a>.</span>
+      <svg class="color">
+        <circle cx="50%" cy="50%" r="50%"></circle>
+      </svg>
+    </div>
+    <!--Actions-->
+    <div id="cart-actions">
+      <input id="update-cart" type="submit" name="update" value="Update cart" style="display: none" />
+      <button id="checkout" class="pill inactive" type="submit" name="checkout">
+        Proceed to checkout
+      </button>
+      <a class="pill" href="/products">Continue Shopping</a>
+      {% if settings.eula.size > 0 -%}
+      <a class="pill" href="{{ settings.eula }}" target="_blank" rel="noreferrer">
+        {{- settings.eula_text -}}
+      </a>
+  	  {%- endif %}
+    </div>
+  </div>
+
+</form>

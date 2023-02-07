@@ -1,0 +1,19 @@
+<main>
+  <!--Header-->
+  <header>
+    {% include 'menu' %}
+    <!--Project List-->
+    <ul></ul>
+    <!--Contact-->
+    <p class="contact-links">
+      <a href="mailto:{{ shop.email }}">{{ shop.email }}</a><br>
+      {% if settings.instagram.size > 0 -%}
+      <a href="{{ settings.instagram }}" target="_blank" rel="noreferrer"><u><i>@margot.leveque</i></u></a>
+      {%- endif %}
+    </p>
+  </header>
+  <!--Projects-->
+  <div id="projects">
+    {{ content_for_index }}  
+  </div>
+</main>

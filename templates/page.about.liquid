@@ -1,0 +1,15 @@
+<!--Header-->
+<header>
+  {% include 'menu' %}
+</header>
+<!--Social media-->
+<div id="social">
+  {% for link in linklists.footer.links -%}
+  <a href="{{ link.url }}" target="_blank" rel="noreferrer">{{ link.title }}</a>{% unless forloop.last %}<br>{% endunless %}
+  {%- endfor %}
+</div>
+<!--Content-->
+<div id="content">
+  {% section 'page-about' %}
+</div>
+

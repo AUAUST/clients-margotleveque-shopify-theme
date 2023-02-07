@@ -1,0 +1,45 @@
+<!--Menu-->
+<menu>
+    <!--About-->
+    <a id="about" href="/pages/about">About</a>
+    <!--Type Catalogue-->
+    <a id="shop" href="/products">Typefaces</a>
+  <!--Work-->
+  <a id="work" href="/pages/work">Studio</a>
+</menu>
+
+<!--Logo-->
+<!-- <div id="logo">
+  <a href="{{ shop.url }}">Margot Lévêque Studio</a>
+  <span>— Art Direction & Type Design</span>
+</div> -->
+<div id="logo">
+  <a href="{{ shop.url }}" class="site_title">Margot Lévêque</a>
+  <a href="{{ shop.url }}" class="page_name">
+    {% if template == "list-collections" or template == "collection" %}
+      Type Foundry 
+    {% elsif template == "page.work" %}
+      Stud<span class="ss01">i</span>o
+    {% else %}
+      {{ page.title }}
+    {% endif %}
+  </a>
+</div>
+
+
+<!-- trials / cart-->
+<nav>
+  <!--Work-->
+  <a class="pill " id="trials" href="/pages/trials-students">GET TRIAL FONTS</a>
+  <!--Cart Button-->
+  <a class="pill {% if cart.item_count >= 1 %} active{% endif %}" id="cart" href="/cart" id="cart-button">CART ({{ cart.item_count }})</a>
+</nav>
+
+
+<button id="burger">
+  <span></span>
+</button>
+
+
+
+

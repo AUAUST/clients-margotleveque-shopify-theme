@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!--
+
+{% echo shop.name %}
+Design by Margot Lévêque
+Code by Carlos Mayo
+carlosmayo.info
+{{ 'now' | date: "%Y" }}
+
+-->
+<html lang="{{ shop.locale }}">  
+<head>  
+  <meta name="auaust">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  {% if template != 'index' and template != 'cart' -%}
+  	<title>{{ shop.name }} — {{ page_title }}</title>
+  {%- elsif template == 'cart' -%}
+  	<title>{{ shop.name }} — {% if cart.item_count == 0 %}Empty {% endif %}Cart</title>
+  {%- else -%}
+  	<title>{{ shop.name }}</title>
+  {%- endif %}
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <link rel="canonical" href="{{ canonical_url }}">
+  {% if settings.favicon.size > 0 -%}
+  <link rel="shortcut icon" href="{{ settings.favicon | img_url: 'master' }}">  
+  {%- endif %}
+  {% if page_description -%}
+    <meta name="description" content="{{ page_description | escape }}">
+  {%- else -%}
+  	<meta name="description" content="{{ shop.description }}">
+  {%- endif %}  
+  {% if template contains '404' or template contains 'cart' or template contains 'search' -%}
+	<meta name="robots" content="noindex">
+  {%- endif %}
+  {{ 'style.css'  | asset_url | stylesheet_tag }}
+  <link rel="preload" href="https://cdn.shopify.com/s/files/1/0561/1182/5082/t/2/assets/CormorantGaramond-LightItalic.woff2" as="font" crossorigin="anonymous">
+  {% if template == 'collection' %}
+  <link rel="preload" href="https://cdn.shopify.com/s/files/1/0561/1182/5082/t/2/assets/CormorantGaramond-Bold.woff2" as="font" crossorigin="anonymous">
+  {% endif %}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  {{ 'global.js' | asset_url | script_tag }}
+  {% if template == "cart" and cart.item_count > 0 -%}
+  <script defer src="{{ 'global-cart.js' | asset_url }}"></script>
+  {% elsif template == 'product' or template contains 'collection' -%}
+  {{ 'option_selection.js' | shopify_asset_url | script_tag }}
+  {%- endif %} 
+  {{ content_for_header }}
+</head>
+<div id="mobileMenu">
+  {% for link in linklists.mobile.links -%}
+    <a href="{{ link.url }}" rel="noreferrer">{{ link.title }}</a>
+  {%- endfor %}
+</div>
+<body class="template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle -}}
+             {%- if template.suffix.size > 0 -%}{{ template.suffix | prepend: "-" -}}
+             {%- elsif template == 'cart' and cart.item_count == 0 -%}-empty
+             {%- elsif request.path contains '/challenge' -%}-challenge{% endif %}">
+  
+  <!--Loader-->
+  <div id="loader"></div>
+  
+  {% if request.path contains '/challenge' %}
+  <!--Content-->
+  <div id="content">
+    <wrap>
+      {{ content_for_layout }}
+    </wrap>
+  </div>
+  {% else %}
+    {{ content_for_layout }}
+  {% endif %}  
+  
+  {% if template == 'collection' and settings.type_guide.size > 0 -%}  
+  <a id="type-guide-button" href="/pages/type-design-guide">Type design guide</a>
+  {%- endif %}
+  
+  {% unless template == 'index' or template contains 'collection' or template == 'cart' -%}  
+  {% include 'banner' %}
+  {% endunless %}
+  
+  {% unless template == 'index' or template == 'cart' -%}
+  <!--Footer-->
+  <footer>
+    <span class="fancy">{% render 'ml-icon' %}</span>
+    <div class="email">
+      <!-- <span>Commissions/inquiries</span> -->
+      <a href="mailto:{{ shop.email }}"><u>{{ shop.email }}</u></a>    	
+    </div>    
+    <wrap class="social">
+      <span>Connect</span>
+      {% for link in linklists.footer.links -%}
+      <a href="{{ link.url }}" target="_blank" rel="noreferrer">{{ link.title }}</a>
+      {%- endfor %}
+    </wrap>
+    <div class="footer-menu">
+      <span>Type Foundry</span>
+      <a href="/products" {% if request.path == '/products' %}class="link-active"{% endif %}>Typefaces</a>
+      {% for link in linklists.main-menu.links -%}
+        <a href="{{ link.url }}" {% if link.active %}class="link-active"{% endif %}>{{ link.title }}</a>
+      {%- endfor %}
+    </div>
+    <wrap class="credits">
+      <!-- ©{{ 'now' | date: "%Y" }} Margot Lévêque -->
+      <li>ML Studio <span>© All Rights reserved</span></li>
+      <li>Design: Margot Lévêque</li>
+      <li>Code: <a href="https://newterritory.studio" aria-label="_black">New Territory Studio</a></li>
+    </wrap>
+  </footer>  
+  {%- endunless %}
+
+
+  {% render 'ajaxify-cart' %}
+</body>
+</html>

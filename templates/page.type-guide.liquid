@@ -1,0 +1,49 @@
+<!--Header-->
+<header>
+  {% include 'menu' %}
+</header>
+<!--Content-->
+<div id="content">
+  <wrap>
+  {% if settings.type_guide.size > 0 -%}
+    {% form 'customer', id: "type-guide" %}
+      <span>
+        {% if form.posted_successfully? or canonical_url contains '?form_type=customer' -%}
+          Thank you!    	
+        {%- else -%}
+          Download our
+        {%- endif %}
+          <br>
+          Type Design Guide for Beginners:
+      </span>
+      {% if form.posted_successfully? or canonical_url contains '?form_type=customer' -%}
+    	<a class="pill active" href="{{ settings.type_guide }}" target="_blank" rel="noreferrer">Download</a>
+      {%- else -%}
+      <!--Subscribe-->
+      {{ form.errors | default_errors }}
+      <input type="hidden" name="contact[tags]" value="newsletter">
+      <input type="text"
+             class="pill"
+             name="contact[first_name]"
+             placeholder="Name/Surname"
+             autocorrect="off"
+             autocapitalize="off"
+             spellcheck="false"
+             required="true">
+      <input type="email"
+             class="pill"
+             name="contact[email]"
+             placeholder="Email"
+             value="{% if customer %}{{ customer.email }}{% endif %}"
+             autocorrect="off"
+             autocapitalize="off"
+             spellcheck="false"
+             required="true">
+      <button class="pill active" type="submit" form="type-guide" name="commit" value="submit">
+        Submit
+      </button>
+      {% endif %}
+    {% endform %} 
+  {%- endif %}
+  </wrap>
+</div>

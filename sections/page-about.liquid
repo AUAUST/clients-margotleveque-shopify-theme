@@ -1,0 +1,81 @@
+{% if section.settings.about != blank -%}
+<wrap>
+  {{ section.settings.about | replace: '<em', '|em' | replace: '</em>', '|/em|' | replace: '<a', '|a' | replace: '</a>', '|/a|' | replace: '</p>', '|br' | strip_html | replace: '|br', '<br>' | replace: '|a', '<a' | replace: '|/a|', '</a>' | replace: '|em', '<em' | replace: '|/em|', '</em>' }}
+</wrap>
+{%- endif %}
+<p>
+  <span>Margot Lévêque Studio — Art Direction & Type Design</span>
+  <!--Work-->
+  <a href="/pages/work">Studio work</a>
+  <!--Shop-->
+  <a href="/products">Type Foundry</a>   
+</p>
+{% if section.settings.scroll == true and section.settings.scroll_warning != blank %}
+<!--Scroll Down-->
+<div id="scroll-down">
+  <div>{{ section.settings.scroll_warning | strip_html | newline_to_br }}</div>
+</div>
+{% endif %}
+{% if section.settings.portrait.size > 0 -%}
+<img class="lazy" src="{{ section.settings.portrait | img_url: 'thumb' }}" data-src="{{ section.settings.portrait | img_url: 'master' }}" alt="Margot Lévêque Portrait">
+{%- endif %}
+<wrap>  
+  {% for block in section.blocks -%}
+  	{% if block.settings.title != blank -%}
+    <div class="title"><i>{{ block.settings.title }}</i></div> 
+  	<br>
+  	{%- endif %}
+  	{% if block.settings.content != blank -%}
+  	<div class="content">
+      {{ block.settings.content | replace: '<em', '|em' | replace: '</em>', '|/em|' | replace: '<a', '|a' | replace: '</a>', '|/a|' | replace: '</p>', '|br' | strip_html | replace: '|br', '<br>' | replace: '|a', '<a' | replace: '|/a|', '</a>' | replace: '|em', '<em' | replace: '|/em|', '</em>' }}
+  	</div>
+  	{%- endif %}
+  {%- endfor %}
+</wrap>
+
+{% schema %}
+  {
+	"class": "page-content",
+	"settings": [
+      {
+        "id": "about",
+        "type": "richtext",
+        "label": "About"
+      },
+      {
+        "type": "textarea",
+        "id": "scroll_warning",
+        "label": "Scroll text"
+      },
+	  {
+        "type": "checkbox",
+        "id": "scroll",
+        "label": "Active",
+        "default": true
+      },
+      {
+        "type": "image_picker",
+        "id": "portrait",
+        "label": "Portrait"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "content",
+        "name": "Content",
+        "settings": [
+          {
+            "type":      "text",
+   			"id":        "title",
+   			"label":     "Title"
+          },
+		  {
+            "type":      "richtext",
+   			"id":        "content",
+   			"label":     "Content"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
