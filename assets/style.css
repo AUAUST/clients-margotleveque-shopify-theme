@@ -2461,6 +2461,9 @@ body.black  #product-options wrap .product-selector:hover {
   margin-top: 30px;
   pointer-events: all;
 }
+.options-wrapper .title .more-details {
+  color: red;
+}
 .options-wrapper.disabled {
   opacity: 0.5;
   pointer-events: none;
