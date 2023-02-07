@@ -2348,6 +2348,7 @@ input[type="range"]::-webkit-slider-thumb:active {
   border-radius: 100%;
 }
 #product-options .title .more-details {
+  display: none;
   position: absolute;
   background-color: #f8f8f5;
   z-index: 1;
@@ -2358,6 +2359,9 @@ input[type="range"]::-webkit-slider-thumb:active {
   pointer-events: all;
   max-height: 9em;
   overflow: scroll;
+}
+#product-options .title .more-details.active {
+  display: block;
 }
 #product-options form,
 #product-options form input {

@@ -23,6 +23,15 @@
       <h6>Help</h6>
       If you need advice, read our Licensing Guide first or reach out to <a href="mailto:studio@margotleveque.com">mailto:studio@margotleveque.com</a>
     </div>
+    <script>
+      (function(){
+        const moreDetailsButton = document.getElementById('more-details-button-{{id}}');
+        const moreDetails = document.getElementById('more-details-{{id}}');
+        moreDetailsButton.addEventListener('click', function(){
+          moreDetails.classList.toggle('active');
+        });
+      })();
+    </script>
   </div>
   <!--Variants-->
   <wrap
