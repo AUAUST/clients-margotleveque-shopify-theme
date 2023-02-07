@@ -2356,7 +2356,8 @@ input[type="range"]::-webkit-slider-thumb:active {
   padding: 0.3rem 0.7rem;
   top: 23px;
   pointer-events: all;
-  cursor: pointer;
+  max-height: 9em;
+  overflow: scroll;
 }
 #product-options form,
 #product-options form input {
