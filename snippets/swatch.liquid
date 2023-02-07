@@ -7,8 +7,11 @@
 
 <section class="options-wrapper {{ product.title }} disabled">
   <!--Variant Title-->
-  <div
-    class="title">SELECT {{ swatch | upcase }}&nbsp;<span class="more-details">?</span></div>
+  <div class="title">
+    SELECT {{ swatch | upcase }}
+    &nbsp;
+    <span class="more-details">?</span>
+    <div id="more-details-{{id}}">foo bar</div>
   <!--Variants-->
   <wrap
     class="variants swatch"
