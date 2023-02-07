@@ -2,26 +2,36 @@
 <header>
   {% include 'menu' %}
   <!--Contact-->
-  <p class="contact-links">
-    <a href="mailto:{{ shop.email }}">{{ shop.email }}</a><br>
+  <p
+    class="contact-links">
+    <a
+      href="mailto:{{ shop.email }}">{{ shop.email }}</a><br>
     {% if settings.instagram.size > 0 -%}
-    <a href="{{ settings.instagram }}" target="_blank" rel="noreferrer"><i><u>@margot.leveque</u></i></a>
+      <a
+        href="{{ settings.instagram }}"
+        target="_blank"
+        rel="noreferrer">
+        <i>
+          <u>@margot.leveque</u>
+        </i>
+      </a>
     {%- endif %}
   </p>
 </header>
 <!--Content-->
-<div id="content">
-{% if page.handle == 'trials-students' -%}
-  {% section 'page-trials' %}
-{%- elsif page.handle == 'custom' -%}
-  {% section 'page-custom' %}
-{%- elsif page.handle == 'licenses' -%}
-  {% section 'page-licensing' %}
-{%- elsif page.handle == 'terms' -%}
-  {% section 'page-terms' %}
-{%- else -%}
-  <wrap>
-    {{ page.content | replace: '<a', '|a' | replace: '</a>', '|/a|' | replace: '</p>', '|br' | strip_html | replace: '|br', '<br>' | replace: '|a', '<a' | replace: '|/a|', '</a>' }}
-  </wrap>
-{%- endif %}
+<div
+  id="content">
+  {% if page.handle == 'trials-students' -%}
+    {% section 'page-trials' %}
+  {%- elsif page.handle == 'custom' -%}
+    {% section 'page-custom' %}
+  {%- elsif page.handle == 'licenses' -%}
+    {% section 'page-licensing' %}
+  {%- elsif page.handle == 'terms' -%}
+    {% section 'page-terms' %}
+  {%- else -%}
+    <wrap>
+      {{ page.content | replace: '<a', '|a' | replace: '</a>', '|/a|' | replace: '</p>', '|br' | strip_html | replace: '|br', '<br>' | replace: '|a', '<a' | replace: '|/a|', '</a>' }}
+    </wrap>
+  {%- endif %}
 </div>

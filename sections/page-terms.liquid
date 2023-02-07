@@ -1,34 +1,37 @@
-<wrap>  
+<wrap>
   {% for block in section.blocks -%}
-  	{% if block.settings.title != blank -%}
-    <div class="title"><i>{{ block.settings.title }}</i></div> 
-  	<br>
-  	{%- endif %}    
-  	{% if block.settings.content != blank -%}
-  	<div class="content">
-      {{ block.settings.content | replace: '<em', '|em' | replace: '</em>', '|/em|' | replace: '<a', '|a' | replace: '</a>', '|/a|' | replace: '</p>', '|br' | strip_html | replace: '|br', '<br>' | replace: '|a', '<a' | replace: '|/a|', '</a>' | replace: '|em', '<em' | replace: '|/em|', '</em>' }}
-  	</div>
-  	{%- endif %}
+    {% if block.settings.title != blank -%}
+      <div
+        class="title">
+        <i>{{ block.settings.title }}</i>
+      </div>
+      <br>
+    {%- endif %}
+    {% if block.settings.content != blank -%}
+      <div
+        class="content">
+        {{ block.settings.content | replace: '<em', '|em' | replace: '</em>', '|/em|' | replace: '<a', '|a' | replace: '</a>', '|/a|' | replace: '</p>', '|br' | strip_html | replace: '|br', '<br>' | replace: '|a', '<a' | replace: '|/a|', '</a>' | replace: '|em', '<em' | replace: '|/em|', '</em>' }}
+      </div>
+    {%- endif %}
   {%- endfor %}
 </wrap>
 
 {% schema %}
   {
-	"class": "page-content",
+    "class": "page-content",
     "blocks": [
       {
         "type": "content",
         "name": "Content",
         "settings": [
           {
-            "type":      "text",
-   			"id":        "title",
-   			"label":     "Title"
-          },
-		  {
-            "type":      "richtext",
-   			"id":        "content",
-   			"label":     "Content"
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          }, {
+            "type": "richtext",
+            "id": "content",
+            "label": "Content"
           }
         ]
       }

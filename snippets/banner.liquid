@@ -1,32 +1,42 @@
 {% if settings.banner_status == 'on' -%}
-<!--Banner-->
-<{% if settings.banner_link.size > 0 %}a href="{{ settings.banner_link }}"{% else %}div{% endif %}
-  id="banner" {% if settings.banner_link contains 'http' %}target="_blank" rel="noreferrer"{% endif %}
-  {% if settings.banner_speed.size > 0 %}style="animation-duration: {{ settings.banner_speed }}s"{% endif %}>  
-  {%- if settings.banner_text.size > 0 -%}
-    {% for i in (1..3) %}
-    <wrap>
-      <p>{{ settings.banner_text | strip_html }}</p>
-      <p>{{ settings.banner_text | strip_html }}</p>
-      <p>{{ settings.banner_text | strip_html }}</p>
-      <p>{{ settings.banner_text | strip_html }}</p>
-      <p>{{ settings.banner_text | strip_html }}</p>
-      <p>{{ settings.banner_text | strip_html }}</p>
-    </wrap>
-    {% endfor %}
-  {%- else -%}
-    {% for i in (1..3) %}
-    <wrap>
-      <p>Paris <span class="clock" timezone="+2"></span></p>
-      <span>¶</span>
-      <p>London <span class="clock" timezone="+1"></span></p>
-      <span>¶</span>
-      <p>New York <span class="clock" timezone="-4"></span></p>
-      <span>¶</span>
-      <p>Los Angeles <span class="clock" timezone="-7"></span></p>
-      <span>¶</span>
-    </wrap>
-    {% endfor %}
-  {%- endif -%}  
-</{% if settings.banner_link.size > 0 %}a{% else %}div{% endif %}>  
+  <!--Banner-->
+  <a
+    {% if settings.banner_link.size > 0 %}href="{{ settings.banner_link }}"{% else %}div{% endif %}
+    id="banner"
+    {% if settings.banner_link contains 'http' %}target="_blank"rel="noreferrer"{% endif %}
+    {% if settings.banner_speed.size > 0 %}style="animation-duration: {{ settings.banner_speed }}s"{% endif %}>
+    {%- if settings.banner_text.size > 0 -%}
+      {% for i in (1..3) %}
+        <wrap>
+          <p>{{ settings.banner_text | strip_html }}</p>
+          <p>{{ settings.banner_text | strip_html }}</p>
+          <p>{{ settings.banner_text | strip_html }}</p>
+          <p>{{ settings.banner_text | strip_html }}</p>
+          <p>{{ settings.banner_text | strip_html }}</p>
+          <p>{{ settings.banner_text | strip_html }}</p>
+        </wrap>
+      {% endfor %}
+    {%- else -%}
+      {% for i in (1..3) %}
+        <wrap>
+          <p>Paris
+            <span class="clock" timezone="+2"></span>
+          </p>
+          <span>¶</span>
+          <p>London
+            <span class="clock" timezone="+1"></span>
+          </p>
+          <span>¶</span>
+          <p>New York
+            <span class="clock" timezone="-4"></span>
+          </p>
+          <span>¶</span>
+          <p>Los Angeles
+            <span class="clock" timezone="-7"></span>
+          </p>
+          <span>¶</span>
+        </wrap>
+      {% endfor %}
+    {%- endif -%}
+  </a{%else%}div{%endif%}> {% if settings.banner_link.size > 0 %}
 {%- endif %}

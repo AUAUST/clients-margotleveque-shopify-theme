@@ -4,7 +4,7 @@
   <a href="/pages/about">{% render 'ml-studio-icon' %}</a>
   <span>— Art Direction & Type Design</span>
   {% if settings.instagram.size > 0 -%}
-  <!-- <sup><a href="{{ settings.instagram }}" target="_blank" rel="noreferrer">Instagram</a></sup> -->
+    <!-- <sup><a href="{{ settings.instagram }}" target="_blank" rel="noreferrer">Instagram</a></sup> -->
   {%- endif %}
 </wrap>
 
@@ -13,28 +13,31 @@
   <!--Work-->
   <a class="link-pill" href="/pages/work">Stud<span class="ss01">i</span>o work</a>
   <!--Shop-->
-  <a class="link-pill" href="/products">Type Foundry</a>  
+  <a class="link-pill" href="/products">Type Foundry</a>
 </div>
- 
+
 {% if settings.hero_image != blank -%}
   <figure class="aspectholder">
     <img
-    srcset="{%- if settings.hero_image.width >= 165 -%}{{ settings.hero_image | img_url: '165x' }} 165w,{%- endif -%}
-      {%- if settings.hero_image.width >= 360 -%}{{ settings.hero_image | img_url: '360x' }} 360w,{%- endif -%}
-      {%- if settings.hero_image.width >= 533 -%}{{ settings.hero_image | img_url: '533x' }} 533w,{%- endif -%}
-      {%- if settings.hero_image.width >= 720 -%}{{ settings.hero_image | img_url: '720x' }} 720w,{%- endif -%}
-      {%- if settings.hero_image.width >= 940 -%}{{ settings.hero_image | img_url: '940x' }} 940w,{%- endif -%}
-      {%- if settings.hero_image.width >= 1066 -%}{{ settings.hero_image | img_url: '1066x' }} 1066w,{%- endif -%}
-      {{ settings.hero_image | img_url: 'master' }} {{ settings.hero_image.width }}w"
+      srcset='{%- if settings.hero_image.width >= 165 -%}
+      {{ settings.hero_image | img_url: '165x' }} 165w,{%- endif -%}
+    {%- if settings.hero_image.width >= 360 -%}
+      {{ settings.hero_image | img_url: '360x' }} 360w,{%- endif -%}
+    {%- if settings.hero_image.width >= 533 -%}
+      {{ settings.hero_image | img_url: '533x' }} 533w,{%- endif -%}
+    {%- if settings.hero_image.width >= 720 -%}
+      {{ settings.hero_image | img_url: '720x' }} 720w,{%- endif -%}
+    {%- if settings.hero_image.width >= 940 -%}
+      {{ settings.hero_image | img_url: '940x' }} 940w,{%- endif -%}
+    {%- if settings.hero_image.width >= 1066 -%}
+      {{ settings.hero_image | img_url: '1066x' }} 1066w,{%- endif -%}
+    {{ settings.hero_image | img_url: 'master' }} {{ settings.hero_image.width }}w"
     src="{{ settings.hero_image | img_url: '533x' }}"
     sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
     alt="{{ settings.hero_image.alt | escape }}"
     loading="lazy"
     width="{{ settings.hero_image.width }}"
     height="{{ settings.hero_image.height }}"
-    class="hero_image lazy"
-    >
+    class="hero_image lazy">
   </figure>
 {% endif %}
-
-

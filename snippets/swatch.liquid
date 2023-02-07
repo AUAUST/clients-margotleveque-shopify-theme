@@ -7,33 +7,38 @@
 
 <section class="options-wrapper {{ product.title }} disabled">
   <!--Variant Title-->
-  <div class="title">SELECT {{ swatch | upcase }}</div>
+  <div
+    class="title">SELECT {{ swatch | upcase }}</div>
   <!--Variants-->
-  <wrap class="variants swatch" data-option-index="{{ option_index }}">  
+  <wrap
+    class="variants swatch"
+    data-option-index="{{ option_index }}">
     {%- assign values = '' -%}
     {% for variant in product.variants %}
       {% assign value = variant.options[option_index] %}
       {% unless values contains value %}
         {% assign values = values | join: ',' %}
-        {% assign values = values | append: ',' | append: value %} 
+        {% assign values = values | append: ',' | append: value %}
         {% assign values = values | split: ',' %}
-          <input id="option-{{ option_index }}-{{ value | handle }}-{{id}}"               
-                 type="radio"
-                 {% assign c = 0 %}
-                 {%- for variant in product.variants -%}
-                 {% if value contains variant.options[1] %}
-                 data-option-{{ c }}="{{ variant.options[0] | downcase | handle }}"
-                 {% assign c = c | plus: 1 %}
-                 {% endif %}
-                 {%- endfor -%}                
-                 name="option-{{ option_index }}"
-                 data-value="{{ value | downcase | handle }}"
-                 value="{{ value | escape }}" />
-          <label data-value="{{ value | escape }}"
-                 class="product-selector option {{ value | handle }} {% if variant.available %}available{% else %}soldout{% endif %}"
-                 for="option-{{ option_index }}-{{ value | handle }}-{{id}}">
-            {{- value -}}
-          </label>
+        <input
+          id="option-{{ option_index }}-{{ value | handle }}-{{id}}"
+          type="radio"
+          {% assign c = 0 %}
+          {%- for variant in product.variants -%}
+          {% if value contains variant.options[1] %}
+          data-option-{{ c }}="{{ variant.options[0] | downcase | handle }}"
+          {% assign c = c | plus: 1 %}
+          {% endif %}
+          {%- endfor -%}
+          name="option-{{ option_index }}"
+          data-value="{{ value | downcase | handle }}"
+          value="{{ value | escape }}" />
+        <label
+          data-value="{{ value | escape }}"
+          class="product-selector option {{ value | handle }} {% if variant.available %}available{% else %}soldout{% endif %}"
+          for="option-{{ option_index }}-{{ value | handle }}-{{id}}">
+          {{- value -}}
+        </label>
       {% endunless %}
     {%- endfor -%}
   </wrap>
