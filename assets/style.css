@@ -2327,7 +2327,7 @@ input[type="range"]::-webkit-slider-thumb:active {
   padding: 2px 0;
   position: relative;
 }
-#product-options .title .more-details {
+#product-options .title .more-details-button {
   display: inline-block;
   position: absolute;
 
@@ -2346,6 +2346,14 @@ input[type="range"]::-webkit-slider-thumb:active {
   color: gray;
   border: 1px solid lightgray;
   border-radius: 100%;
+}
+#product-options .title .more-details {
+  position: absolute;
+  background-color: #f8f8f5;
+  z-index: 1;
+  border: 0.5px solid black;
+  border-radius: 2px;
+  padding: 0.3rem 0.7rem;
 }
 #product-options form,
 #product-options form input {
