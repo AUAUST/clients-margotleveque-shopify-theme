@@ -2360,6 +2360,16 @@ input[type="range"]::-webkit-slider-thumb:active {
   max-height: 9em;
   overflow: scroll;
 }
+#product-options .title .more-details h6 {
+  text-transform: uppercase;
+  border-bottom: 0.5px gray solid;
+  margin-bottom: 4px;
+}
+#product-options .title .more-details h6 {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-color: #00ff00;
+}
 #product-options .title .more-details.active {
   display: block;
 }
