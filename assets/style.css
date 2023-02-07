@@ -113,9 +113,9 @@ label {
   color: inherit;
   opacity: 1;
 }
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   display: none;
-}
+} */
 :focus {
   outline: none !important;
 }
@@ -2354,6 +2354,7 @@ input[type="range"]::-webkit-slider-thumb:active {
   border: 0.5px solid black;
   border-radius: 2px;
   padding: 0.3rem 0.7rem;
+  top: 23px;
 }
 #product-options form,
 #product-options form input {
