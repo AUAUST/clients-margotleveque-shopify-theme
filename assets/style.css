@@ -1790,6 +1790,7 @@ div#banner {
   color: lightgray;
 }
 .type-row_name .coming-soon svg {
+  transition: opacity 0.1s linear;
   height: 5rem;
   top: 25%;
   opacity: 0;
