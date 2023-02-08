@@ -2398,6 +2398,11 @@ input[type="range"]::-webkit-slider-thumb:active {
   pointer-events: all;
   overflow: scroll;
 }
+.white #product-options .title .more-details,
+.black #product-options .title .more-details {
+  background-color: var(--darkgray-color);
+}
+
 #product-options .title .more-details h6 {
   text-transform: uppercase;
   margin-top: 1.5rem;
