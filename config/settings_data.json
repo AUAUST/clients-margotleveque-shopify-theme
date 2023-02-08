@@ -764,6 +764,26 @@
       "type-catalogue": {
         "type": "type-catalogue",
         "blocks": {
+          "151987ca-f001-47f0-b364-ad09da57d271": {
+            "type": "type",
+            "settings": {
+              "collection": "romie",
+              "collection_name": "Romie <span class=\"ss01\">I<\/span>tali<span class=\"ss01\">c<\/span>",
+              "ornaments": "",
+              "active": "romie-italic",
+              "has_italic": false,
+              "italic_coming_soon": false,
+              "italic_text": "",
+              "active_italic": "",
+              "title": "Italic",
+              "font_size": 47,
+              "description": "<p>Romie is a typeface designed by Margot Lévêque. Started in 2017, this typeface is a display born from calligraphy. It covers a majority of the european languages and comes in the standard file formats (for print & web). Romie has been updated in 2022: the glyphset has been expanded, including its mythical large ligatures set. Romie is now available in Regular, Regular Italic, Medium, Bold and Black. The others italics will be released very soon! <\/p><p><\/p><p>Many thanks to <a href=\"https:\/\/www.instagram.com\/guillaumebesson_\/?hl=fr\" target=\"_blank\" title=\"https:\/\/www.instagram.com\/guillaumebesson_\/?hl=fr\"><strong>Guillaume Besson<\/strong><\/a> for his help in development, production and for all the support during the release rush! Special + Another special thanks to <a href=\"https:\/\/www.instagram.com\/celinehurka\/?hl=fr\" target=\"_blank\" title=\"https:\/\/www.instagram.com\/celinehurka\/?hl=fr\"><strong>Céline Hurka<\/strong><\/a> for her help in development.<\/p>",
+              "license": "<p>LICENSES ALL-IN-ONE<\/p><p>→ Each license includes Unlimited uses for Print, Websites, Mobile applications, Global Corporate, Electronic publications, Social networks, Videos and Movies.<\/p><p>→ Your or your client's company size is the only number you need to calculate the price for our licenses. <\/p>",
+              "specimen": "https:\/\/cdn.shopify.com\/s\/files\/1\/0561\/1182\/5082\/files\/ROMIE2.0_SPECIMEN_MLTYPEFOUNDRY.pdf?v=1654450264",
+              "layer_opacity": 50,
+              "coming_soon": false
+            }
+          },
           "189d9da5-96de-416d-a8fa-9ca6cc7036cf": {
             "type": "type",
             "settings": {
@@ -781,26 +801,6 @@
               "license": "<p>LICENSES ALL-IN-ONE<\/p><p>→ Each license includes Unlimited uses for Print, Websites, Mobile applications, Global Corporate, Electronic publications, Social networks, Videos and Movies.<\/p><p>→ Your or your client's company size is the only number you need to calculate the price for our licenses. <\/p>",
               "specimen": "https:\/\/cdn.shopify.com\/s\/files\/1\/0561\/1182\/5082\/files\/ROMIE2.0_SPECIMEN_MLTYPEFOUNDRY.pdf?v=1654450264",
               "layer_opacity": 34,
-              "coming_soon": false
-            }
-          },
-          "151987ca-f001-47f0-b364-ad09da57d271": {
-            "type": "type",
-            "settings": {
-              "collection": "romie",
-              "collection_name": "Romie <span class=\"ss01\">I<\/span>tali<span class=\"ss01\">c<\/span>",
-              "ornaments": "",
-              "active": "romie-regular",
-              "has_italic": false,
-              "italic_coming_soon": false,
-              "italic_text": "",
-              "active_italic": "",
-              "title": "Italic",
-              "font_size": 47,
-              "description": "<p>Romie is a typeface designed by Margot Lévêque. Started in 2017, this typeface is a display born from calligraphy. It covers a majority of the european languages and comes in the standard file formats (for print & web). Romie has been updated in 2022: the glyphset has been expanded, including its mythical large ligatures set. Romie is now available in Regular, Regular Italic, Medium, Bold and Black. The others italics will be released very soon! <\/p><p><\/p><p>Many thanks to <a href=\"https:\/\/www.instagram.com\/guillaumebesson_\/?hl=fr\" target=\"_blank\" title=\"https:\/\/www.instagram.com\/guillaumebesson_\/?hl=fr\"><strong>Guillaume Besson<\/strong><\/a> for his help in development, production and for all the support during the release rush! Special + Another special thanks to <a href=\"https:\/\/www.instagram.com\/celinehurka\/?hl=fr\" target=\"_blank\" title=\"https:\/\/www.instagram.com\/celinehurka\/?hl=fr\"><strong>Céline Hurka<\/strong><\/a> for her help in development.<\/p>",
-              "license": "<p>LICENSES ALL-IN-ONE<\/p><p>→ Each license includes Unlimited uses for Print, Websites, Mobile applications, Global Corporate, Electronic publications, Social networks, Videos and Movies.<\/p><p>→ Your or your client's company size is the only number you need to calculate the price for our licenses. <\/p>",
-              "specimen": "https:\/\/cdn.shopify.com\/s\/files\/1\/0561\/1182\/5082\/files\/ROMIE2.0_SPECIMEN_MLTYPEFOUNDRY.pdf?v=1654450264",
-              "layer_opacity": 50,
               "coming_soon": false
             }
           },
@@ -867,8 +867,8 @@
           }
         },
         "block_order": [
-          "189d9da5-96de-416d-a8fa-9ca6cc7036cf",
           "151987ca-f001-47f0-b364-ad09da57d271",
+          "189d9da5-96de-416d-a8fa-9ca6cc7036cf",
           "2bb42656-b846-4db6-9bd1-24ca5bd8ac95",
           "5a195a3a-66f5-4e3e-a1dd-9edd1a3ffcfe",
           "fc11e916-7f31-4366-9b1b-c9695f9789d2"
