@@ -2369,7 +2369,7 @@ input[type="range"]::-webkit-slider-thumb:active {
   z-index: 1;
 
   font-family: "TWK", Arial, Helvetica, sans-serif;
-  font-size: 1.1rem;
+  font-size: 1rem;
 
   background-color: white;
 
