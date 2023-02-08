@@ -2533,6 +2533,7 @@ input[type="range"]::-webkit-slider-thumb:active {
 }
 
 #product-options wrap .product-selector.active,
+#product-options wrap .product-selector.bonus,
 .desktop #product-options wrap .product-selector:hover {
   /* font-family: 'Garamond Bold', Times, serif; */
   color: var(--black-color);
