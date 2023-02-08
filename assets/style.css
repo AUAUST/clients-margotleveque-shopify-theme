@@ -2356,24 +2356,31 @@ input[type="range"]::-webkit-slider-thumb:active {
   display: none;
   position: absolute;
   top: 23px;
-  padding: 1.7rem 0.7rem;
+  padding: 0 0.7rem 1.7rem 0.7rem;
 
   z-index: 1;
 
   font-family: "TWK", Arial, Helvetica, sans-serif;
+  font-size: 1.1rem;
 
   background-color: white;
 
   border: 0.5px solid black;
   border-radius: 2rem;
+  box-shadow: gray 5px 5px 15px;
 
   pointer-events: all;
   overflow: scroll;
 }
 #product-options .title .more-details h6 {
   text-transform: uppercase;
-  border-bottom: 0.5px gray solid;
-  margin-bottom: 4px;
+  margin-top: 1.5rem;
+  font-size: inherit;
+  font-weight: bold;
+}
+#product-options .title .more-details em {
+  font-size: inherit;
+  font-weight: bold;
 }
 #product-options .title .more-details a {
   text-decoration: underline;
