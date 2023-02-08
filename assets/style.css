@@ -1775,6 +1775,7 @@ div#banner {
   }
   .type-row_details {
     font-size: 12px !important;
+    margin-bottom: 0px;
   }
   .type-row_name {
     padding-top: 1rem;
