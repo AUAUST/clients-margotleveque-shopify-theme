@@ -2399,8 +2399,11 @@ input[type="range"]::-webkit-slider-thumb:active {
   text-underline-offset: 2px;
   text-decoration-color: #00ff00;
 }
-#product-options :not(.disabled) .title .more-details.active {
+#product-options .title .more-details.active {
   display: block;
+}
+#product-options .disabled .title .more-details.active {
+  display: none;
 }
 #product-options form,
 #product-options form input {
