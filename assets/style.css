@@ -5,16 +5,16 @@
  */
 
 :root {
-  --background-color: yellow;
-  /* --background-color: #f8f8f5; */
-  --highlight-color: blue;
-  /* --highlight-color: #a5faa1; */
-  --darkgray-color: red;
-  /* --darkgray-color: #a0a0a0; */
-  --black-color: purple;
-  /* --black-color: #090000; */
-  --text-color: green;
-  /* --text-color: var(--text-color); */
+  /* --background-color: yellow; */
+  --background-color: #f8f8f5;
+  /* --highlight-color: blue; */
+  --highlight-color: #a5faa1;
+  /* --darkgray-color: red; */
+  --darkgray-color: #a0a0a0;
+  /* --black-color: purple; */
+  --black-color: #090000;
+  /* --text-color: green; */
+  --text-color: #575756;
 }
 
 #preview-bar-iframe,
