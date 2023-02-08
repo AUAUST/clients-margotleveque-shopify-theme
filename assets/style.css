@@ -6,6 +6,7 @@
 
 :root {
   --background-color: #f8f8f5;
+  --highlight-color: #a5faa1;
 }
 
 #preview-bar-iframe,
@@ -184,7 +185,7 @@ em {
 }
 u {
   text-decoration: none;
-  border-bottom: 1px solid #0f0;
+  border-bottom: 1px solid var(--highlight-color);
 }
 .ss01 {
   font-feature-settings: "ss01";
@@ -297,7 +298,7 @@ a {
   left: 0;
   width: 0;
   height: 3px;
-  background-color: #00ff00;
+  background-color: var(--highlight-color);
   border-radius: 0.5rem;
   transform: translateY(-50%);
   pointer-events: none;
@@ -1159,7 +1160,7 @@ footer .credits li a {
         left: 0;
         width: 0;
         height: 1px;
-        background-color: #00ff00;
+        background-color: var(--highlight-color);
         border-radius: .5rem;
         transform: translateY(0);    
         pointer-events: none;
@@ -1183,7 +1184,7 @@ footer .credits li a {
         left: 0;
         width: 0;
         height: 1px;
-        background-color: #00ff00;
+        background-color: var(--highlight-color);
         border-radius: 0;
         transform: translateY(0);    
         pointer-events: none;
@@ -1495,7 +1496,7 @@ div#banner {
   text-align: center;
 }
 #content wrap:first-child a {
-  border-bottom: 1px solid #0f0 !important;
+  border-bottom: 1px solid var(--highlight-color) !important;
 }
 #content wrap:last-child a {
   border: none;
@@ -1672,7 +1673,7 @@ div#banner {
   transform: rotate(-45deg);
   font-family: "Romie-Italic";
   -webkit-text-stroke-width: 3px;
-  -webkit-text-stroke-color: #00ff00;
+  -webkit-text-stroke-color: var(--highlight-color);
 }
 .new-icon span {
   margin-left: -13px;
@@ -1758,7 +1759,7 @@ div#banner {
   transform: translateX(-50%);
 }
 .desktop .type-row:hover span .type-row_name {
-  color: #00ff00;
+  color: var(--highlight-color);
 }
 .device .type-row:active span span {
   opacity: 0.3;
@@ -1853,13 +1854,13 @@ div#banner {
 }
 #type-row span::selection {
   background-color: transparent;
-  color: #0f0;
+  color: var(--highlight-color);
 }
 #type-row span {
   padding: 0 1.2rem;
   display: inline-block;
   cursor: text;
-  caret-color: #00ff00;
+  caret-color: var(--highlight-color);
 }
 #type-row span.inactive {
   cursor: default;
@@ -1973,7 +1974,7 @@ div#banner {
 }
 #type-actions .color.active circle,
 .desktop #type-actions .color:hover circle {
-  stroke: #0f0;
+  stroke: var(--highlight-color);
 }
 @media (min-width: 1681px) {
   #type-actions .color {
@@ -2404,7 +2405,7 @@ input[type="range"]::-webkit-slider-thumb:active {
 #product-options .title .more-details a {
   text-decoration: underline;
   text-underline-offset: 2px;
-  text-decoration-color: #00ff00;
+  text-decoration-color: var(--highlight-color);
 }
 #product-options .title .more-details.active {
   display: block;
@@ -2516,7 +2517,11 @@ input[type="range"]::-webkit-slider-thumb:active {
 }
 #product-options wrap .product-selector.active::before,
 #product-options wrap .product-selector.right.bonus::before {
-  background: radial-gradient(circle, #0f0 50%, transparent 50%);
+  background: radial-gradient(
+    circle,
+    var(--highlight-color) 50%,
+    transparent 50%
+  );
 }
 
 #product-options wrap .product-selector.active,
@@ -2785,7 +2790,7 @@ body.black  #product-options wrap .product-selector:hover {
 }
 .device #cart-button:active {
   color: #575756;
-  background-color: #00ff00;
+  background-color: var(--highlight-color);
 }
 .desktop #cart-button {
   transition: padding-bottom 0.2s ease-in-out, color 0.2s ease-in-out,
@@ -2794,7 +2799,7 @@ body.black  #product-options wrap .product-selector:hover {
 .desktop #cart-button:hover {
   padding-bottom: 2em;
   color: #575756;
-  background-color: #00ff00;
+  background-color: var(--highlight-color);
 }
 @media (max-width: 812px) {
   #cart-button {
@@ -2836,7 +2841,7 @@ body.black  #product-options wrap .product-selector:hover {
 .pill-big.active,
 .device .pill-big:active,
 .desktop .pill-big:hover{
-	background-color: #00ff00;
+	background-color: var(--highlight-color);
 }
 .device .pill-big.active:active{
   	color: var(--background-color) !important;
@@ -2913,12 +2918,12 @@ body.black  #product-options wrap .product-selector:hover {
 .pill.active,
 .device .pill:not(.title):not(#buy):active,
 .desktop .pill:not(.title):hover {
-  background-color: #00ff00;
-  border: 1px solid #00ff00;
+  background-color: var(--highlight-color);
+  border: 1px solid var(--highlight-color);
 }
 #trials {
-  background-color: #00ff00;
-  border: 1px solid #00ff00;
+  background-color: var(--highlight-color);
+  border: 1px solid var(--highlight-color);
 }
 .device .pill.active:not(#buy):active {
   color: var(--background-color) !important;
@@ -2929,9 +2934,9 @@ body.black  #product-options wrap .product-selector:hover {
     background-color 0.2s linear !important;
 }
 .pill-green {
-  border: 1px solid #00ff00;
+  border: 1px solid var(--highlight-color);
   /* color: #575756 !important; */
-  background-color: #00ff00;
+  background-color: var(--highlight-color);
 }
 @media (min-width: 1441px) {
   .pill {
@@ -3077,7 +3082,7 @@ body.black input[type="range"]::-webkit-slider-thumb {
 .pill.active,
 .device .pill:not(.title):not(#buy):active,
 .desktop .pill:not(.title):hover {
-  background-color: #00ff00 !important;
+  background-color: var(--highlight-color) !important;
   color: #575756 !important;
 }
 @media (max-width: 812px) {
@@ -3107,8 +3112,8 @@ body.black input[type="range"]::-webkit-slider-thumb {
   display: flex !important;
   align-items: center;
   justify-content: center;
-  background-color: #00ff00;
-  border: 1px solid #00ff00;
+  background-color: var(--highlight-color);
+  border: 1px solid var(--highlight-color);
   border-radius: 100px;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -3138,7 +3143,7 @@ body.black input[type="range"]::-webkit-slider-thumb {
 }
 .device #type-guide-button:active {
   color: #575756;
-  background-color: #00ff00;
+  background-color: var(--highlight-color);
 }
 .desktop #type-guide-button {
   transition: padding-bottom 0.2s ease-in-out, color 0.2s ease-in-out,
@@ -3147,7 +3152,7 @@ body.black input[type="range"]::-webkit-slider-thumb {
 .desktop #type-guide-button:hover {
   padding-bottom: 2rem;
   color: #575756;
-  background-color: #00ff00;
+  background-color: var(--highlight-color);
 }
 #type-guide {
   display: grid;
