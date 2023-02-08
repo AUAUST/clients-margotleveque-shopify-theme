@@ -340,7 +340,11 @@
             <div class="left">
             {% for product in collection.products -%}
               {% if product.tags contains "pack" or forloop.length == 1 %}
-              <div class="style product-selector left {% if product.tags contains "pack" %}bold{% endif %}" data-pack="{{- product.title -}}" data-value="{{ product.title | handle | downcase | escape }}" data-id="{{ product.id }}">
+              <div class="style product-selector left
+                {% comment %}
+                  {% if product.tags contains "pack" %}bold{% endif %}
+                {% endcomment %}
+                  " data-pack="{{- product.title -}}" data-value="{{ product.title | handle | downcase | escape }}" data-id="{{ product.id }}">
                 {{- product.title -}}
               </div>
               {% endif %}
