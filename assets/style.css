@@ -414,9 +414,15 @@ a {
 
 @font-face {
   font-family: "TWK";
-  src: url("TWKLausannePan-150.woff2") format("woff2"),
-    url("TWKLausannePan-150.woff") format("woff");
+  src: url("TWKLausannePan-150.woff2") format("woff2");
   font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TWK";
+  src: url("TWKLausanne-650.woff2") format("woff2");
+  font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
