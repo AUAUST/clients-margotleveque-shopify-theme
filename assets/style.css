@@ -2338,19 +2338,21 @@ input[type="range"]::-webkit-slider-thumb:active {
 
   text-align: center;
   line-height: 12px;
+  font-family: "TWK", Arial, Helvetica, sans-serif;
   font-size: 13px;
-  font-weight: 900;
+  font-weight: bold;
+  color: white;
 
   top: 0.4em;
   height: 1.1rem;
-  width: 1.1rem;
+  width: 2.2rem;
 
   pointer-events: all;
   cursor: pointer;
 
   color: gray;
   border: 1px solid lightgray;
-  border-radius: 100%;
+  border-radius: 5rem;
 }
 #product-options .title .more-details {
   display: none;
