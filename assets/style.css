@@ -7,6 +7,7 @@
 :root {
   --background-color: #f8f8f5;
   --highlight-color: #a5faa1;
+  --darkgray-color: #a0a0a0;
 }
 
 #preview-bar-iframe,
@@ -2362,7 +2363,7 @@ input[type="range"]::-webkit-slider-thumb:active {
   cursor: pointer;
 
   color: white;
-  background-color: gray;
+  background-color: var(--darkgray-color);
   border-radius: 5rem;
 
   user-select: none;
@@ -2385,7 +2386,7 @@ input[type="range"]::-webkit-slider-thumb:active {
   background-color: white;
 
   border-radius: 2rem;
-  box-shadow: gray 5px 5px 15px;
+  box-shadow: var(--darkgray-color) 5px 5px 15px;
 
   pointer-events: all;
   overflow: scroll;
@@ -2513,7 +2514,7 @@ input[type="range"]::-webkit-slider-thumb:active {
 #product-options wrap .product-selector.active::before,
 #product-options wrap .product-selector.right.bonus::before,
 .desktop #product-options wrap .product-selector:hover::before {
-  border: 1px solid gray;
+  border: 1px solid var(--darkgray-color);
 }
 #product-options wrap .product-selector.active::before,
 #product-options wrap .product-selector.right.bonus::before {
