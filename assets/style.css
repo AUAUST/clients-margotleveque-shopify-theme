@@ -1756,6 +1756,7 @@ div#banner {
 @media (max-width: 812px) {
   .template-list-collections .type-catalogue {
     margin-bottom: 15rem;
+    margin-top: 1rem;
   }
   .type-row {
     padding: 2.5rem 0;
@@ -1779,6 +1780,8 @@ div#banner {
   }
   .type-row_name {
     padding-top: 1rem;
+    padding-bottom: 0;
+    margin-bottom: -5px;
   }
 }
 @media (max-width: 414px) {
