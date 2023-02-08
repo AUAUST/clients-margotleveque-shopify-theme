@@ -2337,7 +2337,7 @@ input[type="range"]::-webkit-slider-thumb:active {
   position: absolute;
 
   text-align: center;
-  line-height: 12px;
+  line-height: 14px;
   font-family: "TWK", Arial, Helvetica, sans-serif;
   font-size: 13px;
   font-weight: bold;
