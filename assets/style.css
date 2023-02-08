@@ -162,7 +162,7 @@ body {
   font-size: 15px;
   font-style: normal;
   line-height: 1.3;
-  color: #575756;
+  color: var(--text-color);
   background-color: var(--background-color);
   overflow-x: hidden;
 }
@@ -276,14 +276,14 @@ a {
 }
 .link-pill:hover {
   background-color: var(--background-color);
-  color: #575756 !important;
+  color: var(--text-color) !important;
   transition: background-color 0.3s ease, color 0.3s ease 0.15s;
 }
 .link-pill svg path {
   transition: fill 0.3s ease;
 }
 .link-pill:hover svg path {
-  fill: #575756 !important;
+  fill: var(--text-color) !important;
 }
 .link-bar {
   position: relative;
@@ -294,7 +294,7 @@ a {
 }
 /* .link-bar:hover {
 	background-color: var(--background-color);
-	color: #575756;
+	color: var(--text-color);
 	transition: background-color 0.3s ease, color 0.3s ease 0.15s;
 } */
 .link-bar::before {
@@ -885,7 +885,7 @@ header span {
     display: flex;
   }
   .template-page-work #logo {
-    color: #575756;
+    color: var(--text-color);
   }
 
   #logo .page_name {
@@ -902,7 +902,7 @@ header span {
   }
 
   #logo .page_name svg path {
-    fill: #575756;
+    fill: var(--text-color);
   }
   menu {
     grid-column: 18 span;
@@ -1150,7 +1150,7 @@ footer .credits li a {
 @media (min-width: 813px) {
   footer a {
     position: relative;
-    /* color: #575756 !important; */
+    /* color: var(--text-color) !important; */
     transition: padding-left 0.1s ease-in-out !important;
     line-height: 1.1;
     transition: opacity 0.2s linear;
@@ -1356,11 +1356,11 @@ div#banner {
   color: var(--darkgray-color);
 }
 .counter::before {
-  color: #575756;
+  color: var(--text-color);
   content: "{";
 }
 .counter::after {
-  color: #575756;
+  color: var(--text-color);
   content: "}";
 }
 @media (max-width: 1024px) {
@@ -2162,7 +2162,7 @@ input[type="range"]::-webkit-slider-thumb:active {
   display: none;
   align-items: center;
   justify-content: center;
-  color: #575756 !important;
+  color: var(--text-color) !important;
 }
 .desktop #gallery .slide:hover .caption {
   display: flex;
@@ -2666,7 +2666,7 @@ body.black  #product-options wrap .product-selector:hover {
 }
 .desktop .item-remove:hover svg,
 .device .item-remove:active svg {
-  fill: #575756;
+  fill: var(--text-color);
 }
 #cart-footer {
   width: 100%;
@@ -2782,7 +2782,7 @@ body.black  #product-options wrap .product-selector:hover {
   bottom: 0;
   width: auto;
   padding: 0 1.2rem 1.2em;
-  background-color: #575756;
+  background-color: var(--text-color);
   border-top-left-radius: 0.8em 1.8em;
   border-top-right-radius: 0.8em 1.8em;
   color: var(--background-color);
@@ -2795,7 +2795,7 @@ body.black  #product-options wrap .product-selector:hover {
   z-index: 10;
 }
 .device #cart-button:active {
-  color: #575756;
+  color: var(--text-color);
   background-color: var(--highlight-color);
 }
 .desktop #cart-button {
@@ -2804,7 +2804,7 @@ body.black  #product-options wrap .product-selector:hover {
 }
 .desktop #cart-button:hover {
   padding-bottom: 2em;
-  color: #575756;
+  color: var(--text-color);
   background-color: var(--highlight-color);
 }
 @media (max-width: 812px) {
@@ -2825,7 +2825,7 @@ body.black  #product-options wrap .product-selector:hover {
   	width: -moz-fit-content;
   	padding: 5px 13px 5px 12px;
   	background-color: white;
-  	color: #575756 !important;
+  	color: var(--text-color) !important;
     border: 1px solid var(--darkgray-color);
 	border-top-left-radius: 1em .9em;
     border-top-right-radius: 1em .9em;
@@ -2851,7 +2851,7 @@ body.black  #product-options wrap .product-selector:hover {
 }
 .device .pill-big.active:active{
   	color: var(--background-color) !important;
-	background-color: #575756;
+	background-color: var(--text-color);
 }
 .desktop .pill-big:hover{
 	transition: background-color .2s linear !important;
@@ -2897,7 +2897,7 @@ body.black  #product-options wrap .product-selector:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #575756 !important;
+  color: var(--text-color) !important;
   font-size: 65%;
   line-height: 16px !important;
   text-transform: uppercase;
@@ -2933,7 +2933,7 @@ body.black  #product-options wrap .product-selector:hover {
 }
 .device .pill.active:not(#buy):active {
   color: var(--background-color) !important;
-  background-color: #575756;
+  background-color: var(--text-color);
 }
 .desktop .pill:hover {
   transition: color 0.2s linear, border 0.2s linear,
@@ -2941,7 +2941,7 @@ body.black  #product-options wrap .product-selector:hover {
 }
 .pill-green {
   border: 1px solid var(--highlight-color);
-  /* color: #575756 !important; */
+  /* color: var(--text-color) !important; */
   background-color: var(--highlight-color);
 }
 @media (min-width: 1441px) {
@@ -3016,7 +3016,7 @@ body.white .pill-big {
 }
 body.black .pill.inactive,
 body.white .pill.inactive {
-  color: #575756 !important;
+  color: var(--text-color) !important;
 }
 body.white .select-wrapper::after {
   border-top: 5px solid black;
@@ -3040,7 +3040,7 @@ body.white .pill {
 }
 body.black .pill.active,
 .desktop body.black .pill:not(.title):hover {
-  color: #575756 !important;
+  color: var(--text-color) !important;
 }
 body.white input[type="range"]::-ms-track {
   background: black;
@@ -3089,7 +3089,7 @@ body.black input[type="range"]::-webkit-slider-thumb {
 .device .pill:not(.title):not(#buy):active,
 .desktop .pill:not(.title):hover {
   background-color: var(--highlight-color) !important;
-  color: #575756 !important;
+  color: var(--text-color) !important;
 }
 @media (max-width: 812px) {
   body.black header,
@@ -3141,14 +3141,14 @@ body.black input[type="range"]::-webkit-slider-thumb {
   left: 1.2rem;
   bottom: 0;
   padding: 0.3em 1rem 0.4em;
-  background-color: #575756;
+  background-color: var(--text-color);
   border-top-left-radius: 1.2rem;
   border-top-right-radius: 1.2rem;
   color: var(--background-color);
   font-size: 80%;
 }
 .device #type-guide-button:active {
-  color: #575756;
+  color: var(--text-color);
   background-color: var(--highlight-color);
 }
 .desktop #type-guide-button {
@@ -3157,7 +3157,7 @@ body.black input[type="range"]::-webkit-slider-thumb {
 }
 .desktop #type-guide-button:hover {
   padding-bottom: 2rem;
-  color: #575756;
+  color: var(--text-color);
   background-color: var(--highlight-color);
 }
 #type-guide {
