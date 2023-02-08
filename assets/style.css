@@ -11,6 +11,8 @@
   /* --highlight-color: #a5faa1; */
   --darkgray-color: red;
   /* --darkgray-color: #a0a0a0; */
+  --text-color: green;
+  /* --text-color: var(--text-color); */
 }
 
 #preview-bar-iframe,
@@ -1025,7 +1027,7 @@ footer {
   grid-template-columns: repeat(12, 1fr);
   grid-gap: 1.3em 1rem;
   font-family: "Garamond Light";
-  color: #8c8c8c;
+  color: var(--text-color);
   font-size: 85%;
 }
 footer .fancy {
@@ -1036,7 +1038,7 @@ footer .fancy svg {
   width: 25px;
 }
 footer .fancy svg path {
-  fill: #8c8c8c;
+  fill: var(--text-color);
 }
 footer > span {
   grid-column: 1/2;
@@ -1055,7 +1057,7 @@ footer div span {
 footer div a {
   grid-column: 2 / 6;
   line-height: 1.1;
-  color: #8c8c8c;
+  color: var(--text-color);
 }
 footer wrap {
   grid-column: 2 span;
@@ -1094,7 +1096,7 @@ footer .credits li span {
 }
 footer .credits li a {
   margin-left: 5px;
-  color: #8c8c8c;
+  color: var(--text-color);
 }
 
 @media (max-width: 1190px) {
@@ -1662,7 +1664,7 @@ div#banner {
   align-items: flex-end;
 }
 .type-row_details span {
-  color: #8c8c8c;
+  color: var(--text-color);
   /* padding: 0 3px; */
 }
 .type-row_details span::after {
