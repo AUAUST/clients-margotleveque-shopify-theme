@@ -1669,6 +1669,7 @@ div#banner {
   font-size: 120%;
 }
 .type-row_name {
+  letter-spacing: -0.03em;
   line-height: 1;
   padding-bottom: 1rem;
   color: black;
