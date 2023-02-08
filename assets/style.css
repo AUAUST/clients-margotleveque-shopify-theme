@@ -5,9 +5,12 @@
  */
 
 :root {
-  --background-color: #f8f8f5;
-  --highlight-color: #a5faa1;
-  --darkgray-color: #a0a0a0;
+  --background-color: yellow;
+  /* --background-color: #f8f8f5; */
+  --highlight-color: blue;
+  /* --highlight-color: #a5faa1; */
+  --darkgray-color: red;
+  /* --darkgray-color: #a0a0a0; */
 }
 
 #preview-bar-iframe,
