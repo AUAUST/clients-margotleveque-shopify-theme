@@ -2363,6 +2363,9 @@ input[type="range"]::-webkit-slider-thumb:active {
   user-select: none;
   -webkit-user-select: none;
 }
+#product-options .disabled .title .more-details-button {
+  cursor: not-allowed;
+}
 #product-options .title .more-details {
   display: none;
   position: absolute;
