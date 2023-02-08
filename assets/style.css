@@ -11,6 +11,8 @@
   /* --highlight-color: #a5faa1; */
   --darkgray-color: red;
   /* --darkgray-color: #a0a0a0; */
+  --black-color: purple;
+  /* --black-color: #090000; */
   --text-color: green;
   /* --text-color: var(--text-color); */
 }
@@ -1689,7 +1691,7 @@ div#banner {
   letter-spacing: -0.03em;
   line-height: 1;
   padding-bottom: 1rem;
-  color: black;
+  color: var(--black-color);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -1961,7 +1963,7 @@ div#banner {
   fill: var(--darkgray-color);
 }
 #black {
-  fill: black;
+  fill: var(--black-color);
 }
 #white {
   fill: white;
@@ -2533,7 +2535,7 @@ input[type="range"]::-webkit-slider-thumb:active {
 #product-options wrap .product-selector.active,
 .desktop #product-options wrap .product-selector:hover {
   /* font-family: 'Garamond Bold', Times, serif; */
-  color: black;
+  color: var(--black-color);
   position: relative;
 }
 
@@ -2993,12 +2995,12 @@ body.black  #product-options wrap .product-selector:hover {
 /* COLORS
 ================================================== */
 body.white {
-  color: black;
+  color: var(--black-color);
   background-color: white;
 }
 body.black {
   color: white;
-  background-color: black;
+  background-color: var(--black-color);
 }
 
 body.black #type-actions,
@@ -3019,7 +3021,7 @@ body.white .pill.inactive {
   color: var(--text-color) !important;
 }
 body.white .select-wrapper::after {
-  border-top: 5px solid black;
+  border-top: 5px solid var(--black-color);
 }
 body.black .select-wrapper::after {
   border-top: 5px solid white;
@@ -3028,14 +3030,14 @@ body.white .color:not(.active) circle {
   stroke: white !important;
 }
 body.black .color:not(.active) circle {
-  stroke: black !important;
+  stroke: var(--black-color) !important;
 }
 body.black .pill {
   border-color: white;
-  background-color: black;
+  background-color: var(--black-color);
 }
 body.white .pill {
-  border-color: black;
+  border-color: var(--black-color);
   background-color: white;
 }
 body.black .pill.active,
@@ -3043,37 +3045,37 @@ body.black .pill.active,
   color: var(--text-color) !important;
 }
 body.white input[type="range"]::-ms-track {
-  background: black;
+  background: var(--black-color);
 }
 body.black input[type="range"]::-ms-track {
   background: white;
 }
 body.white input[type="range"]::-moz-range-track {
-  background: black;
+  background: var(--black-color);
 }
 body.black input[type="range"]::-moz-range-track {
   background: white;
 }
 body.white input[type="range"]::-webkit-slider-runnable-track {
-  background: black;
+  background: var(--black-color);
 }
 body.black input[type="range"]::-webkit-slider-runnable-track {
   background: white;
 }
 body.white input[type="range"]::-ms-thumb {
-  background: black;
+  background: var(--black-color);
 }
 body.black input[type="range"]::-moz-range-thumb {
   background: white;
 }
 body.white input[type="range"]::-webkit-slider-thumb {
-  background: black;
+  background: var(--black-color);
 }
 body.black input[type="range"]::-ms-thumb {
   background: white;
 }
 body.white input[type="range"]::-moz-range-thumb {
-  background: black;
+  background: var(--black-color);
 }
 body.black input[type="range"]::-webkit-slider-thumb {
   background: white;
@@ -3094,7 +3096,7 @@ body.black input[type="range"]::-webkit-slider-thumb {
 @media (max-width: 812px) {
   body.black header,
   body.black #mobileMenu {
-    background-color: black;
+    background-color: var(--black-color);
   }
   body.white header,
   body.white #mobileMenu {
