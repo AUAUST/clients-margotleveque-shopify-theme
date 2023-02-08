@@ -2355,14 +2355,19 @@ input[type="range"]::-webkit-slider-thumb:active {
 #product-options .title .more-details {
   display: none;
   position: absolute;
-  background-color: #f8f8f5;
-  z-index: 1;
-  border: 0.5px solid black;
-  border-radius: 2px;
-  padding: 0.3rem 0.7rem;
   top: 23px;
+  padding: 1.7rem 0.7rem;
+
+  z-index: 1;
+
+  font-family: "TWK", Arial, Helvetica, sans-serif;
+
+  background-color: white;
+
+  border: 0.5px solid black;
+  border-radius: 2rem;
+
   pointer-events: all;
-  max-height: 9em;
   overflow: scroll;
 }
 #product-options .title .more-details h6 {
