@@ -1388,12 +1388,33 @@
           "text_mobile": "<p>Custom logotype designed alongside <a href=\"https:\/\/www.instagram.com\/lenamusmann\/?hl=fr\" target=\"_blank\" title=\"https:\/\/www.instagram.com\/lenamusmann\/?hl=fr\">Lena Musmann<\/a> for GANNI<\/p>",
           "size": "normal"
         }
+      },
+      "0fd63acb-90a0-446f-acfd-01937c74779d": {
+        "type": "project",
+        "disabled": true,
+        "blocks": {
+          "b9d3d98d-6ad6-452a-b54f-4804bc3655ca": {
+            "type": "gallery",
+            "settings": {
+            }
+          }
+        },
+        "block_order": [
+          "b9d3d98d-6ad6-452a-b54f-4804bc3655ca"
+        ],
+        "settings": {
+          "title": "Pirelli",
+          "text": "<p>Ninna typeface in use for Pirelli 2023 Calendar. DA by the talented <a href=\"https:\/\/www.instagram.com\/emmasummerton\/\" target=\"_blank\" title=\"https:\/\/www.instagram.com\/emmasummerton\/\">Emma Summerton<\/a><\/p>",
+          "text_mobile": "",
+          "size": "normal"
+        }
       }
     },
     "content_for_index": [
       "47006421-c929-4403-91e8-04c8051f51d4",
       "1633703914fe6d92ac",
       "1619176409304445b2",
+      "0fd63acb-90a0-446f-acfd-01937c74779d",
       "16337070808ae9f712",
       "1621760530d51b68bf",
       "1621760498ba299042",
