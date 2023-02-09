@@ -1393,6 +1393,12 @@
       "0fd63acb-90a0-446f-acfd-01937c74779d": {
         "type": "project",
         "blocks": {
+          "ae4ea712-a847-47c2-bd42-aad98a2901c8": {
+            "type": "gallery",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/pirelli-margotleveque7.jpg"
+            }
+          },
           "b9d3d98d-6ad6-452a-b54f-4804bc3655ca": {
             "type": "gallery",
             "settings": {
@@ -1438,6 +1444,7 @@
           }
         },
         "block_order": [
+          "ae4ea712-a847-47c2-bd42-aad98a2901c8",
           "b9d3d98d-6ad6-452a-b54f-4804bc3655ca",
           "381e80d5-0d46-437f-902e-8efc47244d59",
           "e0a1f5fb-177a-467e-ab95-5cef2be6d26f",
