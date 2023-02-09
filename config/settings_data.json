@@ -1329,6 +1329,12 @@
               "img": "shopify:\/\/shop_images\/2023-02-04_09.05.13_3030618602835981504_4168238072.jpg"
             }
           },
+          "bbe59514-d793-4c13-b327-725ced13be8c": {
+            "type": "gallery",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/GanniLogo_MargotLeveque_LenaM20.jpg"
+            }
+          },
           "9b8225dd-5c10-45f6-8cdb-78a0ac9406be": {
             "type": "gallery",
             "settings": {
@@ -1358,15 +1364,23 @@
             "settings": {
               "img": "shopify:\/\/shop_images\/GanniLogo_MargotLeveque_LenaM6.jpg"
             }
+          },
+          "977a6df9-212f-4292-9f19-e059ef3a6f9e": {
+            "type": "gallery",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/GanniLogo_MargotLeveque_LenaM21.jpg"
+            }
           }
         },
         "block_order": [
           "c3fe481c-a490-42d5-af90-da517e77afbe",
+          "bbe59514-d793-4c13-b327-725ced13be8c",
           "9b8225dd-5c10-45f6-8cdb-78a0ac9406be",
           "07716c5c-bae8-4806-bb7c-75f9c9b4743c",
           "cf20e9bb-96fe-412f-93d9-4df8246da83b",
           "2fa5c569-2e6a-438c-a47a-79ca79354012",
-          "730df017-77e6-4be4-bd84-abfdb65af697"
+          "730df017-77e6-4be4-bd84-abfdb65af697",
+          "977a6df9-212f-4292-9f19-e059ef3a6f9e"
         ],
         "settings": {
           "title": "GANNI",
@@ -1379,9 +1393,9 @@
     "content_for_index": [
       "47006421-c929-4403-91e8-04c8051f51d4",
       "1633703914fe6d92ac",
+      "1619176409304445b2",
       "16337070808ae9f712",
       "1621760530d51b68bf",
-      "1619176409304445b2",
       "1621760498ba299042",
       "1619176738c9d7d0b2",
       "16219684174824918b",
