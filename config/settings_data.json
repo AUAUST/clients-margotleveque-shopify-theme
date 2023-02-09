@@ -1441,6 +1441,42 @@
             "settings": {
               "img": "shopify:\/\/shop_images\/pirelli-margotleveque3.jpg"
             }
+          },
+          "121c46e9-0b38-4f67-b1e2-33eb1ba6ee47": {
+            "type": "gallery",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/pirelli-margotleveque12.jpg"
+            }
+          },
+          "79a8c8ea-8c39-420b-95e1-0795d7a80c75": {
+            "type": "gallery",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/pirelli-margotleveque10.jpg"
+            }
+          },
+          "84d863b2-52ee-4252-9762-bcb52fee2a9d": {
+            "type": "gallery",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/pirelli-margotleveque8.jpg"
+            }
+          },
+          "1498f594-7888-4972-af28-7c85c74094ca": {
+            "type": "gallery",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/pirelli-margotleveque9.jpg"
+            }
+          },
+          "e1a12499-0e8a-4651-beec-2d566891047d": {
+            "type": "gallery",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/pirelli-margotleveque11.jpg"
+            }
+          },
+          "ab5ba83f-da77-4591-b731-992c39697f77": {
+            "type": "gallery",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/pirelli-margotleveque13.jpg"
+            }
           }
         },
         "block_order": [
@@ -1451,7 +1487,13 @@
           "c18b48ac-5793-43d7-aabe-b1462fc21121",
           "20ee24e2-fe78-48db-8ebc-b968be87fb57",
           "48afc187-c214-4a45-9b7b-d61c2ca9ba9f",
-          "45382638-75a7-48ba-bb1b-c2459ac8c14f"
+          "45382638-75a7-48ba-bb1b-c2459ac8c14f",
+          "121c46e9-0b38-4f67-b1e2-33eb1ba6ee47",
+          "79a8c8ea-8c39-420b-95e1-0795d7a80c75",
+          "84d863b2-52ee-4252-9762-bcb52fee2a9d",
+          "1498f594-7888-4972-af28-7c85c74094ca",
+          "e1a12499-0e8a-4651-beec-2d566891047d",
+          "ab5ba83f-da77-4591-b731-992c39697f77"
         ],
         "settings": {
           "title": "Pirelli",
