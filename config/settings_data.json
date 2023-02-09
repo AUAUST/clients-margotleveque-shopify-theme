@@ -1319,6 +1319,26 @@
           "text_mobile": "<p>A24 — Custom logotype designed for Half Magic<\/p>",
           "size": "normal"
         }
+      },
+      "47006421-c929-4403-91e8-04c8051f51d4": {
+        "type": "project",
+        "blocks": {
+          "c3fe481c-a490-42d5-af90-da517e77afbe": {
+            "type": "gallery",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/2023-02-04_09.05.13_3030618602835981504_4168238072.jpg"
+            }
+          }
+        },
+        "block_order": [
+          "c3fe481c-a490-42d5-af90-da517e77afbe"
+        ],
+        "settings": {
+          "title": "GANNI",
+          "text": "<p>Custom logotype designed alongside <strong>Lena Musmann for <\/strong>FW23<a href=\"https:\/\/www.linkedin.com\/company\/ganni-a-s\/\">Ganni A\/S<\/a> BUTTERFLY show<\/p>",
+          "text_mobile": "",
+          "size": "normal"
+        }
       }
     },
     "content_for_index": [
@@ -1338,7 +1358,8 @@
       "16219684753dd7d813",
       "1621760514cd91aece",
       "16280508185088d042",
-      "1628050637798a8438"
+      "1628050637798a8438",
+      "47006421-c929-4403-91e8-04c8051f51d4"
     ],
     "blocks": {
       "855628211100114053": {
