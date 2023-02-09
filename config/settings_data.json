@@ -1328,25 +1328,60 @@
             "settings": {
               "img": "shopify:\/\/shop_images\/2023-02-04_09.05.13_3030618602835981504_4168238072.jpg"
             }
+          },
+          "9b8225dd-5c10-45f6-8cdb-78a0ac9406be": {
+            "type": "gallery",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/GanniLogo_MargotLeveque_LenaM2.jpg"
+            }
+          },
+          "07716c5c-bae8-4806-bb7c-75f9c9b4743c": {
+            "type": "gallery",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/GanniLogo_MargotLeveque_LenaM1.jpg"
+            }
+          },
+          "cf20e9bb-96fe-412f-93d9-4df8246da83b": {
+            "type": "gallery",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/GanniLogo_MargotLeveque_LenaM0.jpg"
+            }
+          },
+          "2fa5c569-2e6a-438c-a47a-79ca79354012": {
+            "type": "gallery",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/GanniLogo_MargotLeveque_LenaM9.jpg"
+            }
+          },
+          "730df017-77e6-4be4-bd84-abfdb65af697": {
+            "type": "gallery",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/GanniLogo_MargotLeveque_LenaM6.jpg"
+            }
           }
         },
         "block_order": [
-          "c3fe481c-a490-42d5-af90-da517e77afbe"
+          "c3fe481c-a490-42d5-af90-da517e77afbe",
+          "9b8225dd-5c10-45f6-8cdb-78a0ac9406be",
+          "07716c5c-bae8-4806-bb7c-75f9c9b4743c",
+          "cf20e9bb-96fe-412f-93d9-4df8246da83b",
+          "2fa5c569-2e6a-438c-a47a-79ca79354012",
+          "730df017-77e6-4be4-bd84-abfdb65af697"
         ],
         "settings": {
           "title": "GANNI",
-          "text": "<p>Custom logotype designed alongside <a href=\"https:\/\/www.instagram.com\/lenamusmann\/?hl=fr\" target=\"_blank\" title=\"https:\/\/www.instagram.com\/lenamusmann\/?hl=fr\">Lena Musmann<\/a> for FW23G anni A\/S BUTTERFLY show<\/p>",
+          "text": "<p>Custom logotype designed alongside <a href=\"https:\/\/www.instagram.com\/lenamusmann\/?hl=fr\" target=\"_blank\" title=\"https:\/\/www.instagram.com\/lenamusmann\/?hl=fr\">Lena Musmann<\/a> for FW3 Ganni A\/S<\/p>",
           "text_mobile": "<p>Custom logotype designed alongside <a href=\"https:\/\/www.instagram.com\/lenamusmann\/?hl=fr\" target=\"_blank\" title=\"https:\/\/www.instagram.com\/lenamusmann\/?hl=fr\">Lena Musmann<\/a> for GANNI<\/p>",
           "size": "normal"
         }
       }
     },
     "content_for_index": [
-      "1619176409304445b2",
       "47006421-c929-4403-91e8-04c8051f51d4",
       "1633703914fe6d92ac",
       "16337070808ae9f712",
       "1621760530d51b68bf",
+      "1619176409304445b2",
       "1621760498ba299042",
       "1619176738c9d7d0b2",
       "16219684174824918b",
