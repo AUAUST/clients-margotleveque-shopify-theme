@@ -1393,22 +1393,22 @@
       "0fd63acb-90a0-446f-acfd-01937c74779d": {
         "type": "project",
         "blocks": {
-          "381e80d5-0d46-437f-902e-8efc47244d59": {
-            "type": "gallery",
-            "settings": {
-              "img": "shopify:\/\/shop_images\/pirelli-margotleveque1.jpg"
-            }
-          },
           "b9d3d98d-6ad6-452a-b54f-4804bc3655ca": {
             "type": "gallery",
             "settings": {
               "img": "shopify:\/\/shop_images\/pirelli-margotleveque_copie.jpg"
             }
+          },
+          "381e80d5-0d46-437f-902e-8efc47244d59": {
+            "type": "gallery",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/pirelli-margotleveque1.jpg"
+            }
           }
         },
         "block_order": [
-          "381e80d5-0d46-437f-902e-8efc47244d59",
-          "b9d3d98d-6ad6-452a-b54f-4804bc3655ca"
+          "b9d3d98d-6ad6-452a-b54f-4804bc3655ca",
+          "381e80d5-0d46-437f-902e-8efc47244d59"
         ],
         "settings": {
           "title": "Pirelli",
@@ -1420,9 +1420,9 @@
     },
     "content_for_index": [
       "47006421-c929-4403-91e8-04c8051f51d4",
+      "1633703914fe6d92ac",
       "1619176409304445b2",
       "0fd63acb-90a0-446f-acfd-01937c74779d",
-      "1633703914fe6d92ac",
       "16337070808ae9f712",
       "1621760530d51b68bf",
       "1621760498ba299042",
