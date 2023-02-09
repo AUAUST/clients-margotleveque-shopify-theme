@@ -1405,8 +1405,21 @@
               "img": "shopify:\/\/shop_images\/pirelli-margotleveque1.jpg"
             }
           },
+          "48afc187-c214-4a45-9b7b-d61c2ca9ba9f": {
+            "type": "gallery",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/pirelli-margotleveque4.jpg"
+            }
+          },
+          "c18b48ac-5793-43d7-aabe-b1462fc21121": {
+            "type": "gallery",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/pirelli-margotleveque5.jpg"
+            }
+          },
           "20ee24e2-fe78-48db-8ebc-b968be87fb57": {
             "type": "gallery",
+            "disabled": true,
             "settings": {
               "img": "shopify:\/\/shop_images\/pirelli-margotleveque2.jpg"
             }
@@ -1421,6 +1434,8 @@
         "block_order": [
           "b9d3d98d-6ad6-452a-b54f-4804bc3655ca",
           "381e80d5-0d46-437f-902e-8efc47244d59",
+          "48afc187-c214-4a45-9b7b-d61c2ca9ba9f",
+          "c18b48ac-5793-43d7-aabe-b1462fc21121",
           "20ee24e2-fe78-48db-8ebc-b968be87fb57",
           "45382638-75a7-48ba-bb1b-c2459ac8c14f"
         ],
