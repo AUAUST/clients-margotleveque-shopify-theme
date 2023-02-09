@@ -1392,11 +1392,11 @@
       },
       "0fd63acb-90a0-446f-acfd-01937c74779d": {
         "type": "project",
-        "disabled": true,
         "blocks": {
           "b9d3d98d-6ad6-452a-b54f-4804bc3655ca": {
             "type": "gallery",
             "settings": {
+              "img": "shopify:\/\/shop_images\/pirelli-margotleveque_copie.jpg"
             }
           }
         },
