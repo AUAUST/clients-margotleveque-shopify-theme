@@ -814,7 +814,7 @@
               "collection_name": "kalice",
               "ornaments": "s",
               "active": "kalice",
-              "letter_spacing": "1em",
+              "letter_spacing": "0.06em",
               "has_italic": true,
               "italic_coming_soon": false,
               "italic_text": "& italic",
