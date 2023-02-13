@@ -133,7 +133,7 @@
             font-family: '{{ name }}';
         }
         @font-face{
-            font-family: '{{ name }}'; src: url('{{ type }}') format('woff2');  
+            font-family: '{{ name }}'; src: url('{{ type | strip_html }}') format('woff2');  
             font-display: block;
         }
       </style>
