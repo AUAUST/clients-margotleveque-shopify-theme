@@ -70,7 +70,13 @@
     .type-{{ name }}{
         font-family: '{{ name }}';
     }
-  {%- if has_italic -%}
+    @font-face{
+        font-family: '{{ name }}';
+        src: url('{{ product.description }}') format('woff2');  
+        font-style: normal;
+        font-display: block;
+    }
+    {%- if has_italic -%}
       @font-face{
         font-family: '{{ name }}';
         src: url('{{ block.settings.active_italic }}') format('woff2');
@@ -78,13 +84,6 @@
         font-display: block;
       }
     {% endif %}
-    @font-face{
-        font-family: '{{ name }}';
-        src: url('{{ product.description }}') format('woff2');  
-        font-style: normal;
-        font-display: block;
-    }
-  
   </style>
 {%- endfor %}
 {%- else -%}
