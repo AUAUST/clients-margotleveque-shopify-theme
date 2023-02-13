@@ -72,14 +72,14 @@
     }
     @font-face{
         font-family: '{{ name }}';
-        src: url('{{ product.description }}') format('woff2');  
+        src: url('{{ product.description | strip_html }}') format('woff2');  
         font-style: normal;
         font-display: block;
     }
     {%- if has_italic -%}
       @font-face{
         font-family: '{{ name }}';
-        src: url('{{ block.settings.active_italic }}') format('woff2');
+        src: url('{{ block.settings.active_italic | strip_html }}') format('woff2');
         font-style: italic;
         font-display: block;
       }
