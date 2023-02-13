@@ -1813,7 +1813,7 @@ div#banner {
   position: relative;
   color: lightgray;
 }
-.type-row_name .coming-soon svg {
+.type-row_name svg {
   transition: opacity 0.1s linear;
   height: 5rem;
   top: 25%;
