@@ -71,7 +71,7 @@
         font-family: '{{ name }}';
     }
     .type-{{ name }} .type-row_name {
-        letter-spacing: {{ block.settings.letter_spacing | default: '0.05em' }};
+        letter-spacing: {{ block.settings.letter_spacing | default: '-0.05em' }};
     }
     @font-face{
         font-family: '{{ name }}';
@@ -451,7 +451,7 @@
           "type":"text",
           "id": "letter_spacing",
           "label": "Default letter spacing",
-          "info": "Default: `0.05em`. The CSS value to apply to `letter-spacing`. Prefer `em` over `px`. Negative values are allowed."
+          "info": "Default: `-0.05em`. The CSS value to apply to `letter-spacing`. Prefer `em` over `px`. Negative values are allowed."
         },
         {
           "type": "checkbox",
