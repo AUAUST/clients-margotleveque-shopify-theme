@@ -10,7 +10,7 @@
 
   {% for product in collection.products %}
     {%- if product.description.size > 0 -%}
-      <style>
+      <style data-test="true">
 @font-face {
   font-family: '{{ product.title | handle }}';
   src: url('{{ product.description | strip_html }}') format('woff2');
