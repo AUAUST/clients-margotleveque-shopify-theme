@@ -10,7 +10,7 @@
 
   {% for product in collection.products %}
     {%- if product.description.size > 0 -%}
-      <style data-test="true">
+      <style>
         .{{ product.title | handle }}{
           font-family: '{{ product.title | handle }}' !important;
         }
