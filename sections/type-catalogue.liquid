@@ -162,7 +162,7 @@
         <select id="styles">
           
           <option selected value disabled>
-            {% if total == 1 %}{{ total }}{% else %}{{ total }}{% endif %} Style{% if total > 1 -%}s{% endif %}
+            {% if total == 1 %}{{ total }}{% else %}{{ total | minus: 1 }}{% endif %} Style{% if total > 1 -%}s{% endif %}
           </option>
           
           {% for product in collection.products -%}
