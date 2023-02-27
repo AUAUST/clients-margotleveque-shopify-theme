@@ -11,46 +11,58 @@
   {% for product in collection.products %}
     {%- if product.description.size > 0 -%}
       <style data-test="true">
-@font-face {
-  font-family: '{{ product.title | handle }}';
-  src: url('{{ product.description | strip_html }}') format('woff2');
-  font-display: block;
-}
-.{{ product.title | handle }}{
-  font-family: '{{ product.title | handle }}' !important;
-}
-</style>
-{%- endif -%}
-{% endfor %}
+        .{{ product.title | handle }}{
+          font-family: '{{ product.title | handle }}' !important;
+        }
+        @font-face {
+          font-family: '{{ product.title | handle }}';
+          src: url('{{ product.description | strip_html }}') format('woff2');
+          font-display: block;
+        }
+      </style>
+    {%- endif -%}
+  {% endfor %}
   <script>
-
-
-$(function() {
-  $('.swatch :radio').change(function() {
-    var t = $(this),
-      optionIndex = t.closest('.swatch').attr('data-option-index'),
-      optionValue = t.val();
-    if (! t.parents('.options-wrapper').is(':last-of-type')) {
-      $('.options-wrapper')
-        .first()
-        .siblings()
-        .find('.swatch :radio')
-        .prop('checked', false);
-      $('.options-wrapper')
-        .first()
-        .siblings()
-        .find('.product-selector')
-        .removeClass('active')
-      $('.options-wrapper:last-of-type label, #product-options .buy-button')
-      .hide()
-    $('.options-wrapper:last-of-type input[data-option-0="' + t.data('value') + '"] + label')
-    .show()
-  $('.options-wrapper:last-of-type input[data-option-1="' + t.data('value') + '"] + label')
-  .show()
-$('.options-wrapper:last-of-type input[data-option-2="' + t.data('value') + '"] + label')
-.show()}t
-  .closest('form')
-  .find('.single-option-selector')
-  .eq(optionIndex)
-  .val(optionValue)
-  .trigger('change');});});</script>
+  $(function () {
+    $(".swatch :radio").change(function () {
+      var t = $(this),
+        optionIndex = t.closest(".swatch").attr("data-option-index"),
+        optionValue = t.val();
+      if (!t.parents(".options-wrapper").is(":last-of-type")) {
+        $(".options-wrapper")
+          .first()
+          .siblings()
+          .find(".swatch :radio")
+          .prop("checked", false);
+        $(".options-wrapper")
+          .first()
+          .siblings()
+          .find(".product-selector")
+          .removeClass("active");
+        $(
+          ".options-wrapper:last-of-type label, #product-options .buy-button"
+        ).hide();
+        $(
+          '.options-wrapper:last-of-type input[data-option-0="' +
+            t.data("value") +
+            '"] + label'
+        ).show();
+        $(
+          '.options-wrapper:last-of-type input[data-option-1="' +
+            t.data("value") +
+            '"] + label'
+        ).show();
+        $(
+          '.options-wrapper:last-of-type input[data-option-2="' +
+            t.data("value") +
+            '"] + label'
+        ).show();
+      }
+      t.closest("form")
+        .find(".single-option-selector")
+        .eq(optionIndex)
+        .val(optionValue)
+        .trigger("change");
+    });
+  });
+  </script>
