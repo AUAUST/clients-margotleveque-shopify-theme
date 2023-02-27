@@ -13,7 +13,7 @@
       <style>
         @font-face {
           font-family: '{{ product.title | handle }}';
-          src: url('{{ product.description | strip_html }}') format('woff2');
+          src: url('{{ product.description | strip_html | strip_newlines | strip }}') format('woff2');
           font-display: block;
         }
       </style>
