@@ -11,9 +11,6 @@
   {% for product in collection.products %}
     {%- if product.description.size > 0 -%}
       <style>
-        .{{ product.title | handle }}{
-          font-family: '{{ product.title | handle }}' !important;
-        }
         @font-face {
           font-family: '{{ product.title | handle }}';
           src: url('{{ product.description | strip_html }}') format('woff2');
