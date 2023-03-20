@@ -297,7 +297,7 @@ document.addEventListener("DOMContentLoaded", function () {
     $(".color").removeClass("active");
     $(this).addClass("active");
     b.removeClass("white black gray");
-    b.addClass();
+    b.addClass($(this).attr("id"));
   });
 
   //Buy products
