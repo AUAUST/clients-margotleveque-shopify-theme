@@ -1655,7 +1655,7 @@ div#banner {
   -ms-user-select: none;
   user-select: none;
 }
-.type-row:nth-child(odd) {
+.type-row:nth-of-type(odd) {
   background-color: var(--lightgray-color);
 }
 
