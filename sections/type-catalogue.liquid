@@ -1,19 +1,19 @@
-{% if template == 'list-collections' %}
-{% for block in section.blocks -%}
+{%- if template == 'list-collections' -%}
+{%- for block in section.blocks -%}
   {%- assign inactive = false -%}
   {%- assign collection = collections[block.settings.collection] -%}
   {%- assign product = all_products[block.settings.active] -%}
   {%- if block.settings.coming_soon == true -%}
-	{%- assign inactive = true -%}
-  {%- endif -%}
-  {%- assign has_italic = false -%}
-  {%- assign italic_coming_soon = false  -%}
-  {%- if block.settings.has_italic -%}
-    {%- assign has_italic = true  -%}
-    {%- if block.settings.italic_coming_soon %}
-      {%- assign italic_coming_soon = true  -%}
+    {%- assign inactive = true -%}
     {%- endif -%}
-  {%- endif -%}
+    {%- assign has_italic = false -%}
+    {%- assign italic_coming_soon = false  -%}
+    {%- if block.settings.has_italic -%}
+      {%- assign has_italic = true  -%}
+      {%- if block.settings.italic_coming_soon %}
+        {%- assign italic_coming_soon = true  -%}
+      {%- endif -%}
+    {%- endif -%}
   {%- assign name = block.id -%}
   <a class="type-row type-{{ name }} {% if inactive == true %}inactive{% endif %} {% if section.settings.align == 'center' %}center{% endif %}"
      href="{{ collection.url }}"
@@ -140,12 +140,12 @@
     </div>
     
     {%- for product in collection.products -%}
-    {%- assign total = collection.all_products_count -%}
-    {%- for tag in product.tags -%}
-    {%- if tag contains 'exclude' -%} 
-    {%- assign total = total | minus: 1 -%}
-    {%- endif -%}
-    {%- endfor -%}
+      {%- assign total = collection.all_products_count -%}
+      {%- for tag in product.tags -%}
+        {%- if tag contains 'exclude' -%} 
+          {%- assign total = total | minus: 1 -%}
+        {%- endif -%}
+      {%- endfor -%}
     {%- endfor -%}
     
     <!--Actions-->
@@ -163,25 +163,24 @@
           </option>
           
           {% for product in collection.products -%}
-          
           	{%- assign exclude = false -%}          
           	{%- for tag in product.tags -%}
-     		{%- if tag contains 'exclude' -%}  
-          	{%- assign exclude = true -%}
-          	{%- endif -%}
-            {%- endfor -%}          
-          	
+     		      {%- if tag contains 'exclude' -%}  
+          	    {%- assign exclude = true -%}
+          	  {%- endif -%}
+            {%- endfor -%}
             {%- if product.description != blank and exclude == false -%}
-            <option value="{{ product.title | handle | escape }}"
-                    data-title="{{ product.title }}">
+            <option
+              value="{{ product.title | handle | escape }}"
+              data-title="{{ product.title }}"
+            >
               {% if product.title contains collection.title and product.title != collection.title %}
-              {{- product.title | replace: collection.title, '' -}}
+                {{- product.title | replace: collection.title, '' -}}
               {% else %}
-              {{- product.title -}}
+                {{- product.title -}}
               {% endif %}
             </option>
             {%- endif -%}
-          
           {%- endfor %}
         </select>
       </div>
@@ -296,11 +295,7 @@
             <div class="left">
             {% for product in collection.products -%}
               {% if product.tags contains "pack" or forloop.length == 1 %}
-              <div class="style product-selector left
-                {% comment %}
-                  {% if product.tags contains "pack" %}bold{% endif %}
-                {% endcomment %}
-                  " data-pack="{{- product.title -}}" data-value="{{ product.title | handle | downcase | escape }}" data-id="{{ product.id }}">
+              <div class="style product-selector left" data-pack="{{- product.title -}}" data-value="{{ product.title | handle | downcase | escape }}" data-id="{{ product.id }}">
                 {{- product.title -}}
               </div>
               {% endif %}
@@ -312,7 +307,7 @@
                 <div class="style product-selector right" data-pack="{%- for item in product.metafields.custom.pack.value -%}{{ item.title }} {% endfor %}" data-value="{{ product.title | handle | downcase | escape }}" data-id="{{ product.id }}">
                   {{- product.title -}}
                   {% if product.tags contains "new" %}
-                  {% render 'new-icon' %}
+                    {% render 'new-icon' %}
                   {% endif %}
                 </div>
                 {% endunless %}
