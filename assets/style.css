@@ -1851,10 +1851,10 @@ div#banner {
   align-items: center;
 }
 #gray {
-  fill: var(--darkgray-color);
+  fill: #f8f8f5;
 }
 #black {
-  fill: var(--black-color);
+  fill: black;
 }
 #white {
   fill: white;
