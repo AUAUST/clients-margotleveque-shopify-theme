@@ -367,19 +367,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // //  adding active class to first variant options
-  // var productsWrap = document.querySelectorAll('#product-options wrap');
-  // if (productsWrap != null) {
-  //   for (let i = 0; i < productsWrap.length; i++) {
-  //     var selector = productsWrap[i].querySelectorAll('.product-selector ');
-  //     for (let i = 0; i < selector.length; i++) {
-  //       const el = selector[0];
-  //       el.classList.add('active');
-  //       console.log(el)
-  //     }
-  //   }
-  // }
-
   // hide logo on scroll
   $(document).scroll(function () {
     if ($(window).scrollTop() !== 0) {
