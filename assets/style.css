@@ -24,7 +24,7 @@ body.white {
   --background-color-light: #ffffff;
   --background-color-dark: #f2f2f2;
   --highlight-color: #33ff4b;
-  --darkgray-color: #a0a0a0;
+  --darkgray-color: #000000;
   --lightgray-color: #e0e0e0;
   --black-color: #090000;
   --text-color-normal: #090000;
@@ -35,7 +35,7 @@ body.black {
   --background-color-light: #000000;
   --background-color-dark: #151515;
   --highlight-color: #33ff4b;
-  --darkgray-color: #a0a0a0;
+  --darkgray-color: #ffffff;
   --lightgray-color: #5f2323;
   --black-color: #090000;
   --text-color-normal: #ffffff;
