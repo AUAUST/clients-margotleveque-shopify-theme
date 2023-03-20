@@ -36,7 +36,7 @@ body.black {
   --background-color-dark: #151515;
   --highlight-color: #33ff4b;
   --darkgray-color: #ffffff;
-  --lightgray-color: #5f2323;
+  --lightgray-color: #0e0e0e;
   --black-color: #090000;
   --text-color-normal: #ffffff;
   --text-color-light: #939393;
@@ -1607,7 +1607,7 @@ div#banner {
   letter-spacing: -0.03em;
   line-height: 1;
   padding-bottom: 1rem;
-  color: var(--black-color);
+  color: var(--text-color-normal);
   display: flex;
   flex-direction: row;
   align-items: center;
