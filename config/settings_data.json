@@ -767,6 +767,7 @@
         "blocks": {
           "151987ca-f001-47f0-b364-ad09da57d271": {
             "type": "type",
+            "disabled": true,
             "settings": {
               "collection": "romie",
               "collection_name": "Romie <span class=\"ss01\">I<\/span>tali<span class=\"ss01\">c<\/span>",
