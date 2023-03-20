@@ -3020,13 +3020,15 @@ body.white {
   --color-red: #ff553a;
 }
 body.black {
-  color: white;
-  background-color: var(--black-color);
-}
-
-body.black .pill.inactive,
-body.white .pill.inactive {
-  color: var(--text-color) !important;
+  --background-color-light: #000000;
+  --background-color-dark: #151515;
+  --highlight-color: #33ff4b;
+  --darkgray-color: #a0a0a0;
+  --lightgray-color: #5f2323;
+  --black-color: #090000;
+  --text-color-normal: #ffffff;
+  --text-color-light: #939393;
+  --color-red: #ff553a;
 }
 body.white .select-wrapper::after {
   border-top: 5px solid var(--black-color);
