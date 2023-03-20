@@ -2282,10 +2282,6 @@ input[type="range"]::-webkit-slider-thumb:active {
   pointer-events: all;
   overflow: scroll;
 }
-.white #product-options .title .more-details,
-.black #product-options .title .more-details {
-  background-color: var(--darkgray-color);
-}
 
 #product-options .title .more-details h6 {
   text-transform: uppercase;
@@ -2787,92 +2783,8 @@ input[type="range"]::-webkit-slider-thumb:active {
   }
 }
 
-/* COLORS
+/* FONT
 ================================================== */
-body.white .select-wrapper::after {
-  border-top: 5px solid var(--black-color);
-}
-body.black .select-wrapper::after {
-  border-top: 5px solid white;
-}
-body.white .color:not(.active) circle {
-  stroke: white !important;
-}
-body.black .color:not(.active) circle {
-  stroke: var(--black-color) !important;
-}
-body.black .pill {
-  border-color: white;
-  background-color: var(--black-color);
-}
-body.white .pill {
-  border-color: var(--black-color);
-  background-color: white;
-}
-body.black .pill.active,
-.desktop body.black .pill:not(.title):hover {
-  color: var(--text-color) !important;
-}
-body.white input[type="range"]::-ms-track {
-  background: var(--black-color);
-}
-body.black input[type="range"]::-ms-track {
-  background: white;
-}
-body.white input[type="range"]::-moz-range-track {
-  background: var(--black-color);
-}
-body.black input[type="range"]::-moz-range-track {
-  background: white;
-}
-body.white input[type="range"]::-webkit-slider-runnable-track {
-  background: var(--black-color);
-}
-body.black input[type="range"]::-webkit-slider-runnable-track {
-  background: white;
-}
-body.white input[type="range"]::-ms-thumb {
-  background: var(--black-color);
-}
-body.black input[type="range"]::-moz-range-thumb {
-  background: white;
-}
-body.white input[type="range"]::-webkit-slider-thumb {
-  background: var(--black-color);
-}
-body.black input[type="range"]::-ms-thumb {
-  background: white;
-}
-body.white input[type="range"]::-moz-range-thumb {
-  background: var(--black-color);
-}
-body.black input[type="range"]::-webkit-slider-thumb {
-  background: white;
-}
-
-#cart {
-  background-color: var(--darkgray-color);
-  color: var(--background-color) !important;
-}
-
-#cart.active,
-.pill.active,
-.device .pill:not(.title):not(#buy):active,
-.desktop .pill:not(.title):hover {
-  background-color: var(--highlight-color) !important;
-  color: var(--text-color) !important;
-}
-@media (max-width: 812px) {
-  body.black header,
-  body.black #mobileMenu {
-    background-color: var(--black-color);
-  }
-  body.white header,
-  body.white #mobileMenu {
-    background-color: white;
-  }
-}
-
 .bold {
   font-family: "Garamond Bold";
 }
