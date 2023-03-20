@@ -18,7 +18,28 @@
   /* --text-color: green; */
   --text-color-normal: #575756;
   --text-color-light: #a0a0a0;
-
+  --color-red: #ff553a;
+}
+body.white {
+  --background-color-light: #ffffff;
+  --background-color-dark: #f2f2f2;
+  --highlight-color: #33ff4b;
+  --darkgray-color: #a0a0a0;
+  --lightgray-color: #e0e0e0;
+  --black-color: #090000;
+  --text-color-normal: #090000;
+  --text-color-light: #1a1a1a;
+  --color-red: #ff553a;
+}
+body.black {
+  --background-color-light: #000000;
+  --background-color-dark: #151515;
+  --highlight-color: #33ff4b;
+  --darkgray-color: #a0a0a0;
+  --lightgray-color: #5f2323;
+  --black-color: #090000;
+  --text-color-normal: #ffffff;
+  --text-color-light: #939393;
   --color-red: #ff553a;
 }
 
@@ -3008,28 +3029,6 @@ body.black  #product-options wrap .product-selector:hover {
 
 /* COLORS
 ================================================== */
-body.white {
-  --background-color-light: #ffffff;
-  --background-color-dark: #f2f2f2;
-  --highlight-color: #33ff4b;
-  --darkgray-color: #a0a0a0;
-  --lightgray-color: #e0e0e0;
-  --black-color: #090000;
-  --text-color-normal: #090000;
-  --text-color-light: #1a1a1a;
-  --color-red: #ff553a;
-}
-body.black {
-  --background-color-light: #000000;
-  --background-color-dark: #151515;
-  --highlight-color: #33ff4b;
-  --darkgray-color: #a0a0a0;
-  --lightgray-color: #5f2323;
-  --black-color: #090000;
-  --text-color-normal: #ffffff;
-  --text-color-light: #939393;
-  --color-red: #ff553a;
-}
 body.white .select-wrapper::after {
   border-top: 5px solid var(--black-color);
 }
