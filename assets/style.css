@@ -1655,6 +1655,9 @@ div#banner {
   -ms-user-select: none;
   user-select: none;
 }
+.type-row:nth-child(odd) {
+  background-color: var(--lightgray-color);
+}
 
 .type-row_details {
   margin-bottom: 1.5em;
