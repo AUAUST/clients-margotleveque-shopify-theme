@@ -1558,8 +1558,7 @@ div#banner {
 }
 .type-row {
   position: relative;
-  width: calc(100vw - 2.4rem);
-  margin-left: 1.2rem;
+  width: 100vw;
   padding: 1rem 7rem;
   display: block;
   font-size: 100px;
