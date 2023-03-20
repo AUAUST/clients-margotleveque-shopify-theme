@@ -61,9 +61,6 @@
           </div>
         {% endif %}
       </div>
-      <!-- {%- if inactive == true -%}
-        {% include 'soon' %}
-      {%- endif -%} -->
     </span>
   </a>
   <style>
@@ -189,28 +186,6 @@
         </select>
       </div>
       <div id="hidden-select-option">{{ collection.all_products_count }} Style{% if collection.all_products_count > 1 -%}s{% endif %}</div>
-      {% comment %}
-      {% if collection.all_products_count > 1 -%}
-      <div class="styles select-wrapper">
-        <optgroup label="{{ collection.all_products_count }} Style">
-          <select id="styles">
-          {% for product in collection.products %}
-            {%- if product.description != blank -%}
-            <option value="{{ product.title | handle | escape }}"
-                    data-title="{{ product.title }}"
-                    {% if product_.id == product.id %}selected{% endif %}>
-              {{- product.title | replace: collection.title, '' -}}
-            </option>
-            {%- endif -%}
-          {% endfor %}
-          </select>
-        </optgroup>
-      </div>
-      <div id="hidden-select-option">{{ product_.title | replace: collection.title, '' }}</div>
-      {%- else -%}
-      <div class="styles">1 Style</div>
-      {%- endif %}
-      {% endcomment %}
       
       {% if inactive != true -%}
       <!--Handler-->
@@ -236,9 +211,6 @@
         <svg id="white" class="color">
           <circle cx="50%" cy="50%" r="50%"></circle>
 		</svg>
-        <!--<div id="gray" class="color active"></div>
-        <div id="black" class="color"></div>
-        <div id="white" class="color"></div>-->
       </div>
       
     </div>
@@ -313,24 +285,6 @@
       <div id="products">        
         <!--Actions-->
         <div id="actions">   
-          <!-- <div id="buy" class="pill {% if inactive == true %}inactive{% endif %}" data-title="Buy {{ collection.title }}">
-            {% if inactive == true -%}
-            Coming soon
-            {%- else -%}
-            Buy {{ collection.title }}
-            {%- endif %}
-          </div>       
-          {%- assign name = collection.title | handle | downcase | escape -%} -->
-          <!-- {% if specimen == true -%}
-          <a class="pill" href="{{ specimen_link }}" target="_blank" rel="noreferrer">
-            Specimen
-          </a>  
-          {%- endif %} -->
-          <!-- {% if settings.eula.size > 0 -%}
-          <a class="pill" href="{{ settings.eula }}" target="_blank" rel="noreferrer">
-            ¶ EULA
-          </a>
-          {%- endif %} -->
         </div>  
         <!--Styles-->
         {% unless inactive == true %}
