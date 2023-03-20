@@ -260,10 +260,10 @@ a {
 .link-pill {
   white-space: nowrap;
   position: relative;
-  border: 1px solid var(--background-color);
+  border: 1px solid currentColor;
   padding: 10px 20px;
   border-radius: 100px;
-  color: var(--background-color);
+  color: white;
   font-size: 50px;
   font-family: "Romie Italic", Times, serif;
 
