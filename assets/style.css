@@ -1732,6 +1732,7 @@ div#banner {
 }
 /*Type Row*/
 #type-row {
+  background-color: var(--background-color-dark);
   width: calc(100% + 2.4rem);
   margin-top: 2.4rem;
   margin-left: -1.2rem;
@@ -1742,7 +1743,6 @@ div#banner {
   white-space: nowrap;
   text-align: center;
   color: var(--darkgray-color);
-  -webkit-user-select: text;
   caret-color: var(--darkgray-color);
   overflow: scroll;
   pointer-events: all;
