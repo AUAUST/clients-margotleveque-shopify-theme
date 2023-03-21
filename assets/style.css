@@ -2352,9 +2352,12 @@ input[type="range"]::-webkit-slider-thumb:active {
 #product-options form input {
   height: 0px !important;
 }
-#product-options wrap .fonts-packs {
-  grid-column: 1/2;
-  grid-row: 1;
+#product-options wrap .fonts-packs.item {
+  background-color: var(--lightgray-color);
+  display: inline-block;
+  width: 100%;
+  padding-block: 0.2em 2em;
+  border-radius: 0.3rem;
 }
 .fonts-packs:first-of-type {
   grid-column: 1/2;
