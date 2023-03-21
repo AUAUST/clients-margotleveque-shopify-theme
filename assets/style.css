@@ -1825,8 +1825,6 @@ div#banner {
   grid-column: 14/17;
 }
 #type-actions > div:last-child {
-  grid-column: 17/19;
-  justify-self: flex-end;
   display: grid;
   grid-auto-flow: column;
   grid-gap: 1rem;
