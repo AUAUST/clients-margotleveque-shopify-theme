@@ -1580,6 +1580,11 @@ div#banner {
 .type-row_details span {
   background-color: var(--background-color-dark);
   color: var(--text-color-normal);
+  display: inline-block;
+  width: 13em;
+  padding-block: 0.5em;
+  border-radius: 2em;
+  margin-inline: 0.25em;
 }
 .type-row:nth-of-type(odd) .type-row_details span:not(.gray, .green) {
   background-color: var(--background-color-light);
