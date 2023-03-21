@@ -1581,7 +1581,7 @@ div#banner {
   background-color: var(--background-color-dark);
   color: var(--text-color-normal);
 }
-.type-row:nth-of-type(odd) span {
+.type-row:nth-of-type(odd) .type-row_details span {
   background-color: var(--background-color-light);
 }
 .type-row_details span.gray {
