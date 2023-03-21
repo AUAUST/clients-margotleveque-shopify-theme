@@ -584,6 +584,7 @@ a {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    color: #ffffff;
   }
   .template-index wrap p {
     font-size: 60%;
