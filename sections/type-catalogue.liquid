@@ -220,7 +220,7 @@
       {% assign alt = collection.description | split: 'alt="' %}
       {% assign content_size = content_src.size | minus: 1 %}
     {% endif %}
-    <div id="infos" class="stick-info-column">
+    <div id="infos" class="sticky-info-column">
       <!--Description-->
       <wrap>
         <p class="desc">{{ description | replace: '<em', '|em' | replace: '</em>', '|/em|' | replace: '<a', '|a' | replace: '</a>', '|/a|' | replace: '</p>', '|br' | strip_html | replace: '|br', '<br>' | replace: '|a', '<a' | replace: '|/a|', '</a>' | replace: '|em', '<em' | replace: '|/em|', '</em>' }}</p>
@@ -278,7 +278,7 @@
       {%- endif %}
     </div>
     <!--Product infos-->
-    <div id="license" class="stick-info-column">
+    <div id="license" class="sticky-info-column">
       <!--Products-->
       <div id="products">
         <!--Actions-->
