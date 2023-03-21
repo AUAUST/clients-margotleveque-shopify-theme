@@ -298,14 +298,14 @@ a {
 }
 .link-pill:hover {
   background-color: var(--background-color);
-  color: var(--text-color) !important;
+  color: var(--text-color-normal) !important;
   transition: background-color 0.3s ease, color 0.3s ease 0.15s;
 }
 .link-pill svg path {
   transition: fill 0.3s ease;
 }
 .link-pill:hover svg path {
-  fill: var(--text-color) !important;
+  fill: var(--text-color-normal) !important;
 }
 .link-bar {
   position: relative;
@@ -857,7 +857,7 @@ header span {
     display: flex;
   }
   .template-page-work #logo {
-    color: var(--text-color);
+    color: var(--text-color-normal);
   }
 
   #logo .page_name {
@@ -873,7 +873,7 @@ header span {
   }
 
   #logo .page_name svg path {
-    fill: var(--text-color);
+    fill: var(--text-color-normal);
   }
   menu {
     grid-column: 18 span;
@@ -996,7 +996,7 @@ footer {
   grid-template-columns: repeat(12, 1fr);
   grid-gap: 1.3em 1rem;
   font-family: "Garamond Light";
-  color: var(--text-color);
+  color: var(--text-color-normal);
   font-size: 85%;
 }
 footer .fancy {
@@ -1007,7 +1007,7 @@ footer .fancy svg {
   width: 25px;
 }
 footer .fancy svg path {
-  fill: var(--text-color);
+  fill: var(--text-color-normal);
 }
 footer > span {
   grid-column: 1/2;
@@ -1026,7 +1026,7 @@ footer div span {
 footer div a {
   grid-column: 2 / 6;
   line-height: 1.1;
-  color: var(--text-color);
+  color: var(--text-color-normal);
 }
 footer wrap {
   grid-column: 2 span;
@@ -1063,7 +1063,7 @@ footer .credits li span {
 }
 footer .credits li a {
   margin-left: 5px;
-  color: var(--text-color);
+  color: var(--text-color-normal);
 }
 
 @media (max-width: 1190px) {
@@ -1287,11 +1287,11 @@ div#banner {
   color: var(--darkgray-color);
 }
 .counter::before {
-  color: var(--text-color);
+  color: var(--text-color-normal);
   content: "{";
 }
 .counter::after {
-  color: var(--text-color);
+  color: var(--text-color-normal);
   content: "}";
 }
 @media (max-width: 1024px) {
@@ -1581,15 +1581,13 @@ div#banner {
   justify-content: center;
   align-items: flex-end;
 }
-.type-row_details span {
-  color: var(--text-color);
+.type-row_details space {
+  background-color: var(--background-color-light);
+  color: var(--text-color-normal);
 }
-.type-row_details span::after {
-  content: "•";
-  padding: 0 5px;
-}
-.type-row_details span:last-of-type::after {
-  display: none;
+.type-row_details span.gray {
+  background-color: var(--darkgray-color);
+  color: var(--text-color-light);
 }
 .new-icon {
   position: relative;
@@ -2048,7 +2046,7 @@ input[type="range"]::-webkit-slider-thumb:active {
   display: none;
   align-items: center;
   justify-content: center;
-  color: var(--text-color) !important;
+  color: var(--text-color-normal) !important;
 }
 .desktop #gallery .slide:hover .caption {
   display: flex;
@@ -2531,7 +2529,7 @@ input[type="range"]::-webkit-slider-thumb:active {
 }
 .desktop .item-remove:hover svg,
 .device .item-remove:active svg {
-  fill: var(--text-color);
+  fill: var(--text-color-normal);
 }
 #cart-footer {
   width: 100%;
@@ -2647,7 +2645,7 @@ input[type="range"]::-webkit-slider-thumb:active {
   bottom: 0;
   width: auto;
   padding: 0 1.2rem 1.2em;
-  background-color: var(--text-color);
+  background-color: var(--text-color-normal);
   border-top-left-radius: 0.8em 1.8em;
   border-top-right-radius: 0.8em 1.8em;
   color: var(--background-color);
@@ -2660,7 +2658,7 @@ input[type="range"]::-webkit-slider-thumb:active {
   z-index: 10;
 }
 .device #cart-button:active {
-  color: var(--text-color);
+  color: var(--text-color-normal);
   background-color: var(--highlight-color);
 }
 .desktop #cart-button {
@@ -2669,7 +2667,7 @@ input[type="range"]::-webkit-slider-thumb:active {
 }
 .desktop #cart-button:hover {
   padding-bottom: 2em;
-  color: var(--text-color);
+  color: var(--text-color-normal);
   background-color: var(--highlight-color);
 }
 @media (max-width: 812px) {
@@ -2704,7 +2702,7 @@ input[type="range"]::-webkit-slider-thumb:active {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--text-color) !important;
+  color: var(--text-color-normal) !important;
   font-size: 65%;
   line-height: 16px !important;
   text-transform: uppercase;
@@ -2736,7 +2734,7 @@ input[type="range"]::-webkit-slider-thumb:active {
 }
 .device .pill.active:not(#buy):active {
   color: var(--background-color) !important;
-  background-color: var(--text-color);
+  background-color: var(--text-color-normal);
 }
 .desktop .pill:hover {
   transition: color 0.2s linear, border 0.2s linear,
@@ -2822,14 +2820,14 @@ input[type="range"]::-webkit-slider-thumb:active {
   left: 1.2rem;
   bottom: 0;
   padding: 0.3em 1rem 0.4em;
-  background-color: var(--text-color);
+  background-color: var(--text-color-normal);
   border-top-left-radius: 1.2rem;
   border-top-right-radius: 1.2rem;
   color: var(--background-color);
   font-size: 80%;
 }
 .device #type-guide-button:active {
-  color: var(--text-color);
+  color: var(--text-color-normal);
   background-color: var(--highlight-color);
 }
 .desktop #type-guide-button {
@@ -2838,7 +2836,7 @@ input[type="range"]::-webkit-slider-thumb:active {
 }
 .desktop #type-guide-button:hover {
   padding-bottom: 2rem;
-  color: var(--text-color);
+  color: var(--text-color-normal);
   background-color: var(--highlight-color);
 }
 #type-guide {
