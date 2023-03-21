@@ -220,51 +220,7 @@
       {% assign alt = collection.description | split: 'alt="' %}
       {% assign content_size = content_src.size | minus: 1 %}
     {% endif %}
-    <!--Product Gallery-->
-    <div id="gallery" {% if content_size > 1 %}class="slider"{% endif -%}>
-      {% if content_size > 0 -%}
-      <div>
-        <div class="slider-tracker focus">
-        {% for i in (1..content_size) %}
-        {% assign src = content_src[i] | split: '"' | first %}
-        {% assign alt_first = alt[i] | split: '"' | first %}
-        {% assign image_src_thumb = src | replace: '_50x50', '_160x160' | replace: '_100x100', '_160x160' | replace: '_240x240', '_160x160' | replace: '_480x480', '_160x160' | replace: '_600x600', '_160x160' | replace: '_1024x1024', '_160x160' | replace: '_2048x2048', '_160x160' %}
-        {% assign image_src_master = src | replace: '_50x50', '' | replace: '_100x100', '' | replace: '_240x240', '' | replace: '_480x480', '' | replace: '_600x600', '' | replace: '_1024x1024', '' | replace: '_2048x2048', '' %}
-        <div class="slide" data-slide="{{ i }}" style="grid-row: {{ i }}">
-          <img class="lazy" src="{{ image_src_thumb }}" data-src="{{ image_src_master }}"  alt="{{ collection.title }} {{ i }}" />   
-        {% if alt_first != blank %}
-          {% if alt_first contains '||' %}
-            {% assign link = alt_first | split: '||' %}
-            <a href="{{ link[1] }}"
-               class="caption"
-               target="_blank"
-               rel="noreferrer"
-               style="background-color: rgba(255,255,255, .{{ opacity }})">
-              <i><u>{{ link[0] }}</u></i>
-            </a>
-          {% else %}
-            <div class="caption" style="background-color: rgba(255,255,255, .{{ opacity }})">
-              <i>{{ alt_first  }}</i>
-            </div>
-          {% endif %}
-        {% endif %}
-        </div>
-        {% endfor %}
-        </div>
-        {% if content_size > 1 -%}
-        <!--Arrow W-->
-        <span class="prev"></span>
-        <!--Arrow E-->
-        <span class="next"></span>
-        {%- endif %}
-      </div>
-      {%- else -%}
-      <!--Image-->
-      <img class="lazy slide" src="{{ collection.image | img_url: 'thumb' }}" data-src="{{ collection.image | img_url: 'master' }}" alt="{{ collection.title }}" />
-      {%- endif %}
-    </div>
-    <!--Product infos-->
-    <div id="infos">
+    <div id="infos" class="stick-info-column">
       <!--Description-->
       <wrap>
         {% if content_size > 1 -%}
@@ -320,7 +276,108 @@
           {%- endfor %}
         </div>
         {% endunless %}
-         
+      </div>
+    </div>
+    <!--Product Gallery-->
+    <div id="gallery" {% if content_size > 1 %}class="slider"{% endif -%}>
+      {% if content_size > 0 -%}
+      <div>
+        <div class="slider-tracker focus">
+        {% for i in (1..content_size) %}
+        {% assign src = content_src[i] | split: '"' | first %}
+        {% assign alt_first = alt[i] | split: '"' | first %}
+        {% assign image_src_thumb = src | replace: '_50x50', '_160x160' | replace: '_100x100', '_160x160' | replace: '_240x240', '_160x160' | replace: '_480x480', '_160x160' | replace: '_600x600', '_160x160' | replace: '_1024x1024', '_160x160' | replace: '_2048x2048', '_160x160' %}
+        {% assign image_src_master = src | replace: '_50x50', '' | replace: '_100x100', '' | replace: '_240x240', '' | replace: '_480x480', '' | replace: '_600x600', '' | replace: '_1024x1024', '' | replace: '_2048x2048', '' %}
+        <div class="slide" data-slide="{{ i }}" style="grid-row: {{ i }}">
+          <img class="lazy" src="{{ image_src_thumb }}" data-src="{{ image_src_master }}"  alt="{{ collection.title }} {{ i }}" />   
+        {% if alt_first != blank %}
+          {% if alt_first contains '||' %}
+            {% assign link = alt_first | split: '||' %}
+            <a href="{{ link[1] }}"
+               class="caption"
+               target="_blank"
+               rel="noreferrer"
+               style="background-color: rgba(255,255,255, .{{ opacity }})">
+              <i><u>{{ link[0] }}</u></i>
+            </a>
+          {% else %}
+            <div class="caption" style="background-color: rgba(255,255,255, .{{ opacity }})">
+              <i>{{ alt_first  }}</i>
+            </div>
+          {% endif %}
+        {% endif %}
+        </div>
+        {% endfor %}
+        </div>
+        {% if content_size > 1 -%}
+        <!--Arrow W-->
+        <span class="prev"></span>
+        <!--Arrow E-->
+        <span class="next"></span>
+        {%- endif %}
+      </div>
+      {%- else -%}
+      <!--Image-->
+      <img class="lazy slide" src="{{ collection.image | img_url: 'thumb' }}" data-src="{{ collection.image | img_url: 'master' }}" alt="{{ collection.title }}" />
+      {%- endif %}
+    </div>
+    <!--Product infos-->
+    <div id="license" class="stick-info-column">
+      <!--Description-->
+      <wrap>
+        {% if content_size > 1 -%}
+        <wrap class="counter"><span>1</span>/{{ content_size }}</wrap>
+        {%- endif %}
+        <p class="desc">{{ description | replace: '<em', '|em' | replace: '</em>', '|/em|' | replace: '<a', '|a' | replace: '</a>', '|/a|' | replace: '</p>', '|br' | strip_html | replace: '|br', '<br>' | replace: '|a', '<a' | replace: '|/a|', '</a>' | replace: '|em', '<em' | replace: '|/em|', '</em>' }}</p>
+        <!-- <div class="spacer">*</div> -->
+        <p class="license">
+          {{ license | replace: '<em', '|em' | replace: '</em>', '|/em|' | replace: '<a', '|a' | replace: '</a>', '|/a|' | replace: '</p>', '|br' | strip_html | replace: '|br', '<br>' | replace: '|a', '<a' | replace: '|/a|', '</a>' | replace: '|em', '<em' | replace: '|/em|', '</em>' }}
+          {% if settings.eula.size > 0 -%}
+          <a class="" href="{{ settings.eula }}" target="_blank" rel="noreferrer">
+            → <u>Read more about licensing</u>
+          </a>
+          {%- endif %}
+        </p>
+      </wrap>
+      <!--Products-->
+      <div id="products">        
+        <!--Actions-->
+        <div id="actions">   
+        </div>  
+        <!--Styles-->
+        {% unless inactive == true %}
+        <div id="product-options">
+          <!--Variant Title-->
+          <div class="title">SELECT STYLE OR PACK</div>
+          <!--Variants-->
+          <wrap>
+            <div class="left">
+            {% for product in collection.products -%}
+              {% if product.tags contains "pack" or forloop.length == 1 %}
+              <div class="style product-selector left" data-pack="{{- product.title -}}" data-value="{{ product.title | handle | downcase | escape }}" data-id="{{ product.id }}">
+                {{- product.title -}}
+              </div>
+              {% endif %}
+            {% endfor %}
+            </div>
+            <div class="right">
+              {% for product in collection.products -%}
+                {% unless product.tags contains "pack" or forloop.length <= 1 %}
+                <div class="style product-selector right" data-pack="{%- for item in product.metafields.custom.pack.value -%}{{ item.title }} {% endfor %}" data-value="{{ product.title | handle | downcase | escape }}" data-id="{{ product.id }}">
+                  {{- product.title -}}
+                  {% if product.tags contains "new" %}
+                    {% render 'new-icon' %}
+                  {% endif %}
+                </div>
+                {% endunless %}
+              {% endfor %}
+              </div>
+          </wrap>
+          {% for product in collection.products -%}  
+            {% include 'purchase-content'%}        
+          {%- endfor %}
+        </div>
+        {% endunless %}
       </div>
     </div>    
     
