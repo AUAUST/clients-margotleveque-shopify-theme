@@ -1776,6 +1776,14 @@ div#banner {
 }
 #type-actions .container {
   grid-column: 2 / span 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+#type-actions .container > * {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 #type-actions .colors-container {
   justify-self: end;
