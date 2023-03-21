@@ -2360,6 +2360,9 @@ input[type="range"]::-webkit-slider-thumb:active {
   border-radius: 0.3rem;
   margin-bottom: 0.3rem;
 }
+.fonts-packs.container:has(.active) .item:not(.active) {
+  opacity: 0.6;
+}
 
 #product-options wrap .product-selector.fonts-cuts {
   grid-column: 2/3;
