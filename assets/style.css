@@ -1569,7 +1569,7 @@ div#banner {
 }
 
 .type-row_details {
-  font-size: 12px !important;
+  font-size: 12px;
   font-family: "TWK", Arial, Helvetica, sans-serif;
   display: flex;
   flex-direction: row;
@@ -1610,7 +1610,7 @@ div#banner {
 .type-row_name {
   letter-spacing: -0.03em;
   line-height: 1;
-  padding-bottom: 1rem;
+  padding-block: 5.5rem 3rem;
   color: var(--text-color-normal);
   display: flex;
   flex-direction: row;
