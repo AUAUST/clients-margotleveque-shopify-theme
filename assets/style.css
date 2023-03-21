@@ -2124,20 +2124,17 @@ input[type="range"]::-webkit-slider-thumb:active {
   line-height: 124%;
 }
 
-#license > wrap .license {
+#infos wrap .license {
   margin-top: 30px;
 }
-#license > wrap a {
+#infos wrap a {
   height: fit-content;
 }
-#license > wrap .license,
-#license > wrap .license a {
+#infos wrap .license,
+#infos wrap .license a {
   font-size: 11px;
   line-height: 14px;
   font-family: "TWK", Arial, Helvetica, sans-serif;
-}
-#license > wrap .spacer {
-  margin: 20px 0 10px 0;
 }
 @media (min-width: 813px) {
   #license {
