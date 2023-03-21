@@ -7,12 +7,12 @@
 :root {
   /* --background-color: yellow; */
   --background-color-light: #f8f8f5;
-  --background-color-dark: #d9d9d9;
+  --background-color-dark: #f2f2ed;
   /* --highlight-color: blue; */
   --highlight-color: #33ff4b;
   /* --darkgray-color: red; */
   --darkgray-color: #a0a0a0;
-  --lightgray-color: #f2f2ed;
+  --lightgray-color: #e0e0e0;
   /* --black-color: purple; */
   --black-color: #090000;
   /* --text-color: green; */
@@ -1569,7 +1569,7 @@ div#banner {
   user-select: none;
 }
 .type-row:nth-of-type(odd) {
-  background-color: var(--lightgray-color);
+  background-color: var(--background-color-dark);
 }
 
 .type-row_details {
