@@ -1695,11 +1695,6 @@ div#banner {
     margin-bottom: 0px;
     font-size: 0.9em;
   }
-  .type-row_name {
-    padding-top: 1.3rem;
-    padding-bottom: 0;
-    margin-bottom: -5px;
-  }
 }
 @media (max-width: 414px) {
   .type-row {
