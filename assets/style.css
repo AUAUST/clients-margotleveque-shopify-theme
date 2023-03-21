@@ -1585,6 +1585,10 @@ div#banner {
   background-color: var(--darkgray-color);
   color: var(--color-white);
 }
+.type-row_details span.green {
+  background-color: var(--highlight-color);
+  color: var(--color-black);
+}
 .new-icon {
   position: relative;
   transform: rotate(-45deg);
