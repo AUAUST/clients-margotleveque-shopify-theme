@@ -20,6 +20,7 @@
 body.white {
   --background-color-light: #ffffff;
   --background-color-dark: #f2f2f2;
+  --font-pack-background: #f4f4f4;
   --highlight-color: #33ff4b;
   --darkgray-color: #000000;
   --lightgray-color: #e0e0e0;
@@ -31,6 +32,7 @@ body.white {
 body.black {
   --background-color-light: #000000;
   --background-color-dark: #151515;
+  --font-pack-background: ##252524;
   --highlight-color: #33ff4b;
   --darkgray-color: #ffffff;
   --lightgray-color: #0e0e0e;
