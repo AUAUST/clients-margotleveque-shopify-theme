@@ -2339,7 +2339,7 @@ input[type="range"]::-webkit-slider-thumb:active {
   grid-column: 1/3;
   font-size: 90%;
   line-height: 144%;
-  padding-left: 1.5em;
+  padding-left: 2em;
 }
 #product-options wrap .product-selector svg {
   position: absolute;
