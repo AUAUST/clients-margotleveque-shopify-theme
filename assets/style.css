@@ -32,7 +32,7 @@ body.white {
 body.black {
   --background-color-light: #000000;
   --background-color-dark: #151515;
-  --font-pack-background: ##252524;
+  --font-pack-background: #252524;
   --highlight-color: #33ff4b;
   --darkgray-color: #ffffff;
   --lightgray-color: #0e0e0e;
