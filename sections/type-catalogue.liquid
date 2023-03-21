@@ -54,11 +54,12 @@
       </div>
       <div class="type-row_details">
         {%- if inactive == true -%}
-          <span>COMING SOON</span>
+          <span class="gray">COMING SOON</span>
         {%- else -%}
-          <span>{{- collection.title | upcase -}}</span>
-          <span>1 family</span>
-          <span>{% if collection.products.count == 1 %}{{ collection.all_products_count }} style{% else %}{{ collection.all_products_count | minus: 1 }} styles{% endif %}</span>
+          <span class="gray">LEARN MORE</span>
+          <!-- <span class="gray"> {{- collection.title -}}</span> -->
+          <span class="white">{% if collection.products.count == 1 %}{{ collection.all_products_count }} style{% else %}{{ collection.all_products_count | minus: 1 }} styles{% endif %}</span>
+          <span>PURCHASE</span>
         {%- endif -%}
       </div>
     </span>
