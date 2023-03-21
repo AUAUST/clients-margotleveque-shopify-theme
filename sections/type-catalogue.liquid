@@ -293,7 +293,7 @@
           <wrap>
             <div class="left">
             {% for product in collection.products -%}
-              {% if product.tags contains "pack" or forloop.length == 1 %}
+              {% if product.tags contains "pack" %}
               <div class="style product-selector left" data-pack="{{- product.title -}}" data-value="{{ product.title | handle | downcase | escape }}" data-id="{{ product.id }}">
                 {{- product.title -}}
               </div>
@@ -302,7 +302,7 @@
             </div>
             <div class="right">
               {% for product in collection.products -%}
-                {% unless product.tags contains "pack" or forloop.length <= 1 %}
+                {% unless product.tags contains "pack" %}
                 <div class="style product-selector right" data-pack="{%- for item in product.metafields.custom.pack.value -%}{{ item.title }} {% endfor %}" data-value="{{ product.title | handle | downcase | escape }}" data-id="{{ product.id }}">
                   {{- product.title -}}
                   {% if product.tags contains "new" %}
