@@ -576,7 +576,6 @@ a {
   .template-index wrap,
   .template-index wrap ~ a {
     font-size: 120%;
-    color: var(--background-color);
   }
   .template-index wrap {
     position: relative;
@@ -588,7 +587,6 @@ a {
   }
   .template-index wrap p {
     font-size: 60%;
-    color: var(--background-color);
     font-family: "Garamond Light";
 
     font-style: italic;
