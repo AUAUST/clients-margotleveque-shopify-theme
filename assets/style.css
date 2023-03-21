@@ -104,8 +104,8 @@ audio {
 input,
 button,
 select {
-  width: fit-content;
   width: -moz-fit-content;
+  width: fit-content;
   margin: 0;
   padding: 0;
   display: inline-block;
@@ -233,8 +233,8 @@ svg {
 /* General
 ================================================== */
 a {
-  width: fit-content;
   width: -moz-fit-content;
+  width: fit-content;
   color: inherit;
   text-decoration: none;
   cursor: pointer;
@@ -788,8 +788,8 @@ header ul {
   line-height: 1.5;
 }
 header ul li {
-  width: fit-content;
   width: -moz-fit-content;
+  width: fit-content;
   cursor: pointer;
 }
 header ul .link-bar.active,
@@ -797,8 +797,8 @@ header ul .link-bar.active,
   padding-left: 3.7rem;
 }
 header p {
-  height: fit-content;
   height: -moz-fit-content;
+  height: fit-content;
   margin-top: 10rem;
   grid-column: 18 span;
   justify-self: flex-end;
@@ -1205,20 +1205,20 @@ div#banner {
 ================================================== */
 @media (min-width: 813px) {
   .template-page-work header {
-    position: sticky;
     position: -webkit-sticky;
+    position: sticky;
     height: var(--h);
     padding-bottom: 0;
   }
   .template-page-work menu {
-    position: sticky;
     position: -webkit-sticky;
+    position: sticky;
     top: 0.8rem;
   }
   .template-page-work header p {
     grid-column: 9 span;
-    position: sticky;
     position: -webkit-sticky;
+    position: sticky;
     top: calc(10.8rem + 1.3em);
     margin-top: 0;
   }
@@ -1464,8 +1464,8 @@ div#banner {
 /*Scroll Down*/
 #scroll-down {
   position: relative;
-  width: fit-content;
   width: -moz-fit-content;
+  width: fit-content;
   height: 0;
   grid-column: 6 / 14;
   justify-self: center;
@@ -1788,8 +1788,8 @@ div#banner {
 }
 .select-wrapper {
   position: relative;
-  width: fit-content;
   width: -moz-fit-content;
+  width: fit-content;
 }
 .select-wrapper::after {
   content: "";
@@ -2110,8 +2110,8 @@ input[type="range"]::-webkit-slider-thumb:active {
 }
 /*Infos*/
 #license {
-  height: fit-content;
   height: -moz-fit-content;
+  height: fit-content;
   grid-column: 4 span;
   display: grid;
   grid-auto-rows: min-content;
@@ -2138,8 +2138,8 @@ input[type="range"]::-webkit-slider-thumb:active {
 }
 @media (min-width: 813px) {
   #license {
-    position: sticky;
     position: -webkit-sticky;
+    position: sticky;
     top: 4em;
     margin-top: -0.25rem;
   }
@@ -2173,14 +2173,14 @@ input[type="range"]::-webkit-slider-thumb:active {
 }
 /*Actions*/
 #products {
-  width: fit-content;
   width: -moz-fit-content;
+  width: fit-content;
   display: grid;
   width: 100%;
 }
 #actions {
-  width: fit-content;
   width: -moz-fit-content;
+  width: fit-content;
   justify-self: flex-start;
   display: grid;
   grid-auto-flow: column;
@@ -2330,8 +2330,8 @@ input[type="range"]::-webkit-slider-thumb:active {
 }
 #product-options wrap .product-selector {
   position: relative;
-  width: fit-content;
   width: -moz-fit-content;
+  width: fit-content;
   cursor: pointer;
   text-align: left;
   grid-column: 1/3;
@@ -2446,8 +2446,8 @@ input[type="range"]::-webkit-slider-thumb:active {
 /* CART
 ================================================== */
 .template-cart header {
-  position: sticky;
   position: -webkit-sticky;
+  position: sticky;
   padding-left: 0;
   padding-right: 0;
   grid-column: 18 span;
@@ -2615,8 +2615,8 @@ input[type="range"]::-webkit-slider-thumb:active {
 /* EMPTY CART
 ================================================== */
 .template-cart-empty header {
-  position: sticky;
   position: -webkit-sticky;
+  position: sticky;
   padding-left: 0;
   padding-right: 0;
   grid-column: 18 span;
