@@ -2141,7 +2141,7 @@ input[type="range"]::-webkit-slider-thumb:active {
   font-family: "TWK", Arial, Helvetica, sans-serif;
 }
 @media (min-width: 813px) {
-  #license {
+  .sticky-info-column {
     position: -webkit-sticky;
     position: sticky;
     top: 4em;
