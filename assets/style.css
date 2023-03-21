@@ -1564,7 +1564,7 @@ div#banner {
   -ms-user-select: none;
   user-select: none;
 }
-.type-row:nth-of-type(odd) {
+.type-row:nth-of-type(even) {
   background-color: var(--background-color-dark);
 }
 
@@ -1585,7 +1585,7 @@ div#banner {
   border-radius: 2em;
   margin-inline: 0.25em;
 }
-.type-row:nth-of-type(odd) .type-row_details span:not(.gray, .green) {
+.type-row:nth-of-type(even) .type-row_details span:not(.gray, .green) {
   background-color: var(--background-color-light);
 }
 .type-row_details span.gray {
