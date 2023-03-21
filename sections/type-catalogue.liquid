@@ -223,11 +223,7 @@
     <div id="infos" class="stick-info-column">
       <!--Description-->
       <wrap>
-        {% if content_size > 1 -%}
-        <wrap class="counter"><span>1</span>/{{ content_size }}</wrap>
-        {%- endif %}
         <p class="desc">{{ description | replace: '<em', '|em' | replace: '</em>', '|/em|' | replace: '<a', '|a' | replace: '</a>', '|/a|' | replace: '</p>', '|br' | strip_html | replace: '|br', '<br>' | replace: '|a', '<a' | replace: '|/a|', '</a>' | replace: '|em', '<em' | replace: '|/em|', '</em>' }}</p>
-        <!-- <div class="spacer">*</div> -->
         <p class="license">
           {{ license | replace: '<em', '|em' | replace: '</em>', '|/em|' | replace: '<a', '|a' | replace: '</a>', '|/a|' | replace: '</p>', '|br' | strip_html | replace: '|br', '<br>' | replace: '|a', '<a' | replace: '|/a|', '</a>' | replace: '|em', '<em' | replace: '|/em|', '</em>' }}
           {% if settings.eula.size > 0 -%}
@@ -237,46 +233,6 @@
           {%- endif %}
         </p>
       </wrap>
-      <!--Products-->
-      <div id="products">
-        <!--Actions-->
-        <div id="actions">
-        </div>
-        <!--Styles-->
-        {% unless inactive == true %}
-        <div id="product-options">
-          <!--Variant Title-->
-          <div class="title">SELECT STYLE OR PACK</div>
-          <!--Variants-->
-          <wrap>
-            <div class="left">
-            {% for product in collection.products -%}
-              {% if product.tags contains "pack" or forloop.length == 1 %}
-              <div class="style product-selector left" data-pack="{{- product.title -}}" data-value="{{ product.title | handle | downcase | escape }}" data-id="{{ product.id }}">
-                {{- product.title -}}
-              </div>
-              {% endif %}
-            {% endfor %}
-            </div>
-            <div class="right">
-              {% for product in collection.products -%}
-                {% unless product.tags contains "pack" or forloop.length <= 1 %}
-                <div class="style product-selector right" data-pack="{%- for item in product.metafields.custom.pack.value -%}{{ item.title }} {% endfor %}" data-value="{{ product.title | handle | downcase | escape }}" data-id="{{ product.id }}">
-                  {{- product.title -}}
-                  {% if product.tags contains "new" %}
-                    {% render 'new-icon' %}
-                  {% endif %}
-                </div>
-                {% endunless %}
-              {% endfor %}
-              </div>
-          </wrap>
-          {% for product in collection.products -%}
-            {% include 'purchase-content'%}
-          {%- endfor %}
-        </div>
-        {% endunless %}
-      </div>
     </div>
     <!--Product Gallery-->
     <div id="gallery" {% if content_size > 1 %}class="slider"{% endif -%}>
@@ -323,22 +279,6 @@
     </div>
     <!--Product infos-->
     <div id="license" class="stick-info-column">
-      <!--Description-->
-      <wrap>
-        {% if content_size > 1 -%}
-        <wrap class="counter"><span>1</span>/{{ content_size }}</wrap>
-        {%- endif %}
-        <p class="desc">{{ description | replace: '<em', '|em' | replace: '</em>', '|/em|' | replace: '<a', '|a' | replace: '</a>', '|/a|' | replace: '</p>', '|br' | strip_html | replace: '|br', '<br>' | replace: '|a', '<a' | replace: '|/a|', '</a>' | replace: '|em', '<em' | replace: '|/em|', '</em>' }}</p>
-        <!-- <div class="spacer">*</div> -->
-        <p class="license">
-          {{ license | replace: '<em', '|em' | replace: '</em>', '|/em|' | replace: '<a', '|a' | replace: '</a>', '|/a|' | replace: '</p>', '|br' | strip_html | replace: '|br', '<br>' | replace: '|a', '<a' | replace: '|/a|', '</a>' | replace: '|em', '<em' | replace: '|/em|', '</em>' }}
-          {% if settings.eula.size > 0 -%}
-          <a class="" href="{{ settings.eula }}" target="_blank" rel="noreferrer">
-            → <u>Read more about licensing</u>
-          </a>
-          {%- endif %}
-        </p>
-      </wrap>
       <!--Products-->
       <div id="products">
         <!--Actions-->
@@ -380,13 +320,11 @@
         {% endunless %}
       </div>
     </div>
-
   </div>
 
 {%- endif %}
 
 <script>
-
   $('.product-selector.left').click(function(evt) {
     // console.log($(this).attr('data-pack'))
     var target = $(this).attr('data-pack');
