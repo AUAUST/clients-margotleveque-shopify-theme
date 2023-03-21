@@ -20,15 +20,6 @@
      {% if block.settings.ornaments != blank %}data-orn="{{ block.settings.ornaments | slice: 0 }}"{% endif %}
      style="font-size: {{ block.settings.font_size | divided_by: 6.0 }}vw">
     <span>
-      <div class="type-row_details">
-        {%- if inactive == true -%}
-          <span>COMING SOON</span>
-        {%- else -%}
-          <span>{{- collection.title | upcase -}}</span>
-          <span>1 family</span>
-          <span>{% if collection.products.count == 1 %}{{ collection.all_products_count }} style{% else %}{{ collection.all_products_count | minus: 1 }} styles{% endif %}</span>
-        {%- endif -%}
-      </div>
       <div class="type-row_name">
         <div>
           {{- block.settings.collection_name -}}
@@ -60,6 +51,15 @@
             </svg>
           </div>
         {% endif %}
+      </div>
+      <div class="type-row_details">
+        {%- if inactive == true -%}
+          <span>COMING SOON</span>
+        {%- else -%}
+          <span>{{- collection.title | upcase -}}</span>
+          <span>1 family</span>
+          <span>{% if collection.products.count == 1 %}{{ collection.all_products_count }} style{% else %}{{ collection.all_products_count | minus: 1 }} styles{% endif %}</span>
+        {%- endif -%}
       </div>
     </span>
   </a>
