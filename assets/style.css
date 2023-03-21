@@ -1781,7 +1781,7 @@ div#banner {
 }
 #type-actions .container > * {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
