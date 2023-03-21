@@ -2699,25 +2699,25 @@ input[type="range"]::-webkit-slider-thumb:active {
 }
 
 .pill {
-  width: fit-content;
-  width: -moz-fit-content;
-  padding: 0 8px 0 7px;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+  width: fit-content;
+  height: fit-content;
+  padding: 0 8px 0 7px;
+  border: 1px solid var(--darkgray-color);
+  border-radius: 100px;
   color: var(--text-color-normal) !important;
+  background-color: var(--background-color);
   font-size: 65%;
   line-height: 16px !important;
   text-transform: uppercase;
-  height: fit-content;
-  border: 1px solid var(--darkgray-color);
-  border-radius: 100px;
-  overflow: hidden;
+  white-space: nowrap;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  background-color: var(--background-color);
 }
 
 .pill.inactive {
