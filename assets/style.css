@@ -165,8 +165,8 @@ label {
 /* BASIC STYLES
 ================================================== */
 ::selection {
-  background-color: rgba(87, 87, 87, 0.99);
-  color: var(--background-color);
+  background-color: var(--text-color-normal);
+  color: var(--background-color-light);
 }
 html {
   font-size: 10px;
