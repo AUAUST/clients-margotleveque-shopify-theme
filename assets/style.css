@@ -1681,9 +1681,6 @@ div#banner {
     font-size: 10vw !important;
     text-align: center;
   }
-  .type-row span {
-    display: contents;
-  }
   .type-row svg {
     top: auto;
     left: 50%;
