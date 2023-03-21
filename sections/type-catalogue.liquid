@@ -204,13 +204,13 @@
       <div>
         <svg id="gray" class="color active">
           <circle cx="50%" cy="50%" r="50%"></circle>
-		</svg>
+		    </svg>
         <svg id="black" class="color">
           <circle cx="50%" cy="50%" r="50%"></circle>
-		</svg>
+		    </svg>
         <svg id="white" class="color">
           <circle cx="50%" cy="50%" r="50%"></circle>
-		</svg>
+		    </svg>
       </div>
 
     </div>
@@ -432,66 +432,53 @@
       "type": "type",
       "name": "Type",
       "settings": [	
-    {
-            "type": "collection",
-            "id": "collection",
-            "label": "Collection"
-        },
         {
-          "type":      "text",
-          "id":        "collection_name",
-          "label":     "Title"
-        },
-
-        {
-          "type":      "text",
-          "id":        "ornaments",
-          "label":     "Bodoni Ornaments",
-          "info": 	 "Use only one letter"
-        },
-        {
-            "type": "product",
-            "id": "active",
-            "label": "Active Type"
-        },
-        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        },{
+          "type": "text",
+          "id": "collection_name",
+          "label": "Title"
+        },{
+          "type": "text",
+          "id": "ornaments",
+          "label": "Bodoni Ornaments",
+          "info": "Use only one letter"
+        },{
+          "type": "product",
+          "id": "active",
+          "label": "Active Type"
+        },{
           "type":"text",
           "id": "letter_spacing",
           "label": "Default letter spacing",
           "info": "Default: `-0.05em`. The CSS value to apply to `letter-spacing`. Prefer `em` over `px`. Negative values are allowed."
-        },
-        {
+        },{
           "type": "checkbox",
           "id": "has_italic",
           "label": "Has italic?",
           "info": "Whether to display the italic font in the title."
-        },
-        {
+        },{
           "type": "checkbox",
           "id": "italic_coming_soon",
           "label": "Italic is coming soon?",
           "info": "Whether to display the italic font as \"coming soon\"?"
-        },
-        {
+        },{
           "type": "text",
           "id": "italic_text",
           "label": "Italic Text",
           "info": "The italic text to append to the title."
-        },
-        {
-            "type": "textarea",
-            "id": "active_italic",
-            "label": "Italic Type",
-            "info": "Base64 string of a woff2 font file"
-        },
-
-
-        {
-          "type":      "text",
-          "id":        "title",
-          "label":     "Title"
-        },
-        {
+        },{
+          "type": "textarea",
+          "id": "active_italic",
+          "label": "Italic Type",
+          "info": "Base64 string of a woff2 font file"
+        },{
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },{
           "type": "range",
           "id": "font_size",
           "min": 15,
@@ -500,24 +487,20 @@
           "unit": "vw",
           "label": "Collection Font size",
           "default": 50
-        },
-        {
-          "type":      "richtext",
-          "id":        "description",
-          "label":     "Description"
-        },
-        {
-          "type":      "richtext",
-          "id":        "license",
-          "label":     "Licensing"
-        },
-        {
-          "type":      "url",
-          "id":        "specimen",
-          "label":     "Specimen",
-          "info":		 "Upload a .pdf to Settings > Files and paste here the generated url"
-        },
-        {
+        },{
+          "type": "richtext",
+          "id": "description",
+          "label": "Description"
+        },{
+          "type": "richtext",
+          "id": "license",
+          "label": "Licensing"
+        },{
+          "type": "url",
+          "id": "specimen",
+          "label": "Specimen",
+          "info": "Upload a .pdf to Settings > Files and paste here the generated url"
+        },{
           "type": "range",
           "id": "layer_opacity",
           "min": 0,
@@ -526,9 +509,7 @@
           "unit": "%",
           "label": "Opacity layer over images",
           "default": 50
-        },
-
-        {
+        },{
           "type": "checkbox",
           "id": "coming_soon",
           "label": "Coming Soon",
