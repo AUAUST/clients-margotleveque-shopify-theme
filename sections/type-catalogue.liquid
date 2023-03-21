@@ -294,7 +294,7 @@
             <div class="fonts-packs">
             {% for product in collection.products -%}
               {% if product.tags contains "pack" %}
-              <div class="style product-selector left" data-pack="{{- product.title -}}" data-value="{{ product.title | handle | downcase | escape }}" data-id="{{ product.id }}">
+              <div class="style product-selector fonts-packs" data-pack="{{- product.title -}}" data-value="{{ product.title | handle | downcase | escape }}" data-id="{{ product.id }}">
                 {{- product.title -}}
               </div>
               {% endif %}
@@ -303,7 +303,7 @@
             <div class="fonts-cuts">
               {% for product in collection.products -%}
                 {% unless product.tags contains "pack" %}
-                <div class="style product-selector right" data-pack="{%- for item in product.metafields.custom.pack.value -%}{{ item.title }} {% endfor %}" data-value="{{ product.title | handle | downcase | escape }}" data-id="{{ product.id }}">
+                <div class="style product-selector fonts-cuts" data-pack="{%- for item in product.metafields.custom.pack.value -%}{{ item.title }} {% endfor %}" data-value="{{ product.title | handle | downcase | escape }}" data-id="{{ product.id }}">
                   {{- product.title -}}
                   {% if product.tags contains "new" %}
                     {% render 'new-icon' %}
@@ -329,7 +329,7 @@
     // console.log($(this).attr('data-pack'))
     var target = $(this).attr('data-pack');
     // console.log(target)
-    Array.from(document.querySelectorAll('.product-selector.right')).forEach(item => {
+    Array.from(document.querySelectorAll('.product-selector.fonts-cuts')).forEach(item => {
       if (item.getAttribute('data-pack').includes(target)) {
         // console.log(item)
         $(item).addClass('bonus')
@@ -338,7 +338,7 @@
       }
     })
   })
-  $('.product-selector.right').click(function(evt) {
+  $('.product-selector.fonts-cuts').click(function(evt) {
     $('.product-selector').removeClass('bonus')
   })
 </script>
