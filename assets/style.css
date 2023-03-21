@@ -2358,10 +2358,7 @@ input[type="range"]::-webkit-slider-thumb:active {
   width: 100%;
   padding-block: 0.2em 2em;
   border-radius: 0.3rem;
-}
-.fonts-packs:first-of-type {
-  grid-column: 1/2;
-  grid-row: 1;
+  margin-bottom: 0.3rem;
 }
 
 #product-options wrap .product-selector.fonts-cuts {
