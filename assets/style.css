@@ -2390,6 +2390,9 @@ input[type="range"]::-webkit-slider-thumb:active {
   border-radius: 100%;
   border: 1px solid lightgray;
 }
+#product-options wrap .fonts-packs.container .product-selector::before {
+  top: 0.45em;
+}
 
 #product-options wrap .product-selector.active::before,
 #product-options wrap .product-selector.fonts-cuts.bonus::before,
