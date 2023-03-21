@@ -537,6 +537,7 @@ a {
   top: 0;
   left: 0;
   padding: 1.2rem 1.2rem 3.6rem;
+  color: #ffffff;
 }
 .template-index .aspectholder {
   position: fixed;
@@ -580,7 +581,6 @@ a {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    color: #ffffff;
   }
   .template-index wrap p {
     font-size: 60%;
@@ -630,13 +630,11 @@ a {
     width: 100%;
     align-self: flex-end;
     text-align: center;
-    color: var(--background-color);
     position: absolute;
     top: 1rem;
   }
   .template-index wrap p {
     font-size: 60%;
-    color: var(--background-color);
     font-family: "Garamond Light";
     font-style: normal;
     font-style: italic;
