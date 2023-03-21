@@ -35,7 +35,7 @@
         </div>
         {%- if has_italic -%}
           &nbsp;
-          <div style="font-style:italic" {%- if italic_coming_soon -%}class="coming-soon"{%- endif -%}>
+          <div style="font-style:italic" {% if italic_coming_soon -%}class="coming-soon"{%- endif -%}>
             {{- block.settings.italic_text -}}
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 526.6 137.7">
               <g>
