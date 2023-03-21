@@ -73,7 +73,7 @@
     }
     @font-face{
         font-family: '{{ name }}';
-        src: url('{{ product.description | strip_html }}') format('woff2');  
+        src: url('{{ product.description | strip_html }}') format('woff2');
         font-style: normal;
         font-display: block;
     }
@@ -99,11 +99,11 @@
     {% if block_collection.id == ID %}
 	  {%- assign title = block.settings.title -%}
       {%- assign name = block.id -%}
-      {%- assign type = product_collection.description -%} 
-	  {%- assign product_ = product_collection -%} 
+      {%- assign type = product_collection.description -%}
+	  {%- assign product_ = product_collection -%}
 	  {%- assign opacity = block.settings.layer_opacity -%}
-	  {%- assign description = block.settings.description -%}	 
-    {%- assign license = block.settings.license -%}	  
+	  {%- assign description = block.settings.description -%}	
+    {%- assign license = block.settings.license -%}	
 	  {%- if block.settings.specimen != blank -%}
 	    {%- assign specimen = true -%}
 	    {%- assign specimen_link = block.settings.specimen -%}
@@ -116,10 +116,10 @@
 
   <!--Content-->
   <div id="product-content">
-    
+
     <!--Type Row-->
     <div id="type-row"
-         class="type-{{ name }}"> 
+         class="type-{{ name }}">
       <span id="editable"
             class="pure {% if inactive == true %}inactive{% endif %}"
             {% if inactive != true %}
@@ -134,39 +134,39 @@
             font-family: '{{ name }}';
         }
         @font-face{
-            font-family: '{{ name }}'; src: url('{{ type | strip_html }}') format('woff2');  
+            font-family: '{{ name }}'; src: url('{{ type | strip_html }}') format('woff2');
             font-display: block;
         }
       </style>
     </div>
-    
+
     {%- for product in collection.products -%}
       {%- assign total = collection.all_products_count -%}
       {%- for tag in product.tags -%}
-        {%- if tag contains 'exclude' -%} 
+        {%- if tag contains 'exclude' -%}
           {%- assign total = total | minus: 1 -%}
         {%- endif -%}
       {%- endfor -%}
     {%- endfor -%}
-    
+
     <!--Actions-->
-    <div id="type-actions">      
-      
+    <div id="type-actions">
+
       <!--Title-->
-      <div class="title">{{ collection.title }}</div>    
-      
+      <div class="title">{{ collection.title }}</div>
+
       <!--Styles-->
-      <div class="styles select-wrapper">        
+      <div class="styles select-wrapper">
         <select id="styles">
-          
+
           <option selected value disabled>
             {% if total == 1 %}{{ total }}{% else %}{{ total | minus: 1 }}{% endif %} Style{% if total > 1 -%}s{% endif %}
           </option>
-          
+
           {% for product in collection.products -%}
-          	{%- assign exclude = false -%}          
+          	{%- assign exclude = false -%}
           	{%- for tag in product.tags -%}
-     		      {%- if tag contains 'exclude' -%}  
+     		      {%- if tag contains 'exclude' -%}
           	    {%- assign exclude = true -%}
           	  {%- endif -%}
             {%- endfor -%}
@@ -186,7 +186,7 @@
         </select>
       </div>
       <div id="hidden-select-option">{{ collection.all_products_count }} Style{% if collection.all_products_count > 1 -%}s{% endif %}</div>
-      
+
       {% if inactive != true -%}
       <!--Handler-->
       <wrap>
@@ -194,12 +194,12 @@
         <input class="type-handler" type="range" min="30" max="280" value="125" step="1" />
       </wrap>
       {%- endif %}
-      
+
       <!--Information-->
       <span class="select-wrapper">
         <span>Information</span>
       </span>
-      
+
       <!--Colors-->
       <div>
         <svg id="gray" class="color active">
@@ -212,9 +212,9 @@
           <circle cx="50%" cy="50%" r="50%"></circle>
 		</svg>
       </div>
-      
+
     </div>
-    
+
     {% if collection.description contains "<img" %}
       {% assign content_src = collection.description | split: ' src="' %}
       {% assign alt = collection.description | split: 'alt="' %}
@@ -238,10 +238,10 @@
         </p>
       </wrap>
       <!--Products-->
-      <div id="products">        
+      <div id="products">
         <!--Actions-->
-        <div id="actions">   
-        </div>  
+        <div id="actions">
+        </div>
         <!--Styles-->
         {% unless inactive == true %}
         <div id="product-options">
@@ -271,8 +271,8 @@
               {% endfor %}
               </div>
           </wrap>
-          {% for product in collection.products -%}  
-            {% include 'purchase-content'%}        
+          {% for product in collection.products -%}
+            {% include 'purchase-content'%}
           {%- endfor %}
         </div>
         {% endunless %}
@@ -289,7 +289,7 @@
         {% assign image_src_thumb = src | replace: '_50x50', '_160x160' | replace: '_100x100', '_160x160' | replace: '_240x240', '_160x160' | replace: '_480x480', '_160x160' | replace: '_600x600', '_160x160' | replace: '_1024x1024', '_160x160' | replace: '_2048x2048', '_160x160' %}
         {% assign image_src_master = src | replace: '_50x50', '' | replace: '_100x100', '' | replace: '_240x240', '' | replace: '_480x480', '' | replace: '_600x600', '' | replace: '_1024x1024', '' | replace: '_2048x2048', '' %}
         <div class="slide" data-slide="{{ i }}" style="grid-row: {{ i }}">
-          <img class="lazy" src="{{ image_src_thumb }}" data-src="{{ image_src_master }}"  alt="{{ collection.title }} {{ i }}" />   
+          <img class="lazy" src="{{ image_src_thumb }}" data-src="{{ image_src_master }}"  alt="{{ collection.title }} {{ i }}" />
         {% if alt_first != blank %}
           {% if alt_first contains '||' %}
             {% assign link = alt_first | split: '||' %}
@@ -340,10 +340,10 @@
         </p>
       </wrap>
       <!--Products-->
-      <div id="products">        
+      <div id="products">
         <!--Actions-->
-        <div id="actions">   
-        </div>  
+        <div id="actions">
+        </div>
         <!--Styles-->
         {% unless inactive == true %}
         <div id="product-options">
@@ -373,14 +373,14 @@
               {% endfor %}
               </div>
           </wrap>
-          {% for product in collection.products -%}  
-            {% include 'purchase-content'%}        
+          {% for product in collection.products -%}
+            {% include 'purchase-content'%}
           {%- endfor %}
         </div>
         {% endunless %}
       </div>
-    </div>    
-    
+    </div>
+
   </div>
 
 {%- endif %}
@@ -442,7 +442,7 @@
           "id":        "collection_name",
           "label":     "Title"
         },
-        
+
         {
           "type":      "text",
           "id":        "ornaments",
@@ -484,8 +484,8 @@
             "label": "Italic Type",
             "info": "Base64 string of a woff2 font file"
         },
-        
-        
+
+
         {
           "type":      "text",
           "id":        "title",
@@ -527,7 +527,7 @@
           "label": "Opacity layer over images",
           "default": 50
         },
-        
+
         {
           "type": "checkbox",
           "id": "coming_soon",
