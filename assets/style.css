@@ -1608,8 +1608,9 @@ div#banner {
   font-size: 120%;
 }
 .type-row_name {
+  line-height: 1em;
   letter-spacing: -0.03em;
-  line-height: 1;
+  white-space: nowrap;
   padding-block: 5.5rem 3rem;
   color: var(--text-color-normal);
   display: flex;
