@@ -291,19 +291,19 @@
           <div class="title">SELECT STYLE OR PACK</div>
           <!--Variants-->
           <wrap>
-            <div class="fonts-packs">
+            <div class="fonts-packs container">
             {% for product in collection.products -%}
               {% if product.tags contains "pack" %}
-              <div class="style product-selector fonts-packs" data-pack="{{- product.title -}}" data-value="{{ product.title | handle | downcase | escape }}" data-id="{{ product.id }}">
+              <div class="style product-selector fonts-packs item" data-pack="{{- product.title -}}" data-value="{{ product.title | handle | downcase | escape }}" data-id="{{ product.id }}">
                 {{- product.title -}}
               </div>
               {% endif %}
             {% endfor %}
             </div>
-            <div class="fonts-cuts">
+            <div class="fonts-cuts container">
               {% for product in collection.products -%}
                 {% unless product.tags contains "pack" %}
-                <div class="style product-selector fonts-cuts" data-pack="{%- for item in product.metafields.custom.pack.value -%}{{ item.title }} {% endfor %}" data-value="{{ product.title | handle | downcase | escape }}" data-id="{{ product.id }}">
+                <div class="style product-selector fonts-cuts item" data-pack="{%- for item in product.metafields.custom.pack.value -%}{{ item.title }} {% endfor %}" data-value="{{ product.title | handle | downcase | escape }}" data-id="{{ product.id }}">
                   {{- product.title -}}
                   {% if product.tags contains "new" %}
                     {% render 'new-icon' %}
