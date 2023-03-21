@@ -2382,7 +2382,7 @@ input[type="range"]::-webkit-slider-thumb:active {
   width: 0.7em;
   height: 0.7em;
 
-  left: 0;
+  left: 0.5em;
   top: 0.25em;
 
   background-color: transparent;
@@ -2409,11 +2409,6 @@ input[type="range"]::-webkit-slider-thumb:active {
 .desktop #product-options wrap .product-selector:hover {
   color: var(--color-black);
   position: relative;
-}
-
-.black #product-options wrap .product-selector.active,
-.black #product-options wrap .product-selector:hover {
-  color: lightgray;
 }
 
 .options-wrapper:last-of-type:not(:last-of-type) {
