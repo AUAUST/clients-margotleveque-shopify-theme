@@ -1577,6 +1577,7 @@ div#banner {
   align-items: flex-end;
 }
 .type-row_details span {
+  white-space: nowrap;
   background-color: var(--background-color-dark);
   color: var(--text-color-normal);
   display: inline-block;
