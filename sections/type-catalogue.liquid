@@ -151,49 +151,54 @@
 
     <!--Actions-->
     <div id="type-actions">
-
-      <!--Title-->
-      <div class="title">{{ collection.title }}</div>
-
-      <!--Styles-->
-      <div class="styles select-wrapper">
-        <select id="styles">
-
-          <option selected value disabled>
-            {% if total == 1 %}{{ total }}{% else %}{{ total | minus: 1 }}{% endif %} Style{% if total > 1 -%}s{% endif %}
-          </option>
-
-          {% for product in collection.products -%}
-          	{%- assign exclude = false -%}
-          	{%- for tag in product.tags -%}
-     		      {%- if tag contains 'exclude' -%}
-          	    {%- assign exclude = true -%}
-          	  {%- endif -%}
-            {%- endfor -%}
-            {%- if product.description != blank and exclude == false -%}
-            <option
-              value="{{ product.title | handle | escape }}"
-              data-title="{{ product.title }}"
-            >
-              {% if product.title contains collection.title and product.title != collection.title %}
-                {{- product.title | replace: collection.title, '' -}}
-              {% else %}
-                {{- product.title -}}
-              {% endif %}
-            </option>
+      <div class="container">
+        <div class="styles">
+          <div class="title">
+            {%- if total == 1 -%}
+              {{ total }}
+            {%- else -%}
+              {{ total | minus: 1 }}
+            {% endif %}
+            Style 
+            {%- if total > 1 -%}
+              s
             {%- endif -%}
-          {%- endfor %}
-        </select>
-      </div>
-      <div id="hidden-select-option">{{ collection.all_products_count }} Style{% if collection.all_products_count > 1 -%}s{% endif %}</div>
+          </div>
+          <div class="select-wrapper">
+            <select id="styles">  
+              {% for product in collection.products -%}
+                {%- assign exclude = false -%}
+                {%- for tag in product.tags -%}
+                  {%- if tag contains 'exclude' -%}
+                    {%- assign exclude = true -%}
+                  {%- endif -%}
+                {%- endfor -%}
+                {%- if product.description != blank and exclude == false -%}
+                <option
+                  value="{{ product.title | handle | escape }}"
+                  data-title="{{ product.title }}"
+                >
+                  {% if product.title contains collection.title and product.title != collection.title %}
+                    {{- product.title | replace: collection.title, '' -}}
+                  {% else %}
+                    {{- product.title -}}
+                  {% endif %}
+                </option>
+                {%- endif -%}
+              {%- endfor %}
+            </select> 
+          </div>
+        </div>
+        <div class="size">
+          <div class="title">
+            Size
+          </div>
+          <div class="range-wrapper">
+            <input class="type-handler" type="range" min="30" max="280" value="125" step="1" />
 
-      {% if inactive != true -%}
-      <!--Handler-->
-      <wrap>
-        <span>Size</span>
-        <input class="type-handler" type="range" min="30" max="280" value="125" step="1" />
-      </wrap>
-      {%- endif %}
+          </div>
+        </div>  
+      </div>
 
       <!--Information-->
       <span class="select-wrapper">
