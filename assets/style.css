@@ -611,15 +611,6 @@ a {
     left: -3.7rem;
   }
 }
-@media (min-width: 813px) and (max-width: 1024px) {
-  .template-index wrap {
-    grid-column: 6 span;
-    color: var(--background-color);
-  }
-  .template-index wrap + a {
-    grid-column: 8 span;
-  }
-}
 @media (max-width: 812px) {
   .template-index {
     display: flex;
