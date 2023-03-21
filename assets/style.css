@@ -1577,13 +1577,13 @@ div#banner {
   justify-content: center;
   align-items: flex-end;
 }
-.type-row_details space {
+.type-row_details span {
   background-color: var(--background-color-light);
   color: var(--text-color-normal);
 }
 .type-row_details span.gray {
   background-color: var(--darkgray-color);
-  color: var(--text-color-light);
+  color: var(--color-white);
 }
 .new-icon {
   position: relative;
