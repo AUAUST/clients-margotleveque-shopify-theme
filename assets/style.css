@@ -1742,7 +1742,7 @@ div#banner {
 .range-wrapper {
   position: relative;
   background-color: var(--background-color-light);
-  width: 2rem;
+  width: 20rem;
   padding-inline: 1.5rem;
   padding-block: 0.3rem;
   text-align: center;
