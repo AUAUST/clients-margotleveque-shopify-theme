@@ -1549,7 +1549,7 @@ div#banner {
   line-height: 1em;
   letter-spacing: -0.03em;
   white-space: nowrap;
-  padding-block: 5.5rem 3rem;
+  padding-block: 6.5rem 5rem;
   color: var(--text-color-normal);
   display: flex;
   flex-direction: row;
