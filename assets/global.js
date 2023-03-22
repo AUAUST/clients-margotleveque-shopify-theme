@@ -237,13 +237,13 @@ document.addEventListener("DOMContentLoaded", function () {
     $(".type-handler").val(S);
   }
 
-  // //Size Type Selector
-  // $(".type-handler").each(function () {
-  //   $(this).on("input", function () {
-  //     $("#type-row").css("font-size", $(this).val() + "px");
-  //     $("#editable").removeClass("pure");
-  //   });
-  // });
+  //Size Type Selector
+  $(".type-handler").each(function () {
+    $(this).on("input", function () {
+      $("#type-row").css("--font-multiplier", $(this).val());
+      $("#editable").removeClass("pure");
+    });
+  });
 
   //Avoid Enter on type rows
   $("#type-row").on("keyup keypress", function (e) {
