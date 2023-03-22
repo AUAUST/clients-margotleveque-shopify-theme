@@ -1724,6 +1724,9 @@ div#banner {
   grid-template-columns: 1fr 1fr;
   font-family: "TWK", Arial, Helvetica, sans-serif;
 }
+#type-actions .container .title {
+  font-size: 0.6em;
+}
 #type-actions .container > * {
   display: flex;
   flex-direction: column;
@@ -1737,6 +1740,10 @@ div#banner {
   position: relative;
   width: -moz-fit-content;
   width: fit-content;
+  background-color: var(--background-color-light);
+  width: 18rem;
+  padding-inline: 1rem;
+  text-align: center;
 }
 .select-wrapper::after {
   content: "";
