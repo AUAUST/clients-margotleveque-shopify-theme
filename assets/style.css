@@ -1837,6 +1837,7 @@ input[type="range"] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  width: 100%;
   transform: translateY(-5px);
 }
 input[type="range"]:focus {
