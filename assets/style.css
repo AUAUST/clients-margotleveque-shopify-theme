@@ -1688,6 +1688,11 @@ div#banner {
   overflow: scroll;
   pointer-events: all;
 }
+@media (max-width: 812px) {
+  #type-row {
+    --font-base: 10vw;
+  }
+}
 #type-row span::selection {
   background-color: transparent;
   color: var(--highlight-color);
