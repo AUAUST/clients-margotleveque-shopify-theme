@@ -2124,12 +2124,6 @@ input[type="range"]::-webkit-slider-thumb:active {
   }
 }
 /*Actions*/
-#products {
-  width: -moz-fit-content;
-  width: fit-content;
-  display: grid;
-  width: 100%;
-}
 #actions {
   width: -moz-fit-content;
   width: fit-content;
