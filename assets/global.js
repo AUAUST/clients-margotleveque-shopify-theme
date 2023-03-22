@@ -208,24 +208,25 @@ document.addEventListener("DOMContentLoaded", function () {
   let pure = document.getElementsByClassName("pure");
   if (pure.length > 0) {
     const text = document.getElementById("editable");
-    function calcTextSize() {
-      const parentContainerWidth = text.parentNode.clientWidth;
-      const currentTextWidth = text.scrollWidth;
-      const currentFontSize = parseInt(window.getComputedStyle(text).fontSize);
-      const newValue = Math.min(
-        Math.max(
-          16,
-          (parentContainerWidth / currentTextWidth) * currentFontSize
-        ),
-        500
-      );
-      text.parentNode.style.setProperty("--fontSize", newValue + "px");
-    }
-    calcTextSize();
-    function resizeBox() {
-      calcTextSize();
-    }
-    resizeBox();
+    // function calcTextSize() {
+    //   const parentContainerWidth = text.parentNode.clientWidth;
+    //   const currentTextWidth = text.scrollWidth;
+    //   const currentFontSize = parseInt(window.getComputedStyle(text).fontSize);
+    //   const newValue = Math.min(
+    //     Math.max(
+    //       16,
+    //       (parentContainerWidth / currentTextWidth) * currentFontSize
+    //     ),
+    //     500
+    //   );
+    //   text.parentNode.style.setProperty("--fontSize", newValue + "px");
+    // }
+    // calcTextSize();
+    // function resizeBox() {
+    //   calcTextSize();
+    // }
+    // resizeBox();
+    text.parentNode.style.setProperty("--font-multiplier", "1");
   }
 
   //Set input range correct value
@@ -236,13 +237,13 @@ document.addEventListener("DOMContentLoaded", function () {
     $(".type-handler").val(S);
   }
 
-  //Size Type Selector
-  $(".type-handler").each(function () {
-    $(this).on("input", function () {
-      $("#type-row").css("font-size", $(this).val() + "px");
-      $("#editable").removeClass("pure");
-    });
-  });
+  // //Size Type Selector
+  // $(".type-handler").each(function () {
+  //   $(this).on("input", function () {
+  //     $("#type-row").css("font-size", $(this).val() + "px");
+  //     $("#editable").removeClass("pure");
+  //   });
+  // });
 
   //Avoid Enter on type rows
   $("#type-row").on("keyup keypress", function (e) {

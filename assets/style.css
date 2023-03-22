@@ -1673,9 +1673,8 @@ div#banner {
 /*Type Row*/
 #type-row {
   background-color: var(--background-color-dark);
-  width: calc(100% + 2.4rem);
   margin-top: 2.4rem;
-  margin-left: -1.2rem;
+  margin-left: 1.2rem;
   padding: 0rem 0 5rem;
   grid-column: 18 span;
   font-size: var(--fontSize);
