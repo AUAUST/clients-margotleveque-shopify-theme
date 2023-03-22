@@ -1788,11 +1788,12 @@ div#banner {
 #type-actions > span {
   grid-column: 14/17;
 }
-#type-actions > div:last-child {
+#type-actions .colors-container {
   display: grid;
   grid-auto-flow: column;
-  grid-gap: 1rem;
-  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
 }
 #gray {
   fill: #f8f8f5;
@@ -1950,11 +1951,6 @@ input[type="range"]::-webkit-slider-thumb:active {
     grid-template-columns: 1fr;
   }
   #type-actions > wrap span {
-    display: none;
-  }
-}
-@media (max-width: 320px) {
-  #type-actions .colors-container {
     display: none;
   }
 }
