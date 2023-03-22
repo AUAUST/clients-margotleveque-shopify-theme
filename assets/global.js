@@ -252,22 +252,6 @@ document.addEventListener("DOMContentLoaded", function () {
     //Adjust select width
     $("#hidden-select-option").text(t.find("option:selected").text());
     t.width($("#hidden-select-option").outerWidth());
-
-    const text = document.getElementById("editable");
-    function calcTextSize() {
-      const parentContainerWidth = text.parentNode.clientWidth;
-      const currentTextWidth = text.scrollWidth;
-      const currentFontSize = parseInt(window.getComputedStyle(text).fontSize);
-      const newValue = Math.min(
-        Math.max(
-          16,
-          (parentContainerWidth / currentTextWidth) * currentFontSize
-        ),
-        500
-      );
-      text.parentNode.style.setProperty("--fontSize", newValue + "px");
-    }
-    calcTextSize();
   });
 
   //Colors
@@ -387,30 +371,6 @@ document.addEventListener("DOMContentLoaded", function () {
 window.onresize = function () {
   //Window Height let
   document.documentElement.style.setProperty("--h", window.innerHeight + "px");
-
-  //Set type row font-size full width
-  let pure = document.getElementsByClassName("pure");
-  if (pure.length > 0) {
-    const text = document.getElementById("editable");
-    function calcTextSize() {
-      const parentContainerWidth = text.parentNode.clientWidth;
-      const currentTextWidth = text.scrollWidth;
-      const currentFontSize = parseInt(window.getComputedStyle(text).fontSize);
-      const newValue = Math.min(
-        Math.max(
-          16,
-          (parentContainerWidth / currentTextWidth) * currentFontSize
-        ),
-        500
-      );
-      text.parentNode.style.setProperty("--fontSize", newValue + "px");
-    }
-    calcTextSize();
-    function resizeBox() {
-      calcTextSize();
-    }
-    resizeBox();
-  }
 
   //Set editable rows text and input range correct value
   if ($("#type-row").length) {
