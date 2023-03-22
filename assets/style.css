@@ -2192,7 +2192,7 @@ input[type="range"]::-webkit-slider-thumb:active {
   z-index: 1;
   font-family: "TWK", Arial, Helvetica, sans-serif;
   font-size: 1rem;
-  background-color: white;
+  background-color: var(--background-color-dark);
   border-radius: 2rem;
   box-shadow: var(--darkgray-color) 5px 5px 15px;
   pointer-events: all;
