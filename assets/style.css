@@ -1738,15 +1738,11 @@ div#banner {
 }
 .select-wrapper,
 .range-wrapper {
+  position: relative;
   background-color: var(--background-color-light);
   width: 18rem;
   padding-inline: 1rem;
   text-align: center;
-}
-.select-wrapper {
-  position: relative;
-  width: -moz-fit-content;
-  width: fit-content;
 }
 .select-wrapper::after {
   content: "";
