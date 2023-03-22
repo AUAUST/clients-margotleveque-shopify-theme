@@ -233,11 +233,12 @@ document.addEventListener("DOMContentLoaded", function () {
     $(this).removeClass("pure");
   });
 
-  //Adjust select width
-  if ($("#styles").length) {
-    $("#styles").width($("#hidden-select-option").outerWidth());
+  const selectWrapper = $(".select-wrapper");
+  if (selectWrapper.length > 0) {
+    selectWrapper.onClick = function () {
+      $("#styles").click();
+    };
   }
-
   //Change Styles function
   $("#styles").change(function () {
     let t = $(this),
