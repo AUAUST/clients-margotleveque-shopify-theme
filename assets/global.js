@@ -229,13 +229,13 @@ document.addEventListener("DOMContentLoaded", function () {
     text.parentNode.style.setProperty("--font-multiplier", "1");
   }
 
-  //Set input range correct value
-  if ($("#type-row").length) {
-    let s = $("#type-row").css("font-size"),
-      S = s.replace("px", "");
-    $(".type-handler").attr("max", S * 2);
-    $(".type-handler").val(S);
-  }
+  // //Set input range correct value
+  // if ($("#type-row").length) {
+  //   let s = $("#type-row").css("font-size"),
+  //     S = s.replace("px", "");
+  //   $(".type-handler").attr("max", S * 2);
+  //   $(".type-handler").val(S);
+  // }
 
   //Size Type Selector
   $(".type-handler").each(function () {
