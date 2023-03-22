@@ -1729,6 +1729,7 @@ div#banner {
 }
 #type-actions .container .title {
   font-size: 0.6em;
+  padding-bottom: 0.4rem;
 }
 #type-actions .container > * {
   display: flex;
