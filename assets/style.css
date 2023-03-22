@@ -1678,7 +1678,8 @@ div#banner {
   margin-left: 1.2rem;
   padding: 3.5rem 0 1.7rem;
   grid-column: 18 span;
-  font-size: calc(5vw * var(--font-multiplier, 1.25));
+  --font-base: 5vw;
+  font-size: calc(var(--font-base) * var(--font-multiplier, 1.25));
   line-height: 1;
   white-space: nowrap;
   text-align: center;
