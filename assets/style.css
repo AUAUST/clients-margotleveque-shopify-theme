@@ -1672,10 +1672,12 @@ div#banner {
 }
 /*Type Row*/
 #type-row {
-  background-color: var(--background-color-dark);
+  margin-left: -1.2rem;
+  width: calc(100vw + 1.2rem);
   margin-top: 2.4rem;
   margin-left: 1.2rem;
   padding: 3.5rem 0 1.7rem;
+  background-color: var(--background-color-dark);
   grid-column: 18 span;
   --font-base: 5vw;
   font-size: calc(var(--font-base) * var(--font-multiplier, 1.25));
@@ -1718,6 +1720,7 @@ div#banner {
   padding-bottom: 1rem;
   margin-left: 1.2rem;
   margin-bottom: 1.5rem;
+  margin-left: -1.2rem;
 }
 #type-actions .container {
   grid-column: 2 / span 1;
