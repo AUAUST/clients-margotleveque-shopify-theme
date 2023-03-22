@@ -297,14 +297,14 @@ a {
 }
 .link-pill:hover {
   background-color: var(--background-color);
-  color: var(--text-color-normal) !important;
+  color: var(--text-color-normal);
   transition: background-color 0.3s ease, color 0.3s ease 0.15s;
 }
 .link-pill svg path {
   transition: fill 0.3s ease;
 }
 .link-pill:hover svg path {
-  fill: var(--text-color-normal) !important;
+  fill: var(--text-color-normal);
 }
 .link-bar {
   position: relative;
@@ -2038,7 +2038,7 @@ input[type="range"]::-webkit-slider-thumb:active {
   display: none;
   align-items: center;
   justify-content: center;
-  color: var(--text-color-normal) !important;
+  color: var(--text-color-normal);
 }
 .desktop #gallery .slide:hover .caption {
   display: flex;
@@ -2697,7 +2697,7 @@ input[type="range"]::-webkit-slider-thumb:active {
   padding: 0 8px 0 7px;
   border: 1px solid var(--darkgray-color);
   border-radius: 100px;
-  color: var(--text-color-normal) !important;
+  color: var(--text-color-normal);
   background-color: var(--background-color);
   font-size: 65%;
   line-height: 16px !important;
@@ -2722,6 +2722,7 @@ input[type="range"]::-webkit-slider-thumb:active {
 }
 #trials {
   background-color: var(--highlight-color);
+  color: var(--color-black);
   border: 1px solid var(--highlight-color);
 }
 .device .pill.active:not(#buy):active {
