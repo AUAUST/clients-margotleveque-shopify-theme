@@ -1760,6 +1760,9 @@ div#banner {
   border-top: 5px solid var(--darkgray-color);
   transform: translateY(-50%);
 }
+.select-wrapper {
+  cursor: pointer;
+}
 .select-wrapper select {
   font: inherit;
 }
@@ -1834,7 +1837,8 @@ input[type="range"] {
   -moz-appearance: none;
   appearance: none;
   width: 100%;
-  transform: translateY(-5px);
+  padding: 5px;
+  cursor: pointer;
 }
 input[type="range"]:focus {
   outline: none;
