@@ -1933,12 +1933,11 @@ input[type="range"]::-webkit-slider-thumb:active {
 }
 @media (max-width: 600px) {
   #type-actions {
-    grid-template-columns: auto;
+    display: block;
   }
   #type-actions .container {
     display: flex;
     flex-direction: column;
-    width: 100%;
     gap: 0.5rem;
   }
   #type-actions .select-wrapper,
@@ -1955,13 +1954,7 @@ input[type="range"]::-webkit-slider-thumb:active {
   }
 }
 @media (max-width: 320px) {
-  #type-actions .styles {
-    grid-column: 1 / 10;
-  }
-  #type-actions > wrap {
-    grid-column: 10 / 19;
-  }
-  #type-actions > div:last-child {
+  #type-actions .colors-container {
     display: none;
   }
 }
