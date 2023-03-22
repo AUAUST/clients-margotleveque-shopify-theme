@@ -1722,6 +1722,7 @@ div#banner {
   grid-column: 2 / span 1;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  font-family: "TWK", Arial, Helvetica, sans-serif;
 }
 #type-actions .container > * {
   display: flex;
@@ -1751,8 +1752,8 @@ div#banner {
   transform: translateY(-50%);
   pointer-events: none;
 }
-.select-wrapper span {
-  padding-right: calc(10px + 0.5rem);
+.select-wrapper select {
+  font: inherit;
 }
 #hidden-select-option {
   position: fixed;
