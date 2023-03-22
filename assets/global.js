@@ -1,25 +1,25 @@
 document.addEventListener("DOMContentLoaded", function () {
-  //Vars
-  var w = window.innerWidth,
+  //lets
+  let w = window.innerWidth,
     h = window.innerHeight;
 
   //Consts
   const b = $("body");
 
-  //Window Height var
+  //Window Height let
   document.documentElement.style.setProperty("--h", h + "px");
 
   //Functions
   function dateToText(d) {
-    var h = d.getHours(),
+    let h = d.getHours(),
       m = d.getMinutes();
     if (m < 10) m = "0" + m;
     if (h < 10) h = "0" + h;
     return h + ":" + m;
   }
   function updateClocks() {
-    for (var i = 0; i < window.arrClocks.length; i++) {
-      var clock = window.arrClocks[i],
+    for (let i = 0; i < window.arrClocks.length; i++) {
+      let clock = window.arrClocks[i],
         offset = window.arrOffsets[i];
       clock.innerHTML = dateToText(new Date(new Date().getTime() + offset));
     }
@@ -28,12 +28,12 @@ document.addEventListener("DOMContentLoaded", function () {
     clockElements = document.getElementsByClassName("clock");
     window.arrClocks = [];
     window.arrOffsets = [];
-    var j = 0;
-    for (var i = 0; i < clockElements.length; i++) {
+    let j = 0;
+    for (let i = 0; i < clockElements.length; i++) {
       el = clockElements[i];
       timezone = parseInt(el.getAttribute("timezone"));
       if (!isNaN(timezone)) {
-        var tzDifference = timezone * 60 + new Date().getTimezoneOffset(),
+        let tzDifference = timezone * 60 + new Date().getTimezoneOffset(),
           offset = tzDifference * 60 * 1000;
         window.arrClocks.push(el);
         window.arrOffsets.push(offset);
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   //Function Sliders
   function nextSlide() {
-    var t = $(".slider-tracker.focus");
+    let t = $(".slider-tracker.focus");
     if (!t.hasClass("transition") && !$("#type-row span").is(":focus")) {
       t.addClass("transition").animate({ left: "-100%" }, 0, function () {
         t.append(t.find(".slide:first-child"));
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
   function prevSlide() {
-    var t = $(".slider-tracker.focus");
+    let t = $(".slider-tracker.focus");
     if (!t.hasClass("transition") && !$("#type-row span").is(":focus")) {
       t.prepend($(".slider-tracker.focus .slide:last-child"));
       t.addClass("transition").css("left", "-100%");
@@ -121,7 +121,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   //Scroll
-  var scroll = $("#scroll-down");
+  let scroll = $("#scroll-down");
   if (scroll.length) {
     $(window).scroll(function (e) {
       if (window.innerWidth > 812) {
@@ -170,7 +170,7 @@ document.addEventListener("DOMContentLoaded", function () {
     );
   });
   $("header ul li").click(function () {
-    var rem = $("#projects").css("padding-top"),
+    let rem = $("#projects").css("padding-top"),
       px = parseInt(rem, 10);
     $("html, body").animate(
       {
@@ -183,7 +183,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   //Project activation
-  var P = [].slice.call(document.querySelectorAll(".project"));
+  let P = [].slice.call(document.querySelectorAll(".project"));
   if ("IntersectionObserver" in window) {
     let o = new IntersectionObserver(
       function (E, observer) {
@@ -205,7 +205,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   //Set editable rows font-size to full width
-  var pure = document.getElementsByClassName("pure");
+  let pure = document.getElementsByClassName("pure");
   if (pure.length > 0) {
     const text = document.getElementById("editable");
     function calcTextSize() {
@@ -230,7 +230,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   //Set input range correct value
   if ($("#type-row").length) {
-    var s = $("#type-row").css("font-size"),
+    let s = $("#type-row").css("font-size"),
       S = s.replace("px", "");
     $(".type-handler").attr("max", S * 2);
     $(".type-handler").val(S);
@@ -246,7 +246,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   //Avoid Enter on type rows
   $("#type-row").on("keyup keypress", function (e) {
-    var keyCode = e.keyCode || e.which;
+    let keyCode = e.keyCode || e.which;
     if (keyCode === 13) {
       e.preventDefault();
       return false;
@@ -265,7 +265,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   //Change Styles function
   $("#styles").change(function () {
-    var t = $(this),
+    let t = $(this),
       v = t.find("option:selected").attr("value"),
       T = t.find("option:selected").data("title"),
       o = t.children("option:selected").text();
@@ -310,7 +310,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   //Buy products
   $("#buy").click(function () {
-    var t = $(this),
+    let t = $(this),
       T = t.data("title"),
       n = t.parent().next();
     t.text(function (i, v) {
@@ -320,7 +320,7 @@ document.addEventListener("DOMContentLoaded", function () {
     n.slideToggle("fast");
   });
   $(".style.product-selector").click(function (e) {
-    var t = $(this),
+    let t = $(this),
       v = t.data("value"),
       T = $('.product-selector[data-value="' + v + '"]');
     $(".style.product-selector").removeClass("active");
@@ -344,7 +344,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   $(".option.product-selector").click(function (e) {
-    var t = $(this),
+    let t = $(this),
       v = t.data("value"),
       T = $('.product-selector[data-value="' + v + '"]');
     $(".option.product-selector").removeClass("active");
@@ -388,7 +388,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   //Lazy Loading
-  var L = [].slice.call(document.querySelectorAll("img.lazy"));
+  let L = [].slice.call(document.querySelectorAll("img.lazy"));
   if ("IntersectionObserver" in window) {
     let o = new IntersectionObserver(function (E, observer) {
       E.forEach(function (e) {
@@ -407,11 +407,11 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 //Resize Functions
 window.onresize = function () {
-  //Window Height var
+  //Window Height let
   document.documentElement.style.setProperty("--h", window.innerHeight + "px");
 
   //Set type row font-size full width
-  var pure = document.getElementsByClassName("pure");
+  let pure = document.getElementsByClassName("pure");
   if (pure.length > 0) {
     const text = document.getElementById("editable");
     function calcTextSize() {
@@ -436,12 +436,12 @@ window.onresize = function () {
 
   //Set editable rows text and input range correct value
   if ($("#type-row").length) {
-    var s = $("#type-row").css("font-size"),
+    let s = $("#type-row").css("font-size"),
       S = s.replace("px", "");
     $(".type-handler").val(S);
   }
   if ($(".pure").length) {
-    var s = $("#type-row").css("font-size"),
+    let s = $("#type-row").css("font-size"),
       S = s.replace("px", "");
     $(".type-handler").attr("max", S * 2);
   }
