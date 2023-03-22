@@ -1921,12 +1921,7 @@ input[type="range"]::-webkit-slider-thumb:active {
 }
 @media (max-width: 1024px) {
   #type-actions {
-    margin-top: 0;
     grid-template-columns: 0px auto 1fr;
-  }
-
-  #type-actions .title {
-    display: none;
   }
   #type-actions > wrap {
     padding: 0;
