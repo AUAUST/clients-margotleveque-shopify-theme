@@ -1703,11 +1703,6 @@ div#banner {
 #type-row span:empty::before {
   content: attr(placeholder);
 }
-@media (max-width: 812px) {
-  #type-row {
-    padding: 0 0 3rem;
-  }
-}
 /*Type Actions*/
 #type-actions {
   grid-column: span 18;
