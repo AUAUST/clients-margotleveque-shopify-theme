@@ -208,34 +208,8 @@ document.addEventListener("DOMContentLoaded", function () {
   let pure = document.getElementsByClassName("pure");
   if (pure.length > 0) {
     const text = document.getElementById("editable");
-    // function calcTextSize() {
-    //   const parentContainerWidth = text.parentNode.clientWidth;
-    //   const currentTextWidth = text.scrollWidth;
-    //   const currentFontSize = parseInt(window.getComputedStyle(text).fontSize);
-    //   const newValue = Math.min(
-    //     Math.max(
-    //       16,
-    //       (parentContainerWidth / currentTextWidth) * currentFontSize
-    //     ),
-    //     500
-    //   );
-    //   text.parentNode.style.setProperty("--fontSize", newValue + "px");
-    // }
-    // calcTextSize();
-    // function resizeBox() {
-    //   calcTextSize();
-    // }
-    // resizeBox();
-    text.parentNode.style.setProperty("--font-multiplier", "1");
+    text.parentNode.style.setProperty("--font-multiplier", "1.25");
   }
-
-  // //Set input range correct value
-  // if ($("#type-row").length) {
-  //   let s = $("#type-row").css("font-size"),
-  //     S = s.replace("px", "");
-  //   $(".type-handler").attr("max", S * 2);
-  //   $(".type-handler").val(S);
-  // }
 
   //Size Type Selector
   $(".type-handler").each(function () {
