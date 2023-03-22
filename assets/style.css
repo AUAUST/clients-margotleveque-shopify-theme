@@ -1675,7 +1675,7 @@ div#banner {
   background-color: var(--background-color-dark);
   margin-top: 2.4rem;
   margin-left: 1.2rem;
-  padding: 0rem 0 5rem;
+  padding: 3.5rem 0 1.7rem;
   grid-column: 18 span;
   font-size: calc(5vw * var(--font-multiplier, 1));
   line-height: 1;
