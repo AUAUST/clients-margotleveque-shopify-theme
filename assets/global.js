@@ -234,9 +234,12 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   const selectWrapper = document.querySelector(".select-wrapper");
+  console.log(selectWrapper);
   if (selectWrapper) {
+    console.log(true);
     const select = document.getElementById("styles");
     selectWrapper.addEventListener("click", () => {
+      console.log("click");
       select.click();
     });
   }
