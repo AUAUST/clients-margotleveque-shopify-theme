@@ -1727,6 +1727,12 @@ div#banner {
   font-family: "TWK", Arial, Helvetica, sans-serif;
   gap: 1rem;
 }
+@media screen and (max-width: 812px) {
+  #type-actions .container {
+    display: flex;
+    flex-direction: column;
+  }
+}
 #type-actions .container .title {
   font-size: 0.6em;
   padding-bottom: 0.4rem;
