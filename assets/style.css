@@ -1717,12 +1717,14 @@ div#banner {
   width: 100vw;
   margin-left: -1.2rem;
   padding-right: 1.2rem;
+  padding-bottom: 1rem;
 }
 #type-actions .container {
   grid-column: 2 / span 1;
   display: grid;
   grid-template-columns: 1fr 1fr;
   font-family: "TWK", Arial, Helvetica, sans-serif;
+  gap: 1rem;
 }
 #type-actions .container .title {
   font-size: 0.6em;
@@ -1740,9 +1742,12 @@ div#banner {
 .range-wrapper {
   position: relative;
   background-color: var(--background-color-light);
-  width: 18rem;
-  padding-inline: 1rem;
+  width: 2rem;
+  padding-inline: 1.5rem;
+  padding-block: 0.3rem;
   text-align: center;
+  border-radius: 0.4rem;
+  font-size: 1.25rem;
 }
 .select-wrapper::after {
   content: "";
