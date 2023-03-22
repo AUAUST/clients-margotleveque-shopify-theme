@@ -2093,7 +2093,7 @@ input[type="range"]::-webkit-slider-thumb:active {
 }
 @media (max-width: 812px) {
   .sticky-info-column {
-    padding: 0.2rem 2rem 0;
+    padding: 0.2rem 2rem 2rem;
     grid-column: 3 / 17;
     justify-items: center;
     text-align: center;
