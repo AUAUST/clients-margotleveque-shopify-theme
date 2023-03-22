@@ -1713,6 +1713,10 @@ div#banner {
   grid-column: span 18;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
+  background-color: var(--background-color-dark);
+  width: 100vw;
+  margin-left: -1.2rem;
+  padding-right: 1.2rem;
 }
 #type-actions .container {
   grid-column: 2 / span 1;
