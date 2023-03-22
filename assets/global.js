@@ -233,12 +233,14 @@ document.addEventListener("DOMContentLoaded", function () {
     $(this).removeClass("pure");
   });
 
-  const selectWrapper = $(".select-wrapper");
-  if (selectWrapper.length > 0) {
-    selectWrapper.onClick = function () {
-      $("#styles").click();
-    };
+  const selectWrapper = document.querySelector(".select-wrapper");
+  if (selectWrapper) {
+    const select = document.getElementById("styles");
+    selectWrapper.addEventListener("click", () => {
+      select.click();
+    });
   }
+
   //Change Styles function
   $("#styles").change(function () {
     let t = $(this),
