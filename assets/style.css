@@ -1932,9 +1932,18 @@ input[type="range"]::-webkit-slider-thumb:active {
   }
 }
 @media (max-width: 600px) {
+  #type-actions {
+    grid-template-columns: auto;
+  }
   #type-actions .container {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+  }
+  #type-actions .select-wrapper,
+  #type-actions .range-wrapper {
+    width: 100%;
   }
   #type-actions > wrap {
     width: 100%;
