@@ -1664,6 +1664,7 @@ div#banner {
 }
 @media (max-width: 812px) {
   #product-content {
+    display: block;
     padding: 0 1.2rem 15rem;
   }
   #product-content > br {
