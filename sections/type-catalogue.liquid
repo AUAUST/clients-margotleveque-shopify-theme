@@ -18,7 +18,8 @@
   <a 
     class="type-row type-{{ name }}
       {% if inactive == true %}inactive{% endif %}
-      {% if section.settings.align == 'center' %}center{% endif %}"
+      {% if section.settings.align == 'center' %}center{% endif -%}
+      "
     href="{{ collection.url }}"
     {% if block.settings.ornaments != blank %}
       data-orn="{{ block.settings.ornaments | slice: 0 }}"
