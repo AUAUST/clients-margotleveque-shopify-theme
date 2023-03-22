@@ -185,11 +185,7 @@
                   value="{{ product.title | handle | escape }}"
                   data-title="{{ product.title }}"
                 >
-                  {% if product.title contains collection.title and product.title != collection.title %}
-                    {{- product.title | replace: collection.title, '' -}}
-                  {% else %}
-                    {{- product.title -}}
-                  {% endif %}
+                  {{- product.title -}}
                 </option>
                 {%- endif -%}
               {%- endfor %}
