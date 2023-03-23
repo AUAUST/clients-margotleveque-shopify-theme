@@ -2024,7 +2024,7 @@ input[type="range"]::-webkit-slider-thumb:active {
 #infos wrap .license,
 #infos wrap .license a {
   font-size: 11px;
-  line-height: 14px;
+  line-height: 1.5em;
   font-family: "TWK", Arial, Helvetica, sans-serif;
 }
 @media (min-width: 813px) {
