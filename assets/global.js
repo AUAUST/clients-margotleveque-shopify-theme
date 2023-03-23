@@ -356,18 +356,6 @@ window.onresize = function () {
   //Window Height let
   document.documentElement.style.setProperty("--h", window.innerHeight + "px");
 
-  //Set editable rows text and input range correct value
-  if ($("#type-row").length) {
-    let s = $("#type-row").css("font-size"),
-      S = s.replace("px", "");
-    $(".type-handler").val(S);
-  }
-  if ($(".pure").length) {
-    let s = $("#type-row").css("font-size"),
-      S = s.replace("px", "");
-    $(".type-handler").attr("max", S * 2);
-  }
-
   //Adjust select width
   $("#styles").width($("#hidden-select-option").outerWidth());
 };
