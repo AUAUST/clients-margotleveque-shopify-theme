@@ -15,29 +15,19 @@
   --color-white: #ffffff;
   --color-black: #090000;
 }
-body.white {
-  --background-color-light: #ffffff;
-  --background-color-dark: #f2f2f2;
-  --font-pack-background: #f4f4f4;
-  --highlight-color: #33ff4b;
-  --darkgray-color: #000000;
-  --lightgray-color: #e0e0e0;
-  --color-black: #090000;
-  --text-color-normal: #090000;
-  --text-color-light: #1a1a1a;
-  --color-red: #ff553a;
-}
-body.black {
-  --background-color-light: #000000;
-  --background-color-dark: #151515;
-  --font-pack-background: #252524;
-  --highlight-color: #33ff4b;
-  --darkgray-color: #4e4e4e;
-  --lightgray-color: #0e0e0e;
-  --color-black: #090000;
-  --text-color-normal: #ffffff;
-  --text-color-light: #939393;
-  --color-red: #ff553a;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color-light: #000000;
+    --background-color-dark: #151515;
+    --font-pack-background: #252524;
+    --highlight-color: #33ff4b;
+    --darkgray-color: #4e4e4e;
+    --lightgray-color: #0e0e0e;
+    --color-black: #090000;
+    --text-color-normal: #ffffff;
+    --text-color-light: #939393;
+    --color-red: #ff553a;
+  }
 }
 #preview-bar-iframe,
 .collection-digital-goods-vat-tax,
@@ -1739,9 +1729,6 @@ div#banner {
   align-items: center;
   justify-content: center;
 }
-#type-actions .colors-container {
-  justify-self: end;
-}
 .select-wrapper,
 .range-wrapper {
   position: relative;
@@ -1791,13 +1778,6 @@ div#banner {
 #type-actions > span {
   grid-column: 14/17;
 }
-#type-actions .colors-container {
-  display: grid;
-  grid-auto-flow: column;
-  gap: 1rem;
-  justify-content: center;
-  margin-top: 1rem;
-}
 #gray {
   fill: #f8f8f5;
 }
@@ -1806,34 +1786,6 @@ div#banner {
 }
 #white {
   fill: white;
-}
-#type-actions .color {
-  width: 10px;
-  height: 10px;
-  cursor: pointer;
-}
-#type-actions .color circle {
-  stroke: var(--background-color);
-  stroke-width: 1px;
-}
-#type-actions .color.active {
-  pointer-events: none;
-}
-#type-actions .color.active circle,
-.desktop #type-actions .color:hover circle {
-  stroke: var(--highlight-color);
-}
-@media (min-width: 1681px) {
-  #type-actions .color {
-    width: 12px;
-    height: 12px;
-  }
-}
-@media (max-width: 812px) {
-  #type-actions .color {
-    width: 12px;
-    height: 12px;
-  }
 }
 /*Font Size Range*/
 input[type="range"] {

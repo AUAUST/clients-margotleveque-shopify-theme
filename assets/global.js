@@ -254,22 +254,6 @@ document.addEventListener("DOMContentLoaded", function () {
     t.width($("#hidden-select-option").outerWidth());
   });
 
-  //Colors
-  $(".color").click(function () {
-    $(".color").removeClass("active");
-    $(this).addClass("active");
-    b.removeClass("white black gray");
-    b.addClass($(this).attr("id"));
-    window.localStorage.setItem("color", $(this).attr("id"));
-  });
-  let color = window.localStorage.getItem("color");
-  if (color) {
-    $(".color").removeClass("active");
-    $("#" + color).addClass("active");
-    b.removeClass("white black gray");
-    b.addClass(color);
-  }
-
   //Buy products
   $("#buy").click(function () {
     let t = $(this),
