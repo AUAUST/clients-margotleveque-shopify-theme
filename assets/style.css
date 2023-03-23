@@ -1677,7 +1677,7 @@ div#banner {
   text-align: center;
   color: var(--darkgray-color);
   caret-color: var(--darkgray-color);
-  overflow: scroll;
+  overflow: auto;
   pointer-events: all;
 }
 @media (max-width: 812px) {
@@ -2141,7 +2141,7 @@ input[type="range"]::-webkit-slider-thumb:active {
   border-radius: 2rem;
   box-shadow: var(--darkgray-color) 5px 5px 15px;
   pointer-events: all;
-  overflow: scroll;
+  overflow: auto;
 }
 #product-options .title .more-details h6 {
   text-transform: uppercase;
