@@ -2018,7 +2018,7 @@ input[type="range"]::-webkit-slider-thumb:active {
   line-height: 124%;
 }
 #infos wrap .license {
-  margin-top: 30px;
+  margin-block: 3.6rem;
 }
 #infos wrap a {
   height: fit-content;
