@@ -9,6 +9,7 @@
   --highlight-color: #33ff4b;
   --darkgray-color: #474743;
   --lightgray-color: #e0e0e0;
+  --text-color-dark: var(--color-black);
   --text-color-normal: #575756;
   --text-color-light: #a0a0a0;
   --color-red: #ff553a;
@@ -24,6 +25,7 @@
     --darkgray-color: #4e4e4e;
     --lightgray-color: #0e0e0e;
     --color-black: #090000;
+    --text-color-dark: var(--color-white);
     --text-color-normal: #ffffff;
     --text-color-light: #939393;
     --color-red: #ff553a;
@@ -1504,17 +1506,13 @@ div#banner {
 }
 .type-row_details span {
   white-space: nowrap;
-  background-color: var(--background-color-dark);
-  color: var(--text-color-normal);
+  color: var(--text-color-dark);
   display: inline-block;
   width: 13em;
   padding-block: 0.5em;
   padding-inline: 1em;
   border-radius: 2em;
   margin-inline: 0.25em;
-}
-.type-row:nth-of-type(odd) .type-row_details span:not(.gray, .green) {
-  background-color: var(--background-color-light);
 }
 .type-row_details span.gray {
   background-color: var(--darkgray-color);
