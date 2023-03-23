@@ -1522,6 +1522,9 @@ div#banner {
   background-color: var(--highlight-color);
   color: var(--color-black);
 }
+.type-row:nth-of-type(odd) .type-row_details span:not(.gray, .green) {
+  width: 8rem;
+}
 .new-icon {
   position: relative;
   transform: rotate(-45deg);
