@@ -61,12 +61,12 @@
         </div>
         <div class="type-row_details">
           {%- if inactive == true -%}
-            <span class="gray">COMING SOON</span>
+            <span class="gray">Coming Soon</span>
           {%- else -%}
-            <span class="gray">LEARN MORE</span>
+            <span class="gray">Learn More</span>
             <!-- <span class="gray"> {{- collection.title -}}</span> -->
             <span>{% if collection.products.count == 1 %}{{ collection.all_products_count }} style{% else %}{{ collection.all_products_count | minus: 1 }} styles{% endif %}</span>
-            <span class="green">PURCHASE</span>
+            <span class="green">Buy</span>
           {%- endif -%}
         </div>
       </span>
