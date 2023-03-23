@@ -233,6 +233,14 @@ document.addEventListener("DOMContentLoaded", function () {
     $(this).removeClass("pure");
   });
 
+  const selectWrapper = document.querySelector(".select-wrapper");
+  if (selectWrapper) {
+    const select = document.getElementById("styles");
+    selectWrapper.addEventListener("click", () => {
+      select.dispatchEvent(new MouseEvent("mousedown"));
+    });
+  }
+
   //Change Styles function
   $("#styles").change(function () {
     let t = $(this),

@@ -1734,15 +1734,11 @@ div#banner {
   position: relative;
   background-color: var(--background-color-light);
   width: 20rem;
-  height: 2.25rem;
   padding-inline: 1.5rem;
   padding-block: 0.3rem;
   text-align: center;
   border-radius: 0.4rem;
   font-size: 1.25rem;
-  overflow: hidden;
-  display: grid;
-  justify-content: center;
 }
 .select-wrapper::after {
   content: "";
@@ -1759,10 +1755,6 @@ div#banner {
 }
 .select-wrapper select {
   font: inherit;
-}
-#styles {
-  padding: 10rem;
-  transform: translateY(calc(-50% + 0.6em));
 }
 #hidden-select-option {
   position: fixed;
