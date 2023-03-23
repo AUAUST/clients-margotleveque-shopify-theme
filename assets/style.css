@@ -2279,8 +2279,7 @@ input[type="range"]::-webkit-slider-thumb:active {
   pointer-events: all;
 }
 .options-wrapper.disabled {
-  opacity: 0.5;
-  pointer-events: none;
+  display: none;
 }
 #price-contact {
   display: none;
