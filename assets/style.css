@@ -1666,7 +1666,9 @@ div#banner {
   margin-top: 2.4rem;
   padding: 3.5rem 0 1.7rem;
   background-color: var(--background-color-dark);
-  box-shadow: 1.2rem 2.4rem 0 2.4rem var(--background-color-dark);
+  box-shadow: 1.2rem 0 0 0 var(--background-color-dark),
+    -1.2rem 0 0 0 var(--background-color-dark);
+  z-index: 1;
   grid-column: 18 span;
   --font-base: 5vw;
   font-size: calc(var(--font-base) * var(--font-multiplier, 1.25));
