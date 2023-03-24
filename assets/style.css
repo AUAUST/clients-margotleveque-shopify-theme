@@ -15,6 +15,7 @@
   --color-red: #ff553a;
   --color-white: #ffffff;
   --color-black: #090000;
+  --font-lausanne: "TWK", Arial, Helvetica, sans-serif;
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -1498,7 +1499,8 @@ div#banner {
 }
 .type-row_details {
   font-size: 12px;
-  font-family: "TWK", Arial, Helvetica, sans-serif;
+
+  font-family: var(--font-lausanne);
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -1715,7 +1717,7 @@ div#banner {
   grid-column: 2 / span 1;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  font-family: "TWK", Arial, Helvetica, sans-serif;
+  font-family: var(--font-lausanne);
   gap: 1rem;
 }
 #type-actions .container .title {
@@ -2027,7 +2029,7 @@ input[type="range"]::-webkit-slider-thumb:active {
 #infos wrap .license a {
   font-size: 11px;
   line-height: 1.5em;
-  font-family: "TWK", Arial, Helvetica, sans-serif;
+  font-family: var(--font-lausanne);
 }
 @media (min-width: 813px) {
   .sticky-info-column {
@@ -2111,7 +2113,7 @@ input[type="range"]::-webkit-slider-thumb:active {
   position: absolute;
   text-align: center;
   line-height: 14px;
-  font-family: "TWK", Arial, Helvetica, sans-serif;
+  font-family: var(--font-lausanne);
   font-size: 13px;
   font-weight: bold;
   color: white;
@@ -2135,7 +2137,7 @@ input[type="range"]::-webkit-slider-thumb:active {
   top: 23px;
   padding: 0 0.7rem 1.7rem 0.7rem;
   z-index: 1;
-  font-family: "TWK", Arial, Helvetica, sans-serif;
+  font-family: var(--font-lausanne);
   font-size: 1rem;
   background-color: var(--background-color-dark);
   border-radius: 2rem;
