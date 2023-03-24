@@ -281,7 +281,7 @@ a {
   margin-right: 10px;
 }
 .link-pill:hover {
-  background-color: var(--background-color);
+  background-color: var(--color-white);
   color: var(--text-color-normal);
   transition: background-color 0.3s ease, color 0.3s ease 0.15s;
 }
