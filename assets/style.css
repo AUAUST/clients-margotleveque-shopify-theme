@@ -2428,13 +2428,11 @@ wrap > .item {
   cursor: pointer;
 }
 #terms svg {
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
   grid-column: 1;
   grid-row: 1;
-  fill: white;
-  stroke: var(--darkgray-color);
-  stroke-width: 1px;
+  fill: var(--color-white);
 }
 #terms.active svg {
   fill: var(--darkgray-color);
