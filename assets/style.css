@@ -914,7 +914,7 @@ header span {
     left: 0;
     width: 100%;
     height: auto;
-    background-color: var(--background-color);
+    background-color: var(--background-color-dark);
     border-bottom: 0.01rem solid var(--darkgray-color);
     transition: transform 0.3s ease;
     transform: translateY(-100%);
