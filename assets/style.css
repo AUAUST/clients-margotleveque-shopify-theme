@@ -2565,7 +2565,6 @@ wrap > .item {
   width: fit-content;
   height: fit-content;
   padding: 0 8px 0 7px;
-  border: 1px solid var(--darkgray-color);
   border-radius: 100px;
   color: var(--text-color-normal);
   background-color: var(--background-color);
