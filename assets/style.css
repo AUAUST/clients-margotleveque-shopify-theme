@@ -2418,6 +2418,9 @@ wrap > .item {
 #cart-actions button {
   font-family: var(--font-lausanne);
 }
+#cart-actions > * {
+  padding: 8px;
+}
 #terms {
   display: grid;
   grid-template-columns: min-content max-content;
