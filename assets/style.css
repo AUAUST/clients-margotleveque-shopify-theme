@@ -2353,6 +2353,9 @@ input[type="range"]::-webkit-slider-thumb:active {
   grid-template-columns: 1fr min-content;
   grid-gap: 1rem;
 }
+.item .item-total {
+  color: var(--text-color-light);
+}
 .item-variations {
   color: var(--darkgray-color);
 }
