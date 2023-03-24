@@ -1606,9 +1606,12 @@ div#banner {
     margin-top: 5rem;
   }
   .type-row {
-    padding: 2.5rem 0;
+    padding: 0 0 1.5rem 0;
     font-size: 10vw !important;
     text-align: center;
+  }
+  .type-row_name {
+    padding-block: 5.5rem 2rem;
   }
   .type-row svg {
     top: auto;
