@@ -2404,8 +2404,8 @@ wrap > .item {
 }
 #cart-footer .item {
   margin-bottom: 1.3em;
-  padding-top: 1rem;
-  border-top: 1px solid var(--darkgray-color);
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--darkgray-color);
 }
 #cart-actions {
   margin-top: 5rem;
