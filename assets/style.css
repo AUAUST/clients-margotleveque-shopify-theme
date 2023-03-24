@@ -2376,7 +2376,7 @@ input[type="range"]::-webkit-slider-thumb:active {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  background-color: var(--color-white);
+  border: 1px solid var(--lightgray-color);
 }
 .item-remove svg {
   width: 100%;
