@@ -2415,6 +2415,9 @@ wrap > .item {
   grid-auto-columns: 1fr;
   grid-gap: 1rem;
 }
+#cart-actions button {
+  font-family: var(--font-lausanne);
+}
 #terms {
   display: grid;
   grid-template-columns: min-content max-content;
