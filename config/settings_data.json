@@ -586,6 +586,13 @@
               "content": "<p>Our pricing structure is straightforward and only takes into account the total number of employees within your or your client's organization. We do not calculate pricing based on how many users will be utilizing the font software within the company, but solely on the total size of the company. The total number of individuals employed by your organization determines the size of your company for licensing purposes.<\/p><p><\/p><p><em>We provide a all-in-one single license that covers all applications; including desktop, web, print, logos, broadcast and app licenses.<\/em><\/p><p><\/p><p>You can purchase licenses up to 2XL on our website. For licenses larger than 2XL, please contact us at <a href=\"mailto:info@margotleveque.com\">info@margotleveque.com<\/a><\/p>"
             }
           },
+          "42aaf3fc-3c53-427f-b0e6-08df53a27db7": {
+            "type": "content",
+            "settings": {
+              "title": "Buying font files for a client",
+              "content": "<p>As a payment facilitator, you have the option to buy font files for your clients. However, it's important to note that your clients must still be the ones to hold the license and abide by the terms of use. Designers, agencies, and studios should purchase a license for the digital font based on their client's company size, and they will charge them for it.<\/p><p><\/p><p>If you are working on behalf of clients, you do not need to purchase a license for your own use. Only the client should be the licensee. However, you cannot use the font for your personal and commercial purposes.<\/p>"
+            }
+          },
           "5298df93-4140-4ac1-a59f-dc2f72b88257": {
             "type": "content",
             "settings": {
@@ -603,7 +610,7 @@
           "7b0fca19-5039-4511-8148-fe513a56f8f5": {
             "type": "content",
             "settings": {
-              "title": "TYPEFACE CREDITS",
+              "title": "TYPEFACES CREDITS AND FONTS IN USE",
               "content": "<p>The end user of this License agrees to do his best to credit Margot Lévêque Studio in conformity with the French lntellectual Property, Code and international conventions and to the copyright regulations by indicating: Digital Font name, ©Margot Lévêque Studio, in the colophon or\/and any place when generally printer name and generals credits appear.<\/p>"
             }
           },
@@ -639,6 +646,7 @@
         "block_order": [
           "0c92de2a-b6e2-4877-b5af-c321499185aa",
           "db8315ae-cd68-4311-99d9-6f3b36f183b4",
+          "42aaf3fc-3c53-427f-b0e6-08df53a27db7",
           "5298df93-4140-4ac1-a59f-dc2f72b88257",
           "975a5a85-e502-4410-89e8-0f1ae93b18cf",
           "7b0fca19-5039-4511-8148-fe513a56f8f5",
