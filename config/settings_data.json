@@ -575,29 +575,36 @@
           "0c92de2a-b6e2-4877-b5af-c321499185aa": {
             "type": "content",
             "settings": {
-              "title": "End user license agreement",
-              "content": "<p>This contract governs the use of the typeface and the fonts composing it, as described on the web pages of the Margot Lévêque Studio website.<\/p><p><\/p><p>Our products are not sold, but are licensed to you as end user This End User License Agreement (EULA) governs the use of Digital Font as presented on the pages of <a href=\"http:\/\/www.margotleveque.com\/products\" target=\"_blank\"><em>www.margotleveque.com\/products<\/em><\/a> and\/or any MARGOT LEVEQUE TYPE'S catalogs. lt is concluded between you (hereinafter: the End user) and Margot Lévêque. By paying, downloading, installing and\/or using Digital Fonts, you confirm that you have read and accepted the terms of this agreement whose terms bind you legally to Margot Lévêque and that you have the legal capacity to contract.<\/p><p><\/p><p>Should you not accept the conditions above and below, do not purchase, access, download and\/or install or otherwise use the Digital Font.<\/p>"
+              "title": "End user license agreement (EULA)",
+              "content": "<p>This contract pertains to the utilization of our typeface and its constituent fonts. Our products are licensed to you as an end user, rather than sold. This EULA governs the usage of our Digital Font, as presented on the <a href=\"http:\/\/www.margotleveque.com\/products\" target=\"_blank\"><em>www.margotleveque.com\/products<\/em><\/a> web pages and\/or any catalogs of Margot Lévêque Studio. It is a legally binding agreement between you, the end user, and Margot Lévêque. <\/p><p><\/p><p>By paying for, downloading, installing, and\/or using our Digital Fonts, you acknowledge that you have read and accepted the terms of this agreement. If you do not accept the terms and conditions above and below, refrain from purchasing, accessing, downloading, installing, or using our Digital Font.<\/p><p><\/p>"
+            }
+          },
+          "db8315ae-cd68-4311-99d9-6f3b36f183b4": {
+            "type": "content",
+            "settings": {
+              "title": "LICENSING TERMS",
+              "content": "<p>Our pricing structure is straightforward and only takes into account the total number of employees within your or your client's organization. We do not calculate pricing based on how many users will be utilizing the font software within the company, but solely on the total size of the company. The total number of individuals employed by your organization determines the size of your company for licensing purposes.<\/p><p><\/p><p><em>We provide a all-in-one single license that covers all applications; including desktop, web, print, logos, broadcast and app licenses.<\/em><\/p><p><\/p><p>You can purchase licenses up to 2XL on our website. For licenses larger than 2XL, please contact us at <a href=\"mailto:info@margotleveque.com\">info@margotleveque.com<\/a><\/p>"
             }
           },
           "5298df93-4140-4ac1-a59f-dc2f72b88257": {
             "type": "content",
             "settings": {
               "title": "TRIALS",
-              "content": "<p>You can get your free trial by sending us an email : <span style=\"text-decoration:underline\">studio@margotleveque.com<\/span><\/p><p><\/p><p>The trial  is free and complete- allows you to use our trial fonts to decide if you want to buy a license<\/p>"
+              "content": "<p>Our trial license offers the opportunity to test and evaluate our font software with ALL GLYPHS included! This allows users to create test documents, visuals, and web pages for presentation to clients or interested parties. We also provide this trial license to students for academic and personal projects. However, it is important to note that any external, commercial, or public use is strictly prohibited without purchasing a license.<\/p>"
             }
           },
-          "db8315ae-cd68-4311-99d9-6f3b36f183b4": {
+          "975a5a85-e502-4410-89e8-0f1ae93b18cf": {
             "type": "content",
             "settings": {
-              "title": "LICENSES - RULES",
-              "content": "<p>The company size of the client is the only metric you need to know in order to license fonts. You don’t have to gather any information about their web traffic, app downloads, etc.<\/p><p><\/p><p><em>Each license includes unlimited uses for Print, Websites, Mobile applications, Global Corporate, Electronic publications, Social networks, Videos and Movies.<\/em><\/p><p><\/p><p>Our fonts are priced based on the company size of the font’s license owner, not on the number of people working with the font files. Your or your client’s company size is the only number you need to calculate the price for our licenses. No information about web traffic or app downloads is necessary.<\/p><p>You are required to upgrade your license only if the company significantly changes its size and the use of the fonts increases beyond the agreed uses.<\/p><p><br\/><\/p><p>S → 1-3 People\/Company<\/p><p>M → 4-10 People\/Company<\/p><p>L → 11-35 People\/Company<\/p><p>XL → 36-70 People\/Company<\/p><p><\/p><p>More? Contact us : studio@margotleveque.com<\/p>"
+              "title": "STUDENTS",
+              "content": "<p>Great news! As a student, you are not required to purchase any license, as we offer a free trial license for our fonts. This license allows you to use our fonts for your study and personal projects, without any additional cost. However, it is important to note that you must still comply with all the licensing terms and conditions, and refrain from any external, commercial, or public use, as it is strictly prohibited.<\/p>"
             }
           },
           "7b0fca19-5039-4511-8148-fe513a56f8f5": {
             "type": "content",
             "settings": {
               "title": "TYPEFACE CREDITS",
-              "content": "<p>The end user of this License agrees to do his best to credit Margot Lévêque Studio in conformity with the French lntellectual Property, Code and international conventions and to the copyright regulations by indicating : Digital Font name, © Margot Lévêque Studio, in the colophon or\/and any place when generally printer name and generals credits appear.<\/p>"
+              "content": "<p>The end user of this License agrees to do his best to credit Margot Lévêque Studio in conformity with the French lntellectual Property, Code and international conventions and to the copyright regulations by indicating: Digital Font name, ©Margot Lévêque Studio, in the colophon or\/and any place when generally printer name and generals credits appear.<\/p>"
             }
           },
           "2e524849-5294-4750-a456-373177d5cdce": {
@@ -611,14 +618,14 @@
             "type": "content",
             "settings": {
               "title": "WARRANTS AND DISCLAIMER",
-              "content": "<p>The Digital Font, is provided as it is. Margot Lévêque Studio does not make any warranty of any kind, either expressed or implied, including, but not limited to the implied warranties of merchantability and fitness for a particular  purpose  The entire risk as to the quality and performance of the Digital Font rests upon you. Margot Lévêque Studio does not warrant that the functions contained in the Digital Font will meet your requirements or error are Free. Any implied warranty obligation created by law is valid for a period of thirty (30) days only. You agree that there are no warranties of any kind after the above period.<\/p><p><\/p><p>Margot Lévêque Studio cannot be held responsible for damage caused or supported by the end user and\/or third party resulting from a misuse of the Digital Font.  Margot Lévêque Studio reserves the right to amend or modify this End user license Agreement at any time without any prior notice, in order to account for future commercial and technical changes.<\/p>"
+              "content": "<p>The Digital Font, is provided as it is. Margot Lévêque Studio does not make any warranty of any kind, either expressed or implied, including, but not limited to the implied warranties of merchantability and fitness for a particular purpose.  The entire risk as to the quality and performance of the Digital Font rests upon you. <\/p><p><\/p><p>Margot Lévêque Studio cannot be held responsible for damage caused or supported by the end user and\/or third party resulting from a misuse of the Digital Font. Margot Lévêque Studio reserves the right to amend or modify this End user license Agreement at any time without any prior notice, in order to account for future commercial and technical changes.<\/p>"
             }
           },
           "a69da70b-a58f-461f-b62c-32701b0563b2": {
             "type": "content",
             "settings": {
               "title": "APPLICABLE LAW AND JURISDICTION",
-              "content": "<p>Any dispute which may arise relating to the existence, making, validity, interpretation, and\/or the execution of this contract agreement will, in the absence of amicable settlement, take place before the Court of Paris (75), France.<\/p>"
+              "content": "<p>This agreement is governed by Swiss law with exclusive juris-diction in Lausanne, Switzerland and any legal disputes will be resolved in Lausnne.<\/p><p><br\/><\/p><p>The United Nations Convention on Contracts for the International Sale of Goods and the United Nations Convention on the Law applicable to International Sales of Goods do not apply. You are responsible for any taxes incurred in your country, including withholding taxes, and they will not be deducted from your payments to us.<\/p>"
             }
           },
           "f80f8a0e-e2b4-48a1-8e7c-9f07891f5bff": {
@@ -631,8 +638,9 @@
         },
         "block_order": [
           "0c92de2a-b6e2-4877-b5af-c321499185aa",
-          "5298df93-4140-4ac1-a59f-dc2f72b88257",
           "db8315ae-cd68-4311-99d9-6f3b36f183b4",
+          "5298df93-4140-4ac1-a59f-dc2f72b88257",
+          "975a5a85-e502-4410-89e8-0f1ae93b18cf",
           "7b0fca19-5039-4511-8148-fe513a56f8f5",
           "2e524849-5294-4750-a456-373177d5cdce",
           "64e0a715-8aa0-4074-8bf9-f4b6a329103b",
