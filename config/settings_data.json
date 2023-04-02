@@ -679,7 +679,7 @@
             "type": "content",
             "settings": {
               "title": "PRICES AND PAYMENT",
-              "content": "<p>All prices from <a href=\"https:\/\/www.margotleveque.com\" title=\"https:\/\/www.margotleveque.com\">www.margotleveque.com<\/a> are in USD and free of taxes. All prices are subject to change without prior notice.<\/p><p><\/p><p>This website offer various payment options : Paypal, CB, MasterCard, Visa.<\/p><p><\/p><p>For a payment by wire transfer, users are invited to contact us for more information by email at: <a href=\"mailto:lvq.margot@gmail.com\" title=\"mailto:lvq.margot@gmail.com\">lvq.margot@gmail.com<\/a>. The download link will only be available once the payment has been processed.<\/p><p><\/p><p>The advertised price must be paid in full after the order confirmation. Data recorded by Margot Lévêque be evidence of all transactions between you and Margot Lévêque.<\/p>"
+              "content": "<p>All prices from <a href=\"https:\/\/www.margotleveque.com\" title=\"https:\/\/www.margotleveque.com\">www.margotleveque.com<\/a> are in CHF and free of taxes. All prices are subject to change without prior notice.<br\/><\/p><p><\/p><p><br\/>This website offer various payment options : Paypal, CB, MasterCard, Visa.<\/p><p><\/p><p><br\/><br\/>For a payment by wire transfer, users are invited to contact us for more information by email at: info@margotleveque.com. The download link will only be available once the payment has been processed.<br\/><br\/>The advertised price must be paid in full after the order confirmation. Data recorded by Margot Lévêque be evidence of all transactions between you and Margot Lévêque.<br\/><br\/>Inaccuracies in the invoicing do not relieve the Customer from any payment obligations or any other obligations reported in these terms.<br\/><br\/><\/p>"
             }
           },
           "5ef6ed12-d343-4daf-9ea1-23141a24db8a": {
@@ -693,21 +693,28 @@
             "type": "content",
             "settings": {
               "title": "REFUNDS",
-              "content": "<p>When the file delivery corresponds to the order made, we are not able to offer a refund once an order has been completed. We may substitute a corrupted or a wrong file.<\/p><p><\/p><p>According to the French act signed on 1997, May 20th: the client can not get a refund for the purchase of downloadable products (Fonts) on the Internet.<\/p>"
+              "content": "<p>When the file delivery corresponds to the order made, we are not able to offer a refund once an order has been completed. We may substitute a corrupted or a wrong file.<\/p><p><\/p><p>According to the French act signed on 1997, May 20th:<em> \"the client can not get a refund for the purchase of downloadable products (Fonts) on the Internet.\"<\/em><\/p>"
             }
           },
           "88230153-50fa-42c2-8787-27afa05e6996": {
             "type": "content",
             "settings": {
               "title": "CUSTOMER SERVICE",
-              "content": "<p>For questions, informations or claims, regarding the products available for sale on the website <a href=\"https:\/\/www.margotleveque.com\" title=\"https:\/\/www.margotleveque.com\">www.margotleveque.com<\/a>, users are invited to directly contact us at <a href=\"mailto:lvq.margot@gmail.com\" title=\"mailto:lvq.margot@gmail.com\">lvq.margot@gmail.com<\/a>. Our support is available in English or French.<\/p><p><\/p><p>All disputes relating to payment transactions, bank or third parties in charge of transaction can be consulted.<\/p>"
+              "content": "<p>For questions, informations or claims, regarding the products available for sale on the website <a href=\"https:\/\/www.margotleveque.com\" title=\"https:\/\/www.margotleveque.com\">www.margotleveque.com<\/a>, users are invited to directly contact us at <a href=\"mailto:lvq.margot@gmail.com\" title=\"mailto:lvq.margot@gmail.com\">info@margotleveque.com<\/a>. Our support is available in English or French.<\/p><p><\/p><p>All disputes relating to payment transactions, bank or third parties in charge of transaction can be consulted.<\/p>"
             }
           },
           "dc3a53d6-f173-4408-84a6-e83c8c2b424e": {
             "type": "content",
             "settings": {
               "title": "APPLICABLE LAW AND JURISDICTION",
-              "content": "<p>For questions, informations or claims, regarding the products available for sale on the website <a href=\"https:\/\/www.margotleveque.com\" title=\"https:\/\/www.margotleveque.com\">www.margotleveque.com<\/a>, users are invited to directly contact us at <\/p><p><a href=\"mailto:lvq.margot@gmail.com\" title=\"mailto:lvq.margot@gmail.com\">lvq.margot@gmail.com<\/a>.<\/p>"
+              "content": "<p>Swiss law exclusively applies to all legal relations Margot Lévêque SARL is a party in.<br\/><br\/>The Customer and Margot Lévêque SARL will not appeal to a Judge until after they have done the utmost to settle a dispute in mutual consultation.<br\/><br\/>Unless otherwise determined by rules of mandatory law, firstly the Judge in Lausanne, Switzerland is entitled to be informed of differences between Margot Lévêque SARL and the Customer.<\/p>"
+            }
+          },
+          "d3c3a33d-7b36-4510-8a44-b35afa16cf1a": {
+            "type": "content",
+            "settings": {
+              "title": "Thank you!",
+              "content": "<p>For questions, informations or claims, regarding the products available for sale on the website <a href=\"https:\/\/www.margotleveque.com\" title=\"https:\/\/www.margotleveque.com\">www.margotleveque.com<\/a>, users are invited to directly contact us at <\/p><p><a href=\"mailto:lvq.margot@gmail.com\" title=\"mailto:lvq.margot@gmail.com\">info@margotleveque.com<\/a><\/p>"
             }
           }
         },
@@ -718,7 +725,8 @@
           "5ef6ed12-d343-4daf-9ea1-23141a24db8a",
           "14465fb7-83c8-42b5-9f5a-29e3da24d1dd",
           "88230153-50fa-42c2-8787-27afa05e6996",
-          "dc3a53d6-f173-4408-84a6-e83c8c2b424e"
+          "dc3a53d6-f173-4408-84a6-e83c8c2b424e",
+          "d3c3a33d-7b36-4510-8a44-b35afa16cf1a"
         ],
         "settings": {
         }
