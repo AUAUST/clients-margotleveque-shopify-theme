@@ -5,11 +5,14 @@
   <p
     class="contact-links"
   >
-    <a href="https://www.instagram.com/margot.leveque">Instagram</a><br>
-    <a href="https://twitter.com/margotlvq">Twitter</a><br>
-    <a href="https://www.linkedin.com/in/margot-leveque/">Linkedin</a><br>
-    <a href="https://www.tiktok.com/@margot.leveque">TikTok</a><br>
-    <a href="https://www.behance.net/margotleveque">Behance</a>
+    {% for link in linklists.footer.links -%}
+      <a
+        href="{{ link.url }}"
+        target="_blank"
+        rel="noreferrer">
+        {{ link.title }}
+      </a>
+    {%- endfor %}
   </p>
 </header>
 <!--Content-->
