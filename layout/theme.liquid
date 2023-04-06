@@ -119,15 +119,14 @@
                 {{ link.title }}
               </a>
             {%- endfor %}
-            {% assign blocks = settings_data.current.sections['type-catalogue'].blocks %}
+            {% assign blocks = settings.current.sections['type-catalogue'].blocks %}
 
-            {% for type in blocks %}
-              {% assign typesettings = type.typesettings %}
-              {% if typesettings.title %}
-                <p>{{ typesettings.title }}</p>
+            {% for uuid in blocks %}
+              {% assign settings = uuid.settings %}
+              {% if settings.title %}
+                <p>{{ settings.title }}</p>
               {% endif %}
             {% endfor %}
-
 
 
 
