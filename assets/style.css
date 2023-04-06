@@ -955,8 +955,13 @@ footer .fancy svg path {
 footer > span {
   grid-column: 1/2;
 }
-footer div {
+footer .footer-links {
   display: flex;
+}
+footer .footer-links div {
+  flex-basis: 1;
+  flex-grow: 1;
+  flex-shrink: 1;
 }
 footer div span {
   grid-column: 1 span;
