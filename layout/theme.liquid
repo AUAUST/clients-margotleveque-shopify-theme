@@ -96,7 +96,7 @@
               <u>{{ shop.email }}</u>
             </a>
           </div>
-          <wrap class="social">
+          <div class="social">
             {% for link in linklists.footer.links -%}
               <a
                 href="{{ link.url }}"
@@ -106,7 +106,7 @@
                 {{ link.title }}
               </a>
             {%- endfor %}
-          </wrap>
+          </div>
           <div class="footer-menu">
             <span>Type Foundry</span>
             <a href="/products" {% if request.path == '/products' %}class="link-active"{% endif %}>Typefaces</a>
