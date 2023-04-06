@@ -114,18 +114,8 @@
               <a href="{{ link.url }}" {% if link.active %}class="link-active"{% endif %}>{{ link.title }}</a>
             {%- endfor %}
           </div>
-          <wrap class="credits">
-            <!-- ©{{ 'now' | date: "%Y" }} Margot Lévêque -->
-            <li>ML Studio
-            <span>© All Rights reserved</span>
-          </li>
-          <li>Design: Margot Lévêque & <a href="https://www.nizarkazan.ch">NK+CO</a></li>
-          <li>Code:
-          <a href="https://carlosmayo.info/" aria-label="_black">Carlos Mayo</a>
-        </li>
-      </wrap>
-    </div>
-  </footer>
+        </div>
+      </footer>
     {%- endunless %}
     {% render 'ajaxify-cart' %}
   </body>
