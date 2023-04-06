@@ -119,13 +119,14 @@
                 {{ link.title }}
               </a>
             {%- endfor %}
-            {%- for block in settings.sections.type-catalogue.blocks -%}
+            {% assign blocks = settings_data.current.sections['type-catalogue'].blocks %}
 
-                <div>
-                  {{- block.settings.collection_name -}}
-                </div>
-
-            {%- endfor -%}
+            {% for type in blocks %}
+              {% assign typesettings = type.typesettings %}
+              {% if typesettings.title %}
+                <p>{{ typesettings.title }}</p>
+              {% endif %}
+            {% endfor %}
 
 
 
