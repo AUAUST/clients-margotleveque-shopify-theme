@@ -122,7 +122,7 @@
             {% assign blocks = settings.current.sections['type-catalogue'].blocks %}
 
             <pre>
-              {{ settings_data | json }}
+              {{ sections | json }}
             </pre>
             {% comment %} {% for uuid in blocks %}
               {% assign settings = uuid.settings %}
