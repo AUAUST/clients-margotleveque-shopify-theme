@@ -110,7 +110,15 @@
           </div>
           <div>
             <span class="footer-title">Typefaces</span>
-
+            {% for link in linklists.typefaces.links -%}
+              <a
+                href="{{ link.url }}"
+                target="_blank"
+                rel="noreferrer"
+              >
+                {{ link.title }}
+              </a>
+            {%- endfor %}
             {%- for block in section.blocks -%}
               {%- assign name = block.id -%}
               {%- assign inactive = false -%}
