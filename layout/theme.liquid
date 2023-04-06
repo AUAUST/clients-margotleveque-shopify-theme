@@ -120,13 +120,7 @@
               </a>
             {%- endfor %}
 
-            <pre>{{ settings.current.sections['type-catalogue'] | json }}</pre>
-            {% comment %} {% for uuid in blocks %}
-              {% assign settings = uuid.settings %}
-              {% if settings.title %}
-                <p>{{ settings.title }}</p>
-              {% endif %}
-            {% endfor %} {% endcomment %}
+            <pre>{{ section | json }}</pre>
 
 
 
