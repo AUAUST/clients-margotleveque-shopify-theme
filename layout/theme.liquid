@@ -91,13 +91,13 @@
         </div>
         <div class="footer-links">
           <div class="email">
-            <span class="footer-title">Contact<span>
+            <span class="footer-title">Contact</span>
             <a href="mailto:{{ shop.email }}">
               <u>{{ shop.email }}</u>
             </a>
           </div>
           <div class="social">
-            <span class="footer-title">Socials<span>
+            <span class="footer-title">Socials</span>
             {% for link in linklists.footer.links -%}
               <a
                 href="{{ link.url }}"
@@ -109,7 +109,7 @@
             {%- endfor %}
           </div>
           <div class="footer-menu">
-            <span class="footer-title">More<span>
+            <span class="footer-title">More</span>
             <a href="/products" {% if request.path == '/products' %}class="link-active"{% endif %}>Typefaces</a>
             {% for link in linklists.main-menu.links -%}
               <a href="{{ link.url }}" {% if link.active %}class="link-active"{% endif %}>{{ link.title }}</a>
