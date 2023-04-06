@@ -109,7 +109,7 @@
             {%- endfor %}
           </div>
           <div class="footer-menu">
-            <span>More</span>
+            <span class="footer-title">More<span>
             <a href="/products" {% if request.path == '/products' %}class="link-active"{% endif %}>Typefaces</a>
             {% for link in linklists.main-menu.links -%}
               <a href="{{ link.url }}" {% if link.active %}class="link-active"{% endif %}>{{ link.title }}</a>
