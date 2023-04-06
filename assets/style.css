@@ -940,6 +940,7 @@ footer {
   grid-gap: 1.3em 1rem;
   font-family: "Garamond Light";
   color: var(--text-color-normal);
+  background-color: var(--background-color-dark);
   font-size: 85%;
 }
 footer .fancy {
