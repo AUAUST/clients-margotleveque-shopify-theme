@@ -957,11 +957,10 @@ footer > span {
 }
 footer .footer-links {
   display: flex;
+  width: 50vw;
 }
 footer .footer-links div {
-  flex-basis: 0;
-  flex-grow: 1;
-  flex-shrink: 1;
+  width: 100%;
 }
 footer div span {
   grid-column: 1 span;
