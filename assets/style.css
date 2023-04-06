@@ -956,11 +956,7 @@ footer > span {
   grid-column: 1/2;
 }
 footer div {
-  grid-column: 5 span;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: min-content;
-  grid-gap: 0 1rem;
+  display: flex;
 }
 footer div span {
   grid-column: 1 span;
