@@ -110,9 +110,43 @@
           </div>
           <div>
             <span class="footer-title">Typefaces</span>
+
             {%- for block in section.blocks -%}
-              <a>{{- block.settings.collection_name -}}</a>
+              {%- assign name = block.id -%}
+              {%- assign inactive = false -%}
+              {%- assign collection = collections[block.settings.collection] -%}
+              {%- assign product = all_products[block.settings.active] -%}
+              {%- if block.settings.coming_soon == true -%}
+                {%- assign inactive = true -%}
+              {%- endif -%}
+              {%- assign has_italic = false -%}
+              {%- assign italic_coming_soon = false  -%}
+              {%- if block.settings.has_italic -%}
+                {%- assign has_italic = true  -%}
+                {%- if block.settings.italic_coming_soon %}
+                  {%- assign italic_coming_soon = true  -%}
+                {%- endif -%}
+              {%- endif -%}
+              <a
+                class="type-row type-{{ name }}
+                  {% if inactive == true %}inactive{% endif %}
+                  {% if section.settings.align == 'center' %}center{% endif -%}
+                  "
+                href="{{ collection.url }}"
+                {% if block.settings.ornaments != blank %}
+                  data-orn="{{ block.settings.ornaments | slice: 0 }}"
+                {% endif %}
+                style="font-size: {{ block.settings.font_size | divided_by: 6.0 }}vw"
+              >
+                <div>
+                  {{- block.settings.collection_name -}}
+                </div>
+              </a>
             {%- endfor -%}
+
+
+
+
           </div>
           <div class="footer-menu">
             <span class="footer-title">More</span>
