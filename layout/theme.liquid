@@ -86,42 +86,46 @@
     {% unless template == 'index' or template == 'cart' -%}
       <!--Footer-->
       <footer>
-        <span class="fancy">{% render 'ml-icon' %}</span>
-        <div class="email">
-          <!-- <span>Commissions/inquiries</span> -->
-          <a href="mailto:{{ shop.email }}">
-            <u>{{ shop.email }}</u>
-          </a>
+        <div>
+          <span class="fancy">{% render 'ml-icon' %}</span>
         </div>
-        <wrap class="social">
-          {% for link in linklists.footer.links -%}
-            <a
-              href="{{ link.url }}"
-              target="_blank"
-              rel="noreferrer"
-            >
-              {{ link.title }}
+        <div>
+          <div class="email">
+            <!-- <span>Commissions/inquiries</span> -->
+            <a href="mailto:{{ shop.email }}">
+              <u>{{ shop.email }}</u>
             </a>
-          {%- endfor %}
-        </wrap>
-        <div class="footer-menu">
-          <span>Type Foundry</span>
-          <a href="/products" {% if request.path == '/products' %}class="link-active"{% endif %}>Typefaces</a>
-          {% for link in linklists.main-menu.links -%}
-            <a href="{{ link.url }}" {% if link.active %}class="link-active"{% endif %}>{{ link.title }}</a>
-          {%- endfor %}
-        </div>
-        <wrap class="credits">
-          <!-- ©{{ 'now' | date: "%Y" }} Margot Lévêque -->
-          <li>ML Studio
+          </div>
+          <wrap class="social">
+            {% for link in linklists.footer.links -%}
+              <a
+                href="{{ link.url }}"
+                target="_blank"
+                rel="noreferrer"
+              >
+                {{ link.title }}
+              </a>
+            {%- endfor %}
+          </wrap>
+          <div class="footer-menu">
+            <span>Type Foundry</span>
+            <a href="/products" {% if request.path == '/products' %}class="link-active"{% endif %}>Typefaces</a>
+            {% for link in linklists.main-menu.links -%}
+              <a href="{{ link.url }}" {% if link.active %}class="link-active"{% endif %}>{{ link.title }}</a>
+            {%- endfor %}
+          </div>
+          <wrap class="credits">
+            <!-- ©{{ 'now' | date: "%Y" }} Margot Lévêque -->
+            <li>ML Studio
             <span>© All Rights reserved</span>
           </li>
           <li>Design: Margot Lévêque & <a href="https://www.nizarkazan.ch">NK+CO</a></li>
           <li>Code:
-            <a href="https://carlosmayo.info/" aria-label="_black">Carlos Mayo</a>
-          </li>
-        </wrap>
-      </footer>
+          <a href="https://carlosmayo.info/" aria-label="_black">Carlos Mayo</a>
+        </li>
+      </wrap>
+    </div>
+  </footer>
     {%- endunless %}
     {% render 'ajaxify-cart' %}
   </body>
