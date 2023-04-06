@@ -121,12 +121,15 @@
             {%- endfor %}
             {% assign blocks = settings.current.sections['type-catalogue'].blocks %}
 
-            {% for uuid in blocks %}
+            <pre>
+              {{ settings | json }}
+            </pre>
+            {% comment %} {% for uuid in blocks %}
               {% assign settings = uuid.settings %}
               {% if settings.title %}
                 <p>{{ settings.title }}</p>
               {% endif %}
-            {% endfor %}
+            {% endfor %} {% endcomment %}
 
 
 
