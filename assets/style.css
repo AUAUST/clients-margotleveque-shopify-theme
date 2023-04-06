@@ -962,6 +962,12 @@ footer .footer-links {
 footer .footer-links div {
   width: 100%;
 }
+footer .footer-links div > * {
+  display: block;
+}
+footer .footer-menu {
+  font-family: "TWK";
+}
 footer div span {
   grid-column: 1 span;
   line-height: 1.1;
