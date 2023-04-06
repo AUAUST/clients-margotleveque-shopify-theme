@@ -935,9 +935,8 @@ header span {
 ================================================== */
 footer {
   padding: 17rem 1.2rem 7rem;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-gap: 1.3em 1rem;
+  display: flex;
+  justify-content: space-between;
   font-family: "Garamond Light";
   color: var(--text-color-normal);
   background-color: var(--background-color-dark);
