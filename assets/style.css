@@ -934,7 +934,7 @@ header span {
 /* Footer
 ================================================== */
 footer {
-  padding: 20rem 1.2rem 10rem;
+  padding: 17rem 1.2rem 7rem;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-gap: 1.3em 1rem;
