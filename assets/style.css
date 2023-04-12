@@ -952,9 +952,6 @@ footer .fancy svg {
 footer .fancy svg path {
   fill: var(--text-color-normal);
 }
-footer > span {
-  grid-column: 1/2;
-}
 footer .footer-links {
   display: flex;
   width: 50vw;
@@ -977,17 +974,6 @@ footer div a {
   grid-column: 2 / 6;
   line-height: 1.1;
   color: var(--text-color-normal);
-}
-footer wrap {
-  grid-column: 2 span;
-  display: grid;
-  grid-auto-rows: min-content;
-}
-footer wrap:last-child {
-  white-space: nowrap;
-}
-footer wrap > span {
-  display: none;
 }
 @media (max-width: 1190px) {
   footer {
