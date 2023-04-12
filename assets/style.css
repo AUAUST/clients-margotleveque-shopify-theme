@@ -990,6 +990,12 @@ footer div a {
     flex-direction: column;
     width: 100vw;
   }
+  footer .footer-links div {
+    text-align: center;
+  }
+  footer .footer-links div > * {
+    margin: 0 auto;
+  }
 }
 /* Work
 ================================================== */
