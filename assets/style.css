@@ -1000,39 +1000,6 @@ footer wrap > span {
   #banner + footer {
     padding-bottom: calc(10rem + 1.2rem + 1.3em);
   }
-  footer {
-    padding: 0 1.2rem 10rem;
-    grid-template-columns: 1fr;
-    grid-gap: 0;
-    text-align: center;
-  }
-  footer > i,
-  footer div,
-  footer wrap {
-    padding: 2rem 0;
-    grid-column: auto !important;
-    justify-content: center !important;
-    border-top: 1px solid var(--darkgray-color);
-  }
-  footer a {
-    display: block;
-    margin: 0 auto;
-  }
-  footer .fancy {
-    display: none;
-  }
-  footer .social {
-    grid-column: unset !important;
-  }
-  footer .email {
-    border-top: none;
-  }
-  footer .credits {
-    border-bottom: none;
-  }
-  footer .credits li {
-    justify-content: center;
-  }
 }
 /* Banner
 ================================================== */
