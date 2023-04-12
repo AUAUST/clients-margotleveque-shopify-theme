@@ -990,6 +990,9 @@ footer wrap > span {
   display: none;
 }
 @media (max-width: 1190px) {
+  footer {
+    flex-direction: column;
+  }
 }
 @media (min-width: 813px) {
 }
