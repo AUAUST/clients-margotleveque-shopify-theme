@@ -1545,11 +1545,19 @@
               "question": "<p>Can I modify your fonts ?<\/p>",
               "answer": "<p>It is not allowed to make any changes directly to the font files. Nevertheless, if you have a specific requirement to modify the font files, we invite you to contact us so we can discuss possible solutions with you! <a href=\"mailto:info@margotleveque.com\" title=\"mailto:info@margotleveque.com\">info@margotleveque.com<\/a><\/p>"
             }
+          },
+          "332e8c62-6986-4bd4-9578-07b1173f538d": {
+            "type": "content",
+            "settings": {
+              "question": "<p>What’s your licensing model?<\/p>",
+              "answer": "<p>Our licensing is simple: we offer a single, all-encompassing license that covers all applications (desktop, web, print, app licenses, etc.). Our pricing is based on one simple metric: company size. This metric is based on the TOTAL number of people who work in your organization – not how many users will use our fonts in your company.<\/p>"
+            }
           }
         },
         "block_order": [
           "a6fd53e9-1e62-4969-9fb1-0d804a373256",
-          "bf1c1d82-79d4-4122-a617-8282417499da"
+          "bf1c1d82-79d4-4122-a617-8282417499da",
+          "332e8c62-6986-4bd4-9578-07b1173f538d"
         ],
         "settings": {
         }
