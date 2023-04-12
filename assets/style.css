@@ -971,7 +971,7 @@ footer .footer-title {
 footer div span {
   grid-column: 1 span;
   line-height: 1.1;
-  margin-bottom: 0.3em;
+  margin-bottom: 0.3e;
 }
 footer div a {
   grid-column: 2 / 6;
@@ -990,70 +990,8 @@ footer wrap > span {
   display: none;
 }
 @media (max-width: 1190px) {
-  footer > span {
-    grid-column: 5 span;
-  }
-  footer div {
-    grid-column: 4 span;
-    grid-template-columns: 1fr;
-  }
-  footer div span,
-  footer div a {
-    grid-column: auto;
-    line-height: 1.1;
-  }
-  footer wrap:not(:last-child) {
-    grid-column: 3 span;
-  }
-  footer wrap > span {
-    display: block;
-  }
-  footer .fancy {
-    grid-column: 1/2;
-  }
-  footer .email {
-    grid-column: 2/4;
-    display: block;
-  }
-  footer .social {
-    grid-column: 5/7 !important;
-  }
-  .footer-menu {
-    grid-column: 7/10;
-  }
-  .footer .credits {
-    grid-column: 7/13;
-  }
-  footer .credits li {
-    display: flex;
-    align-items: flex-start;
-    line-height: 1.1;
-  }
-  footer .credits li span {
-    font-size: 50%;
-  }
-  footer .credits li a {
-    margin-left: 5px;
-  }
 }
 @media (min-width: 813px) {
-  footer a {
-    position: relative;
-    transition: padding-left 0.1s ease-in-out !important;
-    line-height: 1.1;
-    transition: opacity 0.2s linear;
-  }
-  footer a:hover {
-    opacity: 0.5;
-  }
-  a.link-active,
-  .desktop footer a:hover {
-    padding-left: 0;
-  }
-  footer .credits li a.link-active,
-  .desktop footer .credits li a:hover {
-    padding-left: 0;
-  }
 }
 @media (max-width: 812px) {
   .template-page-work footer {
