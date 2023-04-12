@@ -2596,8 +2596,15 @@ wrap > .item {
   color: var(--text-color-normal);
   width: fit-content;
   max-width: 70%;
+  padding: 0.8rem 1.3rem;
+  border-radius: 1.1rem;
 }
 #shopify-section-page-faq .faq-answer {
+  font-family: "TWK";
+  font-size: 1.2rem;
   width: 70%;
   float: right;
+  background-color: var(--highlight-color);
+  padding: 0.8rem 1.3rem;
+  border-radius: 1.1rem;
 }
