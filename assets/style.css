@@ -984,9 +984,10 @@ footer div a {
   }
   footer .footer-links {
     flex-direction: column;
-    width: 100vw;
+    width: 100%;
   }
   footer .footer-links div {
+    border-top: 1px solid var(--color-black);
     text-align: center;
   }
   footer .footer-links div > * {
