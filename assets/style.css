@@ -971,6 +971,7 @@ footer .footer-title {
 footer div span {
   grid-column: 1 span;
   line-height: 1.1;
+  margin-bottom: 0.3em;
 }
 footer div a {
   grid-column: 2 / 6;
