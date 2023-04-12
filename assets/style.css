@@ -2181,7 +2181,8 @@ input[type="range"]::-webkit-slider-thumb:active {
 #cart-wrapper header nav #trials {
   background-color: var(--background-color);
 }
-#cart-header {
+#cart-header,
+#faq-header {
   font-family: var(--font-lausanne);
   margin-bottom: 7rem;
   padding: 5rem 0;
