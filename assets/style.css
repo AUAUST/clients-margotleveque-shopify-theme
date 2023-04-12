@@ -2593,6 +2593,7 @@ wrap > .item {
 }
 #shopify-section-page-faq .faq-question {
   font-family: Garamond Light Italic, Times, serif;
+  font-style: italic;
   background-color: var(--color-white);
   color: var(--text-color-normal);
   width: fit-content;
