@@ -946,8 +946,7 @@ footer .fancy {
   font-family: "Romie Italic";
 }
 footer .fancy svg {
-  height: 20px;
-  width: 25px;
+  height: 55px;
 }
 footer .fancy svg path {
   fill: var(--text-color-normal);
