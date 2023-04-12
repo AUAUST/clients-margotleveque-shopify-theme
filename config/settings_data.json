@@ -1587,6 +1587,13 @@
               "question": "<p>I bought a license before, but since then the size of my company has changed. <\/p><p>Do I need to upgrade my license?<\/p>",
               "answer": "<p>To ensure that your license is up to date, regular checks are carried out on our side. Therefore, it is important to contact us to upgrade your fonts and keep your license valid.<\/p>"
             }
+          },
+          "bd7d3d03-e914-472a-b5a8-b1e970736c32": {
+            "type": "content",
+            "settings": {
+              "question": "<p>Do I need to pay again for the update of one of your fonts?<\/p>",
+              "answer": "<p>Of course not! If you have purchased a license before and an update is available, you are entitled to it for free. Normally, you will receive it automatically. If you don’t receive it, don’t hesitate to contact us at <a href=\"mailto:info@margotleveque.com\" title=\"mailto:info@margotleveque.com\">info@margotleveque.com<\/a>.<\/p>"
+            }
           }
         },
         "block_order": [
@@ -1597,7 +1604,8 @@
           "eacbc627-f359-4df4-8f41-498ed2f6c8ac",
           "1368c0f9-e654-4110-98e1-d7d6877c4d9f",
           "e1b97284-fca2-483d-a1d1-6329b1dd3b31",
-          "9865adad-4795-4a3e-b886-83a31c256ff7"
+          "9865adad-4795-4a3e-b886-83a31c256ff7",
+          "bd7d3d03-e914-472a-b5a8-b1e970736c32"
         ],
         "settings": {
         }
