@@ -2594,7 +2594,7 @@ wrap > .item {
   padding-block: 2rem;
 }
 #shopify-section-page-faq .faq-question {
-  font-family: Garamond Light Italic, Times, serif;
+  font-family: "Romie Italic", Times, serif;
   font-style: italic;
   line-height: 1;
   background-color: var(--color-white);
