@@ -2594,12 +2594,13 @@ wrap > .item {
 #shopify-section-page-faq .faq-question {
   font-family: Garamond Light Italic, Times, serif;
   font-style: italic;
+  line-height: 1;
   background-color: var(--color-white);
   color: var(--text-color-normal);
   width: fit-content;
   max-width: 70%;
-  padding: 0.8rem 1.3rem;
-  border-radius: 1.1rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: 0.7rem;
 }
 #shopify-section-page-faq .faq-answer {
   font-family: "TWK";
