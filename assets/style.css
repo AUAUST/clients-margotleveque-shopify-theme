@@ -2590,6 +2590,7 @@ wrap > .item {
   flex-direction: column;
 }
 #shopify-section-page-faq .faq-question-container {
+  padding-block: 2rem;
 }
 #shopify-section-page-faq .faq-question {
   font-family: Garamond Light Italic, Times, serif;
@@ -2601,6 +2602,7 @@ wrap > .item {
   max-width: 70%;
   padding: 0.5rem 0.9rem;
   border-radius: 0.7rem;
+  margin-bottom: 1rem;
 }
 #shopify-section-page-faq .faq-answer {
   font-family: "TWK";
