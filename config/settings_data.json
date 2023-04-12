@@ -1538,10 +1538,18 @@
               "question": "<p>Hi Margot! First question:<\/p><p>How can I use your fonts as a student?<\/p>",
               "answer": "<p>Great news! As a student, you are not required to purchase any license, as we offer a free trial license for our fonts. This license allows you to use our fonts for your study and personal projects, without any additional cost. However, it is important to note that you must still comply with all the licensing terms and conditions, and refrain from any external, commercial, or public use, as it is strictly prohibited.<\/p>"
             }
+          },
+          "bf1c1d82-79d4-4122-a617-8282417499da": {
+            "type": "content",
+            "settings": {
+              "question": "<p>Can I modify your fonts ?<\/p>",
+              "answer": "<p>It is not allowed to make any changes directly to the font files. Nevertheless, if you have a specific requirement to modify the font files, we invite you to contact us so we can discuss possible solutions with you! <a href=\"mailto:info@margotleveque.com\" title=\"mailto:info@margotleveque.com\">info@margotleveque.com<\/a><\/p>"
+            }
           }
         },
         "block_order": [
-          "a6fd53e9-1e62-4969-9fb1-0d804a373256"
+          "a6fd53e9-1e62-4969-9fb1-0d804a373256",
+          "bf1c1d82-79d4-4122-a617-8282417499da"
         ],
         "settings": {
         }
