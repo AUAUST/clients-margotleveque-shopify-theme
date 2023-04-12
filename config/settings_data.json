@@ -1580,6 +1580,13 @@
               "question": "<p>I’m a designer working on a project for a company. Who should buy the license?<\/p>",
               "answer": "<p>The company is the sole license holder, but you can purchase the font files on behalf of your client as a payment facilitator. This option can save your client time and effort, allowing them to focus on their core business activities. However, it’s important to note that your client remains responsible for adhering to the licensing terms and conditions.<\/p>"
             }
+          },
+          "9865adad-4795-4a3e-b886-83a31c256ff7": {
+            "type": "content",
+            "settings": {
+              "question": "<p>I bought a license before, but since then the size of my company has changed. <\/p><p>Do I need to upgrade my license?<\/p>",
+              "answer": "<p>To ensure that your license is up to date, regular checks are carried out on our side. Therefore, it is important to contact us to upgrade your fonts and keep your license valid.<\/p>"
+            }
           }
         },
         "block_order": [
@@ -1589,7 +1596,8 @@
           "d0b77e41-d665-457a-b5da-4b3c384aafb4",
           "eacbc627-f359-4df4-8f41-498ed2f6c8ac",
           "1368c0f9-e654-4110-98e1-d7d6877c4d9f",
-          "e1b97284-fca2-483d-a1d1-6329b1dd3b31"
+          "e1b97284-fca2-483d-a1d1-6329b1dd3b31",
+          "9865adad-4795-4a3e-b886-83a31c256ff7"
         ],
         "settings": {
         }
