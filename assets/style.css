@@ -997,44 +997,6 @@ footer wrap > span {
   .template-page-work footer {
     padding-top: 15rem;
   }
-  #banner + footer {
-    padding-bottom: calc(10rem + 1.2rem + 1.3em);
-  }
-}
-/* Banner
-================================================== */
-#banner {
-  position: fixed;
-  bottom: 0;
-  width: 100vw;
-  padding: 1.2rem 0;
-  display: grid;
-  grid-auto-flow: column;
-  font-feature-settings: normal;
-  color: var(--darkgray-color);
-  white-space: nowrap;
-  overflow: hidden;
-  animation-duration: 40s;
-  z-index: 9;
-}
-div#banner {
-  pointer-events: none;
-}
-#banner wrap {
-  display: flex;
-  align-items: center;
-  animation: marquee-left linear infinite;
-  animation-duration: inherit;
-}
-#banner wrap > p {
-  padding-left: 5rem;
-}
-#banner wrap > p + span {
-  padding-left: 5rem;
-  font-size: 70%;
-}
-.desktop a#banner:hover wrap {
-  animation-play-state: paused;
 }
 /* Work
 ================================================== */
