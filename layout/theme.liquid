@@ -108,9 +108,11 @@
             <span class="footer-title">Typefaces</span>
 
             {% for collection in collections %}
-              <a href="{{ collection.url }}">
-                {{ collection.title }}
-              </a>
+              {% unless collection.coming_soon == true %}
+                <a href="{{ collection.url }}">
+                  {{ collection.title }}
+                </a>
+              {% endunless %}
             {% endfor %}
 
           </div>
