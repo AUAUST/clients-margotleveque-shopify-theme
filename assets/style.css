@@ -987,7 +987,7 @@ footer div a {
     width: 100%;
   }
   footer .footer-links div {
-    border-top: 1px solid var(--color-black);
+    border-top: 0.01rem solid var(--color-black);
     text-align: center;
   }
   footer .footer-links div > * {
