@@ -110,59 +110,12 @@
           </div>
           <div>
             <span class="footer-title">Typefaces</span>
-            {% for link in linklists.typefaces.links -%}
-              <a
-                href="{{ link.url }}"
-                target="_blank"
-                rel="noreferrer"
-              >
-                {{ link.title }}
-              </a>
-            {%- endfor %}
 
-            {% comment %} <pre>{{ collections | json }}</pre> {% endcomment %}
-            <div>
-              block settings: {{ block.settings | json }}
-              collection: {{ collection | json }}
-              product: {{ product | json }}
-              collections: {{ collections | json }}
-              products: {{ products | json }}
-              all_products_count: {{ all_products_count }}
-              all_products: {{ all_products | json }}
-              block: {{ block | json }}
-              section: {{ section | json }}
-              linklists: {{ linklists | json }}
-              settings: {{ settings | json }}
-              template: {{ template }}
-              request: {{ request | json }}
-              shop: {{ shop | json }}
-            </div>
-
-            {%- for block in section.blocks -%}
-              {%- assign inactive = false -%}
-              {%- assign collection = collections[block.settings.collection] -%}
-              {%- assign product = all_products[block.settings.active] -%}
-              {%- assign name = block.id -%}
-              <a
-                class="type-row type-{{ name }}
-                  {% if inactive == true %}inactive{% endif %}
-                  {% if section.settings.align == 'center' %}center{% endif -%}
-                  "
-                href="{{ collection.url }}"
-                {% if block.settings.ornaments != blank %}
-                  data-orn="{{ block.settings.ornaments | slice: 0 }}"
-                {% endif %}
-                style="font-size: {{ block.settings.font_size | divided_by: 6.0 }}vw"
-              >
-                <span>
-                  <div class="type-row_name">
-                    <div>
-                      {{- block.settings.collection_name -}}
-                    </div>
-                  </div>
-                </span>
+            {% for collection in collections %}
+              <a href="{{ collection.url }}">
+                {{ collection.title }}
               </a>
-            {%- endfor -%}
+            {% endfor %}
 
           </div>
           <div class="footer-menu">
