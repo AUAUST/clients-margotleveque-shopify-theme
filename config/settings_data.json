@@ -1552,12 +1552,20 @@
               "question": "<p>What’s your licensing model?<\/p>",
               "answer": "<p>Our licensing is simple: we offer a single, all-encompassing license that covers all applications (desktop, web, print, app licenses, etc.). Our pricing is based on one simple metric: company size. This metric is based on the TOTAL number of people who work in your organization – not how many users will use our fonts in your company.<\/p>"
             }
+          },
+          "d0b77e41-d665-457a-b5da-4b3c384aafb4": {
+            "type": "content",
+            "settings": {
+              "question": "<p>What is your refund policy?<\/p>",
+              "answer": "<p>Unfortunately, we cannot provide refunds for any font purchases. Once a font has been purchased, it is considered a final sale. However, if you encounter any technical issues with the font files, please reach out to us and we will do our best to assist you in resolving the issue: <a href=\"mailto:info@margotleveque.com\" title=\"mailto:info@margotleveque.com\">info@margotleveque.com<\/a><\/p>"
+            }
           }
         },
         "block_order": [
           "a6fd53e9-1e62-4969-9fb1-0d804a373256",
           "bf1c1d82-79d4-4122-a617-8282417499da",
-          "332e8c62-6986-4bd4-9578-07b1173f538d"
+          "332e8c62-6986-4bd4-9578-07b1173f538d",
+          "d0b77e41-d665-457a-b5da-4b3c384aafb4"
         ],
         "settings": {
         }
