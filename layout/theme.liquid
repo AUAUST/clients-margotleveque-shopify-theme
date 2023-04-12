@@ -121,6 +121,9 @@
             {%- endfor %}
 
             {% comment %} <pre>{{ collections | json }}</pre> {% endcomment %}
+            <pre>
+              {{ section.blocks | json }}
+            </pre>
 
             {%- for block in section.blocks -%}
               {%- assign inactive = false -%}
