@@ -122,7 +122,7 @@
 
             {% comment %} <pre>{{ collections | json }}</pre> {% endcomment %}
             <pre>
-              {{ all_products[block.settings.active] | json }}
+              {{ collections[block.settings.collection] | json }}
             </pre>
 
             {%- for block in section.blocks -%}
