@@ -1,16 +1,18 @@
-<wrap>
+<div class="faq-container">
   {% for block in section.blocks -%}
-    <div
-      class="title">
-      <i>{{ block.settings.question }}</i>
-    </div>
-    <br>
-    <div
-      class="content">
-      {{ block.settings.answer | replace: '<em', '|em' | replace: '</em>', '|/em|' | replace: '<a', '|a' | replace: '</a>', '|/a|' | replace: '</p>', '|br' | strip_html | replace: '|br', '<br>' | replace: '|a', '<a' | replace: '|/a|', '</a>' | replace: '|em', '<em' | replace: '|/em|', '</em>' }}
+    <div class="faq-question">
+      <div
+        class="faq-question">
+        <i>{{ block.settings.question }}</i>
+      </div>
+      <br>
+      <div
+        class="faq-answer">
+        {{ block.settings.answer }}
+      </div>
     </div>
   {%- endfor %}
-</wrap>
+</div>
 
 {% schema %}
   {
