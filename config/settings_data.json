@@ -1559,13 +1559,21 @@
               "question": "<p>What is your refund policy?<\/p>",
               "answer": "<p>Unfortunately, we cannot provide refunds for any font purchases. Once a font has been purchased, it is considered a final sale. However, if you encounter any technical issues with the font files, please reach out to us and we will do our best to assist you in resolving the issue: <a href=\"mailto:info@margotleveque.com\" title=\"mailto:info@margotleveque.com\">info@margotleveque.com<\/a><\/p>"
             }
+          },
+          "eacbc627-f359-4df4-8f41-498ed2f6c8ac": {
+            "type": "content",
+            "settings": {
+              "question": "<p>What about trial licenses?<\/p>",
+              "answer": "<p>We provide a unique and complimentary trial license to our fonts, which enables users to evaluate and test the font software for the purpose of creating test documents, visuals, and web pages, as well as presenting them to clients or other interested parties. Our font files contain all the glyphs, making it easier for users to pitch projects, test the final font, and save time and effort.<\/p>"
+            }
           }
         },
         "block_order": [
           "a6fd53e9-1e62-4969-9fb1-0d804a373256",
           "bf1c1d82-79d4-4122-a617-8282417499da",
           "332e8c62-6986-4bd4-9578-07b1173f538d",
-          "d0b77e41-d665-457a-b5da-4b3c384aafb4"
+          "d0b77e41-d665-457a-b5da-4b3c384aafb4",
+          "eacbc627-f359-4df4-8f41-498ed2f6c8ac"
         ],
         "settings": {
         }
