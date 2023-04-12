@@ -986,6 +986,10 @@ footer div a {
   .template-page-work footer {
     padding-top: 15rem;
   }
+  footer .footer-links {
+    flex-direction: column;
+    width: 100vw;
+  }
 }
 /* Work
 ================================================== */
