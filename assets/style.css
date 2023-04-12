@@ -2582,3 +2582,14 @@ wrap > .item {
   text-decoration: none !important;
   color: red;
 }
+#shopify-section-page-faq .faq-container {
+  width: 100%;
+  max-width: 768px;
+  grid-column: 6 / 14;
+}
+#shopify-section-page-faq .faq-question-container {
+}
+#shopify-section-page-faq .faq-question {
+}
+#shopify-section-page-faq .faq-answer {
+}
