@@ -975,14 +975,10 @@ footer div a {
   line-height: 1.1;
   color: var(--text-color-normal);
 }
-@media (max-width: 1190px) {
+@media (max-width: 812px) {
   footer {
     flex-direction: column;
   }
-}
-@media (min-width: 813px) {
-}
-@media (max-width: 812px) {
   .template-page-work footer {
     padding-top: 15rem;
   }
