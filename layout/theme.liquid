@@ -121,9 +121,22 @@
             {%- endfor %}
 
             {% comment %} <pre>{{ collections | json }}</pre> {% endcomment %}
-            <pre>
-              {{ block.settings.collection | json }}
-            </pre>
+            <div>
+              block settings: {{ block.settings | json }}
+              collection: {{ collection | json }}
+              product: {{ product | json }}
+              collections: {{ collections | json }}
+              products: {{ products | json }}
+              all_products_count: {{ all_products_count }}
+              all_products: {{ all_products | json }}
+              block: {{ block | json }}
+              section: {{ section | json }}
+              linklists: {{ linklists | json }}
+              settings: {{ settings | json }}
+              template: {{ template }}
+              request: {{ request | json }}
+              shop: {{ shop | json }}
+            </div>
 
             {%- for block in section.blocks -%}
               {%- assign inactive = false -%}
