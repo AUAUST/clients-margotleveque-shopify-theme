@@ -79,10 +79,6 @@
       <a id="type-guide-button" href="/pages/type-design-guide">Type design guide</a>
     {%- endif %}
 
-    {% unless template == 'index' or template contains 'collection' or template == 'cart' -%}
-      {% include 'banner' %}
-    {% endunless %}
-
     {% unless template == 'index' or template == 'cart' -%}
       <!--Footer-->
       <footer>
