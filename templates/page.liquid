@@ -26,6 +26,10 @@
     {% section 'page-licensing' %}
   {%- elsif page.handle == 'terms' -%}
     {% section 'page-terms' %}
+  {%- elsif page.handle == 'faq' -%}
+    <div class="faq">
+      Hello World
+    </div>
   {%- else -%}
     <wrap>
       {{ page.content | replace: '<a', '|a' | replace: '</a>', '|/a|' | replace: '</p>', '|br' | strip_html | replace: '|br', '<br>' | replace: '|a', '<a' | replace: '|/a|', '</a>' }}
