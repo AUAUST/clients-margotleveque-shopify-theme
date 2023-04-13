@@ -2201,6 +2201,9 @@ input[type="range"]::-webkit-slider-thumb:active {
   box-shadow: 1.2rem 0 0 0 var(--background-color-dark),
     -1.2rem 0 0 0 var(--background-color-dark);
 }
+#faq-header {
+  margin-top: 7rem;
+}
 #cart-wrapper wrap {
   font-family: var(--font-lausanne);
   width: 100%;
