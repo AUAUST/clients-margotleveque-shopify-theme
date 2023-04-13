@@ -981,28 +981,13 @@ footer div a {
   color: var(--text-color-normal);
 }
 footer-credits {
-  font-size: 1.1rem;
+  font-size: 0.8rem;
+  font-family: "TWK";
   height: 2.5rem;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   padding-right: 1rem;
-}
-
-footer-credits .credits-studio {
-  font-family: "Romie Italic";
-  font-style: italic;
-}
-footer-credits .credits-design {
-  padding-right: 0.6em;
-}
-footer-credits .credits-all-rights {
-  font-family: TWK;
-  font-size: 0.7em;
-  padding-inline: 0.2em 1em;
-}
-footer-credits .credits-name {
-  font-family: "TWK";
 }
 @media (max-width: 812px) {
   footer {
