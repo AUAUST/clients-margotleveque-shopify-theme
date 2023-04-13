@@ -5,15 +5,16 @@
   <p
     class="contact-links"
   >
-    {% for link in linklists.footer.links -%}
-      {% page.handle %}
-      <a
-        href="{{ link.url }}"
-        target="_blank"
-        rel="noreferrer">
-        {{ link.title }}
-      </a><br>
-    {%- endfor %}
+    {% unless page.handle == 'faq' -%}
+      {% for link in linklists.footer.links -%}
+        <a
+          href="{{ link.url }}"
+          target="_blank"
+          rel="noreferrer">
+          {{ link.title }}
+        </a><br>
+      {%- endfor %}
+    {% endunless %}
   </p>
 </header>
 <!--Content-->
