@@ -24,14 +24,12 @@
     {% if template == "list-collections" or template == "collection" %}
       Type Foundry
     {% elsif template == "page.work" %}
-      Stud<span
-        class="ss01">i</span>o
+      Stud<span class="ss01">i</span>o
     {% else %}
       {{ page.title }}
     {% endif %}
   </a>
 </div>
-
 
 <!-- trials / cart-->
 <nav>
@@ -47,7 +45,6 @@
     href="/cart"
     id="cart-button">CART ({{ cart.item_count }})</a>
 </nav>
-
 
 <button
   id="burger">
