@@ -991,6 +991,9 @@ footer-credits .credits-studio {
   font-family: "Romie Italic";
   font-style: italic;
 }
+footer-credits .credits-design {
+  padding-right: 0.8em;
+}
 footer-credits .credits-all-rights {
   font-family: TWK;
   font-size: 0.7em;
