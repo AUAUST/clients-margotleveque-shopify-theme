@@ -987,6 +987,7 @@ footer-credits {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  gap: 0.5em;
   padding-right: 1rem;
 }
 @media (max-width: 812px) {
