@@ -119,7 +119,11 @@
           <div class="footer-menu">
             <span class="footer-title">More</span>
             {% for link in linklists.main-menu.links -%}
-              <a href="{{ link.url }}" {% if link.active %}class="link-active"{% endif %}>{{ link.title }}</a>
+              {%- if link.title == '__split' -%}
+                <br />
+              {%- else -%}
+                <a href="{{ link.url }}" {% if link.active %}class="link-active"{% endif %}>{{ link.title }}</a>
+              {%- endif %}
             {%- endfor %}
           </div>
         </div>
