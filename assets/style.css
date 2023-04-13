@@ -941,6 +941,7 @@ footer {
   color: var(--text-color-normal);
   background-color: var(--background-color-dark);
   font-size: 85%;
+  margin-top: 2.5rem;
 }
 footer .fancy {
   font-family: "Romie Italic";
