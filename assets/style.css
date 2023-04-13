@@ -948,6 +948,8 @@ footer .fancy {
 }
 footer .fancy svg {
   height: 55px;
+  margin-left: 1rem;
+  margin-top: -0.5rem;
 }
 footer .fancy svg path {
   fill: var(--text-color-normal);
