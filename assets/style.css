@@ -2643,3 +2643,6 @@ wrap > .item {
   padding: 0.8rem 1.3rem;
   border-radius: 1.1rem;
 }
+#shopify-section-page-faq .faq-answer a {
+  text-decoration: underline;
+}
