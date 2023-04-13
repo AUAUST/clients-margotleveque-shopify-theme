@@ -996,6 +996,9 @@ footer-credits .credits-all-rights {
   font-size: 0.7em;
   padding-inline: 0.2em 1em;
 }
+footer-credits .credits-name {
+  font-family: "TWK";
+}
 @media (max-width: 812px) {
   footer {
     flex-direction: column;
