@@ -1364,7 +1364,7 @@ footer-credits .credits-name {
 .type-row {
   position: relative;
   width: 100vw;
-  padding: 1rem 7rem 3rem;
+  padding: 1rem 7rem 4rem;
   display: block;
   font-size: 100px;
   line-height: normal;
@@ -1421,7 +1421,7 @@ footer-credits .credits-name {
   line-height: 1em;
   letter-spacing: -0.03em;
   white-space: nowrap;
-  padding-block: 6.5rem 3rem;
+  padding-block: 4.5rem 3rem;
   color: var(--text-color-normal);
   display: flex;
   flex-direction: row;
