@@ -1347,7 +1347,7 @@ footer div a {
   -ms-user-select: none;
   user-select: none;
 }
-.type-row:nth-of-type(even) {
+.type-row:nth-of-type(odd) {
   background-color: var(--background-color-dark);
 }
 .type-row_details {
