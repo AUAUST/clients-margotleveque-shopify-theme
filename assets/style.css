@@ -2636,12 +2636,11 @@ wrap > .item {
 }
 #shopify-section-page-faq .faq-answer {
   font-family: "TWK";
-  font-size: 1.2rem;
   width: 70%;
   float: right;
   background-color: var(--highlight-color);
-  padding: 0.8rem 1.3rem;
-  border-radius: 1.1rem;
+  padding: 1.2rem 1.5rem;
+  border-radius: 1.5rem;
 }
 #shopify-section-page-faq .faq-answer a {
   text-decoration: underline;
