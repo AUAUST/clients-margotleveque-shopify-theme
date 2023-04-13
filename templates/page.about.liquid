@@ -3,15 +3,14 @@
   {% include 'menu' %}
 </header>
 <!--Social media-->
-<div
-  id="social">
+<div id="social">
   {% for link in linklists.footer.links -%}
     <a
       href="{{ link.url }}"
       target="_blank"
       rel="noreferrer">
       {{ link.title }}
-    </a>
+    </a><br/>
   {%- endfor %}
 </div>
 <!--Content-->
