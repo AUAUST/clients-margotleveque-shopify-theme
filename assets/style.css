@@ -680,12 +680,6 @@ header .contact-links {
 .template-page-work #logo.hide {
   opacity: 1;
 }
-/* .template-page #logo {
-  display: none;
-}
-.template-page #logo {
-  display: none;
-} */
 .template-page-work #logo {
   color: var(--background-color);
 }
