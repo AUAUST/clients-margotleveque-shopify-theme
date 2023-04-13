@@ -2601,11 +2601,11 @@ wrap > .item {
 }
 #shopify-section-page-faq .faq-question-container {
   padding-block: 2rem;
+  line-height: 1em;
 }
 #shopify-section-page-faq .faq-question {
   font-family: "Romie Italic", Times, serif;
   font-style: italic;
-  line-height: 1;
   background-color: var(--color-white);
   color: var(--text-color-normal);
   width: fit-content;
