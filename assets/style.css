@@ -961,6 +961,9 @@ footer .footer-links {
 footer .footer-links div {
   width: 100%;
 }
+footer .footer-links .email {
+  width: 170%;
+}
 footer .footer-links div > * {
   display: block;
 }
