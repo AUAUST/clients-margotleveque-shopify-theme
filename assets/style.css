@@ -986,6 +986,11 @@ footer-credits {
   justify-content: flex-end;
   padding-right: 1rem;
 }
+footer-credits .credits-all-rights {
+  font-family: TWK;
+  font-size: 0.7em;
+  padding-inline: 0.2em 1em;
+}
 @media (max-width: 812px) {
   footer {
     flex-direction: column;
