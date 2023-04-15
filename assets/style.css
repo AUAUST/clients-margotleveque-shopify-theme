@@ -283,7 +283,7 @@ a {
 }
 .link-pill:hover {
   background-color: var(--color-white);
-  color: var(--text-color-normal);
+  color: var(--color-black);
   transition: background-color 0.3s ease, color 0.3s ease 0.15s;
 }
 .link-pill svg path {
