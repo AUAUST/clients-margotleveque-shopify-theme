@@ -2610,7 +2610,7 @@ wrap > .item {
   font-family: "Romie Italic", Times, serif;
   font-style: italic;
   background-color: var(--color-white);
-  color: var(--text-color-normal);
+  color: var(--color-black);
   width: fit-content;
   max-width: 70%;
   padding: 1.2rem 1.5rem;
@@ -2622,6 +2622,7 @@ wrap > .item {
   width: 70%;
   float: right;
   background-color: var(--highlight-color);
+  color: var(--color-black);
   padding: 1.2rem 1.5rem;
   border-radius: 1.5rem;
 }
