@@ -2645,13 +2645,13 @@ footer{
   left: 1.2rem;
   top: 2.4rem;
 }
-.klaviyo-form{
+footer .klaviyo-form{
   max-width: 460px;
 }
-.klaviyo-form form{
+footer .klaviyo-form form{
   padding-top: 0 !important;
 }
-.klaviyo-form input{
+footer .klaviyo-form input{
   all: unset;
   border: none !important;
   border-bottom: solid 1px #E8E8E6!important;
@@ -2667,19 +2667,19 @@ footer{
   color: var(--text-color-light) !important;
   font-weight: 400 !important;
 }
-.klaviyo-form input::placeholder {
+footer .klaviyo-form input::placeholder {
   font-weight: 400 !important;
   opacity: 0.8;
   font-size: 18px !important;
   font-family: TWK !important;
   color: var(--text-color-light) !important;
 }
-.klaviyo-form h3{
+footer .klaviyo-form h3{
   font-family: TWK!important;
   color: var(--text-color-normal)!important;
   font-size: 28px;
 }
-.klaviyo-form p{
+footer .klaviyo-form p{
   background: white !important;
   color: #575756;
   padding: 14px !important;
@@ -2689,14 +2689,14 @@ footer{
   font-family: "Romie Italic" !important;
   font-weight: 400 !important;
 }
-.klaviyo-form p span{
+footer .klaviyo-form p span{
   font-style: italic !important;
   font-family: "Romie Italic" !important;
   font-size: 18px !important;
   font-weight: 400 !important;
 }
 
-.klaviyo-form button{
+footer .klaviyo-form button{
   all: unset;
   border-radius: 100px !important;
   padding: 7px 25px !important;
@@ -2709,50 +2709,50 @@ footer{
   font-weight: 400 !important;
 }
 @media (max-width:800px){
-  .klaviyo-form h3{
+  footer .klaviyo-form h3{
     font-size: 23px;
   }
-  .klaviyo-form p{
+  footer .klaviyo-form p{
     font-size: 16px !important;
   }
-  .klaviyo-form p span{
+  footer .klaviyo-form p span{
     font-size: 16px !important;
   }
-  .klaviyo-form input{
+  footer .klaviyo-form input{
     font-size: 16px !important;
   }
-  .klaviyo-form button{
+  footer .klaviyo-form button{
     font-size: 16px !important;
   }
 }
 @media (min-width:800px){
-  .footer__logo{
+  footer .footer__logo{
     left: 2rem;
   }
-  .klaviyo-form{
+  footer .klaviyo-form{
     margin-left: 1rem;
   }
-  .klaviyo-form input{
+  footer .klaviyo-form input{
     margin-left : 80px !important;
   }
-  .klaviyo-form button{
+  footer .klaviyo-form button{
     margin-right : -80px;
   }
 }
 
 @media (prefers-color-scheme: dark) {
-  .klaviyo-form p {
+  footer .klaviyo-form p {
     background-color: #323030 !important;
     color: white !important;
   }
-  .klaviyo-form p span{
+  footer .klaviyo-form p span{
     color: white !important;
   }
-  .klaviyo-form button {
+  footer .klaviyo-form button {
     background-color: #323030 !important;
     color: white !important;
   }
-  .klaviyo-form input{
+  footer .klaviyo-form input{
     border-bottom: solid 1px #E8E8E6!important;
   }
 }
