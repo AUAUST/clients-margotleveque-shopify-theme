@@ -57,9 +57,9 @@
     {%- endfor %}
   </div>
   <body class="template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle -}}
-                                                             {%- if template.suffix.size > 0 -%}{{ template.suffix | prepend: "-" -}}
-                                                             {%- elsif template == 'cart' and cart.item_count == 0 -%}-empty
-                                                             {%- elsif request.path contains '/challenge' -%}-challenge{% endif %}">
+                                                                                                 {%- if template.suffix.size > 0 -%}{{ template.suffix | prepend: "-" -}}
+                                                                                                 {%- elsif template == 'cart' and cart.item_count == 0 -%}-empty
+                                                                                                 {%- elsif request.path contains '/challenge' -%}-challenge{% endif %}">
 
     <!--Loader-->
     <div id="loader"></div>
@@ -82,14 +82,15 @@
     {% unless template == 'index' or template == 'cart' -%}
       <!--Footer-->
       <footer>
-        <div>
-          <span class="fancy">{% render 'ml-icon' %}</span>
+        <div class="">
+          <span class="fancy footer__logo">{% render 'ml-icon' %}</span>
+          <div class="klaviyo-form-Uk5GSe"></div>
         </div>
         <div class="footer-links">
           <div class="email">
             <span class="footer-title">Contact</span>
-            <a href="mailto:{{ shop.email }}">
-              <u>{{ shop.email }}</u>
+            <a href="mailto:studio@margotleveque.com">
+              <u>studio@margotleveque.com</u>
             </a>
           </div>
           <div class="social">
@@ -98,8 +99,7 @@
               <a
                 href="{{ link.url }}"
                 target="_blank"
-                rel="noreferrer"
-              >
+                rel="noreferrer">
                 {{ link.title }}
               </a>
             {%- endfor %}
@@ -120,7 +120,7 @@
             <span class="footer-title">More</span>
             {% for link in linklists.main-menu.links -%}
               {%- if link.title == '__split' -%}
-                <br />
+                <br/>
               {%- else -%}
                 <a href="{{ link.url }}" {% if link.active %}class="link-active"{% endif %}>{{ link.title }}</a>
               {%- endif %}
@@ -132,9 +132,15 @@
     <footer-credits>
       <span class="credits-studio">ML Studio</span>
       <span class="credits-all-rights">© All Rights reserved</span>
-      <span class="credits-design">Design: <span class="credits-name">Margot Lévêque & <a href="https://www.nizarkazan.ch">NK+CO</a></span></span>
+      <span class="credits-design">Design:
+        <span class="credits-name">Margot Lévêque &
+          <a href="https://www.nizarkazan.ch">NK+CO</a>
+        </span>
+      </span>
       <span class="credits-code">Code:
-        <a href="https://carlosmayo.info/" aria-label="_black"><span class="credits-name">Carlos Mayo</span></a>
+        <a href="https://carlosmayo.info/" aria-label="_black">
+          <span class="credits-name">Carlos Mayo</span>
+        </a>
       </span>
     </footer-credits>
     {% render 'ajaxify-cart' %}
