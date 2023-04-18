@@ -8,16 +8,32 @@
         "label": "Favicon",
         "info": "300 × 300px (only .png)"
       },
-      { "type": "url", "id": "instagram", "label": "Instagram" },
-      { "type": "text", "id": "eula_text", "label": "Cart Eula Text" },
+      {
+        "type": "url",
+        "id": "instagram",
+        "label": "Instagram"
+      },
+      {
+        "type": "text",
+        "id": "eula_text",
+        "label": "Cart Eula Text"
+      },
       {
         "type": "url",
         "id": "eula",
         "label": "Eula Link",
         "info": "Upload a .pdf to Settings > Files and paste here the generated url"
       },
-      { "type": "url", "id": "type_guide", "label": "Type Guide Pdf" },
-      { "type": "image_picker", "id": "hero_image", "label": "Hero Image" }
+      {
+        "type": "url",
+        "id": "type_guide",
+        "label": "Type Guide Pdf"
+      },
+      {
+        "type": "image_picker",
+        "id": "hero_image",
+        "label": "Hero Image"
+      }
     ]
   }
 ]
