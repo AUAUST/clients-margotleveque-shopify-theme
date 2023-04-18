@@ -2816,6 +2816,7 @@ footer .klaviyo-form button{
 font-weight: 400 !important;
   font-family: TWK !important;
   color:var(--text-color-normal) !important;
+  font-size: 1em !important;
 }
 
 @media (max-width: 812px){
