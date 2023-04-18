@@ -2802,6 +2802,10 @@ footer .klaviyo-form button{
     font-size: 14px !important;
  }
 
+ .content.sans-serif{
+  font-family: var(--font-lausanne) !important;
+  font-size: .8em;
+ }
 #content .klaviyo-form p, #content .klaviyo-form p span , #content .klaviyo-form p a{
 font-weight: 400 !important;
   font-family: TWK !important;
