@@ -3,7 +3,7 @@
   {% include 'menu' %}
   <!--Contact-->
   <p class="contact-links">
-    {% unless page.handle == 'faq' -%}
+    {% unless page.handle == 'faq' or page.handle == 'trial-fonts-pack' -%}
       {% for link in linklists.footer.links -%}
         <a
           href="{{ link.url }}"
