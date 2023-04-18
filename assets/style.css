@@ -2756,3 +2756,63 @@ footer .klaviyo-form button{
     border-bottom: solid 1px #E8E8E6!important;
   }
 }
+
+
+
+
+/* BANNER */
+#content.has-banner{
+  min-height: 0;
+  top: inherit;
+}
+.text-banner{
+  width: 100%;
+  padding: 60px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -190px;
+  background-color: var(--background-color-dark);
+  font-weight: 400;
+  font-family: TWK;
+}
+
+#content .klaviyo-form input{
+  border: none !important;
+  font-weight: 400 !important;
+  font-family: TWK !important;
+  border-radius: 4px !important;
+  text-align: center !important;
+  color:#575756 !important;
+}
+#content .klaviyo-form input::placeholder, #content .klaviyo-form label, #content .klaviyo-form label > *, #content .klaviyo-form button{
+  font-weight: 400 !important;
+  font-family: TWK !important;
+  color:var(--text-color-normal) !important;
+ }
+#content .klaviyo-form input::placeholder{
+  color:#575756 !important;
+}
+ 
+ #content .klaviyo-form button{
+    height: 40px !important;
+    color: var(--text-color-dark) !important;
+    background-color: var(--lightgray-color) !important;
+    letter-spacing: normal !important;
+    font-size: 14px !important;
+ }
+
+#content .klaviyo-form p, #content .klaviyo-form p span , #content .klaviyo-form p a{
+font-weight: 400 !important;
+  font-family: TWK !important;
+  color:var(--text-color-normal) !important;
+}
+
+@media (max-width: 812px){
+  #content{
+    padding-bottom: 0;
+  }
+  .text-banner{
+    margin-top: -200px;
+  }
+}

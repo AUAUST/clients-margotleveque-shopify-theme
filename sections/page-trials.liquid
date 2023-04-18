@@ -1,17 +1,14 @@
 <wrap>
-  <div
-    class="klaviyo-form-VFBTzE"></div>
+  <div class="klaviyo-form-VFBTzE"></div>
   {% for block in section.blocks -%}
     {% if block.settings.title != blank -%}
-      <div
-        class="title">
+      <div class="title">
         <i>{{ block.settings.title }}</i>
       </div>
       <br>
     {%- endif %}
     {% if block.settings.content != blank -%}
-      <div
-        class="content">
+      <div class="content">
         {{ block.settings.content | replace: '<em', '|em' | replace: '</em>', '|/em|' | replace: '<a', '|a' | replace: '</a>', '|/a|' | replace: '</p>', '|br' | strip_html | replace: '|br', '<br>' | replace: '|a', '<a' | replace: '|/a|', '</a>' | replace: '|em', '<em' | replace: '|/em|', '</em>' }}
       </div>
     {%- endif %}
