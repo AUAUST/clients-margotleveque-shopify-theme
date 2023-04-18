@@ -18,7 +18,7 @@
 
 {% assign hasBanner = false %}
 
-{% if page.handle == 'trials-students' or page.handle == 'trials-fonts-pack' -%}
+{% if page.handle == 'trials-students' or page.handle == 'trial-fonts-pack' -%}
   {% assign hasBanner = true %}
 {% endif %}
 
@@ -28,7 +28,7 @@
 
 <!--Content-->
 <div id="content" class="{%  if hasBanner %}has-banner{%endif%}">
-  {% if page.handle == 'trials-students' or page.handle == 'trials-fonts-pack' -%}
+  {% if page.handle == 'trials-students' or page.handle == 'trial-fonts-pack' -%}
     {% section 'page-trials' %}
   {%- elsif page.handle == 'custom' -%}
     {% section 'page-custom' %}

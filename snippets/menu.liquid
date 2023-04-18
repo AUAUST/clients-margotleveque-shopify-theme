@@ -11,7 +11,7 @@
   <a href="{{ shop.url }}" class="site_title">
     Margot Lévêque
   </a>
-  {% unless page.handle == 'trials-students' or page.handle == 'trials-fonts-pack' -%}
+  {% unless page.handle == 'trials-students' or page.handle == 'trial-fonts-pack' -%}
     <a href="{{ shop.url }}" class="page_name">
       {% if template == "list-collections" or template == "collection" %}
         Type Foundry
@@ -30,7 +30,7 @@
   <a
     class="pill "
     id="trials"
-    href="/pages/trials-fonts-pack">GET TRIAL FONTS</a>
+    href="/pages/trial-fonts-pack">GET TRIAL FONTS</a>
   <!--Cart Button-->
   <a
     class="pill {% if cart.item_count >= 1 %} active{% endif %}"
