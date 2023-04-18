@@ -1609,6 +1609,12 @@
         ],
         "settings": {
         }
+      },
+      "text-banner": {
+        "type": "text-banner",
+        "settings": {
+          "text": "Get our Trial Fonts Pack"
+        }
       }
     },
     "content_for_index": [
