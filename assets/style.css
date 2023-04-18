@@ -2806,17 +2806,21 @@ footer .klaviyo-form button{
     font-size: 14px !important;
     font-family: Garamond Light,Times,serif !important;
     font-style: normal !important;
+    width: 70% !important;
+    margin: 0 auto;
  }
 
  .content.sans-serif{
   font-family: var(--font-lausanne) !important;
   font-size: 1em;
+  padding-top: 24px;
  }
 #content .klaviyo-form p, #content .klaviyo-form p span , #content .klaviyo-form p a{
 font-weight: 400 !important;
   font-family: TWK !important;
   color:var(--text-color-normal) !important;
-  font-size: 1em !important;
+  font-size: .9em !important;
+  line-height: 1.2;
 }
 
 @media (max-width: 812px){
