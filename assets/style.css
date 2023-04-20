@@ -2770,6 +2770,11 @@ footer .klaviyo-form button{
   #content[data-page="trial-fonts-pack"]{
     padding: 15rem 0 8rem;    
   }
+  #content .klaviyo-form{
+    width: 520px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
 }
 
 .text-banner{
@@ -2833,11 +2838,6 @@ font-weight: 400 !important;
 @media (max-width: 812px){
   #content[data-page="trial-fonts-pack"]{
     padding-bottom: 0;
-  }
-  #content .klaviyo-form{
-    width: 520px;
-    max-width: 100%;
-    margin: 0 auto;
   }
   .text-banner{
     margin-top: -200px;
