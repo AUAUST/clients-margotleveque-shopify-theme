@@ -2765,6 +2765,13 @@ footer .klaviyo-form button{
   min-height: 0;
   top: inherit;
 }
+
+@media (min-width:800px){
+  #content[data-page="trial-fonts-pack"]{
+    padding: 15rem 0 8rem;    
+  }
+}
+
 .text-banner{
   width: 100%;
   padding: 60px 0;
@@ -2824,8 +2831,13 @@ font-weight: 400 !important;
 }
 
 @media (max-width: 812px){
-  #content{
+  #content[data-page="trial-fonts-pack"]{
     padding-bottom: 0;
+  }
+  #content .klaviyo-form{
+    width: 520px;
+    max-width: 100%;
+    margin: 0 auto;
   }
   .text-banner{
     margin-top: -200px;

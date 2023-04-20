@@ -27,7 +27,10 @@
 {% endif %}
 
 <!--Content-->
-<div id="content" class="{%  if hasBanner %}has-banner{%endif%}">
+<div
+  id="content"
+  class="{%  if hasBanner %}has-banner{%endif%}"
+  data-page="{{page.handle}}">
   {% if page.handle == 'trials-students' or page.handle == 'trial-fonts-pack' -%}
     {% section 'page-trials' %}
   {%- elsif page.handle == 'custom' -%}
