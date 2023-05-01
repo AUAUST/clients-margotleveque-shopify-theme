@@ -294,7 +294,7 @@
                 <style>
                   @font-face {
                     font-family: '{{ product.title -}}';
-                    src: url({{ '/mls/' | append: product.title | replace: ' ', '-' | append: '.woff2' | asset_url }});
+                    src: url(https:{{ 'mls/' | append: product.title | replace: ' ', '-' | append: '.woff2' | asset_url }});
                   }
                 </style>
                 <div
