@@ -2069,10 +2069,10 @@ input[type="range"]::-webkit-slider-thumb:active {
 }
 #product-options wrap .product-selector svg {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: -40px;
-  height: 150%;
+  left: 100%;
+  bottom: 30%;
+  transform: translateX(-20px);
+  height: 100%;
 }
 #product-options form input {
   height: 0px !important;
@@ -2096,6 +2096,7 @@ input[type="range"]::-webkit-slider-thumb:active {
   grid-column: 2/3;
   font-size: 1.05em;
   font-family: var(--font-family), "Garamond Light", Times, serif;
+  padding-right: 0;
 }
 @media (max-width: 800px) {
   #product-options wrap .product-selector::before {
