@@ -291,7 +291,19 @@
             <div class="fonts-cuts container">
               {% for product in collection.products -%}
                 {% unless product.tags contains "pack" %}
-                <div class="style product-selector fonts-cuts item" data-pack="{%- for item in product.metafields.custom.pack.value -%}{{ item.title }} {% endfor %}" data-value="{{ product.title | handle | downcase | escape }}" data-id="{{ product.id }}">
+                <style>
+                  @font-face {
+                    font-family: '{{ product.title -}}';
+                    src: url({{ '/mls/' | append: product.title | replace: ' ', '-' | append: '.woff2' | asset_url }});
+                  }
+                </style>
+                <div
+                  class="style product-selector fonts-cuts item"
+                  data-pack="{%- for item in product.metafields.custom.pack.value -%}{{ item.title }} {% endfor %}"
+                  data-value="{{ product.title | handle | downcase | escape }}"
+                  data-id="{{ product.id }}"
+                  style="font-family: '{{ product.title -}}'"
+                >
                   {{- product.title -}}
                   {% if product.tags contains "new" %}
                     {% render 'new-icon' %}
