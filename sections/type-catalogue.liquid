@@ -302,7 +302,7 @@
                   data-pack="{%- for item in product.metafields.custom.pack.value -%}{{ item.title }} {% endfor %}"
                   data-value="{{ product.title | handle | downcase | escape }}"
                   data-id="{{ product.id }}"
-                  style="font-family: '{{ product.title -}}'"
+                  style="--font-family: '{{ product.title -}}'"
                 >
                   {{- product.title -}}
                   {% if product.tags contains "new" %}
