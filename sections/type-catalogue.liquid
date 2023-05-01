@@ -15,7 +15,7 @@
         {%- endif -%}
       {%- endif -%}
     {%- assign name = block.id -%}
-    <a 
+    <a
       class="type-row type-{{ name }}
         {% if inactive == true %}inactive{% endif %}
         {% if section.settings.align == 'center' %}center{% endif -%}
@@ -109,8 +109,8 @@
       {%- assign type = product_collection.description -%}
 	  {%- assign product_ = product_collection -%}
 	  {%- assign opacity = block.settings.layer_opacity -%}
-	  {%- assign description = block.settings.description -%}	
-    {%- assign license = block.settings.license -%}	
+	  {%- assign description = block.settings.description -%}
+    {%- assign license = block.settings.license -%}
 	  {%- if block.settings.specimen != blank -%}
 	    {%- assign specimen = true -%}
 	    {%- assign specimen_link = block.settings.specimen -%}
@@ -166,13 +166,13 @@
             {%- else -%}
               {{ total | minus: 1 }}
             {% endif %}
-            Style 
+            Style
             {%- if total > 1 -%}
               s
             {%- endif -%}
           </div>
           <div class="select-wrapper">
-            <select id="styles">  
+            <select id="styles">
               {% for product in collection.products -%}
                 {%- assign exclude = false -%}
                 {%- for tag in product.tags -%}
@@ -189,7 +189,7 @@
                 </option>
                 {%- endif -%}
               {%- endfor %}
-            </select> 
+            </select>
           </div>
         </div>
         <div class="size">
@@ -199,7 +199,7 @@
           <div class="range-wrapper">
             <input class="type-handler" type="range" min="0.5" max="5" value="1.25" step="0.05" />
           </div>
-        </div>  
+        </div>
       </div>
     </div>
 
@@ -357,7 +357,7 @@
     {
       "type": "type",
       "name": "Type",
-      "settings": [	
+      "settings": [
         {
           "type": "collection",
           "id": "collection",
