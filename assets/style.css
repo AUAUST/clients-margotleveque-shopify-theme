@@ -2094,13 +2094,14 @@ input[type="range"]::-webkit-slider-thumb:active {
   width: 100%;
   padding-block: 0.2em 2em;
   border-radius: 0.3rem;
-  margin-bottom: 0.3rem;
+  margin-bottom: 1.5rem;
 }
 .fonts-packs.container:has(.active) .item:not(.active) {
   opacity: 0.6;
 }
 #product-options wrap .product-selector.fonts-cuts {
   grid-column: 2/3;
+  font-size: 1em;
 }
 @media (max-width: 800px) {
   #product-options wrap .product-selector::before {
