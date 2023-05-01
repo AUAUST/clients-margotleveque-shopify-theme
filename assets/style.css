@@ -2092,7 +2092,7 @@ input[type="range"]::-webkit-slider-thumb:active {
 #product-options wrap .product-selector.fonts-cuts {
   position: relative;
   grid-column: 2/3;
-  font-size: 1.05em;
+  font-size: 1.15em;
   font-family: var(--font-family), "Garamond Light", Times, serif;
   padding-right: 0;
   line-height: 1.5em;
