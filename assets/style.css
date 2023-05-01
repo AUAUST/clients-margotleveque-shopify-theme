@@ -2139,11 +2139,11 @@ input[type="range"]::-webkit-slider-thumb:active {
   position: relative;
 }
 
-.product-selector-romie-italic {
+#product-options wrap .product-selector.product-selector-romie-italic {
   --custom-top: 0.08em;
   top: var(--custom-top);
 }
-.product-selector-romie-italic::before {
+#product-options wrap .product-selector.product-selector-romie-italic::before {
   top: calc(0.25em - var(--custom-top));
 }
 
