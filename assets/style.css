@@ -1958,7 +1958,7 @@ input[type="range"]::-webkit-slider-thumb:active {
 #product-options .title {
   font-size: 80%;
   border-bottom: 0.01rem solid;
-  padding: 2px 0;
+  padding: 8px 0;
   position: relative;
   display: flex;
   justify-content: space-between;
