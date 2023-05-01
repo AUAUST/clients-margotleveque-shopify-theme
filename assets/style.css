@@ -2101,7 +2101,7 @@ input[type="range"]::-webkit-slider-thumb:active {
 }
 #product-options wrap .product-selector.fonts-cuts {
   grid-column: 2/3;
-  font-size: 1em;
+  font-size: 1.05em;
 }
 @media (max-width: 800px) {
   #product-options wrap .product-selector::before {
