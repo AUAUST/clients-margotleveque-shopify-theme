@@ -2088,13 +2088,16 @@ input[type="range"]::-webkit-slider-thumb:active {
 #product-options form input {
   height: 0px !important;
 }
+#product-options .fonts-packs.container {
+  margin-bottom: 1rem;
+}
 #product-options wrap .fonts-packs.item {
   background-color: var(--font-pack-background);
   display: inline-block;
   width: 100%;
   padding-block: 0.2em 2em;
   border-radius: 0.3rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 .fonts-packs.container:has(.active) .item:not(.active) {
   opacity: 0.6;
