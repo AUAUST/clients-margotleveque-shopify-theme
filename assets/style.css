@@ -2098,6 +2098,13 @@ input[type="range"]::-webkit-slider-thumb:active {
   font-family: var(--font-family), "Garamond Light", Times, serif;
   padding-right: 0;
 }
+.product-selector-romie-italic {
+  top: 0.08em;
+}
+.product-selector-romie-italic::before {
+  transform: translateY(0.08em);
+}
+
 @media (max-width: 800px) {
   #product-options wrap .product-selector::before {
     height: 1px;
