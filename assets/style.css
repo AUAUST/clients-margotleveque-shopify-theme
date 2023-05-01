@@ -2143,11 +2143,8 @@ input[type="range"]::-webkit-slider-thumb:active {
   --custom-top: 0.08em;
   top: var(--custom-top);
 }
-#product-options
-  wrap
-  .fonts-packs.container
-  .product-selector.product-selector-romie-italic::before {
-  top: calc(0.25em - var(--custom-top));
+.product-selector-romie-italic::before {
+  top: calc(0.25em - var(--custom-top)) !important;
 }
 
 .options-wrapper:last-of-type:not(:last-of-type) {
