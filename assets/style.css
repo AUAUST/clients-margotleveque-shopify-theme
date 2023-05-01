@@ -955,7 +955,7 @@ footer .footer-links {
 footer .footer-links div {
   width: 100%;
 }
-@media (min-width:800px){
+@media (min-width: 800px) {
   footer .footer-links .email {
     width: 170%;
   }
@@ -2632,29 +2632,28 @@ wrap > .item {
   text-decoration: underline;
 }
 
-
 /* NEWSLETTER FOOTER*/
 
-footer{
+footer {
   padding-top: 12rem;
-  position:relative;
+  position: relative;
 }
 
-.footer__logo{
+.footer__logo {
   position: absolute;
   left: 1.2rem;
   top: 2.4rem;
 }
-footer .klaviyo-form{
+footer .klaviyo-form {
   max-width: 460px;
 }
-footer .klaviyo-form form{
+footer .klaviyo-form form {
   padding-top: 0 !important;
 }
-footer .klaviyo-form input{
+footer .klaviyo-form input {
   all: unset;
   border: none !important;
-  border-bottom: solid 1px #E8E8E6!important;
+  border-bottom: solid 1px #e8e8e6 !important;
   padding-bottom: 15px !important;
   background: transparent !important;
   outline: none !important;
@@ -2674,12 +2673,12 @@ footer .klaviyo-form input::placeholder {
   font-family: TWK !important;
   color: var(--text-color-light) !important;
 }
-footer .klaviyo-form h3{
-  font-family: TWK!important;
-  color: var(--text-color-normal)!important;
+footer .klaviyo-form h3 {
+  font-family: TWK !important;
+  color: var(--text-color-normal) !important;
   font-size: 28px;
 }
-footer .klaviyo-form p{
+footer .klaviyo-form p {
   background: white !important;
   color: #575756;
   padding: 14px !important;
@@ -2689,14 +2688,14 @@ footer .klaviyo-form p{
   font-family: "Romie Italic" !important;
   font-weight: 400 !important;
 }
-footer .klaviyo-form p span{
+footer .klaviyo-form p span {
   font-style: italic !important;
   font-family: "Romie Italic" !important;
   font-size: 18px !important;
   font-weight: 400 !important;
 }
 
-footer .klaviyo-form button{
+footer .klaviyo-form button {
   all: unset;
   border-radius: 100px !important;
   padding: 7px 25px !important;
@@ -2708,35 +2707,35 @@ footer .klaviyo-form button{
   font-size: 18px !important;
   font-weight: 400 !important;
 }
-@media (max-width:800px){
-  footer .klaviyo-form h3{
+@media (max-width: 800px) {
+  footer .klaviyo-form h3 {
     font-size: 23px;
   }
-  footer .klaviyo-form p{
+  footer .klaviyo-form p {
     font-size: 16px !important;
   }
-  footer .klaviyo-form p span{
+  footer .klaviyo-form p span {
     font-size: 16px !important;
   }
-  footer .klaviyo-form input{
+  footer .klaviyo-form input {
     font-size: 16px !important;
   }
-  footer .klaviyo-form button{
+  footer .klaviyo-form button {
     font-size: 16px !important;
   }
 }
-@media (min-width:800px){
-  footer .footer__logo{
+@media (min-width: 800px) {
+  footer .footer__logo {
     left: 2rem;
   }
-  footer .klaviyo-form{
+  footer .klaviyo-form {
     margin-left: 1rem;
   }
-  footer .klaviyo-form input{
-    margin-left : 80px !important;
+  footer .klaviyo-form input {
+    margin-left: 80px !important;
   }
-  footer .klaviyo-form button{
-    margin-right : -80px;
+  footer .klaviyo-form button {
+    margin-right: -80px;
   }
 }
 
@@ -2745,39 +2744,36 @@ footer .klaviyo-form button{
     background-color: #323030 !important;
     color: white !important;
   }
-  footer .klaviyo-form p span{
+  footer .klaviyo-form p span {
     color: white !important;
   }
   footer .klaviyo-form button {
     background-color: #323030 !important;
     color: white !important;
   }
-  footer .klaviyo-form input{
-    border-bottom: solid 1px #E8E8E6!important;
+  footer .klaviyo-form input {
+    border-bottom: solid 1px #e8e8e6 !important;
   }
 }
 
-
-
-
 /* BANNER */
-#content.has-banner{
+#content.has-banner {
   min-height: 0;
   top: inherit;
 }
 
-@media (min-width:800px){
-  #content[data-page="trial-fonts-pack"]{
-    padding: 10rem 0 4rem;    
+@media (min-width: 800px) {
+  #content[data-page="trial-fonts-pack"] {
+    padding: 10rem 0 4rem;
   }
-  #content .klaviyo-form{
+  #content .klaviyo-form {
     width: 520px;
     max-width: 100%;
     margin: 0 auto;
   }
 }
 
-.text-banner{
+.text-banner {
   width: 100%;
   padding: 60px 0;
   display: flex;
@@ -2789,57 +2785,61 @@ footer .klaviyo-form button{
   font-family: TWK;
 }
 
-#content .klaviyo-form input{
+#content .klaviyo-form input {
   border: none !important;
   font-weight: 400 !important;
   font-family: TWK !important;
   border-radius: 4px !important;
   text-align: center !important;
-  color:#575756 !important;
+  color: #575756 !important;
   font-size: 16px !important;
 }
-#content .klaviyo-form input::placeholder{
-  color:#575756 !important;
+#content .klaviyo-form input::placeholder {
+  color: #575756 !important;
   font-size: 16px !important;
 }
-#content .klaviyo-form input::placeholder, #content .klaviyo-form label, #content .klaviyo-form label > *, #content .klaviyo-form button{
+#content .klaviyo-form input::placeholder,
+#content .klaviyo-form label,
+#content .klaviyo-form label > *,
+#content .klaviyo-form button {
   font-weight: 400 !important;
   font-family: TWK !important;
-  color:var(--text-color-normal) !important;
- }
+  color: var(--text-color-normal) !important;
+}
 
- 
- #content .klaviyo-form button{
-    height: 40px !important;
-    background-color: var(--highlight-color) !important;
-    color: var(--color-black) !important;
-    border: 1px solid var(--highlight-color) !important;
-    letter-spacing: normal !important;
-    font-size: 14px !important;
-    font-family: Garamond Light,Times,serif !important;
-    font-style: normal !important;
-    width: 70% !important;
-    margin: 0 auto;
- }
+#content .klaviyo-form button {
+  height: 40px !important;
+  background-color: var(--highlight-color) !important;
+  color: var(--color-black) !important;
+  border: 1px solid var(--highlight-color) !important;
+  letter-spacing: normal !important;
+  font-size: 14px !important;
+  font-family: Garamond Light, Times, serif !important;
+  font-style: normal !important;
+  width: 70% !important;
+  margin: 0 auto;
+}
 
- .content.sans-serif{
+.content.sans-serif {
   font-family: var(--font-lausanne) !important;
   font-size: 1em;
   padding-top: 24px;
- }
-#content .klaviyo-form p, #content .klaviyo-form p span , #content .klaviyo-form p a{
-font-weight: 400 !important;
+}
+#content .klaviyo-form p,
+#content .klaviyo-form p span,
+#content .klaviyo-form p a {
+  font-weight: 400 !important;
   font-family: TWK !important;
-  color:var(--text-color-normal) !important;
-  font-size: .9em !important;
+  color: var(--text-color-normal) !important;
+  font-size: 0.9em !important;
   line-height: 1.2;
 }
 
-@media (max-width: 812px){
-  #content[data-page="trial-fonts-pack"]{
+@media (max-width: 812px) {
+  #content[data-page="trial-fonts-pack"] {
     padding-bottom: 0;
   }
-  .text-banner{
+  .text-banner {
     margin-top: -200px;
   }
 }
