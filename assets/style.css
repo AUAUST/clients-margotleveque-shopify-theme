@@ -1388,17 +1388,6 @@ footer-credits {
 .type-row .type-row_details span:not(.gray, .green) {
   width: 8rem;
 }
-.new-icon {
-  position: relative;
-  transform: rotate(-45deg);
-  font-family: "Romie-Italic";
-  -webkit-text-stroke-width: 3px;
-  -webkit-text-stroke-color: var(--highlight-color);
-}
-.new-icon span {
-  margin-left: -13px;
-  font-size: 120%;
-}
 .type-row_name {
   line-height: 1em;
   letter-spacing: -0.03em;
@@ -2103,6 +2092,7 @@ input[type="range"]::-webkit-slider-thumb:active {
   opacity: 0.6;
 }
 #product-options wrap .product-selector.fonts-cuts {
+  position: relative;
   grid-column: 2/3;
   font-size: 1.05em;
   font-family: var(--font-family), "Garamond Light", Times, serif;
