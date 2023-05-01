@@ -298,7 +298,7 @@
                   }
                 </style>
                 <div
-                  class="style product-selector fonts-cuts item"
+                  class="style product-selector fonts-cuts item custom-alignment-{{product.title | downcase | replace: ' ', '-'}}"
                   data-pack="{%- for item in product.metafields.custom.pack.value -%}{{ item.title }} {% endfor %}"
                   data-value="{{ product.title | handle | downcase | escape }}"
                   data-id="{{ product.id }}"
