@@ -2666,6 +2666,7 @@ footer .klaviyo-form button {
   }
   #type-row {
     --font-base: 10vw;
+    margin-top: 0;
   }
   #gallery {
     grid-column: 3/17;
