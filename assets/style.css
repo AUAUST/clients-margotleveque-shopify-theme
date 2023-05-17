@@ -2524,6 +2524,7 @@ footer .klaviyo-form button {
     background-color: var(--background-color-dark);
     flex-direction: column;
     width: 100%;
+    font-size: 1.1em;
   }
   footer .footer-links div {
     padding-block: 1em;
