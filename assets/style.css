@@ -2211,6 +2211,7 @@ footer .klaviyo-form button {
 @media (min-width: 813px) {
   #gallery .prev,
   #gallery .next {
+    display: none;
     pointer-events: none;
   }
   #gallery > div {
