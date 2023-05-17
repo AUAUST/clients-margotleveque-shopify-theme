@@ -2537,6 +2537,7 @@ footer .klaviyo-form button {
     background-color: var(--background-color-light);
     flex-direction: column;
     margin-top: 0;
+    padding-bottom: 0;
   }
   .template-page-work footer {
     padding-top: 15rem;
