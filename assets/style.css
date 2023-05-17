@@ -1772,19 +1772,6 @@ input[type="range"]::-webkit-slider-thumb {
 input[type="range"]::-webkit-slider-thumb:active {
   cursor: grabbing;
 }
-/* @media (max-width: 1024px) {
-  #type-actions {
-    grid-template-columns: 0px auto 1fr;
-  }
-  #type-actions > wrap {
-    padding: 0;
-    grid-column: 6 / 14;
-    grid-template-columns: min-content minmax(auto, 1fr);
-  }
-  #type-actions > span {
-    display: none;
-  }
-} */
 @media (max-width: 600px) {
   #type-actions {
     display: block;
