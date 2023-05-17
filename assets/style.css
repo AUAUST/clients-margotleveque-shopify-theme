@@ -2541,6 +2541,9 @@ footer .klaviyo-form button {
   footer div span {
     margin-bottom: 0.5em;
   }
+  footer-credits {
+    justify-content: center;
+  }
   .template-index {
     display: flex;
     flex-wrap: wrap;
