@@ -2384,7 +2384,6 @@ footer .klaviyo-form button {
     grid-gap: 1rem 0;
     border-bottom: 0.01rem solid var(--darkgray-color);
     padding: 0.8rem 1.2rem 1.2rem;
-    margin-bottom: 2rem;
     background-color: var(--background-color);
     z-index: 100;
     align-items: center;
