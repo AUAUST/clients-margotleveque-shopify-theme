@@ -2256,11 +2256,6 @@ footer .klaviyo-form button {
     font-size: 100%;
   }
 }
-@media (max-width: 800px) {
-  #product-options wrap .product-selector::before {
-    height: 1px;
-  }
-}
 @media (max-width: 320px) {
   #product-options wrap {
     font-size: 100%;
