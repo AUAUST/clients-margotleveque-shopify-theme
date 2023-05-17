@@ -2536,6 +2536,7 @@ footer .klaviyo-form button {
   }
   footer .footer-links div > * {
     margin: 0 auto;
+    line-height: 1.4em;
   }
   footer div span {
     margin-bottom: 0.5em;
