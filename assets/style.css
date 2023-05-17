@@ -2749,6 +2749,9 @@ footer .klaviyo-form button {
   .text-banner {
     margin-top: -200px;
   }
+  #product-options .title {
+    justify-content: center;
+  }
 }
 @media (max-width: 600px) {
   #about {
