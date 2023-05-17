@@ -2529,6 +2529,9 @@ footer .klaviyo-form button {
     border-bottom: 0.01rem solid var(--color-black);
     text-align: center;
   }
+  footer div.footer-links div.footer-menu {
+    border-bottom: none;
+  }
   footer .footer-links div > * {
     margin: 0 auto;
   }
