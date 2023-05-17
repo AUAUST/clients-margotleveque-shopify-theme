@@ -853,8 +853,18 @@ footer-credits {
   height: 100%;
 }
 .slider .prev {
+  position: relative;
   left: 0;
   cursor: w-resize;
+}
+.slider .prev::after {
+  content: "→";
+  font-family: "Romie Italic";
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
 }
 .slider .next {
   right: 0;
