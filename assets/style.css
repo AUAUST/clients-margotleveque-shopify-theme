@@ -858,7 +858,7 @@ footer-credits {
 }
 .slider .prev::after {
   content: "←";
-  font-family: "Romie Italic";
+  font-family: "Romie-Regular-Italic";
   display: block;
   position: absolute;
   top: 50%;
@@ -871,7 +871,7 @@ footer-credits {
 }
 .slider .next::after {
   content: "→";
-  font-family: "Romie Italic";
+  font-family: "Romie-Regular-Italic";
   display: block;
   position: absolute;
   top: 50%;
