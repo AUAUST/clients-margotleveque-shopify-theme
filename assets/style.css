@@ -856,14 +856,23 @@ footer-credits {
   left: 0;
   cursor: w-resize;
 }
-.slider .prev::after {
+.slider .prev::after,
+.slider .next::after {
   content: "←";
-  font-family: "Romie-Regular-Italic";
   display: block;
   position: absolute;
   top: 50%;
   left: 0;
   transform: translateY(-50%);
+  font-family: "Romie-Regular-Italic";
+  font-size: 2.5rem;
+  line-height: 0.95;
+  text-align: center;
+  color: var(--color-white);
+  border: 1px solid currentcolor;
+  border-radius: 2.5rem;
+  width: 2rem;
+  height: 2rem;
 }
 .slider .next {
   right: 0;
@@ -871,12 +880,6 @@ footer-credits {
 }
 .slider .next::after {
   content: "→";
-  font-family: "Romie-Regular-Italic";
-  display: block;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
 }
 /* PAGES
 ================================================== */
