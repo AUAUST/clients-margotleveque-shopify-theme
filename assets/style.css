@@ -1212,6 +1212,7 @@ footer-credits {
 }
 .select-wrapper select {
   font: inherit;
+  text-align-last: center;
 }
 #hidden-select-option {
   position: fixed;
