@@ -1124,6 +1124,7 @@ footer-credits {
   color: var(--highlight-color);
 }
 #type-row span {
+  vertical-align: text-top;
   padding: 0 1.2rem;
   display: inline-block;
   cursor: text;
