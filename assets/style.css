@@ -862,7 +862,7 @@ footer-credits {
   display: block;
   position: absolute;
   top: 50%;
-  left: 0;
+  left: 1.7rem;
   transform: translateY(-50%);
   font-family: "Romie-Regular-Italic";
   font-size: 2.5rem;
@@ -881,7 +881,7 @@ footer-credits {
 .slider .next::after {
   content: "→";
   left: auto;
-  right: 0;
+  right: 1.7rem;
 }
 /* PAGES
 ================================================== */
