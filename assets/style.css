@@ -858,7 +858,8 @@ footer-credits {
   top: 50%;
   left: 1.7rem;
   transform: translateY(-50%);
-  font-family: "Romie Italic" !important;
+  font-family: "Romie Italic";
+  font-style: italic;
   font-size: 2.5rem;
   line-height: 0.95;
   text-align: center;
