@@ -319,97 +319,91 @@ a {
 ================================================== */
 @font-face {
   font-family: "Garamond Light";
-  src: url("CormorantGaramond-Light.woff2") format("woff2");
+  src: url("CormorantGaramond-Light.woff2");
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 @font-face {
   font-family: "Garamond Light Italic";
-  src: url("CormorantGaramond-LightItalic.woff2") format("woff2");
+  src: url("CormorantGaramond-LightItalic.woff2");
   font-weight: normal;
   font-style: italic;
   font-display: block;
 }
 @font-face {
   font-family: "Garamond Bold";
-  src: url("CormorantGaramond-Bold.woff2") format("woff2");
+  src: url("CormorantGaramond-Bold.woff2");
   font-weight: bold;
   font-style: normal;
   font-display: block;
 }
 @font-face {
   font-family: "Bodoni Ornaments";
-  src: url("Bodoni Ornaments.woff2") format("woff2");
+  src: url("Bodoni Ornaments.woff2");
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 @font-face {
   font-family: "Kalice_update";
-  src: url("Kalice-Regular-V04.woff2") format("woff2"),
-    url("Kalice-Regular-V04.woff") format("woff");
+  src: url("Kalice-Regular-V04.woff2"), url("Kalice-Regular-V04.woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Cormorant Garamond";
-  src: url("CormorantGaramond-Light.woff2") format("woff2"),
-    url("CormorantGaramond-Light.woff") format("woff");
+  src: url("CormorantGaramond-Light.woff2"), url("CormorantGaramond-Light.woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "ABC";
-  src: url("ABCDiatype-Medium.woff2") format("woff2"),
-    url("ABCDiatype-Medium.woff") format("woff");
+  src: url("ABCDiatype-Medium.woff2"), url("ABCDiatype-Medium.woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Ninna";
-  src: url("Ninna-Regular.woff2") format("woff2"),
-    url("Ninna-Regular.woff") format("woff");
+  src: url("Ninna-Regular.woff2"), url("Ninna-Regular.woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Minion Pro";
-  src: url("MinionPro-Regular.woff2") format("woff2"),
-    url("MinionPro-Regular.woff") format("woff");
+  src: url("MinionPro-Regular.woff2"), url("MinionPro-Regular.woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Romie Regular";
-  src: url("Romie-Regular.woff2") format("woff2"),
-    url("Romie-Regular.woff") format("woff");
+  src: url("Romie-Regular.woff2"), url("Romie-Regular.woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Romie Italic";
-  src: url("Romie-Regular-Italic.woff2") format("woff2");
+  src: url("Romie-Regular-Italic.woff2");
   font-weight: normal;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: "TWK";
-  src: url("TWKLausannePan-150.woff2") format("woff2");
+  src: url("TWKLausannePan-150.woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "TWK";
-  src: url("TWKLausanne-650.woff2") format("woff2");
+  src: url("TWKLausanne-650.woff2");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -879,7 +873,7 @@ footer-credits {
   cursor: e-resize;
 }
 .slider .next::after {
-  content: "→";
+  content: "\2192";
   left: auto;
   right: 1.7rem;
 }
