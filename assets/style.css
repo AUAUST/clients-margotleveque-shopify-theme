@@ -2772,6 +2772,9 @@ footer .klaviyo-form button {
   #product-options .title {
     justify-content: center;
   }
+  #infos {
+    display: none;
+  }
 }
 @media (max-width: 600px) {
   #about {
