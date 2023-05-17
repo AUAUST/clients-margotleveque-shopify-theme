@@ -2512,18 +2512,21 @@ footer .klaviyo-form button {
     transform: translateY(0);
   }
   footer {
+    padding-inline: 0;
+    background-color: var(--background-color-light);
     flex-direction: column;
   }
   .template-page-work footer {
     padding-top: 15rem;
   }
   footer .footer-links {
+    background-color: var(--background-color-dark);
     flex-direction: column;
     width: 100%;
   }
   footer .footer-links div {
     padding-block: 1em;
-    border-top: 0.01rem solid var(--color-black);
+    border-bottom: 0.01rem solid var(--color-black);
     text-align: center;
   }
   footer .footer-links div > * {
