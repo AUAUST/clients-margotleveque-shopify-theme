@@ -861,20 +861,20 @@ footer-credits {
   font-family: "Romie Italic";
   font-style: italic;
   font-size: 2.5rem;
-  line-height: 0.95;
+  line-height: 1;
   text-align: center;
-  color: var(--color-white);
-  border: 1px solid currentcolor;
+  color: var(--color-gray);
+  border: 0.5px solid currentcolor;
   border-radius: 2.5rem;
-  width: 2rem;
-  height: 2rem;
+  width: 2.2rem;
+  height: 2.2rem;
 }
 .slider .next {
   right: 0;
   cursor: e-resize;
 }
 .slider .next::after {
-  content: "\2192";
+  content: "→";
   left: auto;
   right: 1.7rem;
 }
