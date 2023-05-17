@@ -2635,7 +2635,7 @@ footer .klaviyo-form button {
   }
   .template-list-collections .type-catalogue {
     margin-bottom: 3rem;
-    margin-top: 5rem;
+    margin-top: 0;
   }
   .type-row {
     padding: 0 0 1.5rem 0;
