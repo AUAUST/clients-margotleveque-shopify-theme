@@ -880,6 +880,8 @@ footer-credits {
 }
 .slider .next::after {
   content: "→";
+  left: auto;
+  right: 0;
 }
 /* PAGES
 ================================================== */
