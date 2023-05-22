@@ -2778,6 +2778,9 @@ footer .klaviyo-form button {
     flex-direction: column;
     gap: 10px;
   }
+  .monthly-newsletter {
+    margin-bottom: 40px;
+  }
 }
 @media (max-width: 600px) {
   #about {
