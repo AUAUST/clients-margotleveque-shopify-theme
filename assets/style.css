@@ -272,13 +272,11 @@ a {
   flex-direction: row;
   justify-content: center;
   align-items: baseline;
+  margin-right: 10px;
 }
 .link-pill svg {
   height: 35px;
   width: fit-content;
-}
-.link-pill:first-child {
-  margin-right: 10px;
 }
 .link-pill:hover {
   background-color: var(--color-white);
@@ -2775,6 +2773,9 @@ footer .klaviyo-form button {
   }
   #infos {
     display: none;
+  }
+  .home-button_wrapper {
+    flex-direction: column;
   }
 }
 @media (max-width: 600px) {
