@@ -749,7 +749,7 @@ footer-credits {
   align-items: center;
   justify-content: flex-end;
   gap: 0.5em;
-  padding-right: 1rem;
+  padding-inline: 1rem;
 }
 /* Work
 ================================================== */
@@ -2562,6 +2562,7 @@ footer .klaviyo-form button {
     margin-bottom: 0.5em;
   }
   footer-credits {
+    font-size: 1rem;
     justify-content: center;
   }
   .template-index {
