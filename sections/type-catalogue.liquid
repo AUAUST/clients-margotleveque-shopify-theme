@@ -184,9 +184,11 @@
                 <option
                   value="{{ product.title | handle | escape }}"
                   data-title="{{ product.title }}"
-                  {%
+                  data-block-settings-title="{{ block.settings.title }}"
+                  data-product-title="{{ product.title }}"
+                  {% comment %} {%
                     if block.settings.title == product.title
-                  %}selected{% endif %}
+                  %}selected{% endif %} {% endcomment %}
                 >
                   {{- product.title -}}
                 </option>
