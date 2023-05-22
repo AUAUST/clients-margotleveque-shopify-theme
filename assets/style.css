@@ -1507,10 +1507,10 @@ input[type="range"]::-webkit-slider-thumb:active {
   opacity: 0.5;
 }
 #product-options .buy-button {
-  width: fit-content;
+  width: 100%;
   margin: 2rem -2px 0;
   cursor: pointer;
-  padding: 16px 80px;
+  padding: 16px 0;
   font-size: 85%;
 }
 #product-options .buy-button .atc_price.hide {
