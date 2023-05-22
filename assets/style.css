@@ -1553,7 +1553,7 @@ input[type="range"]::-webkit-slider-thumb:active {
   height: 0px !important;
 }
 #product-options .fonts-packs.container {
-  margin-bottom: 1rem;
+  margin-bottom: 18px;
 }
 #product-options wrap .fonts-packs.item {
   background-color: var(--font-pack-background);
