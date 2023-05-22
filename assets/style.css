@@ -861,8 +861,10 @@ footer-credits {
   font-size: 2.5rem;
   line-height: 1;
   text-align: center;
-  color: var(--color-white);
-  border: 0.5px solid var(--darkgray-color);
+  color: blue;
+  /* var(--color-white); */
+  border: 0.5px solid red;
+  /* var(--darkgray-color); */
   border-radius: 2.5rem;
   width: 2.2rem;
   height: 2.2rem;
