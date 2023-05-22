@@ -1843,7 +1843,7 @@ wrap > .item {
   border-color: var(--lightgray-color);
   pointer-events: none;
 }
-.pill.active,
+.pill,
 .device .pill:not(.title):not(#buy):active,
 .desktop .pill:not(.title):hover {
   background-color: var(--highlight-color);
