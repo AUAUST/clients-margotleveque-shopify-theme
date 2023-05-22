@@ -1510,7 +1510,7 @@ input[type="range"]::-webkit-slider-thumb:active {
   width: fit-content;
   margin: 2rem -2px 0;
   cursor: pointer;
-  padding: 10px 28px;
+  padding: 16px 80px;
   font-size: 85%;
 }
 #product-options .buy-button .atc_price.hide {
@@ -1569,7 +1569,7 @@ input[type="range"]::-webkit-slider-thumb:active {
 #product-options wrap .product-selector.fonts-cuts {
   position: relative;
   grid-column: 2/3;
-  font-size: 1.4em;
+  font-size: 1.05em;
   line-height: 1.5em;
   font-family: var(--font-family), "Garamond Light", Times, serif;
   padding-right: 0;
