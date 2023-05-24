@@ -1589,7 +1589,6 @@ input[type="range"]::-webkit-slider-thumb:active {
 #product-options wrap .fonts-packs.container .product-selector::before {
   top: 0.45em;
 }
-#product-options wrap .product-selector.active::before,
 #product-options wrap .product-selector.fonts-cuts.bonus::before,
 .desktop #product-options wrap .product-selector:hover::before {
   border: 1px solid var(--darkgray-color);
