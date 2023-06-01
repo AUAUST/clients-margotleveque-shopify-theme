@@ -574,19 +574,19 @@
               {{ line_item.variant_title }}
             </div>
 
-            <div class="price">
+            <div class="price text-right">
               {{ line_item.price | money }}
             </div>
 
-            <div class="quantity">
+            <div class="quantity text-center">
               {{ line_item.quantity }}
             </div>
 
-            <div class="vat">
+            <div class="vat text-center">
               0%
             </div>
 
-            <div class="total">
+            <div class="total text-right">
               {{ line_item.line_price | money }}
             </div>
 
@@ -594,15 +594,16 @@
         {% endfor %}
 
 
-        <div class="row">
-           <div class="subtotal title wide-column">
+        <div class="row text-right">
+           <div class="subtotal title wide-column padding-bottom-0">
             {{ TEXT_subtotal }}
           </div>
-          <div class="subtotal value">
+          <div class="subtotal value padding-bottom-0">
             {{ subtotal_price | money }}
           </div>
         </div>
-        <div class="row underline">
+
+        <div class="row underline text-right">
           <div class="shipping title wide-column">
             {{ TEXT_shipping }}
           </div>
@@ -610,18 +611,24 @@
             {{ shipping_price | default: 0.0 | money }}
           </div>
         </div>
-        <div class="row underline">
+        <div class="row underline text-right">
           <div class="total title wide-column">
-            {{ TEXT_total }} ({{ currency }})
+            <strong>
+              {{ TEXT_total }} ({{ currency }})
+            </strong>
           </div>
           <div class="total value">
-            {{ total_price | money }}
+            <strong>
+              {{ total_price | money }}
+            </strong>
           </div>
         </div>
 
 
-        <div>
-          {{ TEXT_thanks }}
+        <div class="row">
+          <div class="full-width">
+            {{ TEXT_thanks }}
+          </div>
         </div>
 
       </div>
@@ -714,6 +721,24 @@
     grid-column: span 7;
   }
 
+  .row .full-width {
+    grid-column: span 8;
+  }
+
+  .row > div {
+    padding-block: 0.9em;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+  .text-right {
+    text-align: right;
+  }
+
+  .row .padding-bottom-0 {
+    padding-bottom: 0;
+  }
 
 
 
