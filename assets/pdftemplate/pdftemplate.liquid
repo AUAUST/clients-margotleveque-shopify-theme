@@ -487,8 +487,8 @@
       <div class="logo">
         <img src="{{ shop_logo_url }}">
       </div>
-      <div class="payement">
-        <p>
+      <div>
+        <p class="payement">
           <strong>
             {{ TEXT_receipt_tax_invoice }}
           </strong>
@@ -497,6 +497,34 @@
             {{ TEXT_payment_method }} {{ payment_method }}
             <br>
             {{ created_at | date: SETTING_date_format }}
+          </span>
+        </p>
+        <p class="customer">
+          <span>
+
+            {% assign billing_address = billing_address | default: customer.default_address %}
+            {% if billing_address != blank %}
+              {{ billing_address.name }}
+              {% if billing_address.company != blank %}
+                <br>
+                {{ billing_address.company }}
+              {% endif %}
+              <br>
+              {{ billing_address.address1 }}
+              {% if billing_address.address2 != blank %}
+                <br>
+                {{ billing_address.address2 }}
+              {% endif %}
+              {% if billing_address.city_province_zip != blank %}
+                <br>
+                {{ billing_address.city_province_zip }}
+              {% endif %}
+              <br>
+              {{ billing_address.country }}
+            {% else %}
+              {{ TEXT_no_customer_information }}
+            {% endif %}
+
           </span>
         </p>
       </div>
