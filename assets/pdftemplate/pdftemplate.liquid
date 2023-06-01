@@ -7,7 +7,7 @@
 <!-- Logo width from "Templates" page > "Customize Branding" -->
 {% assign SETTING_shop_accent_color = shop_accent_color %}
 <!-- Accent color from "Templates" page > "Customize Branding" -->
-{% assign SETTING_date_format = '%b %e, %Y' %}
+{% assign SETTING_date_format = '%B %e, %Y' %}
 <!-- Adjusts date format used, see: https://shopify.github.io/liquid/filters/date/ -->
 {% assign SETTING_show_product_images = true %}
 <!-- Display product images? (true/false) -->
@@ -37,7 +37,7 @@
   See: http://help.forsbergplustwo.com/en/articles/5137649
 -->
 
-{% assign TEXT_receipt_tax_invoice = 'Receipt / Tax Invoice' %}
+{% assign TEXT_receipt_tax_invoice = 'Receipt / Invoice' %}
 {% assign TEXT_shipping_address = 'Shipping address' %}
 {% assign TEXT_customer = 'Customer' %}
 {% assign TEXT_tel = 'Tel.' %}
@@ -487,7 +487,19 @@
       <div class="logo">
         <img src="{{ shop_logo_url }}">
       </div>
-      <div class="payement"></div>
+      <div class="payement">
+        <p>
+          <strong>
+            {{ TEXT_receipt_tax_invoice }}
+          </strong>
+          <br>
+          <span>
+            {{ TEXT_payment_method }} {{ payment_method }}
+            <br>
+            {{ created_at | date: SETTING_date_format }}
+          </span>
+        </p>
+      </div>
     </header>
     <section class="area-container"></section>
     <footer class="area-container">
