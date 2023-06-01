@@ -483,6 +483,9 @@
 
 <div class="template">
   <main>
+    <header class="area-container"></header>
+    <section class="area-container"></section>
+    <footer class="area-container"></footer>
   </main>
 </div>
 
@@ -499,7 +502,16 @@
     position: absolute;
     inset: 0;
     margin: 40px 40px 20px 80px;
-    background: red;
+  }
+
+  .template .area-container {
+    border: 1px solid #e1e1e1;
+  }
+
+  main {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 2fr 4fr 1fr;
   }
 
   .template p {
