@@ -594,12 +594,35 @@
         {% endfor %}
 
 
+        <div class="row">
+           <div class="pricing-title">
+            {{ TEXT_subtotal }}
+          </div>
+          <div class="pricing-details">
+            {{ subtotal_price | money }}
+          </div>
+        </div>
+        <div class="row">
+          <div class="pricing-title">
+            {{ TEXT_shipping }}
+          </div>
+          <div class="pricing-details">
+            {{ shipping_price | default: 0.0 | money }}
+          </div>
+        </div>
+        <div class="row">
+          <div class="pricing-title">
+            {{ TEXT_total_paid }}
+          </div>
+          <div class="pricing-details">
+            {{ total_paid | money }}
+          </div>
+        </div>
 
 
-
-
-
-
+        <div>
+          {{ TEXT_thanks }}
+        </div>
 
       </div>
     </section>
