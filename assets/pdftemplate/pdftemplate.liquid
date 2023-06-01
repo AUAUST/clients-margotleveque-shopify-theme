@@ -1,10 +1,12 @@
 <!-- RECEIPT / INVOICE -->
 
 <!-- Document Settings -->
-{% assign SETTING_shop_logo = '' %}
-<!-- Add URL to uploaded logo image. See: http://help.forsbergplustwo.com/en/articles/2907646 -->
-{% assign SETTING_shop_logo_width = 240 %}
-<!-- Adjusts size of logo -->
+{% assign SETTING_shop_logo = shop_logo_url %}
+<!-- Logo uploaded from "Templates" page > "Customize Branding" -->
+{% assign SETTING_shop_logo_width = shop_logo_width %}
+<!-- Logo width from "Templates" page > "Customize Branding" -->
+{% assign SETTING_shop_accent_color = shop_accent_color %}
+<!-- Accent color from "Templates" page > "Customize Branding" -->
 {% assign SETTING_date_format = '%b %e, %Y' %}
 <!-- Adjusts date format used, see: https://shopify.github.io/liquid/filters/date/ -->
 {% assign SETTING_show_product_images = true %}
@@ -71,7 +73,7 @@
 {% endif %}
 <!-- END: Barcode snippet -->
 
-<div class="template-505080">
+<div class="template">
   <div class="header">
     <div class="shop-title to-uppercase">
       {% if SETTING_shop_logo != blank %}
@@ -177,14 +179,16 @@
         </p>
         <p class="order-detail">
           {{ payment_method }}
-          <br>
-          {{ TEXT_payment_due_on }}
-          {{ payment_terms.current_payment_schedule.due_at | date: SETTING_date_format }} (
-          {{- payment_terms.payment_terms_name -}}
-          )
-          {% if payment_terms.overdue %}
+          {% if payment_terms != blank %}
             <br>
-            <span class="label-warning">{{ TEXT_payment_overdue }}</span>
+            {{ TEXT_payment_due_on }}
+            {{ payment_terms.current_payment_schedule.due_at | date: SETTING_date_format }} (
+            {{- payment_terms.payment_terms_name -}}
+            )
+            {% if payment_terms.overdue %}
+              <br>
+              <span class="label-warning">{{ TEXT_payment_overdue }}</span>
+            {% endif %}
           {% endif %}
         </p>
       {% endif %}
@@ -478,7 +482,7 @@
 </div>
 
 <style>
-  .template-505080 * {
+  .template * {
     font-family: "Open Sans", sans-serif !important;
     font-size: 14px;
     font-weight: 300;
@@ -486,25 +490,25 @@
     box-sizing: border-box;
   }
 
-  .template-505080 {
+  .template {
     margin: auto;
     padding: 10px 30px 0 30px;
     min-height: 600px;
   }
 
-  .template-505080 p {
+  .template p {
     margin: 0 0 7px 0;
   }
 
-  .template-505080 a,
-  .template-505080 a:link,
-  .template-505080 a:visited {
+  .template a,
+  .template a:link,
+  .template a:visited {
     color: #000;
     font-weight: 300;
     text-decoration: none;
   }
 
-  .template-505080 .header {
+  .template .header {
     width: 100%;
     display: -webkit-box;
     display: -webkit-flex;
@@ -514,11 +518,12 @@
     margin-bottom: 30px;
   }
 
-  .template-505080 .header p {
+  .template .header p {
     margin: 0
   }
 
-  .template-505080 .shop-title {
+  .template .shop-title {
+    color: {{ SETTING_shop_accent_color }};
     -webkit-box-flex: 6;
     -webkit-flex: 6;
     flex: 6;
@@ -527,17 +532,17 @@
     font-weight: 400;
   }
 
-  .template-505080 .shop-logo {
+  .template .shop-logo {
     max-width: {{ SETTING_shop_logo_width }}px;
   }
 
-  .template-505080 .order-title {
+  .template .order-title {
     -webkit-box-flex: 4;
     -webkit-flex: 4;
     flex: 4;
   }
 
-  .template-505080 .customer-addresses {
+  .template .customer-addresses {
     width: 100%;
     display: -webkit-box;
     display: -webkit-flex;
@@ -547,52 +552,52 @@
     margin-bottom: 15px;
   }
 
-  .template-505080 .shipping-address {
+  .template .shipping-address {
     flex-grow: 1;
     flex-basis: 0;
   }
 
-  .template-505080 .billing-address {
+  .template .billing-address {
     flex-grow: 1;
     flex-basis: 0;
   }
 
-  .template-505080 .order-details {
+  .template .order-details {
     text-align: right;
     flex-grow: 1;
     flex-basis: 0;
     margin-bottom: 15px;
   }
 
-  .template-505080 .address-detail,
-  .template-505080 .order-detail {
+  .template .address-detail,
+  .template .order-detail {
     margin: 5px 0 0;
     line-height: 1.5;
   }
 
-  .template-505080 .subtitle-bold {
+  .template .subtitle-bold {
     font-weight: bold;
     margin: 0;
     font-size: 13px;
   }
 
-  .template-505080 .order-detail + .subtitle-bold {
+  .template .order-detail + .subtitle-bold {
     margin-top: 15px;
   }
 
-  .template-505080 .to-uppercase {
+  .template .to-uppercase {
     text-transform: uppercase;
   }
 
-  .template-505080 .text-align-right {
+  .template .text-align-right {
     text-align: right;
   }
 
-  .template-505080 .order-table {
+  .template .order-table {
     display: block;
   }
 
-  .template-505080 .order-table-row {
+  .template .order-table-row {
     display: -webkit-box;
     display: -webkit-flex;
     display: flex;
@@ -602,37 +607,37 @@
     page-break-inside: avoid;
   }
 
-  .template-505080 .order-table-header {
+  .template .order-table-header {
     margin-bottom: 0;
   }
 
   {% if SETTING_show_product_images == true %}
-    .template-505080 .order-table-header .item-image-and-description {
+    .template .order-table-header .item-image-and-description {
       -webkit-box-flex: 8;
       -webkit-flex: 8;
       flex: 8;
       margin-right: 30px;
     }
   {% else %}
-    .template-505080 .order-table-header .item-image-and-description {
+    .template .order-table-header .item-image-and-description {
       -webkit-box-flex: 7;
       -webkit-flex: 7;
       flex: 7;
     }
   {% endif %}
 
-  .template-505080 .order-table-header .order-table-cell {
+  .template .order-table-header .order-table-cell {
     white-space: nowrap;
   }
 
-  .template-505080 .order-table-cell {
+  .template .order-table-cell {
     -webkit-box-flex: 2;
     -webkit-flex: 2;
     flex: 2;
     margin: 0;
   }
 
-  .template-505080 .item-image {
+  .template .item-image {
     -webkit-box-flex: 1;
     -webkit-flex: 1;
     flex: 1;
@@ -640,34 +645,39 @@
     min-width: {{ SETTING_product_image_size | default: 0 }}px;
   }
 
-  .template-505080 .item-description {
+  .template .item-description {
     -webkit-box-flex: 7;
     -webkit-flex: 7;
     flex: 7;
   }
 
-  .template-505080 .item-description-line {
+  .template .item-description-line {
     display: block;
     margin: 0;
   }
 
-  .template-505080 .item-description p {
+  .template .item-description p {
     margin: 0;
     line-height: 1.5;
   }
 
-  .template-505080 .item-line-price {
+  .template .item-line-price {
     -webkit-box-flex: 3;
     -webkit-flex: 3;
     flex: 3;
   }
 
-  .template-505080 .missing-line-items-text {
+  .template .missing-line-items-text {
     margin: 15px 0;
     padding: 0 7px;
   }
 
-  .template-505080 .notes-and-pricing {
+  .template .barcode {
+    height: 32px;
+    display: inline-block;
+  }
+
+  .template .notes-and-pricing {
     width: 100%;
     display: -webkit-box;
     display: -webkit-flex;
@@ -677,12 +687,12 @@
     margin-bottom: 15px;
   }
 
-  .template-505080 .notes {
+  .template .notes {
     flex-grow: 2;
     flex-basis: 0;
   }
 
-  .template-505080 .notes-row {
+  .template .notes-row {
     display: -webkit-box;
     display: -webkit-flex;
     display: flex;
@@ -692,47 +702,47 @@
     page-break-inside: avoid;
   }
 
-  .template-505080 .notes-title {
+  .template .notes-title {
     -webkit-box-flex: 1;
     -webkit-flex: 1;
     flex: 1;
   }
 
-  .template-505080 .notes-details {
+  .template .notes-details {
     -webkit-box-flex: 3;
     -webkit-flex: 3;
     flex: 3;
     margin-right: 30px;
   }
 
-  .template-505080 .footer {
+  .template .footer {
     margin-top: 30px;
     text-align: center;
     line-height: 1.5;
   }
 
-  .template-505080 .footer p {
+  .template .footer p {
     margin: 0;
     margin-bottom: 15px;
   }
-  .template-505080 .footer p:last-of_type {
+  .template .footer p:last-of_type {
     margin-bottom: 0px;
   }
 
-  .template-505080 hr {
+  .template hr {
     height: 2px;
-    border-bottom: 2px solid #e1e1e1;
+    border-bottom: 2px solid {{ SETTING_shop_accent_color | default: "#e1e1e1" }};
     margin: 0;
   }
 
-  .template-505080 .aspect-ratio {
+  .template .aspect-ratio {
     position: relative;
     display: block;
     background: #fafbfc;
     padding: 0;
   }
 
-  .template-505080 .aspect-ratio::before {
+  .template .aspect-ratio::before {
     z-index: 1;
     content: "";
     position: absolute;
@@ -743,12 +753,12 @@
     border: 1px solid rgba(195,207,216,0.3);
   }
 
-  .template-505080 .aspect-ratio--square {
+  .template .aspect-ratio--square {
     width: 100%;
     padding-bottom: 100%;
   }
 
-  .template-505080 .aspect-ratio__content {
+  .template .aspect-ratio__content {
     position: absolute;
     max-width: 100%;
     max-height: 100%;
@@ -761,12 +771,12 @@
   }
 
 
-  .template-505080 .pricing {
+  .template .pricing {
     flex-grow: 1;
     flex-basis: 0;
   }
 
-  .template-505080 .pricing-row {
+  .template .pricing-row {
     display: -webkit-box;
     display: -webkit-flex;
     display: flex;
@@ -776,19 +786,19 @@
     page-break-inside: avoid;
   }
 
-  .template-505080 .pricing-title {
+  .template .pricing-title {
     -webkit-box-flex: 1;
     -webkit-flex: 1;
     flex: 1;
   }
 
-  .template-505080 .pricing-details {
+  .template .pricing-details {
     -webkit-box-flex: 1;
     -webkit-flex: 1;
     flex: 1;
   }
 
-  .template-505080 .label-warning {
+  .template .label-warning {
     display: inline-block;
     background-color: #FFEA8A;
     border-radius: 10px;padding: 1px 6px;
