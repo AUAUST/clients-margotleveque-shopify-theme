@@ -73,7 +73,7 @@
 {% endif %}
 <!-- END: Barcode snippet -->
 
-<div class="template">
+{% comment %} <div class="template">
   <div class="header">
     <div class="shop-title to-uppercase">
       {% if SETTING_shop_logo != blank %}
@@ -479,6 +479,7 @@
       <a href="https://{{ shop.domain }}" target="_blank">{{ shop.domain }}</a>
     </p>
   </div>
+</div> {% endcomment %}
 </div>
 
 <style>
