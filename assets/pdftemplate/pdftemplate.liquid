@@ -25,7 +25,7 @@
 <!-- Shop info -->
 {% assign shop_name_text = '' %}
 <!-- Overwrite the default shop name shown. Leave blank to use default from Shopify -->
-{% assign shop_address_text = '' %}
+{% assign shop_address_text = 'Rue du Grand-Pont 1 <br> 1350 Orbe, Switzerland <br> system@margotleveque.com <br> margotleveque.com' %}
 <!-- Overwrite the default shop address shown. Leave blank to use default from Shopify -->
 {% assign shop_tax_number_text = '' %}
 <!-- Display your shop tax or VAT number. Example "VAT No. DK12345" -->
@@ -485,7 +485,21 @@
   <main>
     <header class="area-container"></header>
     <section class="area-container"></section>
-    <footer class="area-container"></footer>
+    <footer class="area-container">
+      <p class="address">
+        <strong>
+          {% if shop_name_text != blank %}
+            {{ shop_name_text }}
+          {% else %}
+            {{ shop.name }}
+          {% endif %}
+        </strong>
+        <br>
+        <span>
+          {{ shop_address_text }}
+        </span>
+      </p>
+    </footer>
   </main>
 </div>
 
@@ -513,6 +527,22 @@
     display: grid;
     grid-template-rows: 2fr 4fr 1fr;
   }
+
+  footer {
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   .template p {
     margin: 0 0 7px 0;
