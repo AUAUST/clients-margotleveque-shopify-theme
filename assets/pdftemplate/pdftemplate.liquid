@@ -1,21 +1,32 @@
 <!-- RECEIPT / INVOICE -->
 
 <!-- Document Settings -->
-{% assign SETTING_shop_logo = "" %} <!-- Add URL to uploaded logo image. See: http://help.forsbergplustwo.com/en/articles/2907646 -->
-{% assign SETTING_shop_logo_width = 240 %} <!-- Adjusts size of logo -->
-{% assign SETTING_date_format = "%b %e, %Y" %} <!-- Adjusts date format used, see: https://shopify.github.io/liquid/filters/date/ -->
-{% assign SETTING_show_product_images = true %} <!-- Display product images? (true/false) -->
-{% assign SETTING_product_image_size = 58 %} <!-- Adjusts size of product images -->
-{% assign SETTING_show_cart_attributes = false %} <!-- Display custom information collected during checkout? (true/false) - Example: Pickup/Delivery date & time. See: http://help.forsbergplustwo.com/en/articles/3825760 -->
-{% assign SETTING_show_order_number_barcode = true %} <!-- Display a barcode of the order number? (true/false) -->
-{% assign SETTING_show_product_barcodes = false %} <!-- Display a barcode of the product variant? (true/false) -->
-
+{% assign SETTING_shop_logo = '' %}
+<!-- Add URL to uploaded logo image. See: http://help.forsbergplustwo.com/en/articles/2907646 -->
+{% assign SETTING_shop_logo_width = 240 %}
+<!-- Adjusts size of logo -->
+{% assign SETTING_date_format = '%b %e, %Y' %}
+<!-- Adjusts date format used, see: https://shopify.github.io/liquid/filters/date/ -->
+{% assign SETTING_show_product_images = true %}
+<!-- Display product images? (true/false) -->
+{% assign SETTING_product_image_size = 58 %}
+<!-- Adjusts size of product images -->
+{% assign SETTING_show_cart_attributes = false %}
+<!--
+  Display custom information collected during checkout? (true/false) - Example: Pickup/Delivery date & time. See: http://help.forsbergplustwo.com/en/articles/3825760
+-->
+{% assign SETTING_show_order_number_barcode = true %}
+<!-- Display a barcode of the order number? (true/false) -->
+{% assign SETTING_show_product_barcodes = false %}
+<!-- Display a barcode of the product variant? (true/false) -->
 
 <!-- Shop info -->
-{% assign shop_name_text = "" %} <!-- Overwrite the default shop name shown. Leave blank to use default from Shopify -->
-{% assign shop_address_text = "" %} <!-- Overwrite the default shop address shown. Leave blank to use default from Shopify -->
-{% assign shop_tax_number_text = "" %} <!-- Display your shop tax or VAT number. Example "VAT No. DK12345" -->
-
+{% assign shop_name_text = '' %}
+<!-- Overwrite the default shop name shown. Leave blank to use default from Shopify -->
+{% assign shop_address_text = '' %}
+<!-- Overwrite the default shop address shown. Leave blank to use default from Shopify -->
+{% assign shop_tax_number_text = '' %}
+<!-- Display your shop tax or VAT number. Example "VAT No. DK12345" -->
 
 <!--
   TRANSLATE TEXT / CHANGE WORDING
@@ -24,49 +35,47 @@
   See: http://help.forsbergplustwo.com/en/articles/5137649
 -->
 
-{% assign TEXT_receipt_tax_invoice = "Receipt / Tax Invoice" %}
-{% assign TEXT_shipping_address = "Shipping address" %}
-{% assign TEXT_customer = "Customer" %}
-{% assign TEXT_tel = "Tel." %}
-{% assign TEXT_no_customer_information = "No customer information" %}
-{% assign TEXT_payment_method = "Payment method" %}
-{% assign TEXT_payment_due_on = "Due on" %}
-{% assign TEXT_payment_overdue = "Overdue" %}
-{% assign TEXT_shipping_method = "Shipping method" %}
-{% assign TEXT_pickup_date_and_time = "Pickup on" %}
-{% assign TEXT_pickup_location = "Pickup location" %}
-{% assign TEXT_delivery_date_and_time = "Delivery on" %}
-{% assign TEXT_items = "Items" %}
-{% assign TEXT_price = "Price" %}
-{% assign TEXT_qty = "Qty" %}
-{% assign TEXT_item_total = "Item total" %}
-{% assign TEXT_sku = "SKU: " %}
-{% assign TEXT_refunded = "x Refunded" %}
-{% assign TEXT_notes = "Notes" %}
-{% assign TEXT_discount = "Discount" %}
-{% assign TEXT_subtotal = "Subtotal" %}
-{% assign TEXT_shipping = "Shipping" %}
-{% assign TEXT_duties = "Import duties" %}
-{% assign TEXT_vat = "VAT %" %}
-{% assign TEXT_total = "Total" %}
-{% assign TEXT_total_refund = "Total refund" %}
-{% assign TEXT_total_paid = "Total paid" %}
-{% assign TEXT_total_due = "Total due" %}
-{% assign TEXT_thanks = "Thank you for shopping with us!" %}
-
+{% assign TEXT_receipt_tax_invoice = 'Receipt / Tax Invoice' %}
+{% assign TEXT_shipping_address = 'Shipping address' %}
+{% assign TEXT_customer = 'Customer' %}
+{% assign TEXT_tel = 'Tel.' %}
+{% assign TEXT_no_customer_information = 'No customer information' %}
+{% assign TEXT_payment_method = 'Payment method' %}
+{% assign TEXT_payment_due_on = 'Due on' %}
+{% assign TEXT_payment_overdue = 'Overdue' %}
+{% assign TEXT_shipping_method = 'Shipping method' %}
+{% assign TEXT_pickup_date_and_time = 'Pickup on' %}
+{% assign TEXT_pickup_location = 'Pickup location' %}
+{% assign TEXT_delivery_date_and_time = 'Delivery on' %}
+{% assign TEXT_items = 'Items' %}
+{% assign TEXT_price = 'Price' %}
+{% assign TEXT_qty = 'Qty' %}
+{% assign TEXT_item_total = 'Item total' %}
+{% assign TEXT_sku = 'SKU: ' %}
+{% assign TEXT_refunded = 'x Refunded' %}
+{% assign TEXT_notes = 'Notes' %}
+{% assign TEXT_discount = 'Discount' %}
+{% assign TEXT_subtotal = 'Subtotal' %}
+{% assign TEXT_shipping = 'Shipping' %}
+{% assign TEXT_duties = 'Import duties' %}
+{% assign TEXT_vat = 'VAT %' %}
+{% assign TEXT_total = 'Total' %}
+{% assign TEXT_total_refund = 'Total refund' %}
+{% assign TEXT_total_paid = 'Total paid' %}
+{% assign TEXT_total_due = 'Total due' %}
+{% assign TEXT_thanks = 'Thank you for shopping with us!' %}
 
 <!-- BEGIN: Barcode snippet -->
 {% if SETTING_show_product_barcodes == true or SETTING_show_order_number_barcode == true %}
-  {% include "barcodes" %}
+  {% include 'barcodes' %}
 {% endif %}
 <!-- END: Barcode snippet -->
-
 
 <div class="template-505080">
   <div class="header">
     <div class="shop-title to-uppercase">
       {% if SETTING_shop_logo != blank %}
-        {{ SETTING_shop_logo | img_tag: '', 'shop-logo'}}
+        {{ SETTING_shop_logo | img_tag: '', 'shop-logo' }}
       {% else %}
         {{ shop.name }}
       {% endif %}
@@ -74,9 +83,10 @@
     <div class="order-title text-align-right">
       <p>
         {% if SETTING_show_order_number_barcode == true %}
-          <img class="barcode" data-barcode="{{ name }}"/><br>
+          <img class="barcode" data-barcode="{{ name }}"><br>
         {% endif %}
-        {{ TEXT_receipt_tax_invoice }} {{ name }}
+        {{ TEXT_receipt_tax_invoice }}
+        {{ name }}
       </p>
       <p>
         {{ created_at | date: SETTING_date_format }}
@@ -90,27 +100,28 @@
           {{ TEXT_shipping_address }}
         </p>
         <p class="address-detail">
-            {{ shipping_address.name }}
-            {% if shipping_address.company != blank %}
-              <br>
-              {{ shipping_address.company }}
-            {% endif %}
+          {{ shipping_address.name }}
+          {% if shipping_address.company != blank %}
             <br>
-            {{ shipping_address.address1 }}
-            {% if shipping_address.address2 != blank %}
-              <br>
-              {{ shipping_address.address2 }}
-            {% endif %}
-            {% if shipping_address.city_province_zip != blank %}
-              <br>
-              {{ shipping_address.city_province_zip }}
-            {% endif %}
+            {{ shipping_address.company }}
+          {% endif %}
+          <br>
+          {{ shipping_address.address1 }}
+          {% if shipping_address.address2 != blank %}
             <br>
-            {{ shipping_address.country }}
-            {% if shipping_address.phone != blank %}
-              <br>
-              {{ TEXT_tel }} {{ shipping_address.phone }}
-            {% endif %}
+            {{ shipping_address.address2 }}
+          {% endif %}
+          {% if shipping_address.city_province_zip != blank %}
+            <br>
+            {{ shipping_address.city_province_zip }}
+          {% endif %}
+          <br>
+          {{ shipping_address.country }}
+          {% if shipping_address.phone != blank %}
+            <br>
+            {{ TEXT_tel }}
+            {{ shipping_address.phone }}
+          {% endif %}
         </p>
       </div>
     {% endif %}
@@ -128,7 +139,7 @@
           {% endif %}
           <br>
           {{ billing_address.address1 }}
-          {%  if billing_address.address2 != blank %}
+          {% if billing_address.address2 != blank %}
             <br>
             {{ billing_address.address2 }}
           {% endif %}
@@ -140,7 +151,8 @@
           {{ billing_address.country }}
           {% if billing_address.phone != blank %}
             <br>
-            {{ TEXT_tel }} {{ billing_address.phone }}
+            {{ TEXT_tel }}
+            {{ billing_address.phone }}
           {% endif %}
         {% elsif customer != blank %}
           {{ customer.name }}
@@ -150,10 +162,11 @@
           {% endif %}
           {% if customer.phone != blank %}
             <br>
-            {{ TEXT_tel }} {{ customer.phone }}
+            {{ TEXT_tel }}
+            {{ customer.phone }}
           {% endif %}
         {% else %}
-           {{ TEXT_no_customer_information }}
+          {{ TEXT_no_customer_information }}
         {% endif %}
       </p>
     </div>
@@ -164,9 +177,14 @@
         </p>
         <p class="order-detail">
           {{ payment_method }}
-          <br>{{ TEXT_payment_due_on }} {{ payment_terms.current_payment_schedule.due_at | date: SETTING_date_format }} ({{ payment_terms.payment_terms_name }})
+          <br>
+          {{ TEXT_payment_due_on }}
+          {{ payment_terms.current_payment_schedule.due_at | date: SETTING_date_format }} (
+          {{- payment_terms.payment_terms_name -}}
+          )
           {% if payment_terms.overdue %}
-            <br><span class="label-warning">{{ TEXT_payment_overdue }}</span>
+            <br>
+            <span class="label-warning">{{ TEXT_payment_overdue }}</span>
           {% endif %}
         </p>
       {% endif %}
@@ -175,19 +193,20 @@
           {{ TEXT_shipping_method }}
         </p>
         <p class="order-detail">
-          {% if fulfillment.tracking_company == blank or fulfillment.tracking_company == "Other" %}
+          {% if fulfillment.tracking_company == blank or fulfillment.tracking_company == 'Other' %}
             {{ shipping_method.title }}
             <br>
             {{ fulfillment.tracking_number }}
           {% else %}
-            {{ fulfillment.tracking_company }} {{ shipping_method.title }}
+            {{ fulfillment.tracking_company }}
+            {{ shipping_method.title }}
             <br>
             {{ fulfillment.tracking_number }}
           {% endif %}
         </p>
       {% endif %}
-      {% if attributes.Pickup-Date != blank or attributes.Delivery-Date != blank %}
-        {% include "pickup_and_delivery" %}
+      {% if attributes['Pickup-Date'] != blank or attributes['Delivery-Date'] != blank %}
+        {% include 'pickup_and_delivery' %}
       {% endif %}
     </div>
   </div>
@@ -225,9 +244,16 @@
               <div class="order-table-row order-table-body">
                 {% if SETTING_show_product_images == true %}
                   <div class="order-table-cell item-image">
-                    <div class="aspect-ratio aspect-ratio-square" style="width: {{ SETTING_product_image_size }}px; height: {{ SETTING_product_image_size }}px;">
+                    <div
+                      class="aspect-ratio aspect-ratio-square"
+                      style="width: {{ SETTING_product_image_size }}px; height: {{ SETTING_product_image_size }}px;"
+                    >
                       {% if line_item.image != blank %}
-                        {{ line_item.image | img_url: effective_image_dimensions | img_tag: '', 'aspect-ratio__content' }}
+                        {{
+                          line_item.image
+                          | img_url: effective_image_dimensions
+                          | img_tag: '', 'aspect-ratio__content'
+                        }}
                       {% else %}
                         {{ '/product_image_placeholder.svg' | img_tag: '', 'aspect-ratio__content placeholder' }}
                       {% endif %}
@@ -246,14 +272,23 @@
                     {% endif %}
                     {% if line_item.sku != blank %}
                       <span class="item-description-line">
-                        {{ TEXT_sku }}{{ line_item.sku }}
+                        {{ TEXT_sku -}}
+                        {{- line_item.sku }}
                       </span>
                     {% endif %}
                     {% for p in line_item.properties %}
                       {% assign p_internal = p.first | slice: 0 %}
-                      {% unless p.first contains "builder_id" or p.first contains "builder_info" or p.first contains "master_builder" or p_internal == "_" or p.last == "" or p.last == blank %}
-                        {% if p.last contains "/uploads/" or p.last contains "cdn.shopify.com" %}
-                          <span class="item-description-line"><a href="{{ p.last }}" target="_blank">{{ p.first }}</a></span>
+                      {% unless p.first contains 'builder_id'
+                        or p.first contains 'builder_info'
+                        or p.first contains 'master_builder'
+                        or p_internal == '_'
+                        or p.last == ''
+                        or p.last == blank
+                      %}
+                        {% if p.last contains '/uploads/' or p.last contains 'cdn.shopify.com' %}
+                          <span class="item-description-line"
+                            ><a href="{{ p.last }}" target="_blank">{{ p.first }}</a></span
+                          >
                         {% else %}
                           <span class="item-description-line">{{ p.first }}: {{ p.last }}</span>
                         {% endif %}
@@ -262,7 +297,10 @@
 
                     {% if line_item.refunded_quantity > 0 %}
                       <span class="item-description-line">
-                        <span class="label-warning">{{ line_item.refunded_quantity }}{{ TEXT_refunded }}</span>
+                        <span class="label-warning">
+                          {{- line_item.refunded_quantity -}}
+                          {{- TEXT_refunded -}}
+                        </span>
                       </span>
                     {% endif %}
                     {% if SETTING_show_product_barcodes == true and line_item.variant.barcode != blank %}
@@ -271,7 +309,9 @@
                   </p>
                 </div>
                 <div class="order-table-cell item-price text-align-right">
-                  {% if line_item.original_price > line_item.price %}<s>{{ line_item.original_price | money }}</s><br>{% endif %}
+                  {% if line_item.original_price > line_item.price -%}
+                    <s>{{ line_item.original_price | money }}</s><br>
+                  {% endif %}
                   {{ line_item.price | money }}
                 </div>
                 <div class="order-table-cell item-quantity text-align-right">
@@ -305,9 +345,7 @@
       {% if SETTING_show_cart_attributes == true %}
         {% for attribute in attributes %}
           <div class="notes-row">
-            <div class="notes-title subtitle-bold to-uppercase">
-              {{ attribute.first }}:
-            </div>
+            <div class="notes-title subtitle-bold to-uppercase">{{ attribute.first }}:</div>
             <div class="notes-details">
               {{ attribute.last }}
             </div>
@@ -319,12 +357,13 @@
       {% if total_discounts != 0.0 %}
         <div class="pricing-row text-align-right">
           <div class="pricing-title">
-            {{ TEXT_discount }}<br>
-            {% for discount in discounts %}{{ discount.title }} {% endfor %}
+            {{ TEXT_discount -}}
+            <br>
+            {% for discount in discounts -%}
+              {{- discount.title }}
+            {% endfor %}
           </div>
-          <div class="pricing-details">
-            -{{ total_discounts | money }}
-          </div>
+          <div class="pricing-details">-{{ total_discounts | money }}</div>
         </div>
       {% endif %}
       <div class="pricing-row text-align-right">
@@ -356,7 +395,8 @@
       {% for tax in tax_lines %}
         <div class="pricing-row text-align-right">
           <div class="pricing-title">
-            {{ tax.title | replace: "VAT", TEXT_vat | replace: "Tax", TEXT_vat }} {{ tax.rate | times: 100 }}%
+            {{ tax.title | replace: 'VAT', TEXT_vat | replace: 'Tax', TEXT_vat }}
+            {{ tax.rate | times: 100 }}%
           </div>
           <div class="pricing-details">
             {{ tax.price | money }}
@@ -364,9 +404,7 @@
         </div>
       {% endfor %}
       <div class="pricing-row text-align-right">
-        <div class="pricing-title subtitle-bold to-uppercase">
-          {{ TEXT_total }} ({{ currency }})
-        </div>
+        <div class="pricing-title subtitle-bold to-uppercase">{{ TEXT_total }} ({{ currency }})</div>
         <div class="pricing-details subtitle-bold to-uppercase">
           {{ total_price | money }}
         </div>
@@ -376,9 +414,7 @@
           <div class="pricing-title">
             {{ TEXT_total_refund }}
           </div>
-          <div class="pricing-details">
-            -{{ total_refunds | money }}
-          </div>
+          <div class="pricing-details">-{{ total_refunds | money }}</div>
         </div>
       {% endif %}
       {% if total_paid != 0.0 %}
@@ -421,10 +457,16 @@
       {% if shop_address_text != blank %}
         {{ shop_address_text }}
       {% else %}
-        {% if shop.address1 != blank %}{{ shop.address1 }},{% endif %}{% if shop.address2 != blank %} {{ shop.address2 }},{% endif %}{% if shop.city != blank %} {{ shop.city }},{% endif %}{% if shop.province_code != blank %} {{ shop.province_code }},{% endif %}{% if shop.zip != blank %} {{ shop.zip }},{% endif %} {{ shop.country }}
+        {% if shop.address1 != blank %}{{ shop.address1 }},{% endif -%}
+        {%- if shop.address2 != blank %} {{ shop.address2 }},{% endif -%}
+        {%- if shop.city != blank %} {{ shop.city }},{% endif -%}
+        {%- if shop.province_code != blank %} {{ shop.province_code }},{% endif -%}
+        {%- if shop.zip != blank %} {{ shop.zip }},{% endif %}
+        {{ shop.country }}
       {% endif %}
       {% if shop_tax_number_text != blank %}
-        <br>{{ shop_tax_number_text }}
+        <br>
+        {{ shop_tax_number_text }}
       {% endif %}
 
       <br>
@@ -436,8 +478,6 @@
 </div>
 
 <style>
-
-
   .template-505080 * {
     font-family: "Open Sans", sans-serif !important;
     font-size: 14px;
@@ -754,5 +794,4 @@
     border-radius: 10px;padding: 1px 6px;
     margin-top: 3px;
   }
-
 </style>
