@@ -595,7 +595,7 @@
 
 
         <div class="row">
-           <div class="subtotal title">
+           <div class="subtotal title wide-column">
             {{ TEXT_subtotal }}
           </div>
           <div class="subtotal value">
@@ -603,7 +603,7 @@
           </div>
         </div>
         <div class="row underline">
-          <div class="shipping title">
+          <div class="shipping title wide-column">
             {{ TEXT_shipping }}
           </div>
           <div class="shipping value">
@@ -611,7 +611,7 @@
           </div>
         </div>
         <div class="row underline">
-          <div class="total title">
+          <div class="total title wide-column">
             {{ TEXT_total }} ({{ currency }})
           </div>
           <div class="total value">
@@ -689,7 +689,7 @@
   }
 
   header .information p {
-    border: 1px solid red;
+    border: 0.5px solid red;
     margin: 0;
   }
   header .information .customer {
@@ -708,6 +708,10 @@
 
   .row.underline > div {
     border-bottom: 1px solid black;
+  }
+
+  .row .wide-column {
+    grid-column: span 7;
   }
 
 
