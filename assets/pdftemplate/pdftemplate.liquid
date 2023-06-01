@@ -505,6 +505,10 @@
 </div>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+</style>
+
+<style>
   @font-face {
     font-family: "EverettMono";
     font-style: normal;
@@ -513,7 +517,8 @@
   }
 
   .template * {
-    font-family: "EverettMono", monospace;
+    {% comment %} font-family: "EverettMono", monospace; {% endcomment %}
+    font-family: 'Space Mono', monospace;
     font-size: 14px;
     font-weight: 300;
     line-height: 18px;
