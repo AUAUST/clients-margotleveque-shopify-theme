@@ -51,6 +51,7 @@
 {% assign TEXT_delivery_date_and_time = 'Delivery on' %}
 {% assign TEXT_items = 'Items' %}
 {% assign TEXT_price = 'Price' %}
+{% assign TEXT_license = 'License' %}
 {% assign TEXT_qty = 'Qty' %}
 {% assign TEXT_item_total = 'Item total' %}
 {% assign TEXT_sku = 'SKU: ' %}
@@ -529,7 +530,79 @@
         </p>
       </div>
     </header>
-    <section class="area-container"></section>
+    <section class="area-container">
+      <div class="invoice-id">
+        {{ TEXT_receipt_tax_invoice }}
+        {{ name }}
+      </div>
+      <div class="products">
+
+        <div class="row titles">
+          <div>
+            {{ TEXT_items }}
+          </div>
+          <div>
+            {{ TEXT_license }}
+          </div>
+          <div>
+            {{ TEXT_price }}
+          </div>
+          <div>
+            {{ TEXT_qty }}
+          </div>
+          <div>
+            {{ TEXT_vat }}
+          </div>
+          <div>
+            {{ TEXT_total }}
+          </div>
+        </div>
+
+        {% for line_item in line_items %}
+
+          {% if line_item.quantity < 1 %}
+            {% continue %}
+          {% endif %}
+
+          <div class="row product">
+
+            <div class="title">
+              {{ line_item.product_title }}
+            </div>
+
+            <div class="license">
+              {{ line_item.variant_title }}
+            </div>
+
+            <div class="price">
+              {{ line_item.price | money }}
+            </div>
+
+            <div class="quantity">
+              {{ line_item.quantity }}
+            </div>
+
+            <div class="vat">
+              0%
+            </div>
+
+            <div class="total">
+              {{ line_item.line_price | money }}
+            </div>
+
+          </div>
+        {% endfor %}
+
+
+
+
+
+
+
+
+
+      </div>
+    </section>
     <footer class="area-container">
       <p class="address">
         <strong>
