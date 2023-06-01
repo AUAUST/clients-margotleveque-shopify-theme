@@ -483,7 +483,10 @@
 
 <div class="template">
   <main>
-    <header class="area-container"></header>
+    <header class="area-container">
+      <div class="logo"></div>
+      <div class="payement"></div>
+    </header>
     <section class="area-container"></section>
     <footer class="area-container">
       <p class="address">
@@ -518,10 +521,19 @@
     border: 1px solid #e1e1e1;
   }
 
+  header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  header > div {
+    border: 1px solid #e1e1e1;
+  }
+
   main {
     height: 100%;
     display: grid;
-    grid-template-rows: 2fr 4fr 1fr;
+    grid-template-rows: 2fr 5fr 1fr;
   }
 
   footer {
