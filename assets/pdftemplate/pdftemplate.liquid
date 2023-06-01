@@ -538,22 +538,22 @@
       <div class="products">
 
         <div class="row titles">
-          <div>
+          <div class="title">
             {{ TEXT_items }}
           </div>
-          <div>
+          <div class="license">
             {{ TEXT_license }}
           </div>
-          <div>
+          <div class="price">
             {{ TEXT_price }}
           </div>
-          <div>
+          <div class="quantity">
             {{ TEXT_qty }}
           </div>
-          <div>
+          <div class="vat">
             {{ TEXT_vat }}
           </div>
-          <div>
+          <div class="total">
             {{ TEXT_total }}
           </div>
         </div>
@@ -671,6 +671,15 @@
   }
   header .information .customer {
     margin-top: 1em;
+  }
+
+  section .products .row {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  .row .title, .row .license {
+    grid-column: span 2;
   }
 
 
