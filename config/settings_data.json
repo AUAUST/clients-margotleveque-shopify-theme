@@ -539,7 +539,7 @@
             "type": "content",
             "settings": {
               "title": "",
-              "content": "<p>Are you a student? No need to buy a license! ML Studio allows students to use its trial versions for their academic projects, as all the trials contain the full set of glyphs!<\/p><p><\/p>",
+              "content": "",
               "sans_serif": true
             }
           }
