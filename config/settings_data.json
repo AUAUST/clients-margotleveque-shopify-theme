@@ -182,7 +182,6 @@
       },
       "1621760514cd91aece": {
         "type": "project",
-        "disabled": true,
         "blocks": {
           "96993d78-57a1-4b46-925b-5b7e59217740": {
             "type": "gallery",
@@ -208,6 +207,7 @@
           "90c6a55a-f71f-4186-b50f-918271d4d6e4",
           "b4b74844-2652-4228-b52e-745b1845dba0"
         ],
+        "disabled": true,
         "settings": {
           "title": "Type 01",
           "text": "<p>Custom \/4 designed for Type 01 Magazine. Picture by <a href=\"https:\/\/liliphillips.com\/\" target=\"_blank\" title=\"https:\/\/liliphillips.com\/\">Lili Phillips<\/a><\/p>",
@@ -603,7 +603,7 @@
             "type": "content",
             "settings": {
               "title": "STUDENTS",
-              "content": "<p>Great news! As a student, you are not required to purchase any license, as we offer a free trial license for our fonts. This license allows you to use our fonts for your study and personal projects, without any additional cost. However, it is important to note that you must still comply with all the licensing terms and conditions, and refrain from any external, commercial, or public use, as it is strictly prohibited.<\/p>"
+              "content": "<p>Students can buy discounted fonts for personal and commercial projects during their studies. After graduation, personal projects begun as a student can still use these fonts. Client projects require a separate license. Teachers at accredited institutions can also get discounted fonts for teaching and non-commercial class projects. The student font pack covers various media types with its educational license.<\/p>"
             }
           },
           "7b0fca19-5039-4511-8148-fe513a56f8f5": {
@@ -909,7 +909,6 @@
       },
       "1628050637798a8438": {
         "type": "project",
-        "disabled": true,
         "blocks": {
           "dc7bfc6f-7b0c-4549-9ee0-7df0174ce217": {
             "type": "gallery",
@@ -949,6 +948,7 @@
           "6992bb4b-b8b6-441b-ae61-f3c9787889f4",
           "6e0c1080-bee2-4dae-afb6-d5fa2a490a7d"
         ],
+        "disabled": true,
         "settings": {
           "title": "Olympics",
           "text": "<p>Integrity Flag designed for the <a href=\"https:\/\/www.instagram.com\/Olympics\/\">@Olympics<\/a> Tokyo 2020 Games—{<a href=\"https:\/\/olympics.com\/tokyo-2020\/en\/i-belong-here\/flag.html\" target=\"_blank\" title=\"https:\/\/olympics.com\/tokyo-2020\/en\/i-belong-here\/flag.html\">More info<\/a>}. Design team mate: <a href=\"http:\/\/raoulgottschling.de\/\" target=\"_blank\" title=\"http:\/\/raoulgottschling.de\/\">Raoul Gottschling<\/a>.<\/p>",
