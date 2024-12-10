@@ -1,0 +1,16 @@
+#cart-actions button,
+#cart-actions a {
+    font-size: inherit;
+    font-family: var(--font-select);
+    font-weight: var(--font-select--weight);
+    font-size: var(--font-nav--size);
+}
+
+@media screen and (min-width: 1024px) {
+    #cart-actions button,
+    #cart-actions a {
+        font-size:calc(var(--font-body--size) * 0.65);
+        line-height: 16px;
+    }
+    
+}

@@ -1,0 +1,129 @@
+{{ 'main-index.css' | asset_url | stylesheet_tag }}
+<section class="main-index {{ section.id }}">
+
+    {%  style %}
+
+        .main-index__gallery {
+            grid-template-columns: repeat({{ section.blocks.size }}, {{ 100 | divided_by: section.blocks.size | append: '%' }});
+        }
+
+        @media (max-width: 1024px) {
+
+            .main-index__gallery {
+                display: none;
+            }
+
+            .main-index.{{ section.id }} {
+                background-image: url("{{ section.settings.image | image_url: width: 900 }}");
+                background-image: -webkit-image-set(url("{{ section.settings.image | image_url: width: 450 }}") 1x, url("{{ section.settings.image| image_url: width: 900 }}") 2x, url("{{ section.settings.image | image_url: width: 1200 }}") 3x);
+                background-image: image-set(url("{{ section.settings.image | image_url: width: 450 }}") 1x, url("{{ section.settings.image| image_url: width: 900 }}") 2x, url("{{ section.settings.image | image_url: width: 1200 }}") 3x);
+                background-position: {{ section.settings.image.presentation.focal_point }};
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+        }
+    {%  endstyle %}
+
+    <ul class="main-index__gallery">
+        {% for block in section.blocks %}
+            <li class="main-index__gallery__item">
+                {{ block.settings.image | image_url: width: 1200 | image_tag: class: 'main-index__gallery__item--media', alt: block.settings.image.alt, widths: '265, 660, 900, 1170, 1580', sizes: '(min-width: 780px) 34.14vw, 100vw' }}
+            </li>
+        {% endfor %}
+    </ul>
+
+    <nav class="main-index__menu home-button_wrapper absolute">
+        <ul class="main-index__menu-list">
+            {% for link in section.settings.homepage_links.links %}
+                <li class="main-index__menu-item">
+                    {%  if link.title == "Studio Work" %}
+                        <a href="{{ link.url }}" class="main-index__menu-item__link link-pill">
+                            Stud<span class="ss01">i</span>o work
+                        </a>
+                        {% else %}
+                            
+                    <a href="{{ link.url }}" class="main-index__menu-item__link link-pill">{{ link.title }}</a>
+                    {%  endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    </nav>
+
+
+    <header class="index-header flex flex-column absolute">
+        <div class="index-header__item">
+            {% render 'logo-monogram' %}
+        </div>
+        <div class="index-header__item">
+            {% render 'logo-mool' %}
+        </div>
+    </header>
+
+</section>
+
+{% schema %} 
+{
+  "name": "Homepage",
+  "class": "section-main-index",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Homepage Links"
+    },
+    {
+      "type": "link_list",
+      "id": "homepage_links",
+      "label": "Homepage Links"
+    },
+    {
+      "type": "header",
+      "content": "Featured Image",
+      "info": "For Mobile / Responsive"
+    },
+    {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+    }
+  ],
+  "max_blocks": 3,
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Desktop Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+        "name": "Homepage",
+        "settings": {
+          "homepage_links": "homepage-menu"
+        },
+        "blocks": [
+          {
+            "type": "image"
+          },
+          {
+            "type": "image"
+          },
+          {
+            "type": "image"
+          }
+        ]
+      }
+  ],
+  "enabled_on": {
+    "templates": [
+      "index"
+    ]
+  }
+}
+{% endschema %}

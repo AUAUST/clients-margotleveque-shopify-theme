@@ -1,16 +1,18 @@
 <!--Header-->
+{{ 'main-page.css' | asset_url | stylesheet_tag }}
 <header>
   {% include 'menu' %}
   <!--Contact-->
-  <p class="contact-links">
+  <p class="contact-links font-nav">
     {% unless page.handle == 'faq' or page.handle == 'trial-fonts-pack' -%}
       {% for link in linklists.footer.links -%}
         <a
           href="{{ link.url }}"
           target="_blank"
-          rel="noreferrer">
-          {{ link.title }}
-        </a><br>
+          rel="noreferrer"
+          class="font-nav">
+          {{ link.title }} 
+        </a>
       {%- endfor %}
     {% endunless %}
   </p>
@@ -29,7 +31,7 @@
 <!--Content-->
 <div
   id="content"
-  class="{%  if hasBanner %}has-banner{%endif%}"
+  class="{%  if hasBanner %}has-banner{%endif%} {{ page.handle | prepend: 'content-' }}"
   data-page="{{page.handle}}">
   {% if page.handle == 'trials-students' or page.handle == 'trial-fonts-pack' -%}
     {% section 'page-trials' %}

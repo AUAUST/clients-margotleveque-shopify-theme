@@ -1,0 +1,59 @@
+.faq-answer p {
+    line-height: 1.2;
+}
+
+#faq-header,
+#shopify-section-page-faq .faq-container {
+    grid-column: 1 / span 1;
+}
+
+#faq-header {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#shopify-section-page-licensing {
+    font-family: var(--font-body);
+    font-size: var(--font-body--size);
+    line-height: var(--font-body--line);
+    letter-spacing: var(--font-body--letter);
+}
+#shopify-section-page-licensing .title {
+    font-family: var(--font-nav);
+    font-size: var(--font-nav--size);
+    line-height: var(--font-nav--line);
+    letter-spacing: var(--font-nav--letter);
+}
+
+#shopify-section-page-licensing i,
+#shopify-section-page-licensing em {
+    font-family: var(--font-body-italic);
+    font-style: italic;
+}
+
+@media screen and (max-width: 1024px) {
+#content.content-custom {
+    padding: 4rem 1.2rem;
+}
+}
+
+@media screen and (min-width: 1024px) {
+    #faq-header {
+        grid-column: 18 span;
+    }
+    #shopify-section-page-faq .faq-container {
+        grid-column: 6 / 14;
+    }
+    #content[data-page="trial-fonts-pack"] {
+        padding: 3rem 0 0;
+    }
+
+    .text-banner {
+        margin-top: calc(-90px + 2rem);
+    }
+
+    #content.content-custom {
+        min-height: 85vh;
+        height: 100%;
+    }
+}

@@ -1,0 +1,249 @@
+{% style %}
+  @font-face {
+    font-family: 'TWKLausanne-150';
+    src: url('{{ 'TWKLausanne-150.woff2' | file_url }}') format('woff2'),
+         url('{{ 'TWKLausanne-150.woff' | file_url }}') format('woff');
+    font-weight: 150;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'TWKLausanne-150Italic';
+    src: url('{{ 'TWKLausanne-150Italic.woff2' | file_url }}') format('woff2'),
+         url('{{ 'TWKLausanne-150Italic.woff' | file_url }}') format('woff');
+    font-weight: normal;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: 'TWKLausanne-200';
+    src: url('{{ 'TWKLausanne-200.woff2' | file_url }}') format('woff2'),
+         url('{{ 'TWKLausanne--200.woff' | file_url }}') format('woff');
+    font-weight: 200;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'TWKLausanne-250';
+    src: url('{{ 'TWKLausanne-250.woff2' | file_url }}') format('woff2'),
+         url('{{ 'TWKLausanne-250-Reg.woff' | file_url }}') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'TWKLausanne-250Italic';
+    src: url('{{ 'TWKLausanne-250Italic.woff2' | file_url }}') format('woff2'),
+         url('{{ 'TWKLausanne-250Italic.woff' | file_url }}') format('woff');
+    font-weight: normal;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: 'TWKLausanne-350';
+    src: url('{{ 'TWKLausanne-350.woff2' | file_url }}') format('woff2'),
+         url('{{ 'TWKLausanne-350.woff' | file_url }}') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'TWKLausanne-350Italic';
+    src: url('{{ 'TWKLausanne-350Italic.woff2' | file_url }}') format('woff2'),
+         url('{{ 'TWKLausanne-350Italic.woff' | file_url }}') format('woff');
+    font-weight: normal;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: 'TWKLausanne-500';
+    src: url('{{ 'TWKLausanne-500.woff2' | file_url }}') format('woff2'),
+         url('{{ 'TWKLausanne-500.woff' | file_url }}') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Romie-Regular';
+    src: url('{{ 'Romie-Regular.woff2' | file_url }}') format('woff2'),
+         url('{{ 'Romie-Regular.woff' | file_url }}') format('woff');
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Romie-Italic';
+    src: url('{{ 'Romie-Italic.woff2' | file_url }}') format('woff2'),
+         url('{{ 'Romie-Italic.woff' | file_url }}') format('woff');
+    font-weight: 400;
+    font-style: italic;
+  }
+
+
+
+  /* Lausanne 250 (nav, footer) 70px letterspacing */
+  /* Lausanne 350 (capsules) */
+  /* Lausanne 500 (select your pack) */
+
+  :root {
+
+      --font-body: 'TWKLausanne-150', Helvetica, Arial, sans-serif;
+      --font-body-italic: 'TWKLausanne-150Italic', Helvetica, Arial, sans-serif;
+
+      --font-nav: 'TWKLausanne-250', Helvetica, Arial, sans-serif;
+      --font-capsule: 'TWKLausanne-350', Helvetica, Arial, sans-serif;
+      --font-select: 'TWKLausanne-500', Helvetica, Arial, sans-serif;
+      --font-footer: 'TWKLausanne-200', Helvetica, Arial, sans-serif;
+
+      --font-romie: 'Romie-Regular', Georgia, serif;
+      --font-romie-italic: 'Romie-Italic', Georgia, serif;
+
+      --font-body--size: 1.6rem;
+      --font-body--letter: 0.05em;
+      --font-body--line: 1.4;
+      --font-boy--weight: 150;
+
+      --font-nav--size: 1.6rem;
+      --font-nav--letter: 0.07em;
+      --font-nav--line: 1;
+      --font-nav--weight: 250;
+
+      --font-capsule--size: 1rem;
+      --font-capsule--letter: 0;
+      --font-capsule--weight: 350;
+
+      --font-select--weight: 500;
+
+      --color-green: #CDFDC4;
+      --color-green-dark: #56AF52;
+      --color-highlight:  var(--highlight-color);
+      --color-black: #000;
+
+  }
+
+  .font-body {
+    font-family: var(--font-body);
+    font-size: var(--font-body--size);
+    line-height: var(--font-body--line);
+    letter-spacing: var(--font-body--letter);
+    font-weight: var(--font-body--weight);
+  }
+  .font-body--caps {
+    font-family: var(--font-body);
+    font-size: var(--font-body--size);
+    line-height: var(--font-body--line);
+    letter-spacing: var(--font-body--letter);
+    text-transform: uppercase;
+    font-weight: var(--font-body--weight);
+  }
+  .font-body--italic, .font-body em, i, em  {
+    font-family: var(--font-body-italic);
+    font-style: italic;
+    font-weight: var(--font-body--weight);
+  }
+
+  .font-nav {
+    font-family: var(--font-nav);
+    text-transform: uppercase;
+    font-size: var(--font-nav--size);
+    letter-spacing: var(--font-nav--letter);
+    line-height: var(--font-nav--line);
+    font-weight: var(--font-nav--weight);
+  }
+  .contact-links .font-nav,
+  #social .font-nav  {
+    text-transform: none;
+    font-size: calc(var(--font-nav--size) * 1.33);
+    font-weight: var(--font-nav--weight);
+  }
+
+
+  .font-nav .link-bar {
+    font-family: var(--font-nav);
+    text-transform: none;
+    font-size: calc(var(--font-nav--size) * 1.33);
+    letter-spacing: var(--font-nav--letter);
+    line-height: var(--font-nav--line);
+    font-weight: var(--font-nav--weight);
+
+    padding: .33em 0;
+    margin-bottom: .33em;
+
+
+
+  }
+
+  .font-nav--italic, .font-nav em {
+    font-family: var(--font-nav-italic);
+    font-style: italic;
+    font-weight: var(--font-nav--weight);
+  }
+
+  .font-footer {
+    font-family: var(--font-footer);
+    font-weight: 200;
+    font-size: var(--font-body--size);
+    line-height: var(--font-body--line);
+    letter-spacing: var(--font-nav--letter);
+
+    text-transform: uppercase;
+  }
+
+  .font-select,
+  #product-options .title.font-select {
+    font-family: var(--font-select);
+    text-transform: uppercase;
+    font-size: var(--font-nav--size);
+    letter-spacing: var(--font-nav--letter);
+    line-height: var(--font-nav--line);
+    var(--font-select--weight);
+
+  }
+  #product-options .title.font-select {
+
+      padding: 15px 0;
+      }
+  h2.capsule {
+    font-family: var(--font-capsule);
+    font-size: var(--font-capsule--size);
+    font-weight: var(--font-capsule--weight);
+    line-height: 1;
+    letter-spacing: var(--font-capsule--letter);
+    text-transform: uppercase;
+
+    padding: 0.3rem .5rem .22rem;
+      border-radius: 1rem;
+      background: transparent;
+      border: .1em solid currentColor;
+      max-width: 110px;
+      text-align: center;
+  }
+
+  .visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    :root {
+      --font-nav--size: calc(10px + .1dvw);
+      --font-body--size: calc(14px + .1dvw);
+      --font-capsule--size: var(--font-nav--size);
+    }
+
+
+  .contact-links.font-nav {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+    .contact-links.font-nav a {
+      /* padding: .166em 0; */
+      margin-bottom: .33em;
+    }
+  }
+{% endstyle %}

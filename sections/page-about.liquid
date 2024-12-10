@@ -1,9 +1,10 @@
+{{ 'section-about.css' | asset_url | stylesheet_tag }}
 {% if section.settings.about != blank -%}
   <wrap>
     {{ section.settings.about | replace: '<em', '|em' | replace: '</em>', '|/em|' | replace: '<a', '|a' | replace: '</a>', '|/a|' | replace: '</p>', '|br' | strip_html | replace: '|br', '<br>' | replace: '|a', '<a' | replace: '|/a|', '</a>' | replace: '|em', '<em' | replace: '|/em|', '</em>' }}
   </wrap>
 {%- endif %}
-<p>
+{% comment %} <p>
   <span>Margot Lévêque Studio — Art Direction & Type Design</span>
   <!--Work-->
   <a
@@ -11,14 +12,14 @@
   <!--Shop-->
   <a
     href="/products">Type Foundry</a>
-</p>
-{% if section.settings.scroll == true and section.settings.scroll_warning != blank %}
+</p> {% endcomment %}
+{% comment %} {% if section.settings.scroll == true and section.settings.scroll_warning != blank %}
   <!--Scroll Down-->
   <div
     id="scroll-down">
     <div>{{ section.settings.scroll_warning | strip_html | newline_to_br }}</div>
   </div>
-{% endif %}
+{% endif %} {% endcomment %}
 {% if section.settings.portrait.size > 0 -%}
   <img
     class="lazy"
@@ -46,7 +47,7 @@
 
 {% schema %}
   {
-    "class": "page-content",
+    "class": "page-content page-about",
     "settings": [
       {
         "id": "about",

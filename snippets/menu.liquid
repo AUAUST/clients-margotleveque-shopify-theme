@@ -1,17 +1,22 @@
+{{ 'component-menu.css' | asset_url | stylesheet_tag }}
 <!--Menu-->
-<menu>
-  <!--About-->
-  <a id="about" href="/pages/about">About</a>
+<menu data-template="{{  template.name }}-{{request.path}}" class="font-nav">
   <!--Type Catalogue-->
-  <a id="shop" href="/products">Typefaces</a>
+<a id="shop" href="/products" class="{% if request.path =='/products' %}current{%  endif %}">Typefaces</a>
   <!--Work-->
-  <a id="work" href="/pages/work">Studio</a>
+  <a id="work" href="/pages/work" class="{% if request.path =='/pages/work' %}current{%  endif %}">Studio Work</a>
+  <!--About-->
+  <a id="about" href="/pages/about" class="{% if request.path =='/pages/about' %}current{%  endif %}">About</a>
 </menu>
 <div id="logo">
-  <a href="{{ shop.url }}" class="site_title">
+  {% comment %} <a href="{{ shop.url }}" class="site_title">
     Margot Lévêque
+  </a> {% endcomment %}
+
+  <a href="{{ routes.root_url }}" class="site_title" aria-label="Return to {{ shop.name }}">
+    {% render 'logo-monogram', class: 'header-logo site_title__logo' %}
   </a>
-  <a href="{{ shop.url }}" class="page_name">
+  <a href="{{ shop.url }}" class="page_name visually-hidden">
     {% if template == "list-collections" or template == "collection" %}
       Type Foundry
     {% elsif template == "page.work" %}
@@ -22,18 +27,19 @@
       {{ page.title }}
     {% endif %}
   </a>
+  
 </div>
 
 <!-- trials / cart-->
 <nav>
   <!--Work-->
   <a
-    class="pill "
+    class="pill font-nav"
     id="trials"
     href="/pages/trial-fonts-pack">GET TRIAL FONTS</a>
   <!--Cart Button-->
   <a
-    class="pill {% if cart.item_count >= 1 %} active{% endif %}"
+    class="pill font-nav {% if cart.item_count >= 1 %} active{% endif %}"
     id="cart"
     href="/cart"
     id="cart-button">CART ({{ cart.item_count }})</a>

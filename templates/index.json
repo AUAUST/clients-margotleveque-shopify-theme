@@ -1,0 +1,48 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-index",
+      "blocks": {
+        "image_yEnmiA": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/DTS_FINISHING_DETAILS_Fanette_Guilloud_Photos_ID7893_1.jpg"
+          }
+        },
+        "image_jyFan8": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/DTS_The_Internet_Fanette_Guilloud_Photos_ID5228_2.jpg"
+          }
+        },
+        "image_4pdKQQ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/DTS_FANTASY_Fanette_Guilloud_Photos_ID7137.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_yEnmiA",
+        "image_jyFan8",
+        "image_4pdKQQ"
+      ],
+      "settings": {
+        "homepage_links": "homepage-menu",
+        "image": "shopify://shop_images/DTS_The_Internet_Fanette_Guilloud_Photos_ID5228_2.jpg"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

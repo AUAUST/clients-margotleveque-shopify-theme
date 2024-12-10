@@ -1,0 +1,130 @@
+.sticky-info-column {
+  font-family: var(--font-body);
+  line-height: var(--font-body--line);
+  letter-spacing: var(--font-body--letter);
+}
+
+.sticky-info-column wrap {
+  display: flex;
+  flex-direction: column;
+  /* gap: 2rem; */
+}
+
+.desc__wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+#infos wrap .desc__wrap .license,
+#infos wrap .desc__wrap .license a {
+  margin-top: 0;
+}
+
+span.bestseller-icon.absolute {
+  display: inline-block;
+
+  aspect-ratio: 1;
+  position: absolute;
+  right: .5rem;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 5rem;
+  height: 5rem;
+
+  pointer-events: none;
+}
+
+#product-options wrap .product-selector {
+  font-size: var(--font-body--size);
+}
+
+#product-options wrap .product-selector span.bestseller-icon.absolute svg {
+  position: relative;
+
+  left: auto;
+  right: auto;
+  top: auto;
+  bottom: auto;
+  transform: none;
+  width: auto;
+}
+
+.type-row_name svg.type-row_name__media {
+  opacity: 1;
+
+  position: relative;
+  left: auto;
+  right: auto;
+  top: auto;
+  bottom: auto !important;
+
+  transform: none;
+
+  width: 100%;
+}
+
+.type-row_details span.green {
+  color: var(--color-black);
+  background-color: var(--color-highlight);
+  border: solid 2px transparent;
+
+  transition-property: color, background-color, border;
+  transition-duration: 0.1s;
+  transition-timing-function: linear;
+}
+
+@media screen and (min-width: 1024px) {
+  .sticky-info-column {
+    font-family: var(--font-body);
+    font-size: var(--font-body--size);
+    line-height: var(--font-body--line);
+    letter-spacing: var(--font-body--letter);
+  }
+
+  #product-content {
+    /* margin-top: 2rem; */
+  }
+
+  span.bestseller-icon.absolute {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .type-row_name svg.type-row_name__media {
+    min-height: 9rem;
+    transition-property: fill;
+    transition-duration: 0.1s;
+    transition-timing-function: linear;
+  }
+
+  .type-row:hover svg.type-row_name__media path {
+    fill: var(--color-highlight);
+
+    transition-property: fill;
+    transition-duration: 0.1s;
+    transition-timing-function: linear;
+  }
+
+  .type-row:hover span.green {
+    color: var(--color-black);
+    background-color: transparent;
+    border: solid 2px var(--color-highlight);
+  }
+  #product-options .font-packs.container:not(:has(.product-selector.item)) {
+    margin: 0;
+  }
+  #product-options wrap .product-selector.fonts-cuts {
+    font-size: 1.33em;
+  }
+
+  .desc__wrap {
+    font-size: calc(var(--font-body--size) * .9);
+  }
+
+  .type-catalogue {
+    margin-top: 3.5rem;
+  }
+}

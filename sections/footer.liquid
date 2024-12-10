@@ -1,0 +1,117 @@
+<!-- Footer -->
+{{ 'section-footer.css' | asset_url | stylesheet_tag }}
+<footer class="main-footer">
+  <div class="footer-row">
+   
+    <div class="footer__logo--wrap">
+      <a
+        href="{{ routes.root_url }}"
+        class=" footer__logo"
+        aria-label="Return to {{ shop.name }}"
+      >
+        {% render 'logo-monogram', class: 'footer__monogram' %}
+      </a>
+    
+    </div>
+
+  </div>
+  
+
+  <div class="monthly-newsletter">
+
+    <div class="klaviyo-form-Uk5GSe"></div>
+    {% comment %} <div class="monthly-newsletter__title font-select">Subscribe to Substack</div>
+    <p class="font-select monthly-newsletter__desc">
+      I pour my heart into every newsletter. If even one person benefits from it, then I’ve achieved everything I hoped for.
+    </p>
+    <div id="custom-substack-embed"></div>
+    <script>
+      window.CustomSubstackWidget = {
+        substackUrl: "margotleveque.substack.com",
+        placeholder: "example@gmail.com",
+        buttonText: "Subscribe",
+        theme: "custom",
+        colors: {
+          primary: "#575756",
+          input: "#F2F2ED",
+          email: "#575756",
+          text: "#F2F2ED",
+        }
+      };
+    </script>
+    <script src="https://substackapi.com/widget.js" async></script> {% endcomment %}
+  </div>
+  <div class="footer-links">
+    <div class="email__wrap">
+      <div class="email">
+        <span class="footer-title font-select">General Inquiries</span>
+        <a href="mailto:studio@margotleveque.com" class="font-select">
+          studio@margotleveque.com
+        </a>
+      </div>
+
+      <div class="email">
+        <span class="footer-title font-select">Licensing Enquiries</span>
+        <a href="mailto:studio@margotleveque.com" class="font-select">
+          system@margotleveque.com
+        </a>
+      </div>
+    </div>
+
+    <div class="social">
+      <span class="footer-title font-select">{{  linklists.footer.title }}</span>
+      {% for link in linklists.footer.links -%}
+        <a
+          href="{{ link.url }}"
+          target="_blank"
+          rel="noreferrer"
+          {% if link.active %}
+            class="link-active font-select"
+          {% else %}
+            class="font-select"
+          {% endif %}
+        >
+          {{ link.title }}
+        </a>
+      {%- endfor %}
+    </div>
+    <div class="typefaces">
+      <span class="footer-title font-select">{{ linklists.typefaces.title }}</span>
+
+      {% for link in linklists.typefaces.links -%}
+          <a
+            href="{{ link.url }}"
+            class="font-select"
+          >
+            {{ link.title }}
+          </a>
+      {% endfor %}
+    </div>
+    <div class="footer-menu">
+      <span class="footer-title font-select">{{ linklists.main-menu.title }}</span>
+      {% for link in linklists.main-menu.links -%}
+        {%- if link.title == '__split' -%}
+          <br>
+        {%- else -%}
+          <a
+            href="{{ link.url }}"
+            {% if link.active %}
+              class="link-active font-select"
+            {% else %}
+              class="font-select"
+            {% endif %}
+          >
+            {{- link.title -}}
+          </a>
+        {%- endif %}
+      {%- endfor %}
+    </div>
+  </div>
+
+  <div class="footer__secondary-logo">
+    {% render 'logo-mool', 'footer__secondary-logo__item' %}
+    <small class="font-select">
+      {{ 'now' | date: '%Y' }}© All Rights Reserved
+    </small>
+  </div>
+</footer>

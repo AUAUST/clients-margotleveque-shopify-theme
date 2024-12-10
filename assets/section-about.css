@@ -1,0 +1,27 @@
+
+.page-about wrap:first-of-type a:first-of-type {
+    text-decoration: underline;
+    text-underline-offset: .2em;
+    text-decoration-color: var(--color-highlight);
+}
+/* 
+.template-page-about #content wrap a:hover {
+    text-decoration-color: transparent;
+} */
+
+
+.page-about {
+    font-family: "Garamond Light", Times, serif;
+    font-feature-settings: "lnum";
+}
+
+@media screen and (min-width: 1082px) {
+    .template-page-about #content {
+        margin-top: 6rem;
+        /* font-size: var(--font-body--size); */
+    }
+
+    .page-content > img {
+        padding: 3rem 1rem;
+    }
+}

@@ -3,19 +3,21 @@
   <header>
     {% include 'menu' %}
     <!-- Project List -->
-    <ul></ul>
+    <ul class="font-nav"></ul>
     <!-- Contact -->
     <p
-      class="contact-links"
+      class="contact-links font-nav"
     >
       {% for link in linklists.footer.links -%}
         <a
           href="{{ link.url }}"
           target="_blank"
           rel="noreferrer"
+          class="font-nav"
         >
-          {{ link.title }}
-        </a><br>
+          {{ link.title }} 
+        </a>
+        
       {%- endfor %}
     </p>
   </header>

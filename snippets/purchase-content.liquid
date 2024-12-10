@@ -37,11 +37,11 @@
       type="submit"
       name="add">
       <span
-        class="atc_price hide"
-        id="product-price-{{ id }}"></span>
-      <span
         class="atc_message"
         id="add-to-cart-{{ id }}">Add to cart</span>
+        <span
+        class="atc_price hide"
+        id="product-price-{{ id }}"></span>
     </button>
   {%- else -%}
     <div
@@ -75,14 +75,14 @@
 // $('#add-to-cart-{{ id }}').html('&nbsp;—&nbsp;Add to cart');
       } else {
         $('#buy-button-{{ id }}').prop('disabled', true);
-        $('#add-to-cart-{{ id }}').html('&nbsp;—&nbsp;Sold out');
+        $('#add-to-cart-{{ id }}').html('Sold out');
       }
 
       if (variant.compare_at_price > variant.price) {
         $('#product-price-{{ id }}').html(Shopify.formatMoney(variant.price, '<span class="red">{{ shop.money_format }} </span>') + ' <s>' + Shopify.formatMoney(variant.compare_at_price, '{{ shop.money_format }}') + '</s>');
 
       } else {
-        $('#product-price-{{ id }}').html(Shopify.formatMoney(variant.price, '{{ shop.money_format }}') + "&nbsp—&nbsp");
+        $('#product-price-{{ id }}').html(Shopify.formatMoney(variant.price, '{{ shop.money_format }}'));
 
       }
       if (variant.price == 0) {
@@ -107,7 +107,7 @@
     } else {
       $('#product-price-{{ id }}').empty();
       $('#buy-button-{{ id }}').prop('disabled', true);
-      $('#add-to-cart-{{ id }}').html('&nbsp;—&nbsp;Add to cart');{% if product.price_varies -%}$('#product-price-{{ id }}').html('{{ product.price_min | money }} / {{ product.price_max | money }}');
+      $('#add-to-cart-{{ id }}').html('Add to cart');{% if product.price_varies -%}$('#product-price-{{ id }}').html('{{ product.price_min | money }} / {{ product.price_max | money }}');
       {%- else -%}
         $('#product-price-{{ id }}').html('{{ product.price | money }}');{%- endif %}
   }
